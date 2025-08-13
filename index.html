@@ -5,21 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vic Duarte - Liderança Ágil & Gestão de Projetos</title>
     
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-    <!-- Navigation Header -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#hero">
-                <img src="{{ url_for('static', filename='images/vic-duarte-logo-white.png') }}" 
+                <img src="static/images/vic-duarte-logo-white.png" 
                      alt="Vic Duarte" height="40" class="me-2">
                 <span class="fw-bold">Vic Duarte</span>
             </a>
@@ -62,13 +57,12 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="hero" class="hero-section">
         <div class="container">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-8 mx-auto text-center">
                     <div class="logo-container mb-4">
-                        <img src="{{ url_for('static', filename='images/vic-duarte-logo-white.png') }}" 
+                        <img src="static/images/vic-duarte-logo-white.png" 
                              alt="Vic Duarte" class="hero-logo img-fluid">
                     </div>
                     <h2 class="h3 text-white-50 mb-4">Liderança Ágil & Gestão de Projetos</h2>
@@ -89,7 +83,6 @@
         </div>
     </section>
 
-    <!-- Minha Abordagem Section -->
     <section id="abordagem" class="py-5">
         <div class="container">
             <div class="row align-items-center">
@@ -97,7 +90,7 @@
                 <div class="col-12 text-center">
                     <div class="mb-4">
                         <h2 class="display-5 fw-bold text-primary mb-4">Agilidade Pragmática e Baseada em Dados</h2>
-                        <img src="{{ url_for('static', filename='images/vic-duarte-logo-dark.png') }}" 
+                        <img src="static/images/vic-duarte-logo-dark.png" 
                              alt="Vic Duarte" class="section-logo mb-4">
                     </div>
                     <p class="lead text-muted mb-4">
@@ -113,7 +106,6 @@
         </div>
     </section>
 
-    <!-- Consultorias Section -->
     <section id="consultorias" class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
@@ -181,7 +173,6 @@
         </div>
     </section>
 
-    <!-- Talks Section -->
     <section id="talks" class="py-5">
         <div class="container">
             <div class="text-center mb-5">
@@ -265,7 +256,6 @@
 
 
 
-    <!-- Momentos Profissionais Section -->
     <section id="momentos" class="py-5">
         <div class="container">
             <div class="text-center mb-5">
@@ -273,12 +263,10 @@
                 <p class="lead text-muted">Registros de palestras, workshops e eventos que marcaram minha trajetória</p>
             </div>
             
-            <!-- Grid layout com imagens de diferentes tamanhos -->
             <div class="row g-4">
-                <!-- Imagem principal grande -->
                 <div class="col-lg-8">
                     <div class="professional-moment-large">
-                        <img src="{{ url_for('static', filename='images/vic-moment-2.jpg') }}" 
+                        <img src="static/images/vic-moment-2.jpg" 
                              alt="Vic Duarte palestrando" class="img-fluid rounded-3 shadow-lg">
                         <div class="moment-overlay">
                             <div class="moment-content">
@@ -289,12 +277,11 @@
                     </div>
                 </div>
                 
-                <!-- Duas imagens menores empilhadas -->
                 <div class="col-lg-4">
                     <div class="row g-4">
                         <div class="col-12">
                             <div class="professional-moment-small">
-                                <img src="{{ url_for('static', filename='images/vic-moment-3.jpg') }}" 
+                                <img src="static/images/vic-moment-3.jpg" 
                                      alt="Workshop de liderança" class="img-fluid rounded-3 shadow">
                                 <div class="moment-overlay-small">
                                     <div class="moment-content-small">
@@ -305,7 +292,7 @@
                         </div>
                         <div class="col-12">
                             <div class="professional-moment-small">
-                                <img src="{{ url_for('static', filename='images/vic-moment-4.jpg') }}" 
+                                <img src="static/images/vic-moment-4.jpg" 
                                      alt="Consultoria em ação" class="img-fluid rounded-3 shadow">
                                 <div class="moment-overlay-small">
                                     <div class="moment-content-small">
@@ -318,11 +305,10 @@
                 </div>
             </div>
             
-            <!-- Segunda linha com layout invertido -->
             <div class="row g-4 mt-4">
                 <div class="col-lg-4">
                     <div class="professional-moment-medium">
-                        <img src="{{ url_for('static', filename='images/vic-moment-5.jpg') }}" 
+                        <img src="static/images/vic-moment-5.jpg" 
                              alt="Evento de networking" class="img-fluid rounded-3 shadow">
                         <div class="moment-overlay-medium">
                             <div class="moment-content-medium">
@@ -344,7 +330,7 @@
                                 <cite title="Source Title">Especialista em Agilidade e Liderança</cite>
                             </footer>
                         </blockquote>
-                        <img src="{{ url_for('static', filename='images/vic-duarte-logo-dark.png') }}" 
+                        <img src="static/images/vic-duarte-logo-dark.png" 
                              alt="Vic Duarte" class="section-logo mt-3">
                     </div>
                 </div>
@@ -352,7 +338,6 @@
         </div>
     </section>
 
-    <!-- Certificações Section -->
     <section id="certificacoes" class="py-5 certification-section">
         <div class="container">
             <div class="text-center mb-5">
@@ -362,7 +347,7 @@
                     investindo continuamente em certificações e desenvolvimento profissional.
                 </p>
                 <div class="certification-banner mb-5">
-                    <img src="{{ url_for('static', filename='images/certifications-banner.png') }}" 
+                    <img src="static/images/certifications-banner.png" 
                          alt="Certificações Vic Duarte" class="img-fluid rounded-3 shadow-lg">
                 </div>
             </div>
@@ -370,7 +355,6 @@
         </div>
     </section>
 
-    <!-- Publicações LinkedIn Section -->
     <section id="publicacoes" class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
@@ -406,7 +390,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer-section text-white">
         <div class="container">
             <div class="row align-items-center py-5">
@@ -425,7 +408,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 text-center mt-4 mt-lg-0">
-                    <img src="{{ url_for('static', filename='images/vic-duarte-logo-white.png') }}" 
+                    <img src="static/images/vic-duarte-logo-white.png" 
                          alt="Vic Duarte" class="footer-logo img-fluid">
                 </div>
             </div>
@@ -440,9 +423,7 @@
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="static/js/main.js"></script>
 </body>
 </html>
