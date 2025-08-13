@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f6f0df;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8dcc0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8d6067;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b06662;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg1)" rx="12"/>
+  
+  <!-- Project visualization - Agile transformation -->
+  <g transform="translate(50, 50)">
+    <!-- Kanban board representation -->
+    <rect x="0" y="0" width="80" height="200" fill="white" stroke="#495471" stroke-width="2" rx="6"/>
+    <rect x="90" y="0" width="80" height="200" fill="white" stroke="#495471" stroke-width="2" rx="6"/>
+    <rect x="180" y="0" width="80" height="200" fill="white" stroke="#495471" stroke-width="2" rx="6"/>
+    <rect x="270" y="0" width="80" height="200" fill="white" stroke="#495471" stroke-width="2" rx="6"/>
+    
+    <!-- Column headers -->
+    <text x="40" y="25" text-anchor="middle" fill="#495471" font-size="12" font-weight="bold">BACKLOG</text>
+    <text x="130" y="25" text-anchor="middle" fill="#495471" font-size="12" font-weight="bold">DOING</text>
+    <text x="220" y="25" text-anchor="middle" fill="#495471" font-size="12" font-weight="bold">REVIEW</text>
+    <text x="310" y="25" text-anchor="middle" fill="#495471" font-size="12" font-weight="bold">DONE</text>
+    
+    <!-- Task cards -->
+    <rect x="10" y="40" width="60" height="30" fill="url(#accent1)" rx="4"/>
+    <rect x="10" y="80" width="60" height="30" fill="url(#accent1)" rx="4"/>
+    <rect x="10" y="120" width="60" height="30" fill="url(#accent1)" rx="4"/>
+    
+    <rect x="100" y="40" width="60" height="30" fill="#6b5a6c" rx="4"/>
+    <rect x="100" y="80" width="60" height="30" fill="#6b5a6c" rx="4"/>
+    
+    <rect x="190" y="40" width="60" height="30" fill="#8d6067" rx="4"/>
+    
+    <rect x="280" y="40" width="60" height="30" fill="#495471" rx="4"/>
+    <rect x="280" y="80" width="60" height="30" fill="#495471" rx="4"/>
+    <rect x="280" y="120" width="60" height="30" fill="#495471" rx="4"/>
+    <rect x="280" y="160" width="60" height="30" fill="#495471" rx="4"/>
+  </g>
+  
+  <!-- Title overlay -->
+  <rect x="0" y="250" width="400" height="50" fill="rgba(73, 84, 113, 0.9)"/>
+  <text x="200" y="275" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Transformação Ágil</text>
+  <text x="200" y="290" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="12">Implementação de Metodologias</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="fit-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8d6067;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b06662;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="55" fill="url(#fit-bg)" stroke="white" stroke-width="3"/>
+  
+  <!-- Fit for Purpose Badge -->
+  <g transform="translate(60, 60)">
+    <!-- Central hexagon -->
+    <polygon points="0,-20 17,-10 17,10 0,20 -17,10 -17,-10" fill="white"/>
+    
+    <!-- Inner text -->
+    <text x="0" y="-8" text-anchor="middle" fill="#8d6067" font-size="6" font-weight="bold">FIT FOR</text>
+    <text x="0" y="2" text-anchor="middle" fill="#8d6067" font-size="6" font-weight="bold">PURPOSE</text>
+    
+    <!-- Decorative gear elements -->
+    <g stroke="#6b5a6c" stroke-width="2" fill="none">
+      <circle cx="0" cy="-30" r="4"/>
+      <circle cx="26" cy="-15" r="4"/>
+      <circle cx="26" cy="15" r="4"/>
+      <circle cx="0" cy="30" r="4"/>
+      <circle cx="-26" cy="15" r="4"/>
+      <circle cx="-26" cy="-15" r="4"/>
+    </g>
+  </g>
+</svg>
