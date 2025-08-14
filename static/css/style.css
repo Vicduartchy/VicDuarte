@@ -642,6 +642,30 @@
 	    display: inline-flex;
 	    align-items: center;
 	}
+	/* Disciplines Section */
+	.discipline-card {
+	    border-top: 4px solid var(--accent-1);
+	    transition: all var(--transition-speed) ease;
+	}
+	.discipline-card:hover {
+	    transform: translateY(-5px);
+	    box-shadow: var(--shadow-md);
+	}
+	.discipline-features {
+	    display: flex;
+	    flex-wrap: wrap;
+	    gap: 0.5rem;
+	}
+	.feature-tag {
+	    background: rgba(9, 33, 64, 0.05);
+	    color: var(--primary);
+	    padding: 4px 10px;
+	    border-radius: 15px;
+	    font-size: var(--text-xs);
+	    font-weight: 500;
+	    display: flex;
+	    align-items: center;
+	}
 	/* Footer */
 	.footer-section {
 	    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -1050,6 +1074,11 @@
 	        opacity: 1;
 	    }
 	    .publication-card {
+	        animation: none;
+	        opacity: 1;
+	        transform: none;
+	    }
+	    .discipline-card {
 	        animation: none;
 	        opacity: 1;
 	        transform: none;
