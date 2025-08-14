@@ -536,6 +536,18 @@
 	    height: 100%;
 	    display: flex;
 	    flex-direction: column;
+	    margin-bottom: 20px;
+	    position: relative;
+	}
+	.linkedin-post::before {
+	    content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    height: 3px;
+	    background: linear-gradient(90deg, var(--primary), var(--accent-1));
+	    border-radius: var(--border-radius) var(--border-radius) 0 0;
 	}
 	.linkedin-post:hover {
 	    transform: translateY(-2px);
@@ -546,12 +558,14 @@
 	    width: 100%;
 	    height: 500px;
 	    border: none;
+	    min-height: 450px;
 	}
-	/* Improved grid layout for publications section */
+	/* Improved grid layout for publications section - 4 posts per row */
 	#publicacoes .row {
 	    display: grid;
-	    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-	    gap: var(--card-gap);
+	    grid-template-columns: repeat(4, 1fr);
+	    gap: 20px;
+	    margin: 0;
 	}
 	/* Publications section container with scroll for better UX */
 	.publications-container {
@@ -573,7 +587,10 @@
 	    border-radius: 4px;
 	}
 	/* Better responsive adjustments for LinkedIn posts */
-	@media (max-width: 1200px) {
+	@media (max-width: 1400px) {
+	    #publicacoes .row {
+	        grid-template-columns: repeat(3, 1fr);
+	    }
 	    .linkedin-post iframe {
 	        height: 450px;
 	    }
@@ -582,6 +599,9 @@
 	    }
 	}
 	@media (max-width: 992px) {
+	    #publicacoes .row {
+	        grid-template-columns: repeat(2, 1fr);
+	    }
 	    .linkedin-post iframe {
 	        height: 420px;
 	    }
@@ -590,15 +610,14 @@
 	    }
 	}
 	@media (max-width: 768px) {
+	    #publicacoes .row {
+	        grid-template-columns: 1fr;
+	    }
 	    .linkedin-post iframe {
 	        height: 380px;
 	    }
 	    .publications-container {
 	        max-height: 1200px;
-	    }
-	    #publicacoes .row {
-	        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-	        gap: 1rem;
 	    }
 	}
 	@media (max-width: 576px) {
@@ -607,10 +626,6 @@
 	    }
 	    .publications-container {
 	        max-height: 1100px;
-	    }
-	    #publicacoes .row {
-	        grid-template-columns: 1fr;
-	        gap: 1rem;
 	    }
 	}
 	/* Add a "Load More" button style for future implementation */
@@ -630,27 +645,16 @@
 	    transform: translateY(-2px);
 	    box-shadow: var(--shadow-md);
 	}
-	/* Lazy loading placeholder for LinkedIn posts */
-	.linkedin-post.loading {
-	    min-height: 500px;
-	    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-	    background-size: 200% 100%;
-	    animation: loading 1.5s infinite;
-	}
-	@keyframes loading {
-	    0% {
-	        background-position: 200% 0;
-	    }
-	    100% {
-	        background-position: -200% 0;
-	    }
-	}
 	/* Publication count indicator */
 	.publication-count {
 	    text-align: center;
 	    margin-bottom: 1.5rem;
 	    color: var(--text-muted-light);
 	    font-size: var(--text-sm);
+	    background: rgba(9, 33, 64, 0.05);
+	    padding: 8px 16px;
+	    border-radius: 20px;
+	    display: inline-block;
 	}
 	/* Section header adjustments for publications section */
 	#publicacoes .section-header {
