@@ -1059,6 +1059,60 @@ button:focus,
     transform: translateX(0);
 }
 
+/* CSS para a Seção de Livros */
+.book-card {
+    border-left: 4px solid var(--accent-1);
+    transition: all var(--transition-speed) ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.book-cover-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.book-cover {
+    max-height: 400px;
+    width: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all var(--transition-speed) ease;
+}
+
+.book-cover:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.book-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent-1) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.book-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
 /* Responsive Adjustments - CORRIGIDOS */
 @media (max-width: 1400px) {
     .container {
@@ -1143,6 +1197,17 @@ button:focus,
     
     .carousel-caption p {
         font-size: 0.9rem;
+    }
+    
+    /* Responsividade para a seção de livros */
+    .book-cover {
+        max-height: 300px;
+    }
+    
+    .book-badge {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
     }
 }
 @media (max-width: 768px) {
@@ -1273,6 +1338,17 @@ button:focus,
     .carousel-indicators .active {
         width: 12px;
         height: 12px;
+    }
+    
+    /* Responsividade para a seção de livros */
+    .book-cover {
+        max-height: 250px;
+    }
+    
+    .book-badge {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
     }
 }
 @media (max-width: 576px) {
@@ -1528,6 +1604,17 @@ button:focus,
         width: 10px;
         height: 10px;
     }
+    
+    /* Responsividade para a seção de livros */
+    .book-cover {
+        max-height: 200px;
+    }
+    
+    .book-badge {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
 }
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
@@ -1561,5 +1648,8 @@ button:focus,
     }
     .carousel-item {
         transition: none !important;
+    }
+    .book-badge {
+        animation: none;
     }
 }
