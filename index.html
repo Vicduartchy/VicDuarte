@@ -1,725 +1,747 @@
-	<!DOCTYPE html>
-	<html lang="pt-BR">
-	<head>
-	    <meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>Vic Duarte - Liderança Ágil & Gestão de Projetos</title>
-	    <!-- Preload critical resources -->
-	    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
-	    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
-	    <!-- Favicon -->
-	    <link rel="icon" type="image/png" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
-	    <link rel="apple-touch-icon" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
-	    <link rel="shortcut icon" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
-	    <!-- Optimized font loading -->
-	    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
-	    <noscript>
-	        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-	    </noscript>
-	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	    <link rel="stylesheet" href="./static/css/style.css">
-	</head>
-	<body>
-	    <!-- Skip link for keyboard navigation -->
-	    <a href="#main-content" class="skip-link visually-hidden-focusable">
-	        Pular para o conteúdo principal
-	    </a>
-	    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" role="navigation" aria-label="Menu principal">
-	        <div class="container">
-	            <a class="navbar-brand" href="#hero" aria-label="Vic Duarte - Início">
-	                <img src="./static/images/vic-duarte-logo-white.png" 
-	                     alt="Vic Duarte" height="40" class="me-2">
-	                <span class="fw-bold">Vic Duarte</span>
-	            </a>
-	            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-	                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-	                <span class="navbar-toggler-icon"></span>
-	            </button>
-	            <div class="collapse navbar-collapse" id="navbarNav">
-	                <ul class="navbar-nav ms-auto">
-	                    <li class="nav-item">
-	                        <a class="nav-link" href="#hero">Início</a>
-	                    </li>
-	                    <li class="nav-item">
-	                        <a class="nav-link" href="#abordagem">Abordagem</a>
-	                    </li>
-	                    <li class="nav-item">
-	                        <a class="nav-link" href="#disciplinas">Disciplinas</a>
-	                    </li>
-	                    <li class="nav-item">
-	                        <a class="nav-link" href="#consultorias">Consultorias</a>
-	                    </li>
-	                    <li class="nav-item">
-	                        <a class="nav-link" href="#talks">Talks</a>
-	                    </li>
-	                    <li class="nav-item">
-	                        <a class="nav-link" href="#momentos">Momentos</a>
-	                    </li>
-	                    <li class="nav-item">
-	                        <a class="nav-link" href="#certificacoes">Certificações</a>
-	                    </li>
-	                    <li class="nav-item">
-	                        <a class="nav-link" href="#publicacoes">Publicações</a>
-	                    </li>
-	                    <li class="nav-item ms-2">
-	                        <a class="btn btn-linkedin btn-sm" href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer">
-	                            <i class="fab fa-linkedin me-1" aria-hidden="true"></i>LinkedIn
-	                        </a>
-	                    </li>
-	                </ul>
-	            </div>
-	        </div>
-	    </nav>
-	    <main id="main-content">
-	        <section id="hero" class="hero-section" aria-labelledby="hero-title">
-	            <div class="container">
-	                <div class="row align-items-center min-vh-100">
-	                    <div class="col-lg-8 mx-auto text-center">
-	                        <div class="logo-container mb-4">
-	                            <img src="./static/images/vic-duarte-logo-white.png" 
-	                                 alt="Vic Duarte" class="hero-logo img-fluid">
-	                        </div>
-	                        <h2 class="h3 text-white-50 mb-4" id="hero-title">Liderança Ágil & Gestão de Projetos</h2>
-	                        <p class="lead text-white-75 mb-5">
-	                            Com mais de meia década de experiência como Agile Coach e Gerente de Projetos, transformo desafios em resultados concretos para os negócios. 
-	                            Minha abordagem pragmática combina práticas ágeis com foco em valor, alinhando equipes e estratégias para alcançar objetivos mensuráveis, sempre priorizando as pessoas e o impacto organizacional.
-	                        </p>
-	                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-	                            <a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg">
-	                                <i class="fab fa-linkedin me-2" aria-hidden="true"></i>Conectar no LinkedIn
-	                            </a>
-	                            <a href="#consultorias" class="btn btn-linkedin btn-lg">
-	                                <i class="fas fa-briefcase me-2" aria-hidden="true"></i>Ver Consultorias
-	                            </a>
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
-	        </section>
-	        <section id="abordagem" class="py-5" aria-labelledby="abordagem-title">
-	            <div class="container">
-	                <div class="row align-items-center">
-	                    <div class="col-12 text-center">
-	                        <div class="mb-4">
-	                            <h2 class="display-5 fw-bold text-primary mb-4" id="abordagem-title">Agilidade Pragmática e Baseada em Dados</h2>
-	                            <img src="./static/images/vic-duarte-logo-dark.png" 
-	                                 alt="Vic Duarte" class="section-logo mb-4">
-	                        </div>
-	                        <p class="lead text-muted mb-4">
-	Minha filosofia é centrada em resultados: utilizo práticas ágeis de forma flexível e orientada por dados para entregar valor real. Com experiência em empresas como ClickBus, Solar Coca-Cola e SAS Plataforma de Educação, ajudei equipes a superarem obstáculos, otimizarem processos e alcançarem metas de negócio com impacto direto no crescimento e na inovação.
-	                        </p>
-	                    </div>
-	                </div>
-	            </div>
-	        </section>
-	        <!-- Nova Seção: Disciplinas de Pós-Graduação (MOVIDA PARA CÁ) -->
-	        <section id="disciplinas" class="py-5 bg-light" aria-labelledby="disciplinas-title">
-	            <div class="container">
-	                <header class="text-center mb-5">
-	                    <h2 class="display-5 fw-bold text-primary mb-3" id="disciplinas-title">Disciplinas de Pós-Graduação</h2>
-	                    <p class="lead text-muted">
-	                        Acesso aos materiais de estudo e notebooks das disciplinas que ministro em programas de pós-graduação.
-	                    </p>
-	                </header>
-	                <div class="row g-4">
-	                    <!-- Card da disciplina 1 -->
-	                    <div class="col-lg-4">
-	                        <div class="card h-100 border-0 shadow-sm discipline-card">
-	                            <div class="card-body p-4">
-	                                <div class="d-flex align-items-center mb-3">
-	                                    <div class="icon-box-modern me-3">
-	                                        <i class="fas fa-users-cog"></i>
-	                                    </div>
-	                                    <div>
-	                                        <h4 class="card-title mb-0">Projetos em Gestão de Pessoas</h4>
-	                                        <p class="text-muted mb-0">Unifametro</p>
-	                                    </div>
-	                                </div>
-	                                <p class="card-text text-muted">
-	                                    Explore os conceitos e práticas de gestão de projetos aplicados à área de pessoas, 
-	                                    com estudos de caso e metodologias ágeis para RH.
-	                                </p>
-	                                <div class="discipline-features mt-3">
-	                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Gestão Ágil</span>
-	                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Projetos de RH</span>
-	                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Liderança</span>
-	                                </div>
-	                                <a href="https://notebooklm.google.com/notebook/d4ef6053-43ba-4949-a01b-d9a903f61070" 
-	                                   target="_blank" rel="noopener noreferrer" 
-	                                   class="btn btn-linkedin mt-3">
-	                                    <i class="fas fa-external-link-alt me-2"></i>Acessar Notebook
-	                                </a>
-	                            </div>
-	                        </div>
-	                    </div>
-	                    <!-- Card da disciplina 2 -->
-	                    <div class="col-lg-4">
-	                        <div class="card h-100 border-0 shadow-sm discipline-card">
-	                            <div class="card-body p-4">
-	                                <div class="d-flex align-items-center mb-3">
-	                                    <div class="icon-box-modern me-3">
-	                                        <i class="fas fa-user-tie"></i>
-	                                    </div>
-	                                    <div>
-	                                        <h4 class="card-title mb-0">Gerenciamento de Recursos Humanos</h4>
-	                                        <p class="text-muted mb-0">Unichristus</p>
-	                                    </div>
-	                                </div>
-	                                <p class="card-text text-muted">
-	                                    Aprofunde-se nas estratégias modernas de gestão de recursos humanos, 
-	                                    alinhando pessoas e processos para resultados organizacionais.
-	                                </p>
-	                                <div class="discipline-features mt-3">
-	                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Estratégia de RH</span>
-	                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Gestão de Talentos</span>
-	                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Transformação</span>
-	                                </div>
-	                                <a href="https://notebooklm.google.com/notebook/2de0db1c-57e7-4eac-b16d-866282dc943e" 
-	                                   target="_blank" rel="noopener noreferrer" 
-	                                   class="btn btn-linkedin mt-3">
-	                                    <i class="fas fa-external-link-alt me-2"></i>Acessar Notebook
-	                                </a>
-	                            </div>
-	                        </div>
-	                    </div>
-	                    <!-- NOVO Card da disciplina 3 -->
-	                    <div class="col-lg-4">
-	                        <div class="card h-100 border-0 shadow-sm discipline-card">
-	                            <div class="card-body p-4">
-	                                <div class="d-flex align-items-center mb-3">
-	                                    <div class="icon-box-modern me-3">
-	                                        <i class="fas fa-brain"></i>
-	                                    </div>
-	                                    <div>
-	                                        <h4 class="card-title mb-0">Jogos de Negócio</h4>
-	                                        <p class="text-muted mb-0">Unichritus</p>
-	                                    </div>
-	                                </div>
-	                                <p class="card-text text-muted">
-	                                    Explore a aplicação de inteligência artificial na gestão de projetos, 
-	                                    automatizando tarefas, previsionando riscos e otimizando a tomada de decisões.
-	                                </p>
-	                                <div class="discipline-features mt-3">
-	                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Inteligência Artificial</span>
-	                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Automação</span>
-	                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Inovação</span>
-	                                </div>
-	                                <a href="https://notebooklm.google.com/notebook/e0da9a32-69f9-42fb-a65c-20f889ce04e8" 
-	                                   target="_blank" rel="noopener noreferrer" 
-	                                   class="btn btn-linkedin mt-3">
-	                                    <i class="fas fa-external-link-alt me-2"></i>Acessar Notebook
-	                                </a>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="text-center mt-5">
-	                    <div class="alert alert-info d-inline-block">
-	                        <i class="fas fa-info-circle me-2"></i>
-	                        <strong>Nota:</strong> Os notebooks contêm materiais complementares, estudos de caso e recursos 
-	                        para aprofundamento nos temas abordados em sala de aula.
-	                    </div>
-	                </div>
-	            </div>
-	        </section>
-	        <section id="consultorias" class="py-5" aria-labelledby="consultorias-title">
-	            <div class="container">
-	                <header class="text-center mb-5">
-	                    <h2 class="display-5 fw-bold text-primary mb-3" id="consultorias-title">Consultorias - Áreas de Atuação e Expertise</h2>
-	                    <p class="lead text-muted">Soluções especializadas para transformar sua organização</p>
-	                </header>
-	                <div class="row g-4" role="list">
-	                    <article class="col-lg-6" role="listitem">
-	                        <div class="card h-100 border-0 shadow-sm" tabindex="0" role="article" aria-labelledby="consultoria-1-title">
-	                            <div class="card-body p-4 text-center">
-	                                <div class="icon-box-modern mb-4 mx-auto" aria-hidden="true">
-	                                    <i class="fas fa-rocket"></i>
-	                                </div>
-	                                <h4 class="card-title mb-3" id="consultoria-1-title">Consultoria em Gestão de Projetos Ágeis</h4>
-	                                <p class="card-text text-muted">
-	Guio organizações na adoção de práticas ágeis customizadas, focando na entrega rápida de valor e na otimização de processos. Minha experiência como Agile Coach me permite criar fluxos de trabalho que alinham equipes aos objetivos de negócio.
-	                                </p>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <article class="col-lg-6" role="listitem">
-	                        <div class="card h-100 border-0 shadow-sm" tabindex="0" role="article" aria-labelledby="consultoria-2-title">
-	                            <div class="card-body p-4 text-center">
-	                                <div class="icon-box-modern mb-4 mx-auto" aria-hidden="true">
-	                                    <i class="fas fa-bullseye"></i>
-	                                </div>
-	                                <h4 class="card-title mb-3" id="consultoria-2-title">Gestão Estratégica com OKRs</h4>
-	                                <p class="card-text text-muted">
-	Como Professional OKR Leader Certified, ajudo empresas a definirem e executarem objetivos estratégicos que geram resultados mensuráveis. Minha abordagem prática garante alinhamento entre visão de negócio e execução diária, com transparência e foco em impacto.
-	                                </p>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <article class="col-lg-6" role="listitem">
-	                        <div class="card h-100 border-0 shadow-sm" tabindex="0" role="article" aria-labelledby="consultoria-3-title">
-	                            <div class="card-body p-4 text-center">
-	                                <div class="icon-box-modern mb-4 mx-auto" aria-hidden="true">
-	                                    <i class="fas fa-users-cog"></i>
-	                                </div>
-	                                <h4 class="card-title mb-3" id="consultoria-3-title">Desenvolvimento de Lideranças</h4>
-	                                <p class="card-text text-muted">
-	Capacito líderes para impulsionarem equipes em ambientes dinâmicos, com foco em engajamento, tomada de decisão prática e resultados de negócio. Minha experiência em coaching ágil fortalece a liderança para mudanças rápidas e eficazes.
-	                                </p>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <article class="col-lg-6" role="listitem">
-	                        <div class="card h-100 border-0 shadow-sm" tabindex="0" role="article" aria-labelledby="consultoria-4-title">
-	                            <div class="card-body p-4 text-center">
-	                                <div class="icon-box-modern mb-4 mx-auto" aria-hidden="true">
-	                                    <i class="fas fa-brain"></i>
-	                                </div>
-	                                <h4 class="card-title mb-3" id="consultoria-4-title">IA na Gestão de Projetos</h4>
-	                                <p class="card-text text-muted">
-	Integro ferramentas de inteligência artificial para otimizar a gestão de projetos, automatizando processos e fornecendo insights que aceleram decisões estratégicas. Minha abordagem combina tecnologia com pragmatismo para maximizar resultados.
-	                                </p>
-	                            </div>
-	                        </div>
-	                    </article>
-	                </div>
-	            </div>
-	        </section>
-	        <section id="talks" class="py-5" aria-labelledby="talks-title">
-	            <div class="container">
-	                <header class="text-center mb-5">
-	                    <h2 class="display-5 fw-bold text-primary mb-3" id="talks-title">Talks: compartilhando conhecimento</h2>
-	                    <p class="lead text-muted">Palestras que inspiram transformação e geram resultados práticos</p>
-	                </header>
-	                <div class="talks-grid">
-	                    <article class="talk-card-container" role="listitem">
-	                        <div class="card h-100 border-0 shadow-sm talk-card" tabindex="0" role="article" aria-labelledby="talk-1-title">
-	                            <div class="card-body p-4 text-center">
-	                                <div class="icon-box-talk mb-3 mx-auto" aria-hidden="true">
-	                                    <i class="fas fa-microchip"></i>
-	                                </div>
-	                                <h5 class="card-title" id="talk-1-title">IA na Gestão de Projetos</h5>
-	                                <p class="card-text text-muted">
-	                                    Como a inteligência artificial está revolucionando a gestão de projetos 
-	                                    e como implementá-la de forma prática.
-	                                </p>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <article class="talk-card-container" role="listitem">
-	                        <div class="card h-100 border-0 shadow-sm talk-card" tabindex="0" role="article" aria-labelledby="talk-2-title">
-	                            <div class="card-body p-4 text-center">
-	                                <div class="icon-box-talk mb-3 mx-auto" aria-hidden="true">
-	                                    <i class="fas fa-chess-queen"></i>
-	                                </div>
-	                                <h5 class="card-title" id="talk-2-title">Liderança Ágil de Alta Performance</h5>
-	                                <p class="card-text text-muted">
-	                                    Desenvolvendo competências de liderança para ambientes dinâmicos 
-	                                    e equipes de alta performance.
-	                                </p>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <article class="talk-card-container" role="listitem">
-	                        <div class="card h-100 border-0 shadow-sm talk-card" tabindex="0" role="article" aria-labelledby="talk-3-title">
-	                            <div class="card-body p-4 text-center">
-	                                <div class="icon-box-talk mb-3 mx-auto" aria-hidden="true">
-	                                    <i class="fas fa-tools"></i>
-	                                </div>
-	                                <h5 class="card-title" id="talk-3-title">Métodos e Metodologias de Projetos com Aplicação Prática</h5>
-	                                <p class="card-text text-muted">
-	                                    Frameworks e metodologias aplicadas na prática, com cases reais 
-	                                    e resultados mensuráveis.
-	                                </p>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <article class="talk-card-container" role="listitem">
-	                        <div class="card h-100 border-0 shadow-sm talk-card" tabindex="0" role="article" aria-labelledby="talk-4-title">
-	                            <div class="card-body p-4 text-center">
-	                                <div class="icon-box-talk mb-3 mx-auto" aria-hidden="true">
-	                                    <i class="fas fa-bullseye"></i>
-	                                </div>
-	                                <h5 class="card-title" id="talk-4-title">OKRs que Geram Resultados</h5>
-	                                <p class="card-text text-muted">
-	                                    Implementação efetiva de OKRs para conectar estratégia à execução 
-	                                    e garantir foco nos resultados.
-	                                </p>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <article class="talk-card-container" role="listitem">
-	                        <div class="card h-100 border-0 shadow-sm talk-card" tabindex="0" role="article" aria-labelledby="talk-5-title">
-	                            <div class="card-body p-4 text-center">
-	                                <div class="icon-box-talk mb-3 mx-auto" aria-hidden="true">
-	                                    <i class="fas fa-rocket"></i>
-	                                </div>
-	                                <h5 class="card-title" id="talk-5-title">O Futuro do Trabalho e Inovação</h5>
-	                                <p class="card-text text-muted">
-	                                    Tendências e transformações que estão moldando o futuro do trabalho 
-	                                    e como se preparar para elas.
-	                                </p>
-	                            </div>
-	                        </div>
-	                    </article>
-	                </div>
-	            </div>
-	        </section>
-	        <section id="momentos" class="py-5" aria-labelledby="momentos-title">
-	            <div class="container">
-	                <header class="section-header">
-	                    <h2 class="display-5 fw-bold text-primary mb-3" id="momentos-title">Momentos Profissionais</h2>
-	                    <p class="lead text-muted">Registros de palestras, workshops e eventos que marcaram minha trajetória</p>
-	                </header>
-	                <div class="moments-grid">
-	                    <div class="moment-item">
-	                        <img src="./static/images/vic-moment-2.jpg" 
-	                             alt="Vic Duarte palestrando sobre agilidade em um evento empresarial" 
-	                             loading="lazy">
-	                        <div class="moment-overlay">
-	                            <div class="moment-content">
-	                                <h5>Palestrando sobre Agilidade</h5>
-	                                <p>Compartilhando conhecimento em eventos do setor</p>
-	                            </div>
-	                        </div>
-	                    </div>
-	                    <div class="moment-item">
-	                        <img src="./static/images/vic-moment-3.jpg" 
-	                             alt="Workshop de liderança com equipe" 
-	                             loading="lazy">
-	                        <div class="moment-overlay">
-	                            <div class="moment-content">
-	                                <h5>Workshop de Liderança</h5>
-	                                <p>Desenvolvendo competências de liderança</p>
-	                            </div>
-	                        </div>
-	                    </div>
-	                    <div class="moment-item">
-	                        <img src="./static/images/vic-moment-4.jpg" 
-	                             alt="Consultoria em ação com cliente" 
-	                             loading="lazy">
-	                        <div class="moment-overlay">
-	                            <div class="moment-content">
-	                                <h5>Consultoria em Ação</h5>
-	                                <p>Transformação organizacional na prática</p>
-	                            </div>
-	                        </div>
-	                    </div>
-	                    <div class="moment-item">
-	                        <img src="./static/images/vic-moment-5.jpg" 
-	                             alt="Evento de networking profissional" 
-	                             loading="lazy">
-	                        <div class="moment-overlay">
-	                            <div class="moment-content">
-	                                <h5>Networking Profissional</h5>
-	                                <p>Construindo conexões estratégicas</p>
-	                            </div>
-	                        </div>
-	                    </div>
-	                    <div class="quote-section-container">
-	                        <blockquote class="blockquote">
-	                            <p class="lead mb-4">
-	                                "A verdadeira transformação organizacional acontece quando combinamos metodologia sólida 
-	                                com liderança inspiradora e foco nas pessoas."
-	                            </p>
-	                            <footer class="blockquote-footer">
-	                                <strong>Vic Duarte</strong>
-	                                <cite title="Source Title">Especialista em Agilidade e Liderança</cite>
-	                            </footer>
-	                        </blockquote>
-	                        <img src="./static/images/vic-duarte-logo-white.png" 
-	                             alt="Vic Duarte" class="section-logo mt-3">
-	                    </div>
-	                </div>
-	            </div>
-	        </section>
-	        <section id="certificacoes" class="py-5 certification-section" aria-labelledby="certificacoes-title">
-	            <div class="container">
-	                <header class="text-center mb-5">
-	                    <h2 class="display-5 fw-bold text-white mb-3" id="certificacoes-title">Certificações e Aprendizado Contínuo</h2>
-	                    <p class="lead text-white-75 mb-4">
-	Comprometida com a excelência, invisto em aprendizado contínuo para entregar soluções práticas e alinhadas aos desafios de negócio atuais.
-	                    </p>
-	                    <div class="certification-banner mb-5">
-	                        <img src="./static/images/certifications-banner.png" 
-	                             alt="Certificações Vic Duarte" class="img-fluid rounded-3 shadow-lg" loading="lazy">
-	                    </div>
-	                </header>
-	            </div>
-	        </section>
-	        <section id="publicacoes" class="py-5 bg-light" aria-labelledby="publicacoes-title">
-	            <div class="container">
-	                <header class="text-center mb-5">
-	                    <h2 class="display-5 fw-bold text-primary mb-3" id="publicacoes-title">Publicações no LinkedIn</h2>
-	                    <p class="lead text-muted">
-	                        Compartilho regularmente insights, experiências e conhecimentos sobre agilidade, 
-	                        liderança e gestão de projetos.
-	                    </p>
-	                    <div class="d-flex justify-content-center align-items-center gap-3 mb-4">
-	                        <div class="publication-count">
-	                            <i class="fab fa-linkedin me-2"></i>10 publicações recentes
-	                        </div>
-	                        <a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-sm">
-	                            <i class="fab fa-linkedin me-1"></i>Ver Perfil Completo
-	                        </a>
-	                    </div>
-	                </header>
-	                <div class="publications-grid">
-	                    <!-- Publicação 1 - MINIMALISTA -->
-	                    <article class="publication-card">
-	                        <div class="publication-content">
-	                            <div class="publication-header">
-	                                <span class="publication-tag">Agilidade</span>
-	                                <span class="publication-date">Recente</span>
-	                            </div>
-	                            <h3 class="publication-title">Agilidade e Transformação Organizacional</h3>
-	                            <p class="publication-excerpt">
-	                                Como implementar metodologias ágeis que realmente transformam a cultura organizacional 
-	                                e geram resultados sustentáveis a longo prazo.
-	                            </p>
-	                            <div class="publication-footer">
-	                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7241433094526783488" target="_blank" rel="noopener noreferrer" class="publication-link">
-	                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
-	                                </a>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <!-- Publicação 2 - MINIMALISTA -->
-	                    <article class="publication-card">
-	                        <div class="publication-content">
-	                            <div class="publication-header">
-	                                <span class="publication-tag">Liderança</span>
-	                                <span class="publication-date">Recente</span>
-	                            </div>
-	                            <h3 class="publication-title">Liderança Ágil e Desenvolvimento de Equipes</h3>
-	                            <p class="publication-excerpt">
-	                                Estratégias práticas para desenvolver líderes que inspiram equipes de alta performance 
-	                                em ambientes de constante mudança.
-	                            </p>
-	                            <div class="publication-footer">
-	                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7242510929626644480" target="_blank" rel="noopener noreferrer" class="publication-link">
-	                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
-	                                </a>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <!-- Publicação 3 - MINIMALISTA -->
-	                    <article class="publication-card">
-	                        <div class="publication-content">
-	                            <div class="publication-header">
-	                                <span class="publication-tag">Gestão</span>
-	                                <span class="publication-date">Recente</span>
-	                            </div>
-	                            <h3 class="publication-title">Gestão de Projetos e Metodologias Ágeis</h3>
-	                            <p class="publication-excerpt">
-	                                Comparativo entre diferentes frameworks ágeis e como escolher o mais adequado 
-	                                para cada tipo de projeto e organização.
-	                            </p>
-	                            <div class="publication-footer">
-	                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7244329833353072640" target="_blank" rel="noopener noreferrer" class="publication-link">
-	                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
-	                                </a>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <!-- Publicação 4 - MINIMALISTA -->
-	                    <article class="publication-card">
-	                        <div class="publication-content">
-	                            <div class="publication-header">
-	                                <span class="publication-tag">Transformação</span>
-	                                <span class="publication-date">Recente</span>
-	                            </div>
-	                            <h3 class="publication-title">Transformação Organizacional e Cultura Ágil</h3>
-	                            <p class="publication-excerpt">
-	                                Os pilares fundamentais para construir uma cultura ágil que sustente a transformação 
-	                                digital e a inovação contínua.
-	                            </p>
-	                            <div class="publication-footer">
-	                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7262850786630492161" target="_blank" rel="noopener noreferrer" class="publication-link">
-	                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
-	                                </a>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <!-- Publicação 5 - MINIMALISTA -->
-	                    <article class="publication-card">
-	                        <div class="publication-content">
-	                            <div class="publication-header">
-	                                <span class="publication-tag">Frameworks</span>
-	                                <span class="publication-date">Recente</span>
-	                            </div>
-	                            <h3 class="publication-title">Metodologias Ágeis e Frameworks</h3>
-	                            <p class="publication-excerpt">
-	                                Deep dive em Scrum, Kanban, SAFe e outros frameworks: quando e como aplicar 
-	                                cada um para maximizar resultados.
-	                            </p>
-	                            <div class="publication-footer">
-	                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7265728296095547394" target="_blank" rel="noopener noreferrer" class="publication-link">
-	                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
-	                                </a>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <!-- Publicação 6 - MINIMALISTA -->
-	                    <article class="publication-card">
-	                        <div class="publication-content">
-	                            <div class="publication-header">
-	                                <span class="publication-tag">Inovação</span>
-	                                <span class="publication-date">Recente</span>
-	                            </div>
-	                            <h3 class="publication-title">Inovação em Projetos e Gestão Ágil</h3>
-	                            <p class="publication-excerpt">
-	                                Como criar um ambiente que fomenta a inovação contínua através de práticas 
-	                                ágeis e mindset experimental.
-	                            </p>
-	                            <div class="publication-footer">
-	                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7267288807182376960" target="_blank" rel="noopener noreferrer" class="publication-link">
-	                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
-	                                </a>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <!-- Publicação 7 - MINIMALISTA -->
-	                    <article class="publication-card">
-	                        <div class="publication-content">
-	                            <div class="publication-header">
-	                                <span class="publication-tag">Coaching</span>
-	                                <span class="publication-date">Recente</span>
-	                            </div>
-	                            <h3 class="publication-title">Liderança de Alta Performance e Coaching</h3>
-	                            <p class="publication-excerpt">
-	                                Técnicas de coaching ágil para desenvolver líderes que multiplicam resultados 
-	                                e criam equipes autônomas e engajadas.
-	                            </p>
-	                            <div class="publication-footer">
-	                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7270804760948035584" target="_blank" rel="noopener noreferrer" class="publication-link">
-	                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
-	                                </a>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <!-- Publicação 8 - MINIMALISTA -->
-	                    <article class="publication-card">
-	                        <div class="publication-content">
-	                            <div class="publication-header">
-	                                <span class="publication-tag">Estratégia</span>
-	                                <span class="publication-date">Recente</span>
-	                            </div>
-	                            <h3 class="publication-title">Gestão Estratégica e OKRs</h3>
-	                            <p class="publication-excerpt">
-	                                Como implementar OKRs que conectam a visão estratégica à execução operacional, 
-	                                criando alinhamento organizacional e foco em resultados.
-	                            </p>
-	                            <div class="publication-footer">
-	                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7272611398310916096" target="_blank" rel="noopener noreferrer" class="publication-link">
-	                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
-	                                </a>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <!-- Publicação 9 - MINIMALISTA -->
-	                    <article class="publication-card">
-	                        <div class="publication-content">
-	                            <div class="publication-header">
-	                                <span class="publication-tag">Resultados</span>
-	                                <span class="publication-date">Recente</span>
-	                            </div>
-	                            <h3 class="publication-title">OKRs e Resultados Mensuráveis</h3>
-	                            <p class="publication-excerpt">
-	                                Casos reais de implementação de OKRs e como medir o impacto real na performance 
-	                                organizacional e nos resultados de negócio.
-	                            </p>
-	                            <div class="publication-footer">
-	                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7274437639699640320" target="_blank" rel="noopener noreferrer" class="publication-link">
-	                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
-	                                </a>
-	                            </div>
-	                        </div>
-	                    </article>
-	                    <!-- Publicação 10 - MINIMALISTA -->
-	                    <article class="publication-card">
-	                        <div class="publication-content">
-	                            <div class="publication-header">
-	                                <span class="publication-tag">Futuro</span>
-	                                <span class="publication-date">Recente</span>
-	                            </div>
-	                            <h3 class="publication-title">Futuro do Trabalho e Tendências</h3>
-	                            <p class="publication-excerpt">
-	                                As principais tendências que estão moldando o futuro do trabalho e como 
-	                                preparar organizações e pessoas para essa nova realidade.
-	                            </p>
-	                            <div class="publication-footer">
-	                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7282027838847803392" target="_blank" rel="noopener noreferrer" class="publication-link">
-	                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
-	                                </a>
-	                            </div>
-	                        </div>
-	                    </article>
-	                </div>
-	                <div class="text-center mt-5">
-	                    <a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg">
-	                        <i class="fab fa-linkedin me-2"></i>Ver Todas as Publicações no LinkedIn
-	                    </a>
-	                </div>
-	            </div>
-	        </section>
-	    </main>
-	    <footer class="footer-section text-white" role="contentinfo">
-	        <div class="container">
-	            <div class="row align-items-center py-5">
-	                <div class="col-lg-8 text-center">
-	                    <h3 class="fw-bold mb-3">Vamos Conectar?</h3>
-	                    <p class="lead mb-4">
-	                        Estou sempre aberta para conversas sobre agilidade, liderança e transformação organizacional.
-	                    </p>
-	                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-	                        <a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg">
-	                            <i class="fab fa-linkedin me-2" aria-hidden="true"></i>Conectar no LinkedIn
-	                        </a>
-	                        <a href="mailto:victoriaduarte.s@gmail.com" class="btn btn-linkedin btn-lg">
-	                            <i class="fas fa-envelope me-2" aria-hidden="true"></i>Enviar E-mail
-	                        </a>
-	                    </div>
-	                </div>
-	                <div class="col-lg-4 text-center mt-4 mt-lg-0">
-	                    <img src="./static/images/vic-duarte-logo-white.png" 
-	                         alt="Vic Duarte" class="footer-logo img-fluid">
-	                </div>
-	            </div>
-	            <hr class="my-4 opacity-25">
-	            <div class="row">
-	                <div class="col-12 text-center">
-	                    <p class="mb-0 text-white-50">
-	                        &copy; 2025 Vic Duarte. Todos os direitos reservados.
-	                    </p>
-	                </div>
-	            </div>
-	        </div>
-	    </footer>
-	    <!-- Botão Flutuante Voltar ao Topo -->
-	    <button id="backToTop" class="back-to-top-btn" aria-label="Voltar ao topo da página">
-	        <i class="fas fa-arrow-up"></i>
-	    </button>
-	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-	    <script src="./static/js/main.js"></script>
-	    <script>
-	        // Botão Voltar ao Topo
-	        const backToTopButton = document.getElementById('backToTop');
-	        // Mostrar/ocultar botão baseado na rolagem da página
-	        window.addEventListener('scroll', () => {
-	            if (window.pageYOffset > 300) { // Mostrar após rolar 300px
-	                backToTopButton.classList.add('show');
-	            } else {
-	                backToTopButton.classList.remove('show');
-	            }
-	        });
-	        // Rolagem suave ao topo quando clicado
-	        backToTopButton.addEventListener('click', () => {
-	            window.scrollTo({
-	                top: 0,
-	                behavior: 'smooth'
-	            });
-	        });
-	    </script>
-	</body>
-	</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vic Duarte - Liderança Ágil & Gestão de Projetos</title>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
+    <link rel="apple-touch-icon" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
+    <link rel="shortcut icon" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
+    <!-- Optimized font loading -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    </noscript>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+    <!-- Skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link visually-hidden-focusable">
+        Pular para o conteúdo principal
+    </a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a class="navbar-brand" href="#hero" aria-label="Vic Duarte - Início">
+                <img src="./static/images/vic-duarte-logo-white.png" 
+                     alt="Vic Duarte" height="40" class="me-2">
+                <span class="fw-bold">Vic Duarte</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#abordagem">Sobre Mim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#disciplinas">Disciplinas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#consultorias">Consultorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#talks">Talks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#momentos">Momentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certificacoes">Certificações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publicacoes">Publicações</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-linkedin btn-sm" href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin me-1" aria-hidden="true"></i>LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main id="main-content">
+        <section id="hero" class="hero-section" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <div class="logo-container mb-4">
+                            <img src="./static/images/vic-duarte-logo-white.png" 
+                                 alt="Vic Duarte" class="hero-logo img-fluid">
+                        </div>
+                        <h2 class="h3 text-white-50 mb-4" id="hero-title">Liderança Ágil & Gestão de Projetos</h2>
+                        <p class="lead text-white-75 mb-5">
+                            Com mais de meia década de experiência como Agile Coach e Gerente de Projetos, transformo desafios em resultados concretos para os negócios. 
+                            Minha abordagem pragmática combina práticas ágeis com foco em valor, alinhando equipes e estratégias para alcançar objetivos mensuráveis, sempre priorizando as pessoas e o impacto organizacional.
+                        </p>
+                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                            <a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg">
+                                <i class="fab fa-linkedin me-2" aria-hidden="true"></i>Conectar no LinkedIn
+                            </a>
+                            <a href="#consultorias" class="btn btn-linkedin btn-lg">
+                                <i class="fas fa-briefcase me-2" aria-hidden="true"></i>Ver Consultorias
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="abordagem" class="py-5" aria-labelledby="abordagem-title">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 mb-4 mb-lg-0">
+                        <div class="profile-image-container">
+                            <img src="./static/images/vicduarte-perfil.jpg" 
+                                 alt="Victoria Duarte - Especialista em Gestão de Projetos e IA" 
+                                 class="img-fluid rounded-3 shadow-lg profile-image">
+                            <div class="profile-badge">
+                                <i class="fas fa-award"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="ps-lg-4">
+                            <h2 class="display-5 fw-bold text-primary mb-4" id="abordagem-title">Sobre Mim</h2>
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="./static/images/vic-duarte-logo-dark.png" 
+                                     alt="Vic Duarte" class="section-logo me-3">
+                                <span class="text-muted">Especialista em Gestão de Projetos e IA</span>
+                            </div>
+                            <p class="lead text-muted mb-4">
+                                Victoria Duarte é especialista em Gestão de Projetos e Aplicações de IA, com formação acadêmica e certificações de excelência. Possui pós-graduações em Gestão de Projetos e Inovação, sendo certificada como Kanban Coaching Professional (KCP) pela Kanban University, Agile Coach e OKR Coach, com comprovada experiência na implementação dessas metodologias em organizações.
+                            </p>
+                            <p class="text-muted mb-4">
+                                Sua trajetória combina expertise técnica em gestão com aplicações práticas de inteligência artificial, desenvolvendo soluções inovadoras para desafios empresariais. Como docente em MBAs da Unifametro e Unichristus, alia conhecimento teórico rigoroso com cases reais do mercado, capacitando profissionais para a gestão moderna.
+                            </p>
+                            <div class="expertise-tags">
+                                <span class="expertise-tag"><i class="fas fa-certificate me-1"></i>Kanban Coaching Professional</span>
+                                <span class="expertise-tag"><i class="fas fa-certificate me-1"></i>Agile Coach</span>
+                                <span class="expertise-tag"><i class="fas fa-certificate me-1"></i>OKR Coach</span>
+                                <span class="expertise-tag"><i class="fas fa-graduation-cap me-1"></i>Docente em MBAs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Nova Seção: Disciplinas de Pós-Graduação (MOVIDA PARA CÁ) -->
+        <section id="disciplinas" class="py-5 bg-light" aria-labelledby="disciplinas-title">
+            <div class="container">
+                <header class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary mb-3" id="disciplinas-title">Disciplinas de Pós-Graduação</h2>
+                    <p class="lead text-muted">
+                        Acesso aos materiais de estudo e notebooks das disciplinas que ministro em programas de pós-graduação.
+                    </p>
+                </header>
+                <div class="row g-4">
+                    <!-- Card da disciplina 1 -->
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm discipline-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-box-modern me-3">
+                                        <i class="fas fa-users-cog"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="card-title mb-0">Projetos em Gestão de Pessoas</h4>
+                                        <p class="text-muted mb-0">Unifametro</p>
+                                    </div>
+                                </div>
+                                <p class="card-text text-muted">
+                                    Explore os conceitos e práticas de gestão de projetos aplicados à área de pessoas, 
+                                    com estudos de caso e metodologias ágeis para RH.
+                                </p>
+                                <div class="discipline-features mt-3">
+                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Gestão Ágil</span>
+                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Projetos de RH</span>
+                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Liderança</span>
+                                </div>
+                                <a href="https://notebooklm.google.com/notebook/d4ef6053-43ba-4949-a01b-d9a903f61070" 
+                                   target="_blank" rel="noopener noreferrer" 
+                                   class="btn btn-linkedin mt-3">
+                                    <i class="fas fa-external-link-alt me-2"></i>Acessar Notebook
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card da disciplina 2 -->
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm discipline-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-box-modern me-3">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="card-title mb-0">Gerenciamento de Recursos Humanos</h4>
+                                        <p class="text-muted mb-0">Unichristus</p>
+                                    </div>
+                                </div>
+                                <p class="card-text text-muted">
+                                    Aprofunde-se nas estratégias modernas de gestão de recursos humanos, 
+                                    alinhando pessoas e processos para resultados organizacionais.
+                                </p>
+                                <div class="discipline-features mt-3">
+                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Estratégia de RH</span>
+                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Gestão de Talentos</span>
+                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Transformação</span>
+                                </div>
+                                <a href="https://notebooklm.google.com/notebook/2de0db1c-57e7-4eac-b16d-866282dc943e" 
+                                   target="_blank" rel="noopener noreferrer" 
+                                   class="btn btn-linkedin mt-3">
+                                    <i class="fas fa-external-link-alt me-2"></i>Acessar Notebook
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- NOVO Card da disciplina 3 -->
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm discipline-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-box-modern me-3">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="card-title mb-0">Jogos de negócio</h4>
+                                        <p class="text-muted mb-0">Unichristus</p>
+                                    </div>
+                                </div>
+                                <p class="card-text text-muted">
+                                    Explore a aplicação de inteligência artificial na gestão de projetos, 
+                                    automatizando tarefas, previsionando riscos e otimizando a tomada de decisões.
+                                </p>
+                                <div class="discipline-features mt-3">
+                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Inteligência Artificial</span>
+                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Automação</span>
+                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Inovação</span>
+                                </div>
+                                <a href="https://notebooklm.google.com/notebook/e0da9a32-69f9-42fb-a65c-20f889ce04e8" 
+                                   target="_blank" rel="noopener noreferrer" 
+                                   class="btn btn-linkedin mt-3">
+                                    <i class="fas fa-external-link-alt me-2"></i>Acessar Notebook
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <div class="alert alert-info d-inline-block">
+                        <i class="fas fa-info-circle me-2"></i>
+                        <strong>Nota:</strong> Os notebooks contêm materiais complementares, estudos de caso e recursos 
+                        para aprofundamento nos temas abordados em sala de aula.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="consultorias" class="py-5" aria-labelledby="consultorias-title">
+            <div class="container">
+                <header class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary mb-3" id="consultorias-title">Consultorias - Áreas de Atuação e Expertise</h2>
+                    <p class="lead text-muted">Soluções especializadas para transformar sua organização</p>
+                </header>
+                <div class="row g-4" role="list">
+                    <article class="col-lg-6" role="listitem">
+                        <div class="card h-100 border-0 shadow-sm" tabindex="0" role="article" aria-labelledby="consultoria-1-title">
+                            <div class="card-body p-4 text-center">
+                                <div class="icon-box-modern mb-4 mx-auto" aria-hidden="true">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h4 class="card-title mb-3" id="consultoria-1-title">Consultoria em Gestão de Projetos Ágeis</h4>
+                                <p class="card-text text-muted">
+Guio organizações na adoção de práticas ágeis customizadas, focando na entrega rápida de valor e na otimização de processos. Minha experiência como Agile Coach me permite criar fluxos de trabalho que alinham equipes aos objetivos de negócio.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-lg-6" role="listitem">
+                        <div class="card h-100 border-0 shadow-sm" tabindex="0" role="article" aria-labelledby="consultoria-2-title">
+                            <div class="card-body p-4 text-center">
+                                <div class="icon-box-modern mb-4 mx-auto" aria-hidden="true">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <h4 class="card-title mb-3" id="consultoria-2-title">Gestão Estratégica com OKRs</h4>
+                                <p class="card-text text-muted">
+Como Professional OKR Leader Certified, ajudo empresas a definirem e executarem objetivos estratégicos que geram resultados mensuráveis. Minha abordagem prática garante alinhamento entre visão de negócio e execução diária, com transparência e foco em impacto.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-lg-6" role="listitem">
+                        <div class="card h-100 border-0 shadow-sm" tabindex="0" role="article" aria-labelledby="consultoria-3-title">
+                            <div class="card-body p-4 text-center">
+                                <div class="icon-box-modern mb-4 mx-auto" aria-hidden="true">
+                                    <i class="fas fa-users-cog"></i>
+                                </div>
+                                <h4 class="card-title mb-3" id="consultoria-3-title">Desenvolvimento de Lideranças</h4>
+                                <p class="card-text text-muted">
+Capacito líderes para impulsionarem equipes em ambientes dinâmicos, com foco em engajamento, tomada de decisão prática e resultados de negócio. Minha experiência em coaching ágil fortalece a liderança para mudanças rápidas e eficazes.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-lg-6" role="listitem">
+                        <div class="card h-100 border-0 shadow-sm" tabindex="0" role="article" aria-labelledby="consultoria-4-title">
+                            <div class="card-body p-4 text-center">
+                                <div class="icon-box-modern mb-4 mx-auto" aria-hidden="true">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h4 class="card-title mb-3" id="consultoria-4-title">IA na Gestão de Projetos</h4>
+                                <p class="card-text text-muted">
+Integro ferramentas de inteligência artificial para otimizar a gestão de projetos, automatizando processos e fornecendo insights que aceleram decisões estratégicas. Minha abordagem combina tecnologia com pragmatismo para maximizar resultados.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="talks" class="py-5" aria-labelledby="talks-title">
+            <div class="container">
+                <header class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary mb-3" id="talks-title">Talks: compartilhando conhecimento</h2>
+                    <p class="lead text-muted">Palestras que inspiram transformação e geram resultados práticos</p>
+                </header>
+                <div class="talks-grid">
+                    <article class="talk-card-container" role="listitem">
+                        <div class="card h-100 border-0 shadow-sm talk-card" tabindex="0" role="article" aria-labelledby="talk-1-title">
+                            <div class="card-body p-4 text-center">
+                                <div class="icon-box-talk mb-3 mx-auto" aria-hidden="true">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <h5 class="card-title" id="talk-1-title">IA na Gestão de Projetos</h5>
+                                <p class="card-text text-muted">
+                                    Como a inteligência artificial está revolucionando a gestão de projetos 
+                                    e como implementá-la de forma prática.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="talk-card-container" role="listitem">
+                        <div class="card h-100 border-0 shadow-sm talk-card" tabindex="0" role="article" aria-labelledby="talk-2-title">
+                            <div class="card-body p-4 text-center">
+                                <div class="icon-box-talk mb-3 mx-auto" aria-hidden="true">
+                                    <i class="fas fa-chess-queen"></i>
+                                </div>
+                                <h5 class="card-title" id="talk-2-title">Liderança Ágil de Alta Performance</h5>
+                                <p class="card-text text-muted">
+                                    Desenvolvendo competências de liderança para ambientes dinâmicos 
+                                    e equipes de alta performance.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="talk-card-container" role="listitem">
+                        <div class="card h-100 border-0 shadow-sm talk-card" tabindex="0" role="article" aria-labelledby="talk-3-title">
+                            <div class="card-body p-4 text-center">
+                                <div class="icon-box-talk mb-3 mx-auto" aria-hidden="true">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h5 class="card-title" id="talk-3-title">Métodos e Metodologias de Projetos com Aplicação Prática</h5>
+                                <p class="card-text text-muted">
+                                    Frameworks e metodologias aplicadas na prática, com cases reais 
+                                    e resultados mensuráveis.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="talk-card-container" role="listitem">
+                        <div class="card h-100 border-0 shadow-sm talk-card" tabindex="0" role="article" aria-labelledby="talk-4-title">
+                            <div class="card-body p-4 text-center">
+                                <div class="icon-box-talk mb-3 mx-auto" aria-hidden="true">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <h5 class="card-title" id="talk-4-title">OKRs que Geram Resultados</h5>
+                                <p class="card-text text-muted">
+                                    Implementação efetiva de OKRs para conectar estratégia à execução 
+                                    e garantir foco nos resultados.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="talk-card-container" role="listitem">
+                        <div class="card h-100 border-0 shadow-sm talk-card" tabindex="0" role="article" aria-labelledby="talk-5-title">
+                            <div class="card-body p-4 text-center">
+                                <div class="icon-box-talk mb-3 mx-auto" aria-hidden="true">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h5 class="card-title" id="talk-5-title">O Futuro do Trabalho e Inovação</h5>
+                                <p class="card-text text-muted">
+                                    Tendências e transformações que estão moldando o futuro do trabalho 
+                                    e como se preparar para elas.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="momentos" class="py-5" aria-labelledby="momentos-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="display-5 fw-bold text-primary mb-3" id="momentos-title">Momentos Profissionais</h2>
+                    <p class="lead text-muted">Registros de palestras, workshops e eventos que marcaram minha trajetória</p>
+                </header>
+                <div class="moments-grid">
+                    <div class="moment-item">
+                        <img src="./static/images/vic-moment-2.jpg" 
+                             alt="Vic Duarte palestrando sobre agilidade em um evento empresarial" 
+                             loading="lazy">
+                        <div class="moment-overlay">
+                            <div class="moment-content">
+                                <h5>Palestrando sobre Agilidade</h5>
+                                <p>Compartilhando conhecimento em eventos do setor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="moment-item">
+                        <img src="./static/images/vic-moment-3.jpg" 
+                             alt="Workshop de liderança com equipe" 
+                             loading="lazy">
+                        <div class="moment-overlay">
+                            <div class="moment-content">
+                                <h5>Workshop de Liderança</h5>
+                                <p>Desenvolvendo competências de liderança</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="moment-item">
+                        <img src="./static/images/vic-moment-4.jpg" 
+                             alt="Consultoria em ação com cliente" 
+                             loading="lazy">
+                        <div class="moment-overlay">
+                            <div class="moment-content">
+                                <h5>Consultoria em Ação</h5>
+                                <p>Transformação organizacional na prática</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="moment-item">
+                        <img src="./static/images/vic-moment-5.jpg" 
+                             alt="Evento de networking profissional" 
+                             loading="lazy">
+                        <div class="moment-overlay">
+                            <div class="moment-content">
+                                <h5>Networking Profissional</h5>
+                                <p>Construindo conexões estratégicas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quote-section-container">
+                        <blockquote class="blockquote">
+                            <p class="lead mb-4">
+                                "A verdadeira transformação organizacional acontece quando combinamos metodologia sólida 
+                                com liderança inspiradora e foco nas pessoas."
+                            </p>
+                            <footer class="blockquote-footer">
+                                <strong>Vic Duarte</strong>
+                                <cite title="Source Title">Especialista em Agilidade e Liderança</cite>
+                            </footer>
+                        </blockquote>
+                        <img src="./static/images/vic-duarte-logo-white.png" 
+                             alt="Vic Duarte" class="section-logo mt-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="certificacoes" class="py-5 certification-section" aria-labelledby="certificacoes-title">
+            <div class="container">
+                <header class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-white mb-3" id="certificacoes-title">Certificações e Aprendizado Contínuo</h2>
+                    <p class="lead text-white-75 mb-4">
+Comprometida com a excelência, invisto em aprendizado contínuo para entregar soluções práticas e alinhadas aos desafios de negócio atuais.
+                    </p>
+                    <div class="certification-banner mb-5">
+                        <img src="./static/images/certifications-banner.png" 
+                             alt="Certificações Vic Duarte" class="img-fluid rounded-3 shadow-lg" loading="lazy">
+                    </div>
+                </header>
+            </div>
+        </section>
+        <section id="publicacoes" class="py-5 bg-light" aria-labelledby="publicacoes-title">
+            <div class="container">
+                <header class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary mb-3" id="publicacoes-title">Publicações no LinkedIn</h2>
+                    <p class="lead text-muted">
+                        Compartilho regularmente insights, experiências e conhecimentos sobre agilidade, 
+                        liderança e gestão de projetos.
+                    </p>
+                    <div class="d-flex justify-content-center align-items-center gap-3 mb-4">
+                        <div class="publication-count">
+                            <i class="fab fa-linkedin me-2"></i>10 publicações recentes
+                        </div>
+                        <a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-sm">
+                            <i class="fab fa-linkedin me-1"></i>Ver Perfil Completo
+                        </a>
+                    </div>
+                </header>
+                <div class="publications-grid">
+                    <!-- Publicação 1 - MINIMALISTA -->
+                    <article class="publication-card">
+                        <div class="publication-content">
+                            <div class="publication-header">
+                                <span class="publication-tag">Agilidade</span>
+                                <span class="publication-date">Recente</span>
+                            </div>
+                            <h3 class="publication-title">Agilidade e Transformação Organizacional</h3>
+                            <p class="publication-excerpt">
+                                Como implementar metodologias ágeis que realmente transformam a cultura organizacional 
+                                e geram resultados sustentáveis a longo prazo.
+                            </p>
+                            <div class="publication-footer">
+                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7241433094526783488" target="_blank" rel="noopener noreferrer" class="publication-link">
+                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Publicação 2 - MINIMALISTA -->
+                    <article class="publication-card">
+                        <div class="publication-content">
+                            <div class="publication-header">
+                                <span class="publication-tag">Liderança</span>
+                                <span class="publication-date">Recente</span>
+                            </div>
+                            <h3 class="publication-title">Liderança Ágil e Desenvolvimento de Equipes</h3>
+                            <p class="publication-excerpt">
+                                Estratégias práticas para desenvolver líderes que inspiram equipes de alta performance 
+                                em ambientes de constante mudança.
+                            </p>
+                            <div class="publication-footer">
+                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7242510929626644480" target="_blank" rel="noopener noreferrer" class="publication-link">
+                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Publicação 3 - MINIMALISTA -->
+                    <article class="publication-card">
+                        <div class="publication-content">
+                            <div class="publication-header">
+                                <span class="publication-tag">Gestão</span>
+                                <span class="publication-date">Recente</span>
+                            </div>
+                            <h3 class="publication-title">Gestão de Projetos e Metodologias Ágeis</h3>
+                            <p class="publication-excerpt">
+                                Comparativo entre diferentes frameworks ágeis e como escolher o mais adequado 
+                                para cada tipo de projeto e organização.
+                            </p>
+                            <div class="publication-footer">
+                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7244329833353072640" target="_blank" rel="noopener noreferrer" class="publication-link">
+                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Publicação 4 - MINIMALISTA -->
+                    <article class="publication-card">
+                        <div class="publication-content">
+                            <div class="publication-header">
+                                <span class="publication-tag">Transformação</span>
+                                <span class="publication-date">Recente</span>
+                            </div>
+                            <h3 class="publication-title">Transformação Organizacional e Cultura Ágil</h3>
+                            <p class="publication-excerpt">
+                                Os pilares fundamentais para construir uma cultura ágil que sustente a transformação 
+                                digital e a inovação contínua.
+                            </p>
+                            <div class="publication-footer">
+                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7262850786630492161" target="_blank" rel="noopener noreferrer" class="publication-link">
+                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Publicação 5 - MINIMALISTA -->
+                    <article class="publication-card">
+                        <div class="publication-content">
+                            <div class="publication-header">
+                                <span class="publication-tag">Frameworks</span>
+                                <span class="publication-date">Recente</span>
+                            </div>
+                            <h3 class="publication-title">Metodologias Ágeis e Frameworks</h3>
+                            <p class="publication-excerpt">
+                                Deep dive em Scrum, Kanban, SAFe e outros frameworks: quando e como aplicar 
+                                cada um para maximizar resultados.
+                            </p>
+                            <div class="publication-footer">
+                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7265728296095547394" target="_blank" rel="noopener noreferrer" class="publication-link">
+                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Publicação 6 - MINIMALISTA -->
+                    <article class="publication-card">
+                        <div class="publication-content">
+                            <div class="publication-header">
+                                <span class="publication-tag">Inovação</span>
+                                <span class="publication-date">Recente</span>
+                            </div>
+                            <h3 class="publication-title">Inovação em Projetos e Gestão Ágil</h3>
+                            <p class="publication-excerpt">
+                                Como criar um ambiente que fomenta a inovação contínua através de práticas 
+                                ágeis e mindset experimental.
+                            </p>
+                            <div class="publication-footer">
+                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7267288807182376960" target="_blank" rel="noopener noreferrer" class="publication-link">
+                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Publicação 7 - MINIMALISTA -->
+                    <article class="publication-card">
+                        <div class="publication-content">
+                            <div class="publication-header">
+                                <span class="publication-tag">Coaching</span>
+                                <span class="publication-date">Recente</span>
+                            </div>
+                            <h3 class="publication-title">Liderança de Alta Performance e Coaching</h3>
+                            <p class="publication-excerpt">
+                                Técnicas de coaching ágil para desenvolver líderes que multiplicam resultados 
+                                e criam equipes autônomas e engajadas.
+                            </p>
+                            <div class="publication-footer">
+                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7270804760948035584" target="_blank" rel="noopener noreferrer" class="publication-link">
+                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Publicação 8 - MINIMALISTA -->
+                    <article class="publication-card">
+                        <div class="publication-content">
+                            <div class="publication-header">
+                                <span class="publication-tag">Estratégia</span>
+                                <span class="publication-date">Recente</span>
+                            </div>
+                            <h3 class="publication-title">Gestão Estratégica e OKRs</h3>
+                            <p class="publication-excerpt">
+                                Como implementar OKRs que conectam a visão estratégica à execução operacional, 
+                                criando alinhamento organizacional e foco em resultados.
+                            </p>
+                            <div class="publication-footer">
+                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7272611398310916096" target="_blank" rel="noopener noreferrer" class="publication-link">
+                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Publicação 9 - MINIMALISTA -->
+                    <article class="publication-card">
+                        <div class="publication-content">
+                            <div class="publication-header">
+                                <span class="publication-tag">Resultados</span>
+                                <span class="publication-date">Recente</span>
+                            </div>
+                            <h3 class="publication-title">OKRs e Resultados Mensuráveis</h3>
+                            <p class="publication-excerpt">
+                                Casos reais de implementação de OKRs e como medir o impacto real na performance 
+                                organizacional e nos resultados de negócio.
+                            </p>
+                            <div class="publication-footer">
+                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7274437639699640320" target="_blank" rel="noopener noreferrer" class="publication-link">
+                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Publicação 10 - MINIMALISTA -->
+                    <article class="publication-card">
+                        <div class="publication-content">
+                            <div class="publication-header">
+                                <span class="publication-tag">Futuro</span>
+                                <span class="publication-date">Recente</span>
+                            </div>
+                            <h3 class="publication-title">Futuro do Trabalho e Tendências</h3>
+                            <p class="publication-excerpt">
+                                As principais tendências que estão moldando o futuro do trabalho e como 
+                                preparar organizações e pessoas para essa nova realidade.
+                            </p>
+                            <div class="publication-footer">
+                                <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7282027838847803392" target="_blank" rel="noopener noreferrer" class="publication-link">
+                                    Ler no LinkedIn <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg">
+                        <i class="fab fa-linkedin me-2"></i>Ver Todas as Publicações no LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-section text-white" role="contentinfo">
+        <div class="container">
+            <div class="row align-items-center py-5">
+                <div class="col-lg-8 text-center">
+                    <h3 class="fw-bold mb-3">Vamos Conectar?</h3>
+                    <p class="lead mb-4">
+                        Estou sempre aberta para conversas sobre agilidade, liderança e transformação organizacional.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                        <a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg">
+                            <i class="fab fa-linkedin me-2" aria-hidden="true"></i>Conectar no LinkedIn
+                        </a>
+                        <a href="mailto:victoriaduarte.s@gmail.com" class="btn btn-linkedin btn-lg">
+                            <i class="fas fa-envelope me-2" aria-hidden="true"></i>Enviar E-mail
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                    <img src="./static/images/vic-duarte-logo-white.png" 
+                         alt="Vic Duarte" class="footer-logo img-fluid">
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0 text-white-50">
+                        &copy; 2025 Vic Duarte. Todos os direitos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Botão Flutuante Voltar ao Topo -->
+    <button id="backToTop" class="back-to-top-btn" aria-label="Voltar ao topo da página">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./static/js/main.js"></script>
+    <script>
+        // Botão Voltar ao Topo
+        const backToTopButton = document.getElementById('backToTop');
+        // Mostrar/ocultar botão baseado na rolagem da página
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) { // Mostrar após rolar 300px
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        // Rolagem suave ao topo quando clicado
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
