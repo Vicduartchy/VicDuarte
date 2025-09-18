@@ -205,13 +205,13 @@
                             </div>
                         </div>
                     </div>
-                    <!-- NOVO Card da disciplina 3 -->
+                    <!-- Card da disciplina 3 - ATUALIZADO -->
                     <div class="col-lg-4">
                         <div class="card h-100 border-0 shadow-sm discipline-card">
                             <div class="card-body p-4">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="icon-box-modern me-3">
-                                        <i class="fas fa-brain"></i>
+                                        <i class="fas fa-chess"></i>
                                     </div>
                                     <div>
                                         <h4 class="card-title mb-0">Jogos de negócio</h4>
@@ -219,13 +219,13 @@
                                     </div>
                                 </div>
                                 <p class="card-text text-muted">
-                                    Explore a aplicação de inteligência artificial na gestão de projetos, 
-                                    automatizando tarefas, previsionando riscos e otimizando a tomada de decisões.
+                                    Explore a aplicação de jogos de negócio como ferramenta de aprendizado prático, 
+                                    simulando cenários reais e desenvolvendo habilidades estratégicas para tomada de decisão.
                                 </p>
                                 <div class="discipline-features mt-3">
-                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Inteligência Artificial</span>
-                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Automação</span>
-                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Inovação</span>
+                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Estratégia</span>
+                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Simulação</span>
+                                    <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Aprendizado Prático</span>
                                 </div>
                                 <a href="https://notebooklm.google.com/notebook/e0da9a32-69f9-42fb-a65c-20f889ce04e8" 
                                    target="_blank" rel="noopener noreferrer" 
@@ -389,69 +389,105 @@ Integro ferramentas de inteligência artificial para otimizar a gestão de proje
         </section>
         <section id="momentos" class="py-5" aria-labelledby="momentos-title">
             <div class="container">
-                <header class="section-header">
+                <header class="text-center mb-5">
                     <h2 class="display-5 fw-bold text-primary mb-3" id="momentos-title">Momentos Profissionais</h2>
                     <p class="lead text-muted">Registros de palestras, workshops e eventos que marcaram minha trajetória</p>
                 </header>
-                <div class="moments-grid">
-                    <div class="moment-item">
-                        <img src="./static/images/vic-moment-2.jpg" 
-                             alt="Vic Duarte palestrando sobre agilidade em um evento empresarial" 
-                             loading="lazy">
-                        <div class="moment-overlay">
-                            <div class="moment-content">
-                                <h5>Palestrando sobre Agilidade</h5>
-                                <p>Compartilhando conhecimento em eventos do setor</p>
+                <!-- Carrossel Automático de Momentos Profissionais -->
+                <div id="momentosCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#momentosCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#momentosCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#momentosCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#momentosCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#momentosCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="moment-carousel-item">
+                                <img src="./static/images/vic-moment-2.jpg" 
+                                     alt="Vic Duarte palestrando sobre agilidade em um evento empresarial" 
+                                     class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Palestrando sobre Agilidade</h5>
+                                    <p>Compartilhando conhecimento em eventos do setor</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="moment-carousel-item">
+                                <img src="./static/images/vic-moment-3.jpg" 
+                                     alt="Workshop de liderança com equipe" 
+                                     class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Workshop de Liderança</h5>
+                                    <p>Desenvolvendo competências de liderança</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="moment-carousel-item">
+                                <img src="./static/images/vic-moment-4.jpg" 
+                                     alt="Consultoria em ação com cliente" 
+                                     class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Consultoria em Ação</h5>
+                                    <p>Transformação organizacional na prática</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="carousel-item">
+                            <div class="moment-carousel-item">
+                                <img src="./static/images/vic-moment-5.jpg" 
+                                     alt="Evento de networking profissional" 
+                                     class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Networking Profissional</h5>
+                                    <p>Construindo conexões estratégicas</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 5 - NOVA FOTO -->
+                        <div class="carousel-item">
+                            <div class="moment-carousel-item">
+                                <img src="./static/images/vic-aula.jpeg" 
+                                     alt="Feedback em sala de aula com mensagem CAN ME EU VOO" 
+                                     class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Feedback em Sala de Aula</h5>
+                                    <p>"CAN ME EU VOO" - Inspirando transformação</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="moment-item">
-                        <img src="./static/images/vic-moment-3.jpg" 
-                             alt="Workshop de liderança com equipe" 
-                             loading="lazy">
-                        <div class="moment-overlay">
-                            <div class="moment-content">
-                                <h5>Workshop de Liderança</h5>
-                                <p>Desenvolvendo competências de liderança</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="moment-item">
-                        <img src="./static/images/vic-moment-4.jpg" 
-                             alt="Consultoria em ação com cliente" 
-                             loading="lazy">
-                        <div class="moment-overlay">
-                            <div class="moment-content">
-                                <h5>Consultoria em Ação</h5>
-                                <p>Transformação organizacional na prática</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="moment-item">
-                        <img src="./static/images/vic-moment-5.jpg" 
-                             alt="Evento de networking profissional" 
-                             loading="lazy">
-                        <div class="moment-overlay">
-                            <div class="moment-content">
-                                <h5>Networking Profissional</h5>
-                                <p>Construindo conexões estratégicas</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="quote-section-container">
-                        <blockquote class="blockquote">
-                            <p class="lead mb-4">
-                                "A verdadeira transformação organizacional acontece quando combinamos metodologia sólida 
-                                com liderança inspiradora e foco nas pessoas."
-                            </p>
-                            <footer class="blockquote-footer">
-                                <strong>Vic Duarte</strong>
-                                <cite title="Source Title">Especialista em Agilidade e Liderança</cite>
-                            </footer>
-                        </blockquote>
-                        <img src="./static/images/vic-duarte-logo-white.png" 
-                             alt="Vic Duarte" class="section-logo mt-3">
-                    </div>
+                    <!-- Controles de navegação -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#momentosCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#momentosCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
+                <!-- Seção de citação abaixo do carrossel -->
+                <div class="quote-section-container mt-5">
+                    <blockquote class="blockquote">
+                        <p class="lead mb-4">
+                            "A verdadeira transformação organizacional acontece quando combinamos metodologia sólida 
+                            com liderança inspiradora e foco nas pessoas."
+                        </p>
+                        <footer class="blockquote-footer">
+                            <strong>Vic Duarte</strong>
+                            <cite title="Source Title">Especialista em Agilidade e Liderança</cite>
+                        </footer>
+                    </blockquote>
+                    <img src="./static/images/vic-duarte-logo-white.png" 
+                         alt="Vic Duarte" class="section-logo mt-3">
                 </div>
             </div>
         </section>
