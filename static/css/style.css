@@ -819,6 +819,80 @@ button:focus,
     border-radius: var(--border-radius);
     overflow: hidden;
 }
+/* CSS para a seção Sobre Mim */
+.profile-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.profile-badge {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent-1) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(191, 69, 42, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(191, 69, 42, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(191, 69, 42, 0);
+    }
+}
+
+.expertise-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.expertise-tag {
+    background: rgba(9, 33, 64, 0.05);
+    color: var(--primary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.expertise-tag:hover {
+    background: rgba(191, 69, 42, 0.1);
+    color: var(--accent-1);
+    transform: translateY(-2px);
+}
+
 /* Responsive Adjustments - CORRIGIDOS */
 @media (max-width: 1400px) {
     .container {
@@ -871,6 +945,21 @@ button:focus,
     .publications-grid {
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
         gap: 1rem;
+    }
+    /* Responsividade para a seção Sobre Mim */
+    .profile-image-container {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .profile-image {
+        max-width: 300px;
+    }
+    
+    .profile-badge {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
     }
 }
 @media (max-width: 768px) {
@@ -958,6 +1047,15 @@ button:focus,
     }
     .quote-section-container .lead {
         font-size: 1.1rem;
+    }
+    /* Expertise tags mobile */
+    .expertise-tags {
+        justify-content: center;
+    }
+    
+    .expertise-tag {
+        font-size: var(--text-xs);
+        padding: 6px 12px;
     }
 }
 @media (max-width: 576px) {
@@ -1089,6 +1187,18 @@ button:focus,
     .quote-section-container .lead {
         font-size: 1rem;
     }
+    /* Profile image mobile */
+    .profile-image {
+        max-width: 250px;
+    }
+    
+    .profile-badge {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        bottom: -10px;
+        right: -10px;
+    }
     /* Mobile footer adjustments */
     .footer-section .row {
         text-align: center;
@@ -1166,5 +1276,8 @@ button:focus,
     }
     .back-to-top-btn {
         transition: none !important;
+    }
+    .profile-badge {
+        animation: none;
     }
 }
