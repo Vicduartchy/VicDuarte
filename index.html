@@ -37,7 +37,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link" href="#hero">Início</a>
                     </li>
@@ -53,19 +53,21 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#consultorias">Consultorias</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#talks">Talks</a>
+                    <!-- Dropdown Menu para seções agrupadas -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Mais <i class="fas fa-chevron-down ms-1"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#talks"><i class="fas fa-microphone me-2"></i>Talks</a></li>
+                            <li><a class="dropdown-item" href="#momentos"><i class="fas fa-images me-2"></i>Momentos</a></li>
+                            <li><a class="dropdown-item" href="#certificacoes"><i class="fas fa-certificate me-2"></i>Certificações</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#publicacoes"><i class="fab fa-linkedin me-2"></i>Publicações</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#momentos">Momentos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#certificacoes">Certificações</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#publicacoes">Publicações</a>
-                    </li>
-                    <li class="nav-item ms-2">
+                    <li class="nav-item ms-3">
                         <a class="btn btn-linkedin btn-sm" href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-linkedin me-1" aria-hidden="true"></i>LinkedIn
                         </a>
