@@ -1126,7 +1126,7 @@ button:focus,
     transform: translateX(0);
 }
 
-/* CSS para a Seção de Livros */
+/* CSS para a Seção de Livros - ATUALIZADO */
 .book-card {
     border-left: 4px solid var(--accent-1);
     transition: all var(--transition-speed) ease;
@@ -1144,33 +1144,21 @@ button:focus,
 }
 
 .book-cover {
-    max-height: 400px;
+    max-height: 280px; /* REDUZIDO de 400px para 280px */
     width: auto;
     border-radius: var(--border-radius);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra mais suave */
     transition: all var(--transition-speed) ease;
 }
 
 .book-cover:hover {
-    transform: scale(1.03);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02); /* Animação de hover mais sutil */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 .book-badge {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent-1) 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    animation: pulse 2s infinite;
+    /* BADGE REMOVIDO PARA VISUAL MAIS MINIMALISTA */
+    display: none;
 }
 
 .book-features {
@@ -1341,7 +1329,7 @@ button:focus,
     
     /* Responsividade para a seção de livros */
     .book-cover {
-        max-height: 300px;
+        max-height: 220px; /* Ajustado */
     }
     
     .book-badge {
@@ -1493,7 +1481,7 @@ button:focus,
     
     /* Responsividade para a seção de livros */
     .book-cover {
-        max-height: 250px;
+        max-height: 180px; /* Ajustado */
     }
     
     .book-badge {
@@ -1800,7 +1788,7 @@ button:focus,
     
     /* Responsividade para a seção de livros */
     .book-cover {
-        max-height: 200px;
+        max-height: 160px; /* Ajustado */
     }
     
     .book-badge {
