@@ -1,3 +1,51 @@
+/* Loader Styles */
+.loader-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(9,33,64,0.85);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #fff;
+    border-top: 6px solid var(--accent-1);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Microinteração botão CTA */
+.cta-btn.pressed {
+    transform: scale(0.96);
+    filter: brightness(0.95);
+    box-shadow: 0 2px 8px rgba(9,33,64,0.15);
+}
+
+/* Contraste de foco aprimorado */
+a:focus-visible, button:focus-visible, .btn:focus-visible, .nav-link:focus-visible, .dropdown-item:focus-visible {
+    outline: 3px solid var(--accent-1);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(191,69,42,0.25);
+}
+
+/* Loader acessível para leitores de tela */
+#loader[aria-label]::after {
+    content: attr(aria-label);
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
 /* Custom CSS for Vic Duarte Website */
 :root {
     /* Color Palette - Maintained as requested */
@@ -710,6 +758,7 @@ button:focus,
     line-height: 1.5;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -1411,7 +1460,8 @@ button:focus,
     .publication-excerpt {
         font-size: var(--text-xs);
         margin-bottom: 0.5rem;
-        -webkit-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
     }
     /* Section header mobile adjustments */
     .section-header {
@@ -1661,7 +1711,8 @@ button:focus,
     .publication-excerpt {
         font-size: var(--text-xs);
         margin-bottom: 0.5rem;
-        -webkit-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
     }
     .publication-footer {
         padding-top: 0.25rem;

@@ -24,78 +24,73 @@
     <!-- Skip link for keyboard navigation -->
     <a href="#main-content" class="skip-link visually-hidden-focusable">
         Pular para o conteúdo principal
+    </head>
+    <body>
+        <!-- Loader -->
+        <div id="loader" class="loader-bg" aria-label="Carregando" role="status">
+            <div class="spinner"></div>
+        </div>
     </a>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" role="navigation" aria-label="Menu principal">
-        <div class="container">
             <a class="navbar-brand" href="#hero" aria-label="Vic Duarte - Início">
                 <img src="./static/images/vic-duarte-logo-white.png" 
                      alt="Vic Duarte" height="40" class="me-2">
                 <span class="fw-bold">Vic Duarte</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
+                <a class="navbar-brand" href="#hero" aria-label="Vic Duarte - Início">
+                    <img src="./static/images/vic-duarte-logo-white.png" 
+                         alt="Logo Vic Duarte, fundo branco, letras estilizadas em azul escuro" height="40" class="me-2">
+                    <span class="fw-bold">Vic Duarte</span>
+                </a>
                     <li class="nav-item">
-                        <a class="nav-link" href="#hero">Início</a>
+                        <a class="nav-link" href="/">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#abordagem">Sobre Mim</a>
+                        <a class="nav-link" href="/sobre">Sobre Mim</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#disciplinas">Disciplinas</a>
+                        <a class="nav-link" href="/livros">Meus Livros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#meus-livros">Meus Livros</a>
+                        <a class="nav-link" href="/ensino">Ensino</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#consultorias">Consultorias</a>
+                        <a class="nav-link" href="/palestras">Palestras e Eventos</a>
                     </li>
-                    <!-- Dropdown Menu para seções agrupadas -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
-                           data-bs-toggle="dropdown" aria-expanded="false">
-                            Mais <i class="fas fa-chevron-down ms-1"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#cursos-livres"><i class="fas fa-book-open me-2"></i>Cursos Livres</a></li>
-                            <li><a class="dropdown-item" href="#talks"><i class="fas fa-microphone me-2"></i>Talks</a></li>
-                            <li><a class="dropdown-item" href="#momentos"><i class="fas fa-images me-2"></i>Momentos</a></li>
-                            <li><a class="dropdown-item" href="#certificacoes"><i class="fas fa-certificate me-2"></i>Certificações</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#publicacoes"><i class="fab fa-linkedin me-2"></i>Publicações</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/consultorias">Consultorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/publicacoes">Publicações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/galeria">Galeria</a>
                     </li>
                     <li class="nav-item ms-3">
                         <a class="btn btn-linkedin btn-sm" href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-linkedin me-1" aria-hidden="true"></i>LinkedIn
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <main id="main-content">
-        <section id="hero" class="hero-section" aria-labelledby="hero-title">
-            <div class="container">
-                <div class="row align-items-center min-vh-100">
+                        <li class="nav-item"><a class="nav-link" href="/">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/sobre">Sobre Mim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/livros">Meus Livros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/ensino">Ensino</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/palestras">Palestras e Eventos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/consultorias">Consultorias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/publicacoes">Publicações</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/galeria">Galeria</a></li>
                     <div class="col-lg-8 mx-auto text-center">
                         <div class="logo-container mb-4">
-                            <img src="./static/images/vic-duarte-logo-white.png" 
-                                 alt="Vic Duarte" class="hero-logo img-fluid">
+                       <img src="./static/images/vic-duarte-logo-white.png" 
+                           alt="Logo Vic Duarte, fundo branco, letras estilizadas em azul escuro" class="hero-logo img-fluid">
                         </div>
-                        <h2 class="h3 text-white-50 mb-4" id="hero-title">Liderança Ágil & Gestão de Projetos</h2>
+                            <h2 class="h3 text-white-50 mb-4" id="hero-title" style="text-shadow:1px 1px 6px #092140;">Liderança Ágil & Gestão de Projetos</h2>
                         <p class="lead text-white-75 mb-5">
                             Com mais de meia década de experiência como Agile Coach e Gerente de Projetos, transformo desafios em resultados concretos para os negócios. 
                             Minha abordagem pragmática combina práticas ágeis com foco em valor, alinhando equipes e estratégias para alcançar objetivos mensuráveis, sempre priorizando as pessoas e o impacto organizacional.
                         </p>
                         <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-                            <a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg">
+                            <a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg cta-btn">
                                 <i class="fab fa-linkedin me-2" aria-hidden="true"></i>Conectar no LinkedIn
                             </a>
-                            <a href="#consultorias" class="btn btn-linkedin btn-lg">
+                            <a href="#consultorias" class="btn btn-linkedin btn-lg cta-btn">
                                 <i class="fas fa-briefcase me-2" aria-hidden="true"></i>Ver Consultorias
                             </a>
                         </div>
@@ -103,38 +98,47 @@
                 </div>
             </div>
         </section>
-        <section id="abordagem" class="py-5" aria-labelledby="abordagem-title">
+        <!-- SOBRE MIM + CERTIFICAÇÕES -->
+        <section id="sobre" class="py-5" aria-labelledby="sobre-title">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-5 mb-4 mb-lg-0">
                         <div class="profile-image-container">
-                            <img src="./static/images/vicduarte-perfil.jpg" 
-                                 alt="Victoria Duarte - Especialista em Gestão de Projetos e IA" 
-                                 class="img-fluid rounded-3 shadow-lg profile-image">
-                            <div class="profile-badge">
-                                <i class="fas fa-award"></i>
-                            </div>
+                            <img src="./static/images/vicduarte-perfil.jpg" alt="Foto de Victoria Duarte sorrindo, cabelos castanhos, fundo claro. Especialista em Gestão de Projetos e IA" class="img-fluid rounded-3 shadow-lg profile-image">
+                            <div class="profile-badge"><i class="fas fa-award"></i></div>
                         </div>
                     </div>
                     <div class="col-lg-7">
                         <div class="ps-lg-4">
-                            <h2 class="display-5 fw-bold text-primary mb-4" id="abordagem-title">Sobre Mim</h2>
+                            <h2 class="display-5 fw-bold text-primary mb-4" id="sobre-title">Sobre Mim</h2>
                             <div class="d-flex align-items-center mb-3">
-                                <img src="./static/images/vic-duarte-logo-dark.png" 
-                                     alt="Vic Duarte" class="section-logo me-3">
-                                <span class="text-muted">Especialista em Gestão de Projetos e IA</span>
+                                <img src="./static/images/vic-duarte-logo-dark.png" alt="Vic Duarte" class="section-logo me-3">
+                                <span class="text-muted">Especialista em Gestão de Projetos, Liderança Ágil e IA</span>
                             </div>
                             <p class="lead text-muted mb-4">
-                                Victoria Duarte é especialista em Gestão de Projetos e Aplicações de IA, com formação acadêmica e certificações de excelência. Possui pós-graduações em Gestão de Projetos e Inovação, sendo certificada como Kanban Coaching Professional (KCP) pela Kanban University, Agile Coach e OKR Coach, com comprovada experiência na implementação dessas metodologias em organizações.
+                                Transformo desafios em resultados concretos, unindo práticas ágeis, inteligência artificial e foco em pessoas. Minha missão é impulsionar negócios e carreiras com inovação, clareza e resultados mensuráveis.
                             </p>
                             <p class="text-muted mb-4">
-                                Sua trajetória combina expertise técnica em gestão com aplicações práticas de inteligência artificial, desenvolvendo soluções inovadoras para desafios empresariais. Como docente em MBAs da Unifametro e Unichristus, alia conhecimento teórico rigoroso com cases reais do mercado, capacitando profissionais para a gestão moderna.
+                                Pós-graduada em Gestão de Projetos e Inovação, certificada como Kanban Coaching Professional (KCP), Agile Coach e OKR Coach. Atuo há mais de 6 anos implementando metodologias ágeis e soluções de IA em empresas de diversos segmentos, sempre com abordagem prática e orientada a valor.
                             </p>
-                            <div class="expertise-tags">
+                            <p class="text-muted mb-4">
+                                Como docente em MBAs da Unifametro e Unichristus, levo conhecimento aplicado e cases reais para a sala de aula, formando líderes preparados para o futuro.
+                            </p>
+                            <div class="expertise-tags mb-3">
                                 <span class="expertise-tag"><i class="fas fa-certificate me-1"></i>Kanban Coaching Professional</span>
                                 <span class="expertise-tag"><i class="fas fa-certificate me-1"></i>Agile Coach</span>
                                 <span class="expertise-tag"><i class="fas fa-certificate me-1"></i>OKR Coach</span>
                                 <span class="expertise-tag"><i class="fas fa-graduation-cap me-1"></i>Docente em MBAs</span>
+                            </div>
+                            <div class="mt-4">
+                                <h3 class="h5 text-primary mb-3"><i class="fas fa-certificate me-2"></i>Certificações</h3>
+                                <ul class="list-group list-group-flush mb-3">
+                                    <li class="list-group-item">Kanban Coaching Professional (KCP) - Kanban University</li>
+                                    <li class="list-group-item">Agile Coach</li>
+                                    <li class="list-group-item">OKR Coach</li>
+                                    <li class="list-group-item">Pós-graduação em Gestão de Projetos</li>
+                                    <li class="list-group-item">Pós-graduação em Inovação</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -891,6 +895,43 @@ Comprometida com a excelência, invisto em aprendizado contínuo para entregar s
                 behavior: 'smooth'
             });
         });
+    </script>
+    <!-- Botão Voltar ao Topo -->
+    <button id="backToTop" class="back-to-top-btn" aria-label="Voltar ao topo" tabindex="0">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts de UI/UX -->
+    <script>
+    // Loader
+    window.addEventListener('load', function() {
+        document.getElementById('loader').style.display = 'none';
+    });
+    // Botão Voltar ao Topo
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+        if(window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({top:0, behavior:'smooth'});
+    });
+    backToTopBtn.addEventListener('keydown', function(e) {
+        if(e.key === 'Enter' || e.key === ' ') {
+            window.scrollTo({top:0, behavior:'smooth'});
+        }
+    });
+    // Microinterações em botões CTA
+    document.querySelectorAll('.cta-btn').forEach(btn => {
+        btn.addEventListener('mousedown', () => btn.classList.add('pressed'));
+        btn.addEventListener('mouseup', () => btn.classList.remove('pressed'));
+        btn.addEventListener('mouseleave', () => btn.classList.remove('pressed'));
+        btn.addEventListener('touchstart', () => btn.classList.add('pressed'));
+        btn.addEventListener('touchend', () => btn.classList.remove('pressed'));
+    });
     </script>
 </body>
 </html>

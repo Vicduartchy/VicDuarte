@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros - Vic Duarte</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader-bg" aria-label="Carregando" role="status">
+        <div class="spinner"></div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a class="navbar-brand" href="/" aria-label="Vic Duarte - Início">
+                <img src="../../static/images/vic-duarte-logo-white.png" alt="Logo Vic Duarte, fundo branco, letras estilizadas em azul escuro" height="40" class="me-2">
+                <span class="fw-bold">Vic Duarte</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="/">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/sobre">Sobre Mim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/livros">Meus Livros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/ensino">Ensino</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/palestras">Palestras e Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/consultorias">Consultorias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/publicacoes">Publicações</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/galeria">Galeria</a></li>
+                    <li class="nav-item ms-3">
+                        <a class="btn btn-linkedin btn-sm" href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin me-1" aria-hidden="true"></i>LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Botão Voltar ao Topo -->
+    <button id="backToTop" class="back-to-top-btn" aria-label="Voltar ao topo" tabindex="0">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- Scripts de UI/UX -->
+    <script>
+    window.addEventListener('load', function() {
+        document.getElementById('loader').style.display = 'none';
+    });
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+        if(window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({top:0, behavior:'smooth'});
+    });
+    backToTopBtn.addEventListener('keydown', function(e) {
+        if(e.key === 'Enter' || e.key === ' ') {
+            window.scrollTo({top:0, behavior:'smooth'});
+        }
+    });
+    </script>
+    <main class="container" style="margin-top:100px">
+        <section class="py-5" aria-labelledby="meus-livros-title">
+            <header class="text-center mb-5">
+                <h1 class="display-5 fw-bold text-primary mb-3" id="meus-livros-title">Meus Livros</h1>
+                <p class="lead text-muted">
+                    Descubra obras que unem experiência prática, inovação e inteligência artificial para transformar sua carreira em gestão e liderança.
+                </p>
+            </header>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm book-card">
+                        <div class="card-body text-center p-4">
+                            <div class="book-cover-container mb-4">
+                                <img src="../../static/images/capa_livro_vic_duarte_cores (1).png" 
+                                    alt="Capa do livro Gestão de Projetos: Guia Prático para o Gestor do Futuro" 
+                                    class="img-fluid rounded-3 book-cover">
+                            </div>
+                            <h2 class="card-title mb-3">Gestão de Projetos: Guia Prático para o Gestor do Futuro</h2>
+                            <p class="card-text text-muted mb-4">
+                                Um guia inovador para quem quer liderar projetos com visão de futuro, combinando métodos ágeis, tecnologia e foco em resultados reais.
+                            </p>
+                            <div class="book-features mb-4 justify-content-center">
+                                <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Inovação</span>
+                                <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Prático</span>
+                                <span class="feature-tag"><i class="fas fa-check-circle me-1"></i>Futurista</span>
+                            </div>
+                            <div class="download-options">
+                                <div class="d-grid gap-3">
+                                    <a href="https://bit.ly/livrodavic" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg">
+                                        <i class="fas fa-file-pdf me-2"></i>Baixar PDF gratuito
+                                    </a>
+                                    <a href="https://amzn.to/4noXnXe" target="_blank" rel="noopener noreferrer" class="btn btn-amazon btn-lg">
+                                        <i class="fab fa-amazon me-2"></i>Comprar na Amazon
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="download-info mt-4">
+                                <div class="alert alert-light d-flex align-items-center" role="alert">
+                                    <i class="fas fa-info-circle text-primary me-2"></i>
+                                    <div>
+                                        <small class="text-muted">
+                                            Disponível em PDF para leitura em qualquer dispositivo e também no formato Kindle para leitores Amazon.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="text-muted">
+                    ...
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
