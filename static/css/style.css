@@ -627,32 +627,17 @@ button:focus,
 .quote-section-container .blockquote-footer strong {
     color: white;
 }
-/* Certification Section */
-.certification-section {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent-1) 100%);
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-.certification-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><circle cx="30" cy="30" r="1" fill="white" opacity="0.05"/></svg>') repeat;
-}
+/* NOVO: Estilo para o banner de certificações dentro da seção Sobre Mim */
 .certification-banner {
-    position: relative;
-    z-index: 2;
+    display: inline-block;
 }
 .certification-banner img {
     max-height: 200px;
     width: auto;
-    margin: 0 auto;
-    display: block;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
 }
+
 /* Publications Grid - MINIMALISTA E MENOR */
 .publications-grid {
     display: grid;
