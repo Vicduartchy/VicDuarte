@@ -213,6 +213,25 @@ section {
     background: rgba(255, 255, 255, 0.15);
 }
 
+/* NOVO: Quick Links Dropdown Styles */
+.quick-links-dropdown .nav-link {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    font-weight: 600;
+}
+.quick-links-dropdown .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.navbar-divider {
+    border-color: rgba(255, 255, 255, 0.2);
+    margin: 0 8px;
+    height: 20px;
+    align-self: center;
+    border: 0;
+    border-top: 1px solid;
+}
+
 /* Dropdown Menu Styles */
 .navbar-nav .dropdown-menu {
     background: rgba(255, 255, 255, 0.95);
@@ -1818,6 +1837,11 @@ button:focus,
     .download-info .alert {
         padding: 0.75rem;
         font-size: 0.85rem;
+    }
+
+    /* Esconder o divisor e reorganizar nav no mobile */
+    .navbar-divider {
+        display: none;
     }
 }
 /* Reduced Motion Support */
