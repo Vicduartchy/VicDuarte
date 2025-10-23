@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA na Gestão de Projetos - Livro de Vic Duarte</title>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
+    <link rel="apple-touch-icon" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
+    <link rel="shortcut icon" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
+    <!-- Optimized font loading -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    </noscript>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Schema JSON-LD for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "name": "IA na Gestão de Projetos: Guia Prático para o Gestor do Futuro",
+        "author": {
+            "@type": "Person",
+            "name": "Victoria Duarte"
+        },
+        "url": "https://vicduartchy.github.io/VicDuarte/livro.html",
+        "description": "Guia prático sobre como usar Inteligência Artificial na Gestão de Projetos"
+    }
+    </script>
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+    <!-- Skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link visually-hidden-focusable">
+        Pular para o conteúdo principal
+    </a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="Vic Duarte - Início">
+                <img src="./static/images/vic-duarte-logo-white.png" 
+                     alt="Vic Duarte" height="40" class="me-2">
+                <span class="fw-bold">Vic Duarte</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="disciplinas.html">Disciplinas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consultorias.html">Consultorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="palestras.html">Palestras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="livro.html">Livro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="publicacoes.html">Publicações</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="btn btn-linkedin btn-sm" href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin me-1" aria-hidden="true"></i>LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="row align-items-center min-vh-60">
+                    <div class="col-lg-10 mx-auto text-center">
+                        <div class="logo-container mb-4">
+                            <img src="./static/images/vic-duarte-logo-white.png" 
+                                 alt="Vic Duarte" class="hero-logo img-fluid lazy-img" data-src="./static/images/vic-duarte-logo-white.png">
+                        </div>
+                        <h1 class="display-4 text-white fw-bold mb-4" id="hero-title">IA na Gestão de Projetos</h1>
+                        <h2 class="h3 text-white-50 mb-4">Guia Prático para o Gestor do Futuro</h2>
+                        <p class="lead text-white-75 mb-5">
+                            Descubra como a Inteligência Artificial pode transformar sua gestão de projetos com estratégias práticas e comprovadas.
+                        </p>
+                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                            <a href="#opcoes" class="btn btn-linkedin btn-lg">
+                                <i class="fas fa-book-open me-2" aria-hidden="true"></i>Ver Opções de Leitura
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre o Livro -->
+        <section id="sobre-livro" class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+                        <img src="./static/images/capa_livro_vic_duarte_cores(1).png" 
+                             alt="Capa do Livro IA na Gestão de Projetos" 
+                             class="img-fluid rounded-3 shadow-lg" 
+                             style="max-height: 500px; object-fit: contain;">
+                    </div>
+                    <div class="col-12 col-md-7">
+                        <h2 class="display-5 fw-bold text-primary mb-4">Sobre o Livro</h2>
+                        <p class="text-muted mb-4">
+                            Este é o meu primeiro livro publicado, onde compartilho insights práticos e estratégias comprovadas sobre como a Inteligência Artificial está transformando a Gestão de Projetos. Com mais de meia década de experiência como Agile Coach e Gerente de Projetos, reúno nesta obra conhecimentos essenciais para líderes, equipes e organizações que buscam usar a IA de maneira estratégica.
+                        </p>
+                        <p class="text-muted mb-4">
+                            O livro aborda desde conceitos fundamentais até aplicações práticas, mostrando como ferramentas de IA podem aumentar a produtividade, melhorar a tomada de decisões e acelerar a entrega de valor em projetos de qualquer porte. Ideal para gestores que desejam estar na vanguarda da transformação digital.
+                        </p>
+                        <div class="row g-3 mb-4">
+                            <div class="col-6 col-md-4">
+                                <div class="text-center p-3 bg-light rounded">
+                                    <i class="fas fa-book text-primary fs-3 mb-2"></i>
+                                    <p class="mb-0 small fw-bold">Guia Prático</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="text-center p-3 bg-light rounded">
+                                    <i class="fas fa-lightbulb text-primary fs-3 mb-2"></i>
+                                    <p class="mb-0 small fw-bold">Insights Reais</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="text-center p-3 bg-light rounded">
+                                    <i class="fas fa-chart-line text-primary fs-3 mb-2"></i>
+                                    <p class="mb-0 small fw-bold">Resultados Práticos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Opções de Leitura -->
+        <section id="opcoes" class="py-5 bg-light">
+            <div class="container">
+                <header class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary mb-3">Como Ler o Livro</h2>
+                    <p class="lead text-muted">
+                        Escolha a opção que melhor se adapta às suas necessidades
+                    </p>
+                </header>
+                <div class="row g-4">
+                    <!-- Opção 1: Download Gratuito -->
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4 text-center">
+                                <div class="icon-box-modern mx-auto mb-4" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                                <h4 class="card-title mb-3">Download Gratuito</h4>
+                                <p class="text-muted mb-4">
+                                    Baixe o livro completo em PDF gratuitamente. Acesso imediato após preencher um breve formulário.
+                                </p>
+                                <ul class="list-unstyled text-muted mb-4 text-start">
+                                    <li><i class="fas fa-check text-success me-2"></i>Formato PDF</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Acesso imediato</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>100% gratuito</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Leia offline</li>
+                                </ul>
+                                <a href="https://forms.gle/YZdySFTxf8FemhQs5" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg w-100">
+                                    <i class="fas fa-download me-2"></i>Baixar PDF Grátis
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Opção 2: Kindle Unlimited -->
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4 text-center">
+                                <div class="icon-box-modern mx-auto mb-4" style="width: 80px; height: 80px;">
+                                    <i class="fab fa-amazon"></i>
+                                </div>
+                                <h4 class="card-title mb-3">Kindle Unlimited</h4>
+                                <p class="text-muted mb-4">
+                                    Leia gratuitamente se você é assinante do Kindle Unlimited. Sincronize em todos os seus dispositivos.
+                                </p>
+                                <ul class="list-unstyled text-muted mb-4 text-start">
+                                    <li><i class="fas fa-check text-success me-2"></i>Grátis para assinantes</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Sincronização automática</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Leia em qualquer dispositivo</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Marcadores e notas</li>
+                                </ul>
+                                <a href="https://amzn.to/3W5WlDn" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg w-100">
+                                    <i class="fab fa-amazon me-2"></i>Ler no Kindle
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Opção 3: Comprar na Amazon -->
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm border-primary" style="border-width: 2px !important;">
+                            <div class="card-body p-4 text-center">
+                                <div class="badge bg-primary text-white mb-3">Apoie meu trabalho</div>
+                                <div class="icon-box-modern mx-auto mb-4" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h4 class="card-title mb-3">Comprar na Amazon</h4>
+                                <p class="text-muted mb-4">
+                                    Apoie meu trabalho adquirindo o livro na Amazon. Sua contribuição ajuda na criação de mais conteúdo.
+                                </p>
+                                <ul class="list-unstyled text-muted mb-4 text-start">
+                                    <li><i class="fas fa-check text-success me-2"></i>Apoie o autor</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Versão Kindle</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Atualizações futuras</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Acesso vitalício</li>
+                                </ul>
+                                <a href="https://amzn.to/3W5WlDn" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg w-100">
+                                    <i class="fab fa-amazon me-2"></i>Comprar na Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prévia do Conteúdo -->
+        <section id="conteudo" class="py-5">
+            <div class="container">
+                <header class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary mb-3">O que você vai aprender</h2>
+                    <p class="lead text-muted">
+                        Conteúdo prático e aplicável para transformar sua gestão de projetos
+                    </p>
+                </header>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="icon-box-talk me-3 flex-shrink-0">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-2">Fundamentos de IA para Gestores</h5>
+                                <p class="text-muted">Entenda os conceitos essenciais de Inteligência Artificial aplicados à gestão de projetos, sem jargões técnicos complexos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="icon-box-talk me-3 flex-shrink-0">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-2">Ferramentas Práticas</h5>
+                                <p class="text-muted">Conheça as principais ferramentas de IA que podem ser implementadas imediatamente em seus projetos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="icon-box-talk me-3 flex-shrink-0">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-2">Casos de Uso Reais</h5>
+                                <p class="text-muted">Exemplos práticos de como a IA está sendo usada com sucesso em diferentes tipos de projetos e organizações.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="icon-box-talk me-3 flex-shrink-0">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-2">Estratégias de Implementação</h5>
+                                <p class="text-muted">Aprenda como introduzir IA em sua organização de forma gradual e eficaz, minimizando resistências.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="py-5 bg-primary text-white">
+            <div class="container text-center">
+                <h2 class="display-5 fw-bold mb-4">Pronto para transformar sua gestão de projetos?</h2>
+                <p class="lead mb-5">
+                    Escolha como você prefere ler e comece sua jornada hoje mesmo.
+                </p>
+                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                    <a href="https://forms.gle/YZdySFTxf8FemhQs5" target="_blank" rel="noopener noreferrer" class="btn btn-light btn-lg">
+                        <i class="fas fa-download me-2"></i>Baixar PDF Grátis
+                    </a>
+                    <a href="https://amzn.to/3W5WlDn" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg">
+                        <i class="fab fa-amazon me-2"></i>Ver na Amazon
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2">&copy; 2024 Victoria Duarte. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer" class="text-white me-3">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a href="https://www.instagram.com/vicduartchy/" target="_blank" rel="noopener noreferrer" class="text-white">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./static/js/main.js"></script>
+</body>
+</html>
