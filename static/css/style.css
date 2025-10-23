@@ -5,6 +5,8 @@
     /* Color Palette - Maintained as requested */
     --bg-light: #F2F2F2;
     --primary: #092140;
+    --bs-primary: #092140;
+    --bs-primary-rgb: 9, 33, 64;
     --secondary: #5F6073;
     --accent-1: #BF452A;
     --accent-2: #BF452A;
@@ -2099,3 +2101,40 @@ button:focus,
 }
 
 /* ========================================== */
+
+
+/* ==========================================
+   Bootstrap Color Overrides
+   ========================================== */
+
+/* Override Bootstrap primary color globally */
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #0a2a52 !important;
+    border-color: #0a2a52 !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+.badge.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+/* ========================================== */
+
