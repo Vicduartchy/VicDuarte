@@ -175,9 +175,9 @@
                                     <li><i class="fas fa-check text-success me-2"></i>100% gratuito</li>
                                     <li><i class="fas fa-check text-success me-2"></i>Leia offline</li>
                                 </ul>
-                                <a href="https://forms.gle/YZdySFTxf8FemhQs5" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg w-100">
+                                <button type="button" class="btn btn-linkedin btn-lg w-100" data-bs-toggle="modal" data-bs-target="#downloadModal">
                                     <i class="fas fa-download me-2"></i>Baixar PDF Grátis
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -329,6 +329,102 @@
     <button id="backToTop" class="back-to-top-btn" aria-label="Voltar ao topo da página">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Modal de Download do Livro -->
+    <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" style="background: linear-gradient(135deg, #092140 0%, #BF452A 100%); color: white;">
+                    <h5 class="modal-title fw-bold" id="downloadModalLabel">
+                        <i class="fas fa-download me-2"></i>Baixar Livro Grátis
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="lead mb-4 text-center">Preencha os dados abaixo para fazer o download do livro:</p>
+                    <form id="downloadForm" action="https://docs.google.com/forms/d/e/1FAIpQLSf0qcuJF5rc5pLCbZj8NR4emCasnt6rP2X4s9yP7jGK0m89dQ/formResponse" method="POST" target="hidden_iframe">
+                        <!-- Nome Completo -->
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label fw-semibold">
+                                Nome completo <span class="text-danger">*</span>
+                            </label>
+                            <input type="text" 
+                                   class="form-control" 
+                                   id="fullName" 
+                                   name="entry.1746462435" 
+                                   placeholder="Seu nome completo" 
+                                   required>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-semibold">
+                                Email <span class="text-danger">*</span>
+                            </label>
+                            <input type="email" 
+                                   class="form-control" 
+                                   id="email" 
+                                   name="entry.846743974" 
+                                   placeholder="seu@email.com" 
+                                   required>
+                        </div>
+                        
+                        <!-- Telefone -->
+                        <div class="mb-3">
+                            <label for="phone" class="form-label fw-semibold">
+                                Telefone (com DDD) <span class="text-danger">*</span>
+                            </label>
+                            <input type="tel" 
+                                   class="form-control" 
+                                   id="phone" 
+                                   name="entry.820066556" 
+                                   placeholder="(85) 99999-9999" 
+                                   required>
+                        </div>
+                        
+                        <!-- Autorização -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">
+                                Autorização de uso de e-mail <span class="text-danger">*</span>
+                            </label>
+                            <p class="text-muted small mb-2">
+                                Ao preencher, você autoriza o uso do seu e-mail para receber nossas novidades e comunicações. Você pode cancelar a qualquer momento.
+                            </p>
+                            <div class="form-check">
+                                <input class="form-check-input" 
+                                       type="radio" 
+                                       name="entry.1299440820" 
+                                       id="authYes" 
+                                       value="Sim - yes" 
+                                       required>
+                                <label class="form-check-label" for="authYes">
+                                    Sim - yes
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" 
+                                       type="radio" 
+                                       name="entry.1299440820" 
+                                       id="authNo" 
+                                       value="Não - No">
+                                <label class="form-check-label" for="authNo">
+                                    Não - No
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-linkedin btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>Enviar e Baixar
+                            </button>
+                        </div>
+                    </form>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

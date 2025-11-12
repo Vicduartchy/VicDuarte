@@ -161,8 +161,47 @@
     }
 
     // ==========================================
+    // Download Form Handler
+    // ==========================================
+    const downloadForm = document.getElementById('downloadForm');
+    
+    if (downloadForm) {
+        downloadForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // Submit to Google Forms via hidden iframe
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).then(() => {
+                // Close modal
+                const modal = bootstrap.Modal.getInstance(document.getElementById('downloadModal'));
+                if (modal) {
+                    modal.hide();
+                }
+                
+                // Redirect to download page after a short delay
+                setTimeout(() => {
+                    window.location.href = 'download-livro.html';
+                }, 500);
+            }).catch((error) => {
+                console.error('Error:', error);
+                // Even if there's an error, redirect to download page
+                setTimeout(() => {
+                    window.location.href = 'download-livro.html';
+                }, 500);
+            });
+        });
+    }
+
+    // ==========================================
     // Console Log (Development)
     // ==========================================
     console.log('🚀 Vic Duarte Website v2.0 - Multi-page architecture loaded successfully!');
 
 })();
+
