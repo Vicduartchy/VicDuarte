@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramentas - Vic Duarte</title>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
+    <link rel="apple-touch-icon" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
+    <link rel="shortcut icon" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
+    <!-- Optimized font loading -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    </noscript>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Schema JSON-LD for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Victoria Duarte",
+        "jobTitle": "Agile Coach & Project Manager",
+        "url": "https://vicduarte.site/ferramentas.html",
+        "sameAs": ["https://www.linkedin.com/in/vic-duarte/"]
+    }
+    </script>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <style>
+        .tool-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .tool-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); }
+        .tool-badge { display: inline-block; background: linear-gradient(135deg, #092140 0%, #BF452A 100%); color: white; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 50px; margin: 3px 2px; }
+        .tool-badge-outline { display: inline-block; border: 1.5px solid #BF452A; color: #BF452A; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 50px; margin: 3px 2px; }
+        .quickflow-preview { border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.18); width: 100%; max-height: 420px; object-fit: cover; object-position: top; }
+        .feature-icon { width: 48px; height: 48px; background: linear-gradient(135deg, #092140 0%, #BF452A 100%); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .origin-box { background: linear-gradient(135deg, rgba(9,33,64,0.05) 0%, rgba(191,69,42,0.08) 100%); border-left: 4px solid #BF452A; border-radius: 0 12px 12px 0; padding: 20px 24px; }
+        .privacy-box { background: #f0f9f0; border: 1px solid #c3e6c3; border-radius: 10px; padding: 16px 20px; }
+    </style>
+</head>
+<body>
+    <!-- Skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link visually-hidden-focusable">
+        Pular para o conteúdo principal
+    </a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="Vic Duarte - Início">
+                <img src="./static/images/vic-duarte-logo-white.png" 
+                     alt="Vic Duarte" height="40" class="me-2">
+                <span class="fw-bold">Vic Duarte</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="disciplinas.html">Disciplinas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consultorias.html">Consultorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="palestras.html">Palestras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="livro.html">Livro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="publicacoes.html">Publicações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ferramentas.html">Ferramentas</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="btn btn-linkedin btn-sm" href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin me-1" aria-hidden="true"></i>LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="row align-items-center min-vh-60">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <div class="logo-container mb-4">
+                            <img src="./static/images/vic-duarte-logo-white.png" 
+                                 alt="Vic Duarte" class="hero-logo img-fluid lazy-img" data-src="./static/images/vic-duarte-logo-white.png">
+                        </div>
+                        <h2 class="h3 text-white-50 mb-4" id="hero-title">Ferramentas Open Source</h2>
+                        <p class="lead text-white-75 mb-5">
+                            Além de consultora e coach, desenvolvo ferramentas práticas para times ágeis. Gratuitas, abertas e focadas em resultado.
+                        </p>
+                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                            <a href="#ferramentas" class="btn btn-linkedin btn-lg">
+                                <i class="fas fa-tools me-2" aria-hidden="true"></i>Ver Ferramentas
+                            </a>
+                            <a href="https://vicduartchy.github.io/quickflow/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg">
+                                <i class="fas fa-external-link-alt me-2" aria-hidden="true"></i>Acessar QuickFlow
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QuickFlow Section -->
+        <section id="ferramentas" class="py-5">
+            <div class="container">
+                <header class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary mb-3" id="ferramentas-title">QuickFlow</h2>
+                    <p class="lead text-muted">Métricas de fluxo ágil, sem complicação.</p>
+                </header>
+
+                <!-- Preview + Descrição principal -->
+                <div class="row align-items-center g-5 mb-5">
+                    <div class="col-lg-6">
+                        <img src="./static/images/quickflow-screenshot.webp"
+                             alt="Interface do QuickFlow — dashboard de métricas de fluxo ágil"
+                             class="quickflow-preview lazy-img"
+                             data-src="./static/images/quickflow-screenshot.webp"
+                             loading="lazy">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <span class="tool-badge"><i class="fas fa-code me-1"></i>Open Source</span>
+                            <span class="tool-badge"><i class="fas fa-gift me-1"></i>100% Gratuito</span>
+                            <span class="tool-badge-outline"><i class="fas fa-lock me-1"></i>Sem Login</span>
+                            <span class="tool-badge-outline"><i class="fas fa-server me-1"></i>Sem Servidor</span>
+                        </div>
+                        <h3 class="fw-bold mb-3">Ferramenta gratuita para análise de métricas de fluxo ágil</h3>
+                        <p class="text-muted mb-4">
+                            Carregue sua planilha do <strong>Jira</strong>, <strong>Azure DevOps</strong> ou <strong>Trello</strong> e gere um dashboard completo em segundos — com <strong>Cycle Time</strong>, <strong>Throughput</strong>, <strong>Aging WIP</strong>, <strong>CFD</strong> e <strong>Histograma</strong>. Tudo direto no navegador, sem cadastro e sem custo.
+                        </p>
+                        <div class="origin-box mb-4">
+                            <p class="mb-0 text-muted">
+                                <i class="fas fa-lightbulb me-2" style="color: #BF452A;"></i>
+                                <strong>Como surgiu:</strong> Desenvolvida com <em>vibe coding</em> usando <strong>Claude Code</strong> e <strong>Manus IA</strong> — uma prova de que consultores ágeis também podem criar ferramentas práticas para os times que apoiam.
+                            </p>
+                        </div>
+                        <a href="https://vicduartchy.github.io/quickflow/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg">
+                            <i class="fas fa-rocket me-2"></i>Acessar o QuickFlow Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="row g-4 mb-5">
+                    <div class="col-12">
+                        <h4 class="fw-bold text-primary mb-4">O que você encontra no QuickFlow</h4>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm tool-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon me-3">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <h5 class="card-title mb-0">Cycle Time</h5>
+                                </div>
+                                <p class="text-muted mb-0">
+                                    Visualize o tempo de ciclo das suas entregas com percentis P50, P85 e P95. Identifique gargalos e melhore a previsibilidade do time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm tool-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon me-3">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                    <h5 class="card-title mb-0">Throughput</h5>
+                                </div>
+                                <p class="text-muted mb-0">
+                                    Acompanhe a taxa de entrega do time ao longo do tempo. Entenda a capacidade real e planeje com base em dados históricos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm tool-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon me-3">
+                                        <i class="fas fa-hourglass-half"></i>
+                                    </div>
+                                    <h5 class="card-title mb-0">Aging WIP</h5>
+                                </div>
+                                <p class="text-muted mb-0">
+                                    Identifique itens em andamento que estão envelhecendo além do limite saudável. Atue antes que virem bloqueios críticos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm tool-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon me-3">
+                                        <i class="fas fa-layer-group"></i>
+                                    </div>
+                                    <h5 class="card-title mb-0">CFD (Cumulative Flow)</h5>
+                                </div>
+                                <p class="text-muted mb-0">
+                                    Diagrama de Fluxo Cumulativo para visualizar o fluxo de trabalho ao longo do tempo e detectar padrões de acúmulo ou bloqueio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm tool-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon me-3">
+                                        <i class="fas fa-chart-area"></i>
+                                    </div>
+                                    <h5 class="card-title mb-0">Histograma</h5>
+                                </div>
+                                <p class="text-muted mb-0">
+                                    Distribuição de frequência do Cycle Time em formato visual. Entenda a variabilidade das suas entregas de forma clara e objetiva.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm tool-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon me-3">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <h5 class="card-title mb-0">Insights Automáticos</h5>
+                                </div>
+                                <p class="text-muted mb-0">
+                                    Análises automáticas baseadas no <strong>Método Kanban de David J. Anderson</strong>. O QuickFlow interpreta os dados e sugere ações de melhoria.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Privacidade + CTA final -->
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <div class="privacy-box">
+                            <h6 class="fw-bold mb-2"><i class="fas fa-shield-alt me-2 text-success"></i>100% Privado — seus dados ficam só com você</h6>
+                            <p class="text-muted mb-0 small">
+                                O QuickFlow não envia nem armazena nenhuma informação em servidores. Todo o processamento acontece diretamente no seu navegador. Sem login, sem rastreamento, sem custo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-center">
+                        <p class="text-muted mb-3">Compatível com exportações de:</p>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+                            <span class="tool-badge-outline"><i class="fas fa-check me-1"></i>Jira</span>
+                            <span class="tool-badge-outline"><i class="fas fa-check me-1"></i>Azure DevOps</span>
+                            <span class="tool-badge-outline"><i class="fas fa-check me-1"></i>Trello</span>
+                            <span class="tool-badge-outline"><i class="fas fa-check me-1"></i>CSV / XLSX</span>
+                        </div>
+                        <a href="https://vicduartchy.github.io/quickflow/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg w-100">
+                            <i class="fas fa-external-link-alt me-2"></i>Acessar o QuickFlow Gratuitamente
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section text-white" role="contentinfo">
+        <div class="container">
+            <div class="row align-items-center py-5">
+                <div class="col-lg-8 text-center">
+                    <h3 class="fw-bold mb-3">Vamos Conectar?</h3>
+                    <p class="lead mb-4">
+                        Estou sempre aberta para conversas sobre agilidade, liderança e transformação organizacional.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                        <a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg">
+                            <i class="fab fa-linkedin me-2" aria-hidden="true"></i>Conectar no LinkedIn
+                        </a>
+                        <a href="mailto:victoriaduarte.s@gmail.com" class="btn btn-linkedin btn-lg">
+                            <i class="fas fa-envelope me-2" aria-hidden="true"></i>Enviar E-mail
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                    <img src="./static/images/vic-duarte-logo-white.png" 
+                         alt="Vic Duarte" class="footer-logo img-fluid">
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0 text-white-50">
+                        &copy; 2025 Vic Duarte. Todos os direitos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante Voltar ao Topo -->
+    <button id="backToTop" class="back-to-top-btn" aria-label="Voltar ao topo da página">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modal de Contato -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Agendar Consultoria</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Para agendar uma consultoria, por favor, entre em contato diretamente:</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i><a href="mailto:victoriaduarte.s@gmail.com">victoriaduarte.s@gmail.com</a></li>
+                        <li><i class="fab fa-linkedin me-2"></i><a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer">Conectar no LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-linkedin" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./static/js/main.js"></script>
+    <!-- Vercel Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
