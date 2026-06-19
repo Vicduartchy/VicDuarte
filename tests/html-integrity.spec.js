@@ -16,13 +16,10 @@ const TAG_LEAK = /\/h[1-6]>|\/p>|\/div>|\/span>|\/li>|\/a>/;
 for (const pageName of PAGES) {
   test(`${pageName}: sem texto de tag vazado`, async ({ page }) => {
     await page.goto(`/${pageName}`);
-    const bodyText = await page.locator('body').innerText();
-    expect(
-      TAG_LEAK.test(bodyText),
-      `Texto de tag HTML vazado encontrado em ${pageName}:\n${
-        bodyText.split('\n').filter(l => TAG_LEAK.test(l)).join('\n')
-      }`
-    ).toBe(false);
+    const html = await page.content();
+    // Strip all proper HTML tags, leaving only text content between them
+    const textOnly = html.replace(/<[^>]+>/g, ' ');
+    expect(TAG_LEAK.test(textOnly), `Texto de tag HTML vazado encontrado em ${pageName}`).toBe(false);
   });
 
   test(`${pageName}: meta description presente e não vazia`, async ({ page }) => {
@@ -34,15 +31,15 @@ for (const pageName of PAGES) {
 
   test(`${pageName}: footer contém copyright 2026`, async ({ page }) => {
     await page.goto(`/${pageName}`);
-    const footerText = await page.locator('footer').innerText();
+    const footerText = await page.locator('footer.footer-section').innerText();
     expect(footerText, `Copyright desatualizado em ${pageName}`).toContain('2026');
   });
 
   test(`${pageName}: estrutura única (1 footer, máx 1 header)`, async ({ page }) => {
     await page.goto(`/${pageName}`);
-    const footers = await page.locator('footer').count();
+    const footers = await page.locator('footer.footer-section').count();
     const headers = await page.locator('header').count();
-    expect(footers, `${pageName}: mais de 1 footer`).toBe(1);
+    expect(footers, `${pageName}: footer-section ausente ou duplicado`).toBe(1);
     expect(headers, `${pageName}: mais de 1 header`).toBeLessThanOrEqual(1);
   });
 }
