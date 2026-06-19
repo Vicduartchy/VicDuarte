@@ -67,16 +67,16 @@ test.describe('Navbar Scroll', () => {
 test.describe('Lazy Load de Imagens', () => {
   test('imagens com data-src carregam ao entrar no viewport', async ({ page }) => {
     await page.goto('/index.html');
-    // Pega a primeira imagem lazy abaixo do fold
-    const lazyImg = page.locator('img[data-src]:not(.hero-logo)').first();
-    const count = await lazyImg.count();
-    if (count === 0) return; // sem imagens lazy, teste não aplicável
 
-    // Antes do scroll: src pode ser placeholder ou igual ao data-src (bootstrap de src)
-    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-    await page.waitForTimeout(600);
+    const lazyImgs = page.locator('img[data-src]:not(.hero-logo)');
+    const count = await lazyImgs.count();
+    if (count === 0) return;
 
-    // Após scroll até o fim: todas as imagens lazy devem ter sido carregadas (classe loaded)
+    for (let i = 0; i < count; i++) {
+      await lazyImgs.nth(i).scrollIntoViewIfNeeded();
+      await page.waitForTimeout(150);
+    }
+
     const unloaded = await page.locator('img[data-src]:not(.loaded):not(.hero-logo)').count();
     expect(unloaded, `${unloaded} imagens lazy não carregaram após scroll`).toBe(0);
   });
