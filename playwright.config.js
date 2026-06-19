@@ -13,7 +13,7 @@ export default defineConfig({
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
   ],
   webServer: {
-    command: 'npx serve . -p 3000 -s',
+    command: 'npx serve . -p 3000',
     url: 'http://localhost:3000',
     reuseExistingServer: true,
     timeout: 10000,
