@@ -26,6 +26,26 @@ static/js/main.js       # JS único do site
 static/images/          # Imagens
 ```
 
+## Testes
+
+```bash
+npm test              # roda todos os testes
+npm run test:nav      # só navegação e links
+npm run test:html     # só integridade HTML
+npm run test:behavior # só comportamento JS
+npm run test:report   # abre relatório HTML do último run
+```
+
+O pre-push hook bloqueia `git push` se testes falharem. O hook executa `npm run test:nav` apenas — a suite de navegação, a mais crítica para regressões — evitando bloqueios por bugs conhecidos nas outras suites.
+
+Use `git push --no-verify` para forçar push em emergência.
+
+**Testes que falham intencionalmente** (bugs conhecidos a corrigir):
+- back-to-top visível após scroll (handler ausente em main.js)
+- meta description ausente em todas as páginas
+- copyright 2025 → 2026
+- tags HTML malformadas em index.html e publicacoes.html
+
 ## CI/CD — Deploy automático
 
 **Todo push para `main` dispara deploy automático na Vercel.**
