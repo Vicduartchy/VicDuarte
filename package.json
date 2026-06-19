@@ -1,0 +1,16 @@
+{
+  "name": "vic-duarte-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:nav": "playwright test navigation",
+    "test:html": "playwright test html-integrity",
+    "test:behavior": "playwright test behavior",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "serve": "^14.2.0"
+  }
+}
