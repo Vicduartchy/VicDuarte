@@ -20,9 +20,33 @@
     }
 
     window.addEventListener('scroll', handleNavbarScroll);
-    
+
     // Initial check
     handleNavbarScroll();
+
+    // ==========================================
+    // Back to Top Button
+    // ==========================================
+    const backToTopBtn = document.getElementById('backToTop');
+
+    if (backToTopBtn) {
+        function handleBackToTop() {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        }
+
+        window.addEventListener('scroll', handleBackToTop);
+
+        backToTopBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Initial check
+        handleBackToTop();
+    }
 
     // ==========================================
     // Smooth Scroll for Anchor Links

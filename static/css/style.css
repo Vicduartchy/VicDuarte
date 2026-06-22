@@ -2027,22 +2027,6 @@ button:focus,
     min-height: 60vh !important;
 }
 
-.icon-box-modern {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent-1) 100%);
-    border-radius: 50%;
-    color: white;
-    font-size: 2rem;
-    transition: all 0.3s ease;
-}
-
-.icon-box-modern:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(9, 33, 64, 0.3);
-}
-
 .card.border-primary {
     position: relative;
     overflow: hidden;
