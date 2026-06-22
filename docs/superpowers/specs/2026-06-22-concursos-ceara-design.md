@@ -8,7 +8,7 @@
 
 ## Contexto
 
-Victoria Duarte quer disponibilizar gratuitamente para o público geral uma plataforma de estudos voltada para os concursos ALECE 2026 e TJ-CE 2026. A plataforma deve oferecer banco de questões interativo com gamificação e resumos por matéria — tudo como recurso de acesso livre, sem login.
+Victoria Duarte quer disponibilizar gratuitamente para o público geral uma plataforma de estudos voltada para os concursos ALECE 2026, TJ-CE 2026 e SEFAZ-CE 2026. A plataforma deve oferecer banco de questões interativo com gamificação e resumos por matéria — tudo como recurso de acesso livre, sem login.
 
 ---
 
@@ -17,7 +17,7 @@ Victoria Duarte quer disponibilizar gratuitamente para o público geral uma plat
 - **Stack:** HTML + Bootstrap 5.3 + vanilla JS — mesmo do site existente (`vicduarte.site`)
 - **Hospedagem:** Vercel, mesmo projeto, deploy automático via push na `main`
 - **Armazenamento:** `localStorage` no navegador (sem backend, sem banco de dados)
-- **Conteúdo:** Arquivos JSON dentro do projeto, gerados com base nos editais típicos de ALECE e TJ-CE
+- **Conteúdo:** Arquivos JSON dentro do projeto, gerados com base nos editais típicos de ALECE, TJ-CE e SEFAZ-CE
 
 ---
 
@@ -25,16 +25,20 @@ Victoria Duarte quer disponibilizar gratuitamente para o público geral uma plat
 
 ```
 concursos/               ← renomear "concursos 2026/" para remover espaço da URL
-  index.html             ← hub: seleção entre ALECE e TJ-CE
+  index.html             ← hub: seleção entre ALECE, TJ-CE e SEFAZ-CE
   alece/
     index.html           ← página principal ALECE 2026
   tjce/
     index.html           ← página principal TJ-CE 2026
+  sefaz/
+    index.html           ← página principal SEFAZ-CE 2026
   data/
     questoes-alece.json  ← banco de questões ALECE (nunca repetir IDs vistos)
     questoes-tjce.json   ← banco de questões TJ-CE
+    questoes-sefaz.json  ← banco de questões SEFAZ-CE
     resumos-alece.json   ← resumos por matéria ALECE
     resumos-tjce.json    ← resumos por matéria TJ-CE
+    resumos-sefaz.json   ← resumos por matéria SEFAZ-CE
 ```
 
 Reutiliza `../static/css/style.css` e `../static/js/main.js` já existentes. Cada página de concurso inclui JS inline para lógica de quiz e gamificação.
@@ -45,11 +49,11 @@ Reutiliza `../static/css/style.css` e `../static/js/main.js` já existentes. Cad
 
 ### 1. Hub (`/concursos`)
 
-- Dois cartões Bootstrap: ALECE 2026 e TJ-CE 2026
+- Três cartões Bootstrap: ALECE 2026, TJ-CE 2026 e SEFAZ-CE 2026
 - Cada cartão exibe: data estimada da prova, número de questões disponíveis, status de progresso do usuário (% respondidas)
 - Visual: paleta `--primary: #092140`, `--accent-1: #BF452A`, fonte Inter — igual ao restante do site
 
-### 2. Página de concurso (`/concursos/alece` e `/concursos/tjce`)
+### 2. Página de concurso (`/concursos/alece`, `/concursos/tjce` e `/concursos/sefaz`)
 
 Duas abas principais:
 
@@ -158,6 +162,17 @@ Badges aparecem com animação CSS ao serem desbloqueados (sem bibliotecas exter
 - Regimento Interno do TJ-CE
 - Ética no Serviço Público
 
+### SEFAZ-CE 2026
+- Língua Portuguesa
+- Direito Constitucional
+- Direito Administrativo
+- Direito Tributário
+- Legislação Tributária do Ceará (ICMS-CE e legislação SEFAZ)
+- Contabilidade Geral e Pública
+- Administração Financeira e Orçamentária
+- Raciocínio Lógico e Matemática Financeira
+- Ética no Serviço Público
+
 > **Nota:** As matérias serão confirmadas/ajustadas quando os editais oficiais de 2026 forem publicados. Os JSONs facilitam essa atualização sem mudanças de código.
 
 ---
@@ -166,14 +181,14 @@ Badges aparecem com animação CSS ao serem desbloqueados (sem bibliotecas exter
 
 - Mínimo de 15 questões por matéria por concurso (garantir volume suficiente para o sistema "nunca repetir" ser percebido)
 - Resumo de ~300 palavras por matéria
-- Total estimado: ~180 questões + 13 resumos no lançamento
+- Total estimado: ~315 questões + 22 resumos no lançamento (3 concursos)
 
 ---
 
 ## Verificação (como testar)
 
 1. `git push origin main` → Vercel detecta e faz deploy automático em ~30s
-2. Acessar `vicduarte.site/concursos` e verificar hub com os dois concursos
+2. Acessar `vicduarte.site/concursos` e verificar hub com os três concursos (ALECE, TJ-CE, SEFAZ-CE)
 3. Entrar em ALECE → Praticar Questões → responder sequência de 3+ acertos e confirmar bônus de streak
 4. Responder questão errada → confirmar explicação e destaque da alternativa correta
 5. Inspecionar `localStorage` no DevTools → chave `alece_seen_ids` deve acumular IDs respondidos
