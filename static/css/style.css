@@ -320,6 +320,13 @@ section {
     font-weight: 600;
 }
 
+.btn-ghost.btn-sm {
+    padding: 4px 14px;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
 .navbar-toggler {
     border: none;
     padding: 6px 8px;
@@ -328,6 +335,9 @@ section {
 
 .navbar-toggler:focus {
     box-shadow: none;
+    outline: 2px solid var(--accent-1);
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
 .navbar-toggler-icon {
@@ -574,6 +584,82 @@ section {
         transform: scale(100, 100);
         opacity: 0;
     }
+}
+
+/* Botão Secundário (ghost/outline) — para ações de menor prioridade */
+.btn-ghost {
+    background: transparent;
+    border: 2px solid var(--primary);
+    padding: 13px 33px;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--primary);
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-speed) ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-ghost:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(9, 33, 64, 0.2);
+    text-decoration: none;
+    border-color: var(--primary);
+}
+
+.btn-ghost:active {
+    transform: scale(0.98) translateY(-1px);
+}
+
+.btn-ghost:focus {
+    color: var(--primary);
+    outline: 2px solid var(--accent-1);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(191, 69, 42, 0.25);
+}
+
+/* Variante ghost sobre fundos escuros (ex: footer, hero) */
+.btn-ghost-light {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    padding: 13px 33px;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-speed) ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-ghost-light:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: white;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.btn-ghost-light:active {
+    transform: scale(0.98) translateY(-1px);
+}
+
+.btn-ghost-light:focus {
+    color: white;
+    outline: 2px solid white;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
 /* Cabeçalho de Seção */
@@ -1992,6 +2078,21 @@ section {
         transition: none !important;
     }
     .book-badge {
+        animation: none;
+    }
+    /* Garantir cards visíveis quando animações são desativadas */
+    .card {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Fallback para browsers sem JS: cards devem ser visíveis */
+@media (scripting: none) {
+    .card {
+        opacity: 1;
+        transform: none;
         animation: none;
     }
 }

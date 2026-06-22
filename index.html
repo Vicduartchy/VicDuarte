@@ -19,18 +19,15 @@
     </noscript>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Critical CSS Inline for Performance (Hero and Navbar) -->
-    <!-- <style>
+    <!-- CSS Crítico Inline (fallback se style.css não carregar) -->
+    <style>
         :root { --primary: #092140; --accent-1: #BF452A; --bg-light: #F2F2F2; --text-muted-light: #2C3E50; }
-        .hero-section { background: linear-gradient(135deg, rgba(9, 33, 64, 0.85) 0%, rgba(191, 69, 42, 0.75) 100%), url('./static/images/vic-hero-bg.jpg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; }
-        .navbar { background: linear-gradient(135deg, var(--primary) 0%, var(--accent-1) 100%); backdrop-filter: blur(10px); transition: all 0.3s ease; padding: 12px 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); min-height: 70px; }
-        .btn-linkedin { background: linear-gradient(135deg, var(--primary) 0%, var(--accent-1) 100%); border: none; padding: 12px 30px; border-radius: 50px; font-weight: 600; color: white; transition: all 0.3s ease; }
         body { font-family: 'Inter', sans-serif; line-height: 1.7; color: #212529; background-color: var(--bg-light); }
-        .book-section { background: #f8f9fa; padding: 40px 20px; border-radius: 15px; margin-top: 40px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
-        .book-section .book-image { max-width: 100%; height: auto; max-height: 300px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
-        .book-section .btn-book { font-size: 1.1rem; padding: 10px 25px; margin: 5px; }
-        .profile-image { max-width: 100%; height: auto; max-height: 400px; object-fit: cover; }
-    </style> -->
+        .navbar { background: linear-gradient(135deg, var(--primary) 0%, var(--accent-1) 100%); padding: 12px 0; min-height: 70px; }
+        .hero-section { background: linear-gradient(135deg, rgba(9,33,64,0.85) 0%, rgba(191,69,42,0.75) 100%), url('./static/images/vic-hero-bg.jpg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; }
+        .btn-linkedin { background: linear-gradient(135deg, var(--primary) 0%, var(--accent-1) 100%); border: none; padding: 12px 30px; border-radius: 50px; font-weight: 600; color: white; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
+        .card { opacity: 1; }
+    </style>
     <!-- Schema JSON-LD for SEO -->
     <script type="application/ld+json">
     {
@@ -196,7 +193,7 @@
                                         <button type="button" class="btn btn-linkedin btn-book me-2" data-bs-toggle="modal" data-bs-target="#downloadModal">
                                             <i class="fas fa-download me-2"></i>Baixar PDF Grátis
                                         </button>
-                                        <a href="livro.html" class="btn btn-linkedin btn-book">
+                                        <a href="livro.html" class="btn btn-ghost btn-book">
                                             <i class="fas fa-book-open me-2"></i>Saiba Mais sobre o Livro
                                         </a>
                                     </div>
@@ -352,7 +349,7 @@
                                 <i class="fas fa-chalkboard-teacher display-4 text-primary mb-3"></i>
                                 <h5 class="card-title">Disciplinas</h5>
                                 <p class="card-text text-muted">Cursos de gestão ágil, Kanban, Scrum e liderança. Conteúdo prático para transformação organizacional.</p>
-                                <a href="disciplinas.html" class="btn btn-linkedin btn-sm mt-3">Saiba Mais</a>
+                                <a href="disciplinas.html" class="btn btn-ghost btn-sm mt-3">Saiba Mais</a>
                             </div>
                         </div>
                     </div>
@@ -362,7 +359,7 @@
                                 <i class="fas fa-microphone display-4 text-primary mb-3"></i>
                                 <h5 class="card-title">Palestras</h5>
                                 <p class="card-text text-muted">Palestras inspiradoras sobre IA, agilidade e liderança. Transforme sua equipe e organização.</p>
-                                <a href="palestras.html" class="btn btn-linkedin btn-sm mt-3">Saiba Mais</a>
+                                <a href="palestras.html" class="btn btn-ghost btn-sm mt-3">Saiba Mais</a>
                             </div>
                         </div>
                     </div>
@@ -372,7 +369,7 @@
                                 <i class="fas fa-briefcase display-4 text-primary mb-3"></i>
                                 <h5 class="card-title">Consultorias</h5>
                                 <p class="card-text text-muted">Consultoria especializada em transformação ágil, IA e gestão de projetos. Resultados mensuráveis.</p>
-                                <a href="consultorias.html" class="btn btn-linkedin btn-sm mt-3">Saiba Mais</a>
+                                <a href="consultorias.html" class="btn btn-ghost btn-sm mt-3">Saiba Mais</a>
                             </div>
                         </div>
                     </div>
@@ -382,7 +379,7 @@
                                 <i class="fab fa-linkedin display-4 text-primary mb-3"></i>
                                 <h5 class="card-title">Publicações</h5>
                                 <p class="card-text text-muted">Artigos sobre gestão, IA e liderança. Insights práticos para o seu dia a dia profissional.</p>
-                                <a href="publicacoes.html" class="btn btn-linkedin btn-sm mt-3">Saiba Mais</a>
+                                <a href="publicacoes.html" class="btn btn-ghost btn-sm mt-3">Saiba Mais</a>
                             </div>
                         </div>
                     </div>
@@ -407,7 +404,7 @@
                                         </p>
                                     </div>
                                     <div class="col-md-4 text-center mt-3 mt-md-0">
-                                        <a href="ferramentas.html" class="btn btn-linkedin btn-sm me-2">
+                                        <a href="ferramentas.html" class="btn btn-ghost btn-sm me-2">
                                             <i class="fas fa-info-circle me-1"></i>Saiba Mais
                                         </a>
                                         <a href="https://vicduartchy.github.io/quickflow/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-sm">
@@ -574,7 +571,7 @@
                     </ul>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-linkedin" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
