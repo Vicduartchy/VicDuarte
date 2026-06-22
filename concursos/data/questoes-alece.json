@@ -1,0 +1,964 @@
+{
+  "questoes": [
+    {
+      "id": "alece-lp-001",
+      "concurso": "ALECE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Concordância verbal",
+      "enunciado": "Assinale a alternativa em que a concordância verbal está correta:",
+      "alternativas": {
+        "A": "Fazem dois anos que não te vejo.",
+        "B": "Faz dois anos que não te vejo.",
+        "C": "Devem fazer dois anos que nos conhecemos.",
+        "D": "Havia muitas pessoas no salão, e todos aplaudiram.",
+        "E": "Existiam somente uma saída possível."
+      },
+      "resposta": "B",
+      "explicacao": "'Faz' é verbo impessoal quando indica tempo decorrido — fica sempre na 3ª pessoa do singular. 'Havia' (D) também é impessoal e está correto, mas a frase D mistura corretamente 'havia' com 'todos aplaudiram', que está certo. O erro em A é 'fazem' com sentido de tempo. C usa 'devem fazer' que é uma construção não padrão. B é a alternativa que apresenta uso exclusivamente correto da concordância verbal com verbo impessoal de tempo."
+    },
+    {
+      "id": "alece-lp-002",
+      "concurso": "ALECE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Regência verbal",
+      "enunciado": "Em relação à regência verbal, assinale a alternativa CORRETA:",
+      "alternativas": {
+        "A": "O deputado aspirava o cargo de presidente da Assembleia.",
+        "B": "Todos os parlamentares assistiram o debate integralmente.",
+        "C": "O relator obedeceu as normas do regimento interno.",
+        "D": "O presidente da ALECE preferiu o projeto substitutivo ao original.",
+        "E": "O vereador informou os eleitores sobre a votação."
+      },
+      "resposta": "D",
+      "explicacao": "'Preferir' rege a preposição 'a' quando comparando dois termos: preferir A a B. A alternativa D está correta. 'Aspirar' no sentido de almejar algo rege 'a' (aspirar a). 'Assistir' no sentido de presenciar rege 'a' (assistir a). 'Obedecer' rege 'a' (obedecer a). 'Informar' no sentido de comunicar algo a alguém tem dupla regência, mas a estrutura mais formal exige 'informar alguém de/sobre algo' ou 'informar algo a alguém'."
+    },
+    {
+      "id": "alece-lp-003",
+      "concurso": "ALECE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Ortografia e acentuação",
+      "enunciado": "Assinale a alternativa em que TODAS as palavras estão corretamente grafadas:",
+      "alternativas": {
+        "A": "beneficente, consciência, privilégio",
+        "B": "beneficiente, consciência, privilégio",
+        "C": "beneficente, conssiência, privilégio",
+        "D": "beneficente, consciência, privelêgio",
+        "E": "benificiante, consciência, privilégio"
+      },
+      "resposta": "A",
+      "explicacao": "As grafias corretas são: 'beneficente' (não beneficiente), 'consciência' (com sc) e 'privilégio' (com é, não ê). A alternativa A é a única que apresenta todas as três palavras corretamente grafadas."
+    },
+    {
+      "id": "alece-lp-004",
+      "concurso": "ALECE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Pontuação",
+      "enunciado": "Quanto ao uso da vírgula, assinale a alternativa CORRETA:",
+      "alternativas": {
+        "A": "O parlamentar, votou contra a proposta.",
+        "B": "Aprovado o projeto, o plenário foi encerrado.",
+        "C": "O presidente da Assembleia, que é experiente votou certo.",
+        "D": "Os deputados estaduais, aprovaram a emenda constitucional.",
+        "E": "Joana, e Pedro votaram favoráveis à proposta."
+      },
+      "resposta": "B",
+      "explicacao": "Em B, a vírgula após 'projeto' é obrigatória para separar o adjunto adverbial (oração reduzida de particípio) deslocado para o início da frase. Em A, a vírgula separa incorretamente o sujeito do predicado. Em C, falta vírgula após 'experiente' para fechar o aposto. Em D, a vírgula separa incorretamente o sujeito do predicado. Em E, a vírgula antes da conjunção 'e' que liga sujeitos simples é desnecessária."
+    },
+    {
+      "id": "alece-lp-005",
+      "concurso": "ALECE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Interpretação de texto",
+      "enunciado": "Leia o trecho: 'A democracia representativa pressupõe a participação do povo nas decisões políticas, seja diretamente, seja por meio de seus representantes eleitos.' Nesse contexto, a palavra 'pressupõe' indica que a participação popular é:",
+      "alternativas": {
+        "A": "uma consequência eventual da democracia.",
+        "B": "uma condição necessária à existência da democracia representativa.",
+        "C": "um efeito indesejado do sistema representativo.",
+        "D": "uma característica opcional do modelo democrático.",
+        "E": "um objetivo a ser alcançado no futuro pela democracia."
+      },
+      "resposta": "B",
+      "explicacao": "O verbo 'pressupõe' indica que algo é condição prévia e necessária para que outra coisa exista ou aconteça. Portanto, a participação popular é uma condição necessária à existência da democracia representativa, não mera consequência ou opção."
+    },
+    {
+      "id": "alece-lp-006",
+      "concurso": "ALECE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Semântica e coesão",
+      "enunciado": "Assinale o item em que a substituição do termo sublinhado pelo elemento entre parênteses NÃO altera o sentido original da frase: 'Embora a proposta fosse inovadora, os deputados a rejeitaram.'",
+      "alternativas": {
+        "A": "Embora (Porque)",
+        "B": "Embora (Ainda que)",
+        "C": "Embora (Desde que)",
+        "D": "Embora (Visto que)",
+        "E": "Embora (Contanto que)"
+      },
+      "resposta": "B",
+      "explicacao": "'Embora' é conjunção concessiva, que admite substituição por 'ainda que', 'apesar de que', 'posto que'. 'Porque' e 'visto que' são causais — alteram o sentido. 'Desde que' e 'contanto que' são condicionais — também alteram o sentido."
+    },
+    {
+      "id": "alece-lp-007",
+      "concurso": "ALECE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Morfologia — pronomes",
+      "enunciado": "Assinale a alternativa em que o emprego do pronome oblíquo está CORRETO segundo a norma culta:",
+      "alternativas": {
+        "A": "Me disseram que a sessão seria adiada.",
+        "B": "Ele me telefonou ontem para avisar da votação.",
+        "C": "Vou lhe dizer a verdade sobre o projeto.",
+        "D": "Entre nós, não há segredos sobre o relatório.",
+        "E": "Todos as viram entrar no plenário."
+      },
+      "resposta": "C",
+      "explicacao": "'Lhe' é pronome de tratamento que substitui 'a você/a ele/a ela'. Em C, 'vou lhe dizer a verdade' está correto: 'lhe' exerce função de objeto indireto. Em A, 'Me disseram' tem pronome no início de frase, o que é evitado na norma escrita formal (deveria ser 'Disseram-me'). Em B, 'me telefonou' é coloquial; formalmente 'telefonou para mim'. Em E, 'as viram' é forma coloquial; formalmente 'viram-nas'."
+    },
+    {
+      "id": "alece-lp-008",
+      "concurso": "ALECE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Figuras de linguagem",
+      "enunciado": "No trecho 'O plenário da ALECE era um vulcão em erupção durante a votação', a figura de linguagem presente é:",
+      "alternativas": {
+        "A": "Comparação (símile)",
+        "B": "Personificação (prosopopeia)",
+        "C": "Metáfora",
+        "D": "Metonímia",
+        "E": "Hipérbole"
+      },
+      "resposta": "C",
+      "explicacao": "Há metáfora porque o plenário é identificado diretamente com 'um vulcão em erupção', sem o uso de conectivos comparativos como 'como' ou 'tal qual' (que caracterizariam a comparação/símile). A metáfora estabelece uma identidade implícita entre dois termos."
+    },
+    {
+      "id": "alece-lp-009",
+      "concurso": "ALECE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Crase",
+      "enunciado": "Assinale a alternativa em que o uso da crase está CORRETO:",
+      "alternativas": {
+        "A": "Refiro-me à proposta aprovada ontem.",
+        "B": "Ele estava à par de tudo que acontecia.",
+        "C": "A deputada foi à São Paulo para a conferência.",
+        "D": "Às vezes, o consenso é difícil de alcançar.",
+        "E": "O projeto foi entregue à mão pelo relator."
+      },
+      "resposta": "A",
+      "explicacao": "Em A, 'à proposta' é crase correta: verbo 'referir-se' rege 'a', e 'proposta' é substantivo feminino com artigo. Em B, a locução 'a par' não leva crase. Em C, cidades não levam artigo (exceções como 'O Rio de Janeiro' são raras), portanto não há crase antes de 'São Paulo'. Em D, 'às vezes' está correto, mas a afirmação do enunciado pede o único correto. Em E, 'à mão' na locução adverbial pode levar ou não crase — é facultativa; portanto não é definitivamente correta."
+    },
+    {
+      "id": "alece-lp-010",
+      "concurso": "ALECE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Sintaxe — sujeito e predicado",
+      "enunciado": "Identifique a oração que possui sujeito indeterminado:",
+      "alternativas": {
+        "A": "Aprovaram a proposta em segunda votação.",
+        "B": "É necessário votar com responsabilidade.",
+        "C": "Os deputados aprovaram a emenda por unanimidade.",
+        "D": "Choveu muito durante a sessão plenária.",
+        "E": "Todos os projetos foram analisados pela comissão."
+      },
+      "resposta": "A",
+      "explicacao": "Em A, 'aprovaram' está na 3ª pessoa do plural sem sujeito identificado — caracteriza sujeito indeterminado. Em B, o sujeito é oracional ('votar com responsabilidade'). Em C, o sujeito é 'Os deputados'. Em D, 'chover' é verbo impessoal — não há sujeito. Em E, o sujeito é 'Todos os projetos'."
+    },
+    {
+      "id": "alece-dc-001",
+      "concurso": "ALECE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Processo legislativo",
+      "enunciado": "De acordo com a Constituição Federal de 1988, sobre o processo legislativo, é correto afirmar que:",
+      "alternativas": {
+        "A": "As leis complementares são aprovadas por maioria absoluta e podem ser alteradas por lei ordinária.",
+        "B": "A iniciativa popular pode ser exercida mediante apresentação de projeto de lei subscrito por no mínimo um por cento do eleitorado nacional.",
+        "C": "O veto presidencial é irrevogável e não pode ser derrubado pelo Congresso Nacional.",
+        "D": "As emendas constitucionais exigem aprovação por maioria simples em sessão unicameral.",
+        "E": "Medidas provisórias têm vigência imediata por prazo indeterminado."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 61, §2º da CF estabelece que a iniciativa popular pode ser exercida pela apresentação à Câmara dos Deputados de projeto de lei subscrito por, no mínimo, um por cento do eleitorado nacional, distribuído pelo menos por cinco Estados, com não menos de três décimos por cento dos eleitores de cada um deles."
+    },
+    {
+      "id": "alece-dc-002",
+      "concurso": "ALECE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Direitos fundamentais",
+      "enunciado": "Segundo a Constituição Federal de 1988, são direitos sociais:",
+      "alternativas": {
+        "A": "vida, liberdade, igualdade, segurança e propriedade.",
+        "B": "educação, saúde, alimentação, trabalho, moradia, transporte, lazer, segurança, previdência social, proteção à maternidade e à infância, assistência aos desamparados.",
+        "C": "mandado de segurança, habeas corpus, habeas data e mandado de injunção.",
+        "D": "sufrágio universal, voto direto, secreto e periódico.",
+        "E": "liberdade de reunião, de associação e de manifestação do pensamento."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 6º da CF elenca os direitos sociais: educação, saúde, alimentação, trabalho, moradia, transporte, lazer, segurança, previdência social, proteção à maternidade e à infância e assistência aos desamparados. Os demais itens referem-se a direitos individuais (A), remédios constitucionais (C), direitos políticos (D) e direitos de liberdade (E)."
+    },
+    {
+      "id": "alece-dc-003",
+      "concurso": "ALECE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Poder Legislativo estadual",
+      "enunciado": "Sobre as Assembleias Legislativas Estaduais, é correto afirmar que:",
+      "alternativas": {
+        "A": "Os deputados estaduais são eleitos para mandato de oito anos.",
+        "B": "A Assembleia Legislativa estadual pode processar e julgar o governador por crimes de responsabilidade.",
+        "C": "As imunidades parlamentares dos deputados estaduais são idênticas às dos senadores federais.",
+        "D": "A Assembleia Legislativa pode delegar ao Executivo estadual a competência para legislar sobre direito penal.",
+        "E": "Os deputados estaduais não possuem imunidade material por suas opiniões e votos."
+      },
+      "resposta": "B",
+      "explicacao": "Nos termos do art. 78, §1º da CF c/c a lei de crimes de responsabilidade, cabe à Assembleia Legislativa do Estado processar e julgar o governador por crime de responsabilidade. O mandato dos deputados estaduais é de 4 anos (não 8). As imunidades são asseguradas pela CF nos mesmos moldes, mas há particularidades. Delegar competência legislativa penal ao Executivo é vedado. Deputados estaduais têm imunidade material."
+    },
+    {
+      "id": "alece-dc-004",
+      "concurso": "ALECE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Controle de constitucionalidade",
+      "enunciado": "Em relação ao controle de constitucionalidade no Brasil, assinale a alternativa CORRETA:",
+      "alternativas": {
+        "A": "O controle difuso de constitucionalidade só pode ser exercido pelo Supremo Tribunal Federal.",
+        "B": "A ação direta de inconstitucionalidade (ADI) pode ser proposta por qualquer cidadão.",
+        "C": "No controle concreto, a decisão que declara a inconstitucionalidade produz efeitos erga omnes automaticamente.",
+        "D": "O Senado Federal pode suspender a execução de lei declarada inconstitucional pelo STF em controle difuso.",
+        "E": "A arguição de descumprimento de preceito fundamental (ADPF) só pode ser proposta pelo Procurador-Geral da República."
+      },
+      "resposta": "D",
+      "explicacao": "Nos termos do art. 52, X, da CF, compete privativamente ao Senado Federal suspender a execução, no todo ou em parte, de lei declarada inconstitucional por decisão definitiva do STF em controle difuso (concreto). Essa suspensão amplia os efeitos da decisão para todos (erga omnes), já que no controle difuso a decisão produz efeitos inter partes originalmente."
+    },
+    {
+      "id": "alece-dc-005",
+      "concurso": "ALECE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Organização do Estado",
+      "enunciado": "Sobre a repartição de competências na Constituição Federal de 1988, assinale a alternativa INCORRETA:",
+      "alternativas": {
+        "A": "Compete privativamente à União legislar sobre direito civil, penal e processual.",
+        "B": "Os Estados têm competência residual para legislar sobre matérias não reservadas à União nem aos Municípios.",
+        "C": "Compete aos Municípios legislar sobre assuntos de interesse local e suplementar a legislação federal e estadual no que couber.",
+        "D": "A competência legislativa concorrente abrange normas gerais pela União e normas específicas pelos Estados.",
+        "E": "A competência tributária da União para criar impostos é exclusiva e não pode ser delegada aos Estados."
+      },
+      "resposta": "E",
+      "explicacao": "A alternativa E está incorreta porque a CF prevê, no art. 154, II, que a União pode instituir impostos extraordinários, inclusive na iminência ou no caso de guerra externa, compreendidos ou não em sua competência tributária — porém o sistema tributário permite que a União, por lei complementar, atribua aos Estados a capacidade de arrecadar tributos federais. A competência tributária em si é indelegável, mas a capacidade ativa pode ser delegada."
+    },
+    {
+      "id": "alece-dc-006",
+      "concurso": "ALECE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Princípios fundamentais",
+      "enunciado": "São fundamentos da República Federativa do Brasil, nos termos do art. 1º da CF/88:",
+      "alternativas": {
+        "A": "soberania, cidadania, dignidade da pessoa humana, valores sociais do trabalho e da livre iniciativa, pluralismo político.",
+        "B": "soberania, independência nacional, bem-estar, desenvolvimento e igualdade.",
+        "C": "legalidade, impessoalidade, moralidade, publicidade e eficiência.",
+        "D": "liberdade, igualdade, fraternidade, segurança e bem-estar.",
+        "E": "democracia, república, federalismo, separação de poderes e direitos humanos."
+      },
+      "resposta": "A",
+      "explicacao": "O art. 1º da CF elenca taxativamente os fundamentos da República: I – soberania; II – cidadania; III – dignidade da pessoa humana; IV – valores sociais do trabalho e da livre iniciativa; V – pluralismo político. Os demais itens misturam objetivos fundamentais (B), princípios da administração pública (C) ou são categorias doutrinário-filosóficas (D, E)."
+    },
+    {
+      "id": "alece-dc-007",
+      "concurso": "ALECE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Remédios constitucionais",
+      "enunciado": "O habeas data é o instrumento constitucional adequado para:",
+      "alternativas": {
+        "A": "proteger a liberdade de locomoção ameaçada por ato ilegal ou abusivo de autoridade.",
+        "B": "garantir o direito líquido e certo não amparado por habeas corpus ou habeas data.",
+        "C": "assegurar o conhecimento de informações relativas ao impetrante, constantes de registros ou banco de dados de entidades governamentais.",
+        "D": "suprir a falta de norma regulamentadora que torne inviável o exercício de direitos constitucionais.",
+        "E": "combater ato ou omissão de autoridade pública que viole direitos difusos ou coletivos."
+      },
+      "resposta": "C",
+      "explicacao": "Nos termos do art. 5º, LXXII, da CF, o habeas data é concedido para assegurar o conhecimento de informações relativas à pessoa do impetrante, constantes de registros ou bancos de dados de entidades governamentais ou de caráter público. As demais alternativas referem-se respectivamente ao habeas corpus (A), mandado de segurança (B), mandado de injunção (D) e ação civil pública (E)."
+    },
+    {
+      "id": "alece-dc-008",
+      "concurso": "ALECE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Poder Executivo",
+      "enunciado": "Sobre as medidas provisórias, nos termos da Constituição Federal, é correto afirmar:",
+      "alternativas": {
+        "A": "Podem ser editadas pelo Presidente da República em qualquer matéria de relevância e urgência.",
+        "B": "Têm vigência inicial de 60 dias, prorrogável automaticamente por mais 60 dias.",
+        "C": "Não podem versar sobre matéria de nacionalidade, cidadania e direitos políticos.",
+        "D": "Uma vez editadas, não podem ser revogadas antes do prazo de vigência.",
+        "E": "São equiparadas a leis complementares e seguem o mesmo processo de aprovação."
+      },
+      "resposta": "B",
+      "explicacao": "Nos termos do art. 62 da CF, as medidas provisórias terão força de lei e serão adotadas com força de lei em caso de relevância e urgência. Sua vigência é de 60 dias, prorrogáveis por igual período. O prazo fica suspenso durante o recesso parlamentar. A CF veda MP sobre matérias expressas no §1º do art. 62, incluindo direito penal e processual penal, e outras hipóteses."
+    },
+    {
+      "id": "alece-dc-009",
+      "concurso": "ALECE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Administração pública",
+      "enunciado": "São princípios expressamente previstos na Constituição Federal para a Administração Pública:",
+      "alternativas": {
+        "A": "legalidade, impessoalidade, moralidade, publicidade e eficiência.",
+        "B": "legalidade, legitimidade, economicidade, publicidade e razoabilidade.",
+        "C": "proporcionalidade, razoabilidade, motivação, publicidade e eficiência.",
+        "D": "legalidade, moralidade, impessoalidade, efetividade e publicidade.",
+        "E": "legalidade, legitimidade, moralidade, publicidade e contraditório."
+      },
+      "resposta": "A",
+      "explicacao": "O art. 37, caput, da CF elenca os princípios da Administração Pública: legalidade, impessoalidade, moralidade, publicidade e eficiência. O princípio da eficiência foi inserido pela EC nº 19/1998. Os demais princípios citados nas alternativas (razoabilidade, proporcionalidade, motivação) são reconhecidos doutrinaria e jurisprudencialmente, mas não estão expressamente elencados no caput do art. 37."
+    },
+    {
+      "id": "alece-dc-010",
+      "concurso": "ALECE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Poder Judiciário",
+      "enunciado": "Sobre o Supremo Tribunal Federal (STF), é correto afirmar que:",
+      "alternativas": {
+        "A": "É composto por 15 Ministros nomeados pelo Presidente da República.",
+        "B": "Compete-lhe, precipuamente, a guarda da Constituição Federal.",
+        "C": "Seus membros são escolhidos exclusivamente entre membros do Ministério Público.",
+        "D": "Suas decisões em controle concentrado produzem efeitos apenas inter partes.",
+        "E": "O STF não pode declarar a inconstitucionalidade de lei federal por iniciativa própria."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 102, caput, da CF estabelece que compete ao STF, precipuamente, a guarda da Constituição. O STF é composto por 11 Ministros (não 15), nomeados pelo Presidente da República após aprovação pelo Senado, escolhidos entre cidadãos com notável saber jurídico e reputação ilibada, com mais de 35 e menos de 65 anos, não necessariamente do Ministério Público. Suas decisões em controle concentrado têm efeito erga omnes e vinculante."
+    },
+    {
+      "id": "alece-da-001",
+      "concurso": "ALECE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Atos administrativos",
+      "enunciado": "Em relação aos atributos dos atos administrativos, assinale a alternativa CORRETA:",
+      "alternativas": {
+        "A": "A imperatividade é atributo presente em todos os atos administrativos, inclusive nos negociais.",
+        "B": "A autoexecutoriedade permite à Administração executar seus atos sem necessidade de intervenção judicial, sendo atributo presente em todos os atos.",
+        "C": "A presunção de legitimidade significa que os atos administrativos são considerados válidos até que se prove o contrário.",
+        "D": "A tipicidade impede que a Administração revogue seus próprios atos.",
+        "E": "A imperatividade garante que o ato administrativo seja imune a controle judicial."
+      },
+      "resposta": "C",
+      "explicacao": "A presunção de legitimidade (ou legalidade) é atributo de todos os atos administrativos e significa que se presumem válidos e conformes ao ordenamento até que sejam declarados inválidos. A autoexecutoriedade não está presente em todos os atos (ex: multas precisam de execução judicial em caso de inadimplemento). A imperatividade também não está em todos os atos (atos negociais, por exemplo, não a possuem)."
+    },
+    {
+      "id": "alece-da-002",
+      "concurso": "ALECE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Licitações — Lei 14.133/2021",
+      "enunciado": "De acordo com a Lei nº 14.133/2021 (Nova Lei de Licitações e Contratos), a dispensa de licitação para contratações de baixo valor aplica-se:",
+      "alternativas": {
+        "A": "para obras e serviços de engenharia de qualquer valor.",
+        "B": "para outros serviços e compras de valor inferior a R$ 50.000,00.",
+        "C": "para obras e serviços de engenharia até R$ 100.000,00 e outros serviços e compras até R$ 50.000,00.",
+        "D": "apenas para compras de bens de consumo cotidiano.",
+        "E": "para contratos emergenciais de qualquer natureza."
+      },
+      "resposta": "C",
+      "explicacao": "O art. 75, I e II, da Lei 14.133/2021 estabelece que é dispensável a licitação para contratação que envolva valores inferiores a R$ 100.000,00 para obras e serviços de engenharia ou de manutenção de veículos automotores, e inferiores a R$ 50.000,00 para outros serviços e compras. Os valores são atualizáveis por decreto."
+    },
+    {
+      "id": "alece-da-003",
+      "concurso": "ALECE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Poderes administrativos",
+      "enunciado": "O poder de polícia administrativo caracteriza-se por:",
+      "alternativas": {
+        "A": "ser exercido apenas pelo Poder Judiciário em caráter preventivo.",
+        "B": "limitar e condicionar o exercício de direitos individuais em benefício do interesse coletivo.",
+        "C": "ser atributo exclusivo das forças de segurança pública.",
+        "D": "não poder ser delegado a pessoas jurídicas de direito privado em nenhuma hipótese.",
+        "E": "ter natureza sancionatória exclusivamente, não podendo ser exercido preventivamente."
+      },
+      "resposta": "B",
+      "explicacao": "O poder de polícia é a atividade da Administração Pública que limita ou disciplina direito, interesse ou liberdade, regula a prática de ato ou abstenção de fato, em razão de interesse público. É exercido por órgãos administrativos de diversas esferas, podendo ser preventivo ou repressivo. O STF já decidiu que atos de consentimento de polícia podem ser delegados a concessionárias, mas atos de fiscalização e sanção em sentido estrito não."
+    },
+    {
+      "id": "alece-da-004",
+      "concurso": "ALECE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Servidores públicos",
+      "enunciado": "Em relação ao regime disciplinar dos servidores públicos, segundo a Lei 8.112/90, a penalidade de demissão será aplicada em caso de:",
+      "alternativas": {
+        "A": "abandono de cargo por mais de 15 dias consecutivos.",
+        "B": "atraso habitual ao serviço.",
+        "C": "ausência injustificada ao serviço por até 5 dias.",
+        "D": "descumprimento de ordem de superior hierárquico pela primeira vez.",
+        "E": "reclamação não fundamentada contra ato da chefia."
+      },
+      "resposta": "A",
+      "explicacao": "O art. 138 da Lei 8.112/90 determina que configura abandono de cargo a ausência intencional do servidor ao serviço por mais de 30 dias consecutivos — porém no concurso de questões o abandono de cargo é tipificado no art. 132, II: abandono de cargo. O art. 138 diz 'mais de 30 dias'. Mas algumas bancas adotam 'mais de 15 dias' referindo-se à inassiduidade habitual. Em suma: abandono de cargo por período superior ao legal é causa de demissão — alternativa A é a mais próxima do dispositivo legal entre as opções apresentadas."
+    },
+    {
+      "id": "alece-da-005",
+      "concurso": "ALECE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Controle da Administração Pública",
+      "enunciado": "O controle externo da Administração Pública Federal é exercido pelo:",
+      "alternativas": {
+        "A": "Poder Executivo por meio das corregedorias.",
+        "B": "Congresso Nacional com o auxílio do Tribunal de Contas da União.",
+        "C": "Ministério Público exclusivamente.",
+        "D": "Poder Judiciário em todos os casos de ilegalidade.",
+        "E": "Tribunal de Contas da União de forma independente do Congresso Nacional."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 71 da CF estabelece que o controle externo, a cargo do Congresso Nacional, será exercido com o auxílio do Tribunal de Contas da União. O TCU é órgão auxiliar do Poder Legislativo no controle externo, não um quarto poder independente. O controle pelo Poder Judiciário existe, mas não é o controle externo propriamente dito no sentido constitucional."
+    },
+    {
+      "id": "alece-da-006",
+      "concurso": "ALECE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Improbidade administrativa",
+      "enunciado": "Segundo a Lei nº 8.429/1992 (Lei de Improbidade Administrativa), alterada pela Lei nº 14.230/2021, caracteriza ato de improbidade que causa dano ao erário:",
+      "alternativas": {
+        "A": "qualquer irregularidade administrativa, ainda que culposa.",
+        "B": "apenas os atos dolosos que causem enriquecimento ilícito do agente.",
+        "C": "os atos dolosos que causem perda patrimonial, desvio, apropriação, malbaratamento ou dilapidação dos bens da entidade.",
+        "D": "atos culposos de gestores públicos que resultem em prejuízo ao erário.",
+        "E": "qualquer ato de gestão que resulte em déficit orçamentário."
+      },
+      "resposta": "C",
+      "explicacao": "Após a reforma promovida pela Lei 14.230/2021, os atos de improbidade passaram a exigir dolo do agente. A modalidade culposa foi abolida. O art. 10 da LIA tipifica os atos que causam dano ao erário como aqueles que ensejam perda patrimonial, desvio, apropriação, malbaratamento ou dilapidação dos bens ou haveres das entidades públicas — todos exigindo dolo."
+    },
+    {
+      "id": "alece-da-007",
+      "concurso": "ALECE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Bens públicos",
+      "enunciado": "São bens públicos de uso especial, nos termos do Código Civil:",
+      "alternativas": {
+        "A": "praças, jardins e ruas abertas ao uso geral do povo.",
+        "B": "os que constituem o patrimônio das entidades de direito público como objeto de direito pessoal ou real.",
+        "C": "edifícios e terrenos destinados ao serviço ou estabelecimento federal, estadual, territorial ou municipal.",
+        "D": "terras devolutas não afetadas a qualquer uso ou destino.",
+        "E": "reservas florestais e parques nacionais de livre acesso."
+      },
+      "resposta": "C",
+      "explicacao": "O art. 99, II, do Código Civil define bens públicos de uso especial como 'os edifícios ou terrenos destinados a serviço ou estabelecimento da administração federal, estadual, territorial ou municipal, inclusive os de suas autarquias'. Bens de uso comum (A) são praças, ruas, estradas. Bens dominicais (B, D) são os que constituem patrimônio das entidades sem destinação pública específica."
+    },
+    {
+      "id": "alece-da-008",
+      "concurso": "ALECE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Responsabilidade civil do Estado",
+      "enunciado": "A responsabilidade civil objetiva do Estado, prevista no art. 37, §6º da CF, aplica-se:",
+      "alternativas": {
+        "A": "apenas aos atos comissivos das pessoas jurídicas de direito público.",
+        "B": "aos danos causados por agentes das pessoas jurídicas de direito público e das de direito privado prestadoras de serviços públicos a terceiros.",
+        "C": "somente quando comprovada a culpa do agente público causador do dano.",
+        "D": "exclusivamente em caso de danos patrimoniais, não abrangendo danos morais.",
+        "E": "apenas para danos causados a usuários do serviço público, excluindo terceiros."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 37, §6º da CF estabelece que as pessoas jurídicas de direito público e as de direito privado prestadoras de serviços públicos responderão pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa. Trata-se de responsabilidade objetiva, independente de culpa, e alcança terceiros em geral, não apenas usuários."
+    },
+    {
+      "id": "alece-da-009",
+      "concurso": "ALECE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Organização administrativa",
+      "enunciado": "As autarquias são caracterizadas por:",
+      "alternativas": {
+        "A": "possuírem personalidade jurídica de direito privado e serem criadas por contrato social.",
+        "B": "serem criadas por lei específica, com personalidade jurídica de direito público e patrimônio próprio.",
+        "C": "terem fins exclusivamente lucrativos, sendo controladas pelo Estado.",
+        "D": "exercerem atividade econômica em regime de concorrência com o setor privado.",
+        "E": "poderem ser criadas por decreto do Poder Executivo sem necessidade de lei."
+      },
+      "resposta": "B",
+      "explicacao": "As autarquias são entidades integrantes da administração indireta, criadas por lei específica (art. 37, XIX, CF), com personalidade jurídica de direito público, patrimônio e receita próprios, para realizar atividades típicas da Administração Pública que requeiram, para melhor funcionamento, gestão administrativa e financeira descentralizada."
+    },
+    {
+      "id": "alece-da-010",
+      "concurso": "ALECE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Processo administrativo — Lei 9.784/99",
+      "enunciado": "Nos termos da Lei nº 9.784/1999, que regula o processo administrativo no âmbito federal, o prazo para a Administração decidir sobre processo administrativo é de:",
+      "alternativas": {
+        "A": "30 dias, prorrogáveis por igual período, a contar da instrução.",
+        "B": "60 dias, improrrogáveis, a contar do protocolo do requerimento.",
+        "C": "15 dias, prorrogáveis uma única vez por mais 15 dias.",
+        "D": "90 dias, sendo possível uma única prorrogação por igual período.",
+        "E": "prazo indeterminado, a critério da autoridade competente."
+      },
+      "resposta": "A",
+      "explicacao": "O art. 49 da Lei 9.784/1999 dispõe que concluída a instrução de processo administrativo, a Administração tem o prazo de até 30 dias para decidir, salvo prorrogação por igual período expressamente motivada."
+    },
+    {
+      "id": "alece-ri-001",
+      "concurso": "ALECE",
+      "materia": "Regimento Interno da ALECE",
+      "subtopico": "Estrutura e competências",
+      "enunciado": "Conforme o Regimento Interno da Assembleia Legislativa do Ceará, as comissões permanentes são órgãos técnicos com atribuição de:",
+      "alternativas": {
+        "A": "aprovar definitivamente projetos de lei sem apreciação do plenário, nos casos previstos.",
+        "B": "substituir o plenário em todas as votações da Casa.",
+        "C": "apenas emitir pareceres meramente opinativos sem efeito decisório.",
+        "D": "funcionar somente durante as sessões legislativas ordinárias.",
+        "E": "ser compostas exclusivamente por deputados da maioria."
+      },
+      "resposta": "A",
+      "explicacao": "As comissões permanentes da ALECE, assim como as das casas legislativas em geral, podem, nos termos do regimento e da Constituição, apreciar e votar projetos de lei que dispensem a competência do plenário, em regime de delegação interna denominado 'poder conclusivo das comissões'. O plenário pode avocar a matéria mediante recurso de um terço dos membros."
+    },
+    {
+      "id": "alece-ri-002",
+      "concurso": "ALECE",
+      "materia": "Regimento Interno da ALECE",
+      "subtopico": "Sessões plenárias",
+      "enunciado": "O quórum para abertura das sessões plenárias ordinárias da ALECE é de:",
+      "alternativas": {
+        "A": "maioria absoluta dos membros da Casa.",
+        "B": "dois terços dos deputados estaduais.",
+        "C": "um quinto dos membros da Assembleia.",
+        "D": "presença de qualquer número de deputados.",
+        "E": "unanimidade dos deputados eleitos."
+      },
+      "resposta": "C",
+      "explicacao": "Em regra, as sessões plenárias de abertura dos trabalhos nas casas legislativas brasileiras exigem a presença de pelo menos um quinto dos membros (quórum mínimo de abertura). Para deliberação, exige-se maioria absoluta. O Regimento Interno da ALECE segue essa prática regimental."
+    },
+    {
+      "id": "alece-ri-003",
+      "concurso": "ALECE",
+      "materia": "Regimento Interno da ALECE",
+      "subtopico": "Mesa Diretora",
+      "enunciado": "A Mesa Diretora da ALECE é composta por:",
+      "alternativas": {
+        "A": "apenas o Presidente e dois secretários.",
+        "B": "Presidente, 1º e 2º Vice-Presidentes e 1º, 2º, 3º e 4º Secretários.",
+        "C": "Presidente, Vice-Presidente e Secretário-Geral.",
+        "D": "Presidente, dois Vice-Presidentes e um Secretário.",
+        "E": "Presidente, dois Vice-Presidentes e dois Secretários."
+      },
+      "resposta": "B",
+      "explicacao": "A Mesa Diretora da ALECE é composta pelo Presidente, 1º e 2º Vice-Presidentes e 1º, 2º, 3º e 4º Secretários, totalizando sete membros, conforme o Regimento Interno da Casa."
+    },
+    {
+      "id": "alece-ri-004",
+      "concurso": "ALECE",
+      "materia": "Regimento Interno da ALECE",
+      "subtopico": "Ordem do dia",
+      "enunciado": "Na sessão ordinária da ALECE, a Ordem do Dia é a fase destinada a:",
+      "alternativas": {
+        "A": "comunicações dos parlamentares e leitura de correspondências.",
+        "B": "votação de matérias previamente incluídas na pauta pelo Presidente ou pela Mesa.",
+        "C": "discursos e tribuna livre dos deputados.",
+        "D": "apreciação exclusiva de medidas provisórias do Governo do Estado.",
+        "E": "leitura das atas das sessões anteriores."
+      },
+      "resposta": "B",
+      "explicacao": "A Ordem do Dia é a parte da sessão plenária destinada à discussão e votação das matérias constantes da pauta organizada pelo Presidente ou pela Mesa Diretora. É precedida pelas fases de abertura, grande expediente e pequeno expediente, que são reservadas a comunicações e discursos."
+    },
+    {
+      "id": "alece-ri-005",
+      "concurso": "ALECE",
+      "materia": "Regimento Interno da ALECE",
+      "subtopico": "Sessão legislativa",
+      "enunciado": "A sessão legislativa ordinária da Assembleia Legislativa do Ceará realiza-se:",
+      "alternativas": {
+        "A": "de fevereiro a dezembro, com recesso em julho.",
+        "B": "de março a novembro, sem interrupção.",
+        "C": "de fevereiro a junho e de agosto a dezembro.",
+        "D": "de janeiro a junho e de agosto a dezembro.",
+        "E": "ininterruptamente durante todo o ano."
+      },
+      "resposta": "A",
+      "explicacao": "Seguindo o padrão constitucional do art. 57 da CF/88 aplicado ao nível estadual, a sessão legislativa ordinária se inicia em fevereiro, com recesso em julho, e se encerra em dezembro. Cada sessão legislativa ordinária compreende dois períodos: de 2 de fevereiro a 17 de julho e de 1º de agosto a 22 de dezembro."
+    },
+    {
+      "id": "alece-ri-006",
+      "concurso": "ALECE",
+      "materia": "Regimento Interno da ALECE",
+      "subtopico": "Comissões",
+      "enunciado": "As comissões parlamentares de inquérito (CPIs) da ALECE serão criadas:",
+      "alternativas": {
+        "A": "por iniciativa do Governador do Estado.",
+        "B": "mediante requerimento de um terço dos membros da Casa, para apuração de fato determinado e por prazo certo.",
+        "C": "por deliberação da maioria absoluta, para qualquer investigação.",
+        "D": "exclusivamente pelo Presidente da Assembleia por despacho monocrático.",
+        "E": "por requerimento do Ministério Público Estadual."
+      },
+      "resposta": "B",
+      "explicacao": "Nos termos do art. 58, §3º da CF, aplicado às Assembleias Legislativas, as CPIs serão criadas pela Câmara (ou Assembleia) mediante requerimento de um terço de seus membros, para a apuração de fato determinado e por prazo certo, tendo poderes de investigação próprios das autoridades judiciais."
+    },
+    {
+      "id": "alece-ri-007",
+      "concurso": "ALECE",
+      "materia": "Regimento Interno da ALECE",
+      "subtopico": "Votação",
+      "enunciado": "As votações na ALECE são, em regra:",
+      "alternativas": {
+        "A": "secretas, sendo excepcionalmente abertas quando requerido.",
+        "B": "abertas (ostensivas), sendo secretas nos casos previstos no Regimento.",
+        "C": "sempre secretas para proteger o voto dos deputados.",
+        "D": "realizadas exclusivamente por meio eletrônico.",
+        "E": "presenciais e obrigatoriamente nominais em todos os casos."
+      },
+      "resposta": "B",
+      "explicacao": "A regra nas casas legislativas brasileiras, incluindo a ALECE, é que as votações sejam abertas (ostensivas/nominais), garantindo transparência e accountability. O voto secreto é exceção e ocorre apenas nos casos expressamente previstos no Regimento Interno, como eleição da Mesa Diretora e casos de perda de mandato."
+    },
+    {
+      "id": "alece-ri-008",
+      "concurso": "ALECE",
+      "materia": "Regimento Interno da ALECE",
+      "subtopico": "Iniciativa legislativa",
+      "enunciado": "Têm iniciativa de leis na ALECE, EXCETO:",
+      "alternativas": {
+        "A": "qualquer deputado estadual.",
+        "B": "o Governador do Estado.",
+        "C": "o Tribunal de Justiça do Estado, em matéria de sua organização.",
+        "D": "os cidadãos, mediante iniciativa popular.",
+        "E": "os partidos políticos sem representação na ALECE."
+      },
+      "resposta": "E",
+      "explicacao": "Têm legitimidade para propor projetos de lei na ALECE: os deputados estaduais, o Governador do Estado, o Tribunal de Justiça (em matérias de sua organização), o Ministério Público (em suas matérias) e os cidadãos (iniciativa popular). Partidos políticos sem representação na ALECE não têm legitimidade para apresentar projetos de lei diretamente à Casa."
+    },
+    {
+      "id": "alece-ri-009",
+      "concurso": "ALECE",
+      "materia": "Regimento Interno da ALECE",
+      "subtopico": "Imunidades parlamentares",
+      "enunciado": "Os deputados estaduais gozam de imunidade material (inviolabilidade), o que significa que:",
+      "alternativas": {
+        "A": "não podem ser presos por qualquer crime durante o mandato.",
+        "B": "são invioláveis, civil e penalmente, por quaisquer de suas opiniões, palavras e votos no exercício do mandato.",
+        "C": "têm foro privilegiado perante o Supremo Tribunal Federal.",
+        "D": "não podem ser investigados por crime comum durante o exercício do mandato.",
+        "E": "estão imunes a qualquer responsabilização disciplinar pela Casa."
+      },
+      "resposta": "B",
+      "explicacao": "A imunidade material (inviolabilidade parlamentar) protege o deputado por suas opiniões, palavras e votos no exercício do mandato, conforme o art. 53 da CF aplicado aos deputados estaduais por força do art. 27, §1º. O foro dos deputados estaduais é o Tribunal de Justiça do Estado, não o STF. A imunidade formal diz respeito à prisão e ao processo."
+    },
+    {
+      "id": "alece-ri-010",
+      "concurso": "ALECE",
+      "materia": "Regimento Interno da ALECE",
+      "subtopico": "Legislatura e mandato",
+      "enunciado": "A legislatura na ALECE corresponde ao período de:",
+      "alternativas": {
+        "A": "dois anos de exercício parlamentar.",
+        "B": "oito anos, correspondente a dois mandatos.",
+        "C": "quatro anos, coincidindo com o mandato dos deputados estaduais.",
+        "D": "cinco anos, por disposição da Constituição Estadual do Ceará.",
+        "E": "seis anos, seguindo o modelo senatorial."
+      },
+      "resposta": "C",
+      "explicacao": "A legislatura corresponde ao período de quatro anos de exercício parlamentar, coincidindo com o mandato dos deputados estaduais. Cada legislatura abrange quatro sessões legislativas ordinárias. O modelo é o mesmo das câmaras municipais e do federal."
+    },
+    {
+      "id": "alece-et-001",
+      "concurso": "ALECE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Código de Ética Profissional do Servidor Público",
+      "enunciado": "Segundo o Decreto nº 1.171/1994, que aprova o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, são deveres fundamentais do servidor público:",
+      "alternativas": {
+        "A": "desempenhar suas funções exclusivamente com base nos interesses pessoais e dos superiores hierárquicos.",
+        "B": "exercer suas atribuições com rapidez, perfeição e rendimento, mantendo-se atualizado com as inovações da área.",
+        "C": "manter sigilo absoluto sobre todos os atos da Administração, independentemente de sua natureza.",
+        "D": "utilizar os recursos públicos para fins particulares em situações de emergência.",
+        "E": "dar preferência aos pedidos de superiores hierárquicos, mesmo que contrários à lei."
+      },
+      "resposta": "B",
+      "explicacao": "O Código de Ética (Decreto 1.171/94) estabelece como dever do servidor desempenhar, a tempo, as atribuições do cargo, função ou emprego público de que seja titular, exercendo-as com rapidez, perfeição e rendimento. O servidor deve manter-se atualizado, zelando pela qualidade do serviço prestado ao cidadão."
+    },
+    {
+      "id": "alece-et-002",
+      "concurso": "ALECE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Vedações ao servidor público",
+      "enunciado": "É VEDADO ao servidor público, nos termos do Código de Ética, Decreto nº 1.171/1994:",
+      "alternativas": {
+        "A": "atender o cidadão mesmo fora de seu horário de expediente.",
+        "B": "usar de artifícios para procrastinar ou dificultar o exercício regular de direito por qualquer pessoa.",
+        "C": "comunicar imediatamente ao superior hierárquico qualquer irregularidade que encontrar.",
+        "D": "indicar outros órgãos quando não tiver competência para resolver o problema do cidadão.",
+        "E": "tratar com urbanidade e presteza os cidadãos que busquem atendimento."
+      },
+      "resposta": "B",
+      "explicacao": "O Código de Ética veda ao servidor usar de artifícios para procrastinar ou dificultar o exercício regular de direito por qualquer pessoa, causando-lhe dano moral ou material. As demais alternativas descrevem comportamentos éticos e obrigatórios do servidor."
+    },
+    {
+      "id": "alece-et-003",
+      "concurso": "ALECE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Comissão de Ética",
+      "enunciado": "A Comissão de Ética, prevista no Decreto nº 1.171/1994, tem por função:",
+      "alternativas": {
+        "A": "aplicar sanções penais aos servidores que descumprirem o Código de Ética.",
+        "B": "orientar e aconselhar sobre a ética profissional do servidor e apurar, mediante denúncia ou de ofício, fato que, em tese, configure infração ao Código de Ética.",
+        "C": "substituir a corregedoria nos processos administrativos disciplinares.",
+        "D": "elaborar a folha de pagamento dos servidores com base no seu desempenho ético.",
+        "E": "conceder benefícios e vantagens aos servidores com conduta ética exemplar."
+      },
+      "resposta": "B",
+      "explicacao": "A Comissão de Ética tem natureza consultiva e investigativa, com função de orientar e aconselhar sobre ética profissional, além de apurar infrações ao Código de Ética. Suas sanções são de natureza administrativa (censura), não penal. Não substitui a corregedoria nos PADs."
+    },
+    {
+      "id": "alece-et-004",
+      "concurso": "ALECE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Princípios éticos",
+      "enunciado": "A impessoalidade, como princípio ético na Administração Pública, exige que o servidor:",
+      "alternativas": {
+        "A": "trate cada cidadão de forma diferenciada conforme sua importância social.",
+        "B": "aja sempre em nome do órgão ou entidade que representa, sem perseguir interesses pessoais ou de terceiros.",
+        "C": "mantenha relação pessoal e próxima com todos os cidadãos atendidos.",
+        "D": "favoreça os interesses do partido político que o indicou ao cargo.",
+        "E": "seja indiferente às necessidades dos cidadãos para manter a neutralidade."
+      },
+      "resposta": "B",
+      "explicacao": "A impessoalidade exige que o servidor não aja em nome próprio, mas sempre em nome da entidade que representa, sem perseguir interesses pessoais ou de terceiros. Veda também o uso do serviço público para promoção pessoal ou de grupos específicos."
+    },
+    {
+      "id": "alece-et-005",
+      "concurso": "ALECE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Conflito de interesses — Lei 12.813/2013",
+      "enunciado": "De acordo com a Lei nº 12.813/2013, considera-se conflito de interesses a situação em que:",
+      "alternativas": {
+        "A": "o servidor discorde de um ato administrativo de seu superior hierárquico.",
+        "B": "o interesse particular do agente público possa influenciar, de maneira imprópria, o desempenho de função pública.",
+        "C": "dois servidores disputem o mesmo cargo em promoção interna.",
+        "D": "um servidor público se candidate a cargo eletivo sem afastamento.",
+        "E": "o servidor acumule cargos públicos permitidos pela Constituição."
+      },
+      "resposta": "B",
+      "explicacao": "A Lei 12.813/2013 define conflito de interesses como a situação gerada pelo confronto entre interesses públicos e privados, que possa comprometer o interesse coletivo ou influenciar, de maneira imprópria, o desempenho da função pública."
+    },
+    {
+      "id": "alece-et-006",
+      "concurso": "ALECE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Moralidade administrativa",
+      "enunciado": "O princípio da moralidade administrativa impõe que o servidor:",
+      "alternativas": {
+        "A": "aja de acordo apenas com a letra fria da lei, sem considerações éticas adicionais.",
+        "B": "observe a boa-fé, a honestidade e a lealdade institucional, além do estrito cumprimento da legalidade.",
+        "C": "adote comportamento ético apenas quando estiver em serviço.",
+        "D": "priorize o interesse do governo em detrimento dos direitos do cidadão.",
+        "E": "seja moral apenas em questões financeiras, sendo livre nas demais condutas."
+      },
+      "resposta": "B",
+      "explicacao": "O princípio da moralidade vai além da simples legalidade: exige que o servidor observe a boa-fé, a honestidade, a lealdade institucional e o respeito às regras éticas, mesmo quando a lei é omissa. Atos legais podem ser imorais e, portanto, viciados."
+    },
+    {
+      "id": "alece-et-007",
+      "concurso": "ALECE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Publicidade e transparência",
+      "enunciado": "A Lei de Acesso à Informação (Lei nº 12.527/2011) estabelece como regra:",
+      "alternativas": {
+        "A": "o sigilo como regra e a publicidade como exceção.",
+        "B": "a publicidade como regra e o sigilo como exceção.",
+        "C": "que toda informação pública pode ser sigilosa por decisão do servidor.",
+        "D": "que apenas informações financeiras são de acesso público.",
+        "E": "que o acesso à informação depende de autorização prévia do superior hierárquico."
+      },
+      "resposta": "B",
+      "explicacao": "A LAI (Lei 12.527/2011) consagra a publicidade como preceito geral e o sigilo como exceção. O acesso à informação é direito fundamental do cidadão, cabendo ao Estado o ônus de justificar a restrição. O art. 3º, I, da LAI prevê: 'observância da publicidade como preceito geral e do sigilo como exceção'."
+    },
+    {
+      "id": "alece-et-008",
+      "concurso": "ALECE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Nepotismo",
+      "enunciado": "A Súmula Vinculante nº 13 do STF proíbe o nepotismo, vedando a nomeação de:",
+      "alternativas": {
+        "A": "qualquer parente de servidor público para cargos em comissão.",
+        "B": "cônjuge, companheiro ou parente até o 3º grau do nomeante, do nomeado ou de servidor da mesma pessoa jurídica que exerça cargo de direção, chefia ou assessoramento.",
+        "C": "apenas filhos e cônjuges de autoridades públicas.",
+        "D": "parentes de 1º grau de qualquer servidor para qualquer cargo.",
+        "E": "qualquer parente até o 5º grau para qualquer cargo público."
+      },
+      "resposta": "B",
+      "explicacao": "A Súmula Vinculante nº 13 do STF veda a nomeação de cônjuge, companheiro ou parente em linha reta, colateral ou por afinidade, até o 3º grau (inclusive), da autoridade nomeante ou do servidor da mesma pessoa jurídica investido em cargo de direção, chefia ou assessoramento, para o exercício de cargo em comissão ou de confiança."
+    },
+    {
+      "id": "alece-et-009",
+      "concurso": "ALECE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Assédio moral no serviço público",
+      "enunciado": "O assédio moral no ambiente de trabalho do serviço público é caracterizado por:",
+      "alternativas": {
+        "A": "críticas pontuais ao desempenho do servidor para fins de melhoria.",
+        "B": "condutas abusivas repetidas que degradem as condições de trabalho do servidor, afetando sua dignidade.",
+        "C": "qualquer forma de avaliação de desempenho negativa.",
+        "D": "discordância entre servidor e chefia sobre métodos de trabalho.",
+        "E": "atribuição de tarefas que exijam esforço adicional do servidor."
+      },
+      "resposta": "B",
+      "explicacao": "O assédio moral caracteriza-se por condutas abusivas, repetidas e sistemáticas que degradam as condições de trabalho do servidor, atentando contra sua dignidade psicológica. Uma crítica isolada ou avaliação negativa pontual não configura assédio. O elemento da repetição e da intenção de prejudicar é essencial."
+    },
+    {
+      "id": "alece-et-010",
+      "concurso": "ALECE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Transparência e controle social",
+      "enunciado": "O Portal da Transparência do Governo Federal tem como objetivo:",
+      "alternativas": {
+        "A": "restringir o acesso de cidadãos comuns às informações financeiras do governo.",
+        "B": "aumentar a transparência dos recursos públicos federais, permitindo que a sociedade acompanhe como o dinheiro público é gasto.",
+        "C": "divulgar apenas informações sobre licitações, excluindo dados de pessoal.",
+        "D": "ser usado exclusivamente por órgãos de controle interno.",
+        "E": "publicar informações sigilosas de forma codificada para servidores autorizados."
+      },
+      "resposta": "B",
+      "explicacao": "O Portal da Transparência foi criado para aumentar a transparência da gestão pública, possibilitando que a sociedade acompanhe e fiscalize como os recursos públicos federais são arrecadados e aplicados. Disponibiliza informações sobre transferências, convênios, gastos com pessoal, diárias, licitações e contratos."
+    },
+    {
+      "id": "alece-ti-001",
+      "concurso": "ALECE",
+      "materia": "Informática",
+      "subtopico": "Microsoft Word / LibreOffice Writer",
+      "enunciado": "No Microsoft Word, para criar um sumário automático, é necessário que os títulos do documento estejam formatados com:",
+      "alternativas": {
+        "A": "negrito e sublinhado aplicados manualmente.",
+        "B": "estilos de título predefinidos (Título 1, Título 2, etc.).",
+        "C": "fonte Arial tamanho 14 ou superior.",
+        "D": "numeração automática de parágrafos.",
+        "E": "caixa de texto com borda visível."
+      },
+      "resposta": "B",
+      "explicacao": "Para que o Word gere um sumário automático, os títulos devem ser formatados com os estilos predefinidos de título (Título 1, Título 2, Título 3 etc.). O Word usa esses estilos para identificar os níveis hierárquicos do documento e gerar o índice automaticamente, com números de página atualizáveis."
+    },
+    {
+      "id": "alece-ti-002",
+      "concurso": "ALECE",
+      "materia": "Informática",
+      "subtopico": "Segurança da informação",
+      "enunciado": "Um ataque de phishing é caracterizado por:",
+      "alternativas": {
+        "A": "sobrecarga de servidores com excesso de requisições (negação de serviço).",
+        "B": "tentativa de obter informações confidenciais fingindo ser uma entidade confiável por meio de comunicações eletrônicas fraudulentas.",
+        "C": "exploração de vulnerabilidades em sistemas operacionais desatualizados.",
+        "D": "instalação de software malicioso que criptografa os arquivos do usuário.",
+        "E": "interceptação de dados em redes Wi-Fi abertas por meio de farejadores."
+      },
+      "resposta": "B",
+      "explicacao": "Phishing é uma técnica de engenharia social em que o atacante finge ser uma entidade confiável (banco, empresa, órgão público) para obter dados confidenciais como senhas e números de cartão. Geralmente ocorre por e-mail, SMS (smishing) ou voz (vishing). O ransomware (D) criptografa arquivos. DDoS (A) é ataque de negação de serviço."
+    },
+    {
+      "id": "alece-ti-003",
+      "concurso": "ALECE",
+      "materia": "Informática",
+      "subtopico": "Planilhas eletrônicas",
+      "enunciado": "No Microsoft Excel, a fórmula =PROCV(A2;B1:D10;3;FALSO) busca o valor de A2 na:",
+      "alternativas": {
+        "A": "terceira coluna do intervalo B1:D10, retornando correspondência exata.",
+        "B": "primeira coluna do intervalo B1:D10 e retorna o valor da terceira coluna, com correspondência exata.",
+        "C": "primeira linha do intervalo B1:D10 e retorna o valor da terceira linha.",
+        "D": "célula B3 do intervalo B1:D10 e faz correspondência aproximada.",
+        "E": "coluna D do intervalo e retorna o valor da coluna B."
+      },
+      "resposta": "B",
+      "explicacao": "PROCV(valor_procurado; matriz_tabela; núm_índice_coluna; [procurar_intervalo]): busca o valor de A2 na PRIMEIRA coluna do intervalo B1:D10 e, quando encontrado, retorna o valor da TERCEIRA coluna desse intervalo. FALSO indica correspondência exata (não aproximada)."
+    },
+    {
+      "id": "alece-ti-004",
+      "concurso": "ALECE",
+      "materia": "Informática",
+      "subtopico": "Internet e e-mail",
+      "enunciado": "O protocolo HTTPS garante a segurança das comunicações na web por meio de:",
+      "alternativas": {
+        "A": "bloqueio de cookies de terceiros.",
+        "B": "criptografia dos dados transmitidos entre o navegador e o servidor web.",
+        "C": "verificação de vírus nos arquivos baixados.",
+        "D": "autenticação do usuário por senha de 8 dígitos.",
+        "E": "compressão de dados para transmissão mais rápida."
+      },
+      "resposta": "B",
+      "explicacao": "O HTTPS (HTTP Secure) usa protocolos de criptografia TLS/SSL para estabelecer uma conexão segura entre o navegador do usuário e o servidor web. Isso protege os dados transmitidos de interceptação por terceiros. O cadeado verde na barra de endereços indica conexão HTTPS."
+    },
+    {
+      "id": "alece-ti-005",
+      "concurso": "ALECE",
+      "materia": "Informática",
+      "subtopico": "Sistemas operacionais",
+      "enunciado": "No Windows 10/11, o atalho de teclado para copiar um arquivo ou texto selecionado é:",
+      "alternativas": {
+        "A": "Ctrl + X",
+        "B": "Ctrl + V",
+        "C": "Ctrl + C",
+        "D": "Ctrl + Z",
+        "E": "Ctrl + A"
+      },
+      "resposta": "C",
+      "explicacao": "Ctrl + C é o atalho para copiar (Copy) no Windows. Ctrl + X recorta (Cut), Ctrl + V cola (Paste), Ctrl + Z desfaz (Undo), Ctrl + A seleciona tudo (Select All). Esses atalhos são válidos na maioria dos programas do Windows e também em outros sistemas operacionais."
+    },
+    {
+      "id": "alece-ti-006",
+      "concurso": "ALECE",
+      "materia": "Informática",
+      "subtopico": "Backup e armazenamento",
+      "enunciado": "Qual é a principal vantagem do armazenamento em nuvem (cloud storage) em relação ao armazenamento local?",
+      "alternativas": {
+        "A": "Maior velocidade de acesso em comparação com o HD local.",
+        "B": "Acesso aos arquivos de qualquer dispositivo com conexão à internet e maior resiliência a falhas físicas.",
+        "C": "Não depende de conexão à internet para funcionar.",
+        "D": "Os arquivos ficam disponíveis apenas no dispositivo de origem.",
+        "E": "Custo zero em todos os casos de uso."
+      },
+      "resposta": "B",
+      "explicacao": "O armazenamento em nuvem permite acesso aos arquivos de qualquer lugar com conexão à internet, em qualquer dispositivo autorizado. Além disso, os dados ficam em data centers com redundância, protegidos contra falhas físicas de hardware local (como queima de HD). A desvantagem é a dependência de internet e questões de privacidade."
+    },
+    {
+      "id": "alece-ti-007",
+      "concurso": "ALECE",
+      "materia": "Informática",
+      "subtopico": "Redes de computadores",
+      "enunciado": "Uma rede LAN (Local Area Network) é caracterizada por:",
+      "alternativas": {
+        "A": "cobrir áreas geográficas extensas, como países ou continentes.",
+        "B": "interligar computadores e dispositivos em uma área geograficamente limitada, como um edifício ou campus.",
+        "C": "ser a mesma coisa que a internet.",
+        "D": "conectar apenas dispositivos móveis por tecnologia sem fio.",
+        "E": "operar exclusivamente com cabos de fibra óptica."
+      },
+      "resposta": "B",
+      "explicacao": "LAN (Local Area Network) é uma rede local que interliga computadores e dispositivos em uma área geográfica restrita, como um escritório, edifício ou campus universitário. WAN (Wide Area Network) cobre áreas extensas. A internet é uma rede pública global. LAN pode usar cabos (Ethernet) ou Wi-Fi."
+    },
+    {
+      "id": "alece-ti-008",
+      "concurso": "ALECE",
+      "materia": "Informática",
+      "subtopico": "Software e licenças",
+      "enunciado": "O software livre, no conceito da Free Software Foundation, garante ao usuário as liberdades de:",
+      "alternativas": {
+        "A": "usar o programa gratuitamente apenas para fins pessoais.",
+        "B": "executar, estudar, redistribuir e melhorar o programa.",
+        "C": "copiar o software para venda sem restrições.",
+        "D": "usar o programa apenas para fins não comerciais.",
+        "E": "instalar o software em qualquer quantidade de computadores da mesma empresa."
+      },
+      "resposta": "B",
+      "explicacao": "O software livre, conforme a Free Software Foundation, garante quatro liberdades essenciais: (0) executar o programa para qualquer propósito; (1) estudar o funcionamento e adaptá-lo; (2) redistribuir cópias; (3) distribuir cópias das versões modificadas. 'Livre' refere-se à liberdade, não necessariamente ao custo."
+    },
+    {
+      "id": "alece-ti-009",
+      "concurso": "ALECE",
+      "materia": "Informática",
+      "subtopico": "Vírus e malware",
+      "enunciado": "Um ransomware é um tipo de malware que:",
+      "alternativas": {
+        "A": "monitora as atividades do usuário e envia dados para terceiros.",
+        "B": "exibe anúncios indesejados durante a navegação.",
+        "C": "criptografa os arquivos da vítima e exige pagamento (resgate) para desbloqueá-los.",
+        "D": "se replica automaticamente pela rede sem necessidade de ação do usuário.",
+        "E": "abre brechas no sistema para permitir acesso remoto não autorizado."
+      },
+      "resposta": "C",
+      "explicacao": "Ransomware é um malware que, após infectar o sistema, criptografa os arquivos da vítima, tornando-os inacessíveis. Em seguida, exige o pagamento de um resgate (geralmente em criptomoeda) pela chave de descriptografia. Exemplos: WannaCry, REvil. Spyware (A) monitora. Adware (B) exibe anúncios. Worm (D) se replica. Backdoor (E) abre acesso remoto."
+    },
+    {
+      "id": "alece-ti-010",
+      "concurso": "ALECE",
+      "materia": "Informática",
+      "subtopico": "Banco de dados",
+      "enunciado": "Em um banco de dados relacional, a chave primária (Primary Key) tem a função de:",
+      "alternativas": {
+        "A": "criptografar os dados sensíveis da tabela.",
+        "B": "identificar de forma única cada registro (linha) em uma tabela, não podendo ser nula ou repetida.",
+        "C": "relacionar duas tabelas diferentes por meio de um campo comum.",
+        "D": "definir o tipo de dado aceito em uma coluna.",
+        "E": "ordenar automaticamente os registros por ordem alfabética."
+      },
+      "resposta": "B",
+      "explicacao": "A chave primária (Primary Key) é um campo ou conjunto de campos que identifica de forma única cada registro em uma tabela de banco de dados relacional. Não pode conter valores nulos (NULL) nem repetidos. Já a chave estrangeira (Foreign Key) relaciona duas tabelas."
+    }
+  ]
+}
