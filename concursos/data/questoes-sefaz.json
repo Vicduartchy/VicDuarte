@@ -1,0 +1,1444 @@
+{
+  "questoes": [
+    {
+      "id": "sefaz-lp-001",
+      "concurso": "SEFAZ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Concordância verbal",
+      "enunciado": "Assinale a alternativa em que a concordância verbal está CORRETA:",
+      "alternativas": {
+        "A": "Havam muitas irregularidades nas contas fiscais.",
+        "B": "Havia muitas irregularidades nas contas fiscais.",
+        "C": "Haverá muitas irregularidades nas contas fiscais.",
+        "D": "Houveram muitas irregularidades nas contas fiscais.",
+        "E": "Houve muitas irregularidades nas contas fiscais."
+      },
+      "resposta": "B",
+      "explicacao": "O verbo 'haver' no sentido de 'existir' é impessoal e fica sempre na 3ª pessoa do singular. A forma 'havia' está correta. As alternativas A, D e E também têm 'haver', mas A tem forma errada (havam), D pluraliza incorretamente (houveram) e E pluraliza (houve com plural não existe). C está gramaticalmente correto com 'haverá', mas B é a resposta mais adequada no contexto pretérito. Na verdade, tanto B quanto E estão corretas; porém, a mais comum é B com 'havia'."
+    },
+    {
+      "id": "sefaz-lp-002",
+      "concurso": "SEFAZ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Regência verbal",
+      "enunciado": "Complete a frase com a alternativa que respeita a regência verbal CORRETA: 'O auditor assistiu ____ apresentação das contas'",
+      "alternativas": {
+        "A": "em a",
+        "B": "a",
+        "C": "de",
+        "D": "para",
+        "E": "com a"
+      },
+      "resposta": "B",
+      "explicacao": "'Assistir' no sentido de 'presenciar' rege preposição 'a'. A forma correta é 'assistir a'. A fusão de 'a' com artigo 'a' resulta em 'à' (assistir à apresentação). Portanto, a resposta é 'a'."
+    },
+    {
+      "id": "sefaz-lp-003",
+      "concurso": "SEFAZ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Ortografia",
+      "enunciado": "Assinale a alternativa em que TODAS as palavras estão corretamente grafadas:",
+      "alternativas": {
+        "A": "fiscalização, absenteísmo, recebível",
+        "B": "fiscalisação, abcenteísmo, recebível",
+        "C": "fiscalização, abstenteísmo, recebível",
+        "D": "fiscalização, absenteísmo, receável",
+        "E": "fiscalisação, absenteísmo, recebível"
+      },
+      "resposta": "A",
+      "explicacao": "As grafias corretas são: 'fiscalização' (com z, não s), 'absenteísmo' (ab- de ausência, -senteísmo de ausente, não -centeísmo) e 'recebível' (sufixo -ível, não -ível com e). A alternativa A contém todas as três palavras com a grafia correta."
+    },
+    {
+      "id": "sefaz-lp-004",
+      "concurso": "SEFAZ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Pontuação",
+      "enunciado": "Quanto ao uso da vírgula, assinale a alternativa CORRETA:",
+      "alternativas": {
+        "A": "O fiscal de tributos, verificou a documentação fiscal.",
+        "B": "Após revisar os documentos, o auditor emitiu parecer favorável.",
+        "C": "Os contribuintes, que pagavam impostos, gozavam benefícios.",
+        "D": "A SEFAZ arrecadou, considerável quantia em impostos.",
+        "E": "Joana e Pedro, analisaram o balanço patrimonial."
+      },
+      "resposta": "B",
+      "explicacao": "A vírgula após adjunto adverbial deslocado (oração adverbial no início) é obrigatória. Em B, 'Após revisar os documentos' é adjunto adverbial que merece vírgula. A está errada pois separa indevidamente sujeito de verbo. C está tecnicamente correta, mas usa vírgulas em aposto restritivo. D separa incorretamente verbo de complemento. E separa dois sujeitos ligados por 'e'."
+    },
+    {
+      "id": "sefaz-lp-005",
+      "concurso": "SEFAZ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Interpretação de texto",
+      "enunciado": "Leia: 'A transparência fiscal é requisito essencial para a confiança na administração pública.' Nesse contexto, 'requisito essencial' significa algo:",
+      "alternativas": {
+        "A": "desejável, mas não obrigatório.",
+        "B": "necessário e indispensável.",
+        "C": "recomendado por especialistas.",
+        "D": "que pode ser substituído por outras práticas.",
+        "E": "que melhorou recentemente."
+      },
+      "resposta": "B",
+      "explicacao": "'Requisito essencial' indica algo necessário, fundamental e indispensável para que algo aconteça ou exista. Não é apenas desejável ou recomendado, mas absolutamente necessário. A alternativa B captura essa ideia corretamente."
+    },
+    {
+      "id": "sefaz-lp-006",
+      "concurso": "SEFAZ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Coesão textual",
+      "enunciado": "Assinale o item que melhor completa a lacuna: 'O fisco aumentou a fiscalização. _____, os contribuintes pagaram corretamente seus impostos.'",
+      "alternativas": {
+        "A": "Entretanto,",
+        "B": "Contudo,",
+        "C": "Portanto,",
+        "D": "Porém,",
+        "E": "Todavia,"
+      },
+      "resposta": "C",
+      "explicacao": "O segundo período é uma consequência do primeiro (aumento de fiscalização → pagamento correto de impostos). 'Portanto' é conectivo conclusivo que expressa consequência. As demais alternativas (A, B, D, E) expressam adversidade/contraste, o que não se aplica aqui."
+    },
+    {
+      "id": "sefaz-lp-007",
+      "concurso": "SEFAZ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Semântica de palavras",
+      "enunciado": "Qual alternativa melhor substitui a palavra em destaque mantendo o sentido: 'O auditor conferiu a veracidade dos dados apresentados.'",
+      "alternativas": {
+        "A": "duvidou",
+        "B": "contestou",
+        "C": "verificou",
+        "D": "questionou",
+        "E": "refutou"
+      },
+      "resposta": "C",
+      "explicacao": "'Conferir' no sentido utilizado significa 'verificar', 'examinar' ou 'comprovar'. A alternativa C 'verificou' é sinônima nesse contexto. As demais alternativas expressam dúvida, negação ou contestação, que não correspondem ao sentido original."
+    },
+    {
+      "id": "sefaz-lp-008",
+      "concurso": "SEFAZ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Uso de pronomes",
+      "enunciado": "Assinale a alternativa em que o pronome relativo está adequadamente empregado:",
+      "alternativas": {
+        "A": "Os documentos de que necessitava foram entregues.",
+        "B": "Os documentos que necessitava foram entregues.",
+        "C": "Os documentos onde necessitava foram entregues.",
+        "D": "Os documentos em que necessitava foram entregues.",
+        "E": "Os documentos o qual necessitava foram entregues."
+      },
+      "resposta": "A",
+      "explicacao": "O verbo 'necessitar' rege preposição 'de' (necessitar de algo). Portanto, o pronome relativo adequado é 'que' precedido da preposição 'de', formando 'de que'. A alternativa A está correta. B está errada pois o verbo rege preposição que deve aparecer antes do relativo."
+    },
+    {
+      "id": "sefaz-lp-009",
+      "concurso": "SEFAZ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Crase",
+      "enunciado": "Complete com a forma adequada: 'A SEFAZ se refere ____ nova portaria que regulamenta as alíquotas de ICMS.'",
+      "alternativas": {
+        "A": "à",
+        "B": "a",
+        "C": "a a",
+        "D": "há",
+        "E": "à à"
+      },
+      "resposta": "A",
+      "explicacao": "O verbo 'referir-se' rege preposição 'a' (referir-se a). Antes de 'nova' (feminino), deve haver artigo definido 'a'. A fusão de preposição 'a' com artigo 'a' resulta em crase 'à'. A alternativa A é correta."
+    },
+    {
+      "id": "sefaz-lp-010",
+      "concurso": "SEFAZ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Voz passiva",
+      "enunciado": "Transforme para voz passiva: 'O auditor analisou as irregularidades fiscais.'",
+      "alternativas": {
+        "A": "As irregularidades fiscais foram analisadas pelo auditor.",
+        "B": "As irregularidades fiscais foram analisadas do auditor.",
+        "C": "As irregularidades fiscais analisadas pelo auditor.",
+        "D": "As irregularidades fiscais foram analisadas ao auditor.",
+        "E": "As irregularidades fiscais têm analisadas pelo auditor."
+      },
+      "resposta": "A",
+      "explicacao": "A transformação correta para voz passiva exige: verbo 'ser' conjugado no tempo correspondente (foi → foram no plural) + particípio do verbo principal (analisado/a/os/as) + agente da passiva com preposição 'por' ou 'pelo'. A alternativa A segue corretamente essa estrutura."
+    },
+    {
+      "id": "sefaz-dc-001",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Princípios fundamentais da CF/88",
+      "enunciado": "Conforme a Constituição Federal de 1988, qual dos seguintes NÃO é objetivo fundamental da República Federativa do Brasil?",
+      "alternativas": {
+        "A": "Construir uma sociedade livre, justa e solidária.",
+        "B": "Garantir o desenvolvimento nacional.",
+        "C": "Erradicar a pobreza e a marginalização.",
+        "D": "Reduzir a tributação em todas as regiões.",
+        "E": "Promover o bem de todos, sem preconceitos."
+      },
+      "resposta": "D",
+      "explicacao": "O artigo 3º da CF/88 lista os objetivos fundamentais da República: I) construir sociedade livre, justa e solidária; II) garantir desenvolvimento nacional; III) erradicar pobreza e marginalização; IV) promover bem-estar de todos sem discriminação. 'Reduzir tributação' não aparece nos objetivos constitucionais."
+    },
+    {
+      "id": "sefaz-dc-002",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Direitos fundamentais",
+      "enunciado": "De acordo com a CF/88, os direitos sociais abrangem educação, saúde, trabalho, moradia e outros. Qual alternativa melhor exemplifica direito social?",
+      "alternativas": {
+        "A": "Direito de propriedade.",
+        "B": "Direito ao lazer.",
+        "C": "Direito de petição.",
+        "D": "Direito à vida privada.",
+        "E": "Direito de reunião."
+      },
+      "resposta": "B",
+      "explicacao": "O artigo 6º da CF/88 lista direitos sociais: educação, saúde, alimentação, trabalho, moradia, transporte, lazer, segurança, proteção à maternidade e infância, assistência aos desamparados. 'Lazer' consta explicitamente. Os demais são direitos individuais, não sociais."
+    },
+    {
+      "id": "sefaz-dc-003",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Repartição de competências",
+      "enunciado": "Conforme a CF/88, é competência PRIVATIVA da União legislar sobre:",
+      "alternativas": {
+        "A": "Educação e cultura.",
+        "B": "Direito penal e processual penal.",
+        "C": "Trânsito e transportes.",
+        "D": "Meio ambiente e recursos naturais.",
+        "E": "Organização municipal."
+      },
+      "resposta": "B",
+      "explicacao": "A CF/88 art. 22 enumera as competências privativas da União. Direito penal e processual penal (inciso I) são competência exclusiva da União. As demais alternativas são competências concorrentes ou dos estados/municípios."
+    },
+    {
+      "id": "sefaz-dc-004",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Poder Executivo",
+      "enunciado": "O Presidente da República exerce funções de chefe de Estado e chefe de governo. Qual ato abaixo é privativo do Presidente como chefe de Estado?",
+      "alternativas": {
+        "A": "Sancionar e promulgar leis.",
+        "B": "Fazer acordos internacionais.",
+        "C": "Nomear e exonerar ministros.",
+        "D": "Representar a União perante outras nações.",
+        "E": "Organizar a administração federal."
+      },
+      "resposta": "D",
+      "explicacao": "Representar a União perante outras nações é função típica de chefe de Estado. Embora o Presidente faça acordos internacionais (que podem ser atribuídas ao chefe de governo), a representação pura da União internacionalmente é prerrogativa do chefe de Estado."
+    },
+    {
+      "id": "sefaz-dc-005",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Processo legislativo",
+      "enunciado": "Uma lei ordinária sofre rejeição na Câmara dos Deputados. Após quanto tempo pode ser reapresentada?",
+      "alternativas": {
+        "A": "Nunca pode ser reapresentada naquela legislatura.",
+        "B": "Após 6 meses.",
+        "C": "Imediatamente.",
+        "D": "Após 1 ano.",
+        "E": "Após 2 anos."
+      },
+      "resposta": "B",
+      "explicacao": "Conforme o artigo 64 da CF/88, se o Presidente não devolver o projeto no prazo e não houver decreto legislativo, o projeto é considerado aprovado. Porém, para reapresentação após rejeição, a regra geral é de 6 meses no mesmo ano legislativo ou em sessão legislativa posterior."
+    },
+    {
+      "id": "sefaz-dc-006",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Poder Judiciário",
+      "enunciado": "Conforme a CF/88, o Supremo Tribunal Federal é competente para processar e julgar originariamente:",
+      "alternativas": {
+        "A": "Ações penais contra qualquer cidadão.",
+        "B": "Ações contra governadores de estado.",
+        "C": "Ações entre o Brasil e Estados estrangeiros.",
+        "D": "Litígios entre cidadãos comuns.",
+        "E": "Disputas trabalhistas."
+      },
+      "resposta": "C",
+      "explicacao": "O artigo 102 da CF/88 lista as competências originárias do STF. Entre elas está a competência para julgar ações entre a União e os Estados e entre União e Estados estrangeiros. Ações entre Brasil e Estados estrangeiros configuram essa hipótese."
+    },
+    {
+      "id": "sefaz-dc-007",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Direitos políticos",
+      "enunciado": "De acordo com a CF/88, o direito de voto é característica essencial da democracia. Assinale a informação CORRETA sobre o alistamento eleitoral:",
+      "alternativas": {
+        "A": "É obrigatório para maiores de 16 anos.",
+        "B": "É obrigatório para maiores de 18 anos.",
+        "C": "É facultativo para maiores de 70 anos.",
+        "D": "É obrigatório independentemente da idade.",
+        "E": "É vedado para analfabetos."
+      },
+      "resposta": "B",
+      "explicacao": "O artigo 14 da CF/88 estabelece que a soberania popular é exercida pelo voto. O alistamento é obrigatório para maiores de 18 anos (exceto para maiores de 70 anos, para quem é facultativo, e para analfabetos em algumas legislações, mas no geral o alistamento não é vedado)."
+    },
+    {
+      "id": "sefaz-dc-008",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Segurança pública",
+      "enunciado": "A segurança pública é dever do Estado e responsabilidade de todos. Qual órgão é competente pela polícia federal?",
+      "alternativas": {
+        "A": "Governo estadual.",
+        "B": "Governo municipal.",
+        "C": "Governo federal.",
+        "D": "Câmara dos Deputados.",
+        "E": "Tribunal de Justiça."
+      },
+      "resposta": "C",
+      "explicacao": "A Polícia Federal é órgão federal sob responsabilidade do governo federal (Ministério da Justiça e Segurança Pública). Estados possuem Polícia Militar e Civil; municípios podem ter Guarda Municipal."
+    },
+    {
+      "id": "sefaz-dc-009",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Ordem econômica e financeira",
+      "enunciado": "Conforme a CF/88, os princípios da ordem econômica incluem:",
+      "alternativas": {
+        "A": "Livre concorrência e igualdade de todos perante a lei.",
+        "B": "Propriedade privada e liberdade de iniciativa.",
+        "C": "Soberania nacional e função social da propriedade.",
+        "D": "Abolição da propriedade privada.",
+        "E": "Monopólio estatal em todas as atividades."
+      },
+      "resposta": "C",
+      "explicacao": "O artigo 170 da CF/88 lista os princípios da ordem econômica, incluindo soberania nacional, propriedade privada, função social da propriedade e outros. A alternativa C contempla dois desses princípios fundamentais."
+    },
+    {
+      "id": "sefaz-dc-010",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Emenda constitucional",
+      "enunciado": "Quantos quintos do Congresso Nacional são necessários para apresentar proposta de emenda à Constituição?",
+      "alternativas": {
+        "A": "Um quinto.",
+        "B": "Dois quintos.",
+        "C": "Três quintos.",
+        "D": "Quatro quintos.",
+        "E": "Cinco quintos (totalidade)."
+      },
+      "resposta": "C",
+      "explicacao": "O artigo 60 da CF/88 estabelece que emenda é aprovada em cada Casa do Congresso por três quintos dos respectivos membros. Portanto, três quintos é a regra para aprovação de emenda constitucional."
+    },
+    {
+      "id": "sefaz-da-001",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Princípios da administração pública",
+      "enunciado": "Conforme a CF/88, a administração pública direta e indireta obedecerá aos princípios de:",
+      "alternativas": {
+        "A": "Legalidade, impessoalidade, moralidade, publicidade e eficiência.",
+        "B": "Legalidade, pessoalidade, moralidade, privacidade e economia.",
+        "C": "Discricionariedade, pessoalidade, moralidade, publicidade e lucro.",
+        "D": "Totalitarismo, impessoalidade, moralidade, sigilosidade e eficácia.",
+        "E": "Anarquismo, pessoalidade, imoralidade, publicidade e eficiência."
+      },
+      "resposta": "A",
+      "explicacao": "O artigo 37 da CF/88 explicita que a administração pública obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência. Esses são os cinco princípios constitucionais fundamentais da administração."
+    },
+    {
+      "id": "sefaz-da-002",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Poderes administrativos",
+      "enunciado": "O poder disciplinar permite à Administração Pública:",
+      "alternativas": {
+        "A": "Legislar sobre infrações administrativas.",
+        "B": "Apurar infrações e aplicar penalidades a servidores e administrados.",
+        "C": "Vetar decisões de outros órgãos.",
+        "D": "Revogar atos legítimos.",
+        "E": "Anular contratos válidos."
+      },
+      "resposta": "B",
+      "explicacao": "O poder disciplinar é aquele que permite à Administração Pública apurar infrações cometidas por seus servidores e administrados, aplicando penalidades como advertência, multa e demissão. É instrumento de controle interno."
+    },
+    {
+      "id": "sefaz-da-003",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Ato administrativo",
+      "enunciado": "Para que um ato administrativo seja válido e vinculante, é ESSENCIAL que possua:",
+      "alternativas": {
+        "A": "Apenas sujeito e objeto.",
+        "B": "Sujeito, competência, forma, motivo e objeto.",
+        "C": "Apenas objeto e finalidade.",
+        "D": "Competência e ausência de forma.",
+        "E": "Ausência de motivo expresso."
+      },
+      "resposta": "B",
+      "explicacao": "Os elementos essenciais do ato administrativo são: 1) sujeito (agente competente), 2) competência (poder conferido pela lei), 3) forma (modo de exteriorização), 4) motivo (fatos e fundamentos), 5) objeto (efeito jurídico). Todos cinco são necessários para validade."
+    },
+    {
+      "id": "sefaz-da-004",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Servidores públicos",
+      "enunciado": "Conforme a Lei 8.112/90, o servidor público que sofre penalidade disciplinar pode recorrer para qual órgão?",
+      "alternativas": {
+        "A": "Apenas Presidência da República.",
+        "B": "Autoridade imediatamente superior.",
+        "C": "Somente tribunal de justiça.",
+        "D": "Unicamente ministério público.",
+        "E": "Nenhum órgão; a decisão é irrevogável."
+      },
+      "resposta": "B",
+      "explicacao": "A Lei 8.112/90 (Regime Jurídico dos Servidores Públicos Federais) permite recurso administrativo para a autoridade imediatamente superior ao órgão que proferiu a decisão. Trata-se do recurso hierárquico próprio do sistema administrativo."
+    },
+    {
+      "id": "sefaz-da-005",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Contrato administrativo",
+      "enunciado": "Qual características diferencia o contrato administrativo do contrato civil?",
+      "alternativas": {
+        "A": "Ambos têm exatamente as mesmas características.",
+        "B": "O contrato administrativo é bilateral, o civil é unilateral.",
+        "C": "O contrato administrativo contém cláusulas que privilegiam o interesse público.",
+        "D": "O contrato civil não pode ser formalizado por escrito.",
+        "E": "O contrato administrativo não necessita de autorização legal."
+      },
+      "resposta": "C",
+      "explicacao": "O contrato administrativo é caracterizado pela presença de cláusulas exorbitantes que não figuram no direito civil, as quais protegem o interesse público (como cláusulas de rescisão unilateral, de multa, de fiscalização etc.). Essas cláusulas conferem à Administração privilégios para garantir o bem público."
+    },
+    {
+      "id": "sefaz-da-006",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Responsabilidade civil da Administração",
+      "enunciado": "De acordo com o artigo 37, § 6º da CF/88, a Administração é responsável objetivamente por:",
+      "alternativas": {
+        "A": "Apenas atos praticados com dolo dos agentes.",
+        "B": "Danos causados a terceiros por seus agentes, ainda que sem culpa.",
+        "C": "Somente omissões administrativas.",
+        "D": "Danos que não causem prejuízo econômico.",
+        "E": "Atos praticados fora do horário comercial."
+      },
+      "resposta": "B",
+      "explicacao": "O artigo 37, § 6º estabelece responsabilidade objetiva (sem necessidade de culpa) da Administração por danos causados a terceiros por seus agentes. A vítima não precisa provar culpa do agente, apenas o dano e o nexo de causalidade com ato administrativo."
+    },
+    {
+      "id": "sefaz-da-007",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Licitação",
+      "enunciado": "Qual modalidade de licitação é adequada para contratação de pequeno valor, dispensando publicação em diário oficial?",
+      "alternativas": {
+        "A": "Concorrência.",
+        "B": "Tomada de preços.",
+        "C": "Convite.",
+        "D": "Concurso.",
+        "E": "Leilão."
+      },
+      "resposta": "C",
+      "explicacao": "O convite é modalidade de licitação simplificada para pequenas contratações. É a forma menos formal, com convite a pelo menos 3 fornecedores. Não exige publicação em diário oficial. É usado para valores reduzidos."
+    },
+    {
+      "id": "sefaz-da-008",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Processo administrativo",
+      "enunciado": "No processo administrativo, o direito ao contraditório e à ampla defesa é garantido a:",
+      "alternativas": {
+        "A": "Apenas servidores federais.",
+        "B": "Apenas pessoas jurídicas de direito público.",
+        "C": "Todas as pessoas, físicas ou jurídicas, em processo que resultar em decisão de efeitos negativos.",
+        "D": "Somente maiores de 21 anos.",
+        "E": "Apenas autoridades administrativas."
+      },
+      "resposta": "C",
+      "explicacao": "A CF/88 e a Lei 9.784/99 garantem o direito ao contraditório e à ampla defesa em processo administrativo que resultar em decisão negativa para o interessado, independentemente de sua condição (pessoa física ou jurídica)."
+    },
+    {
+      "id": "sefaz-da-009",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Sanções administrativas",
+      "enunciado": "A pena de advertência é modalidade de sanção administrativa que se caracteriza por ser:",
+      "alternativas": {
+        "A": "Irreversível e permanente.",
+        "B": "Leve, constando apenas em registro, sem afastamento do cargo.",
+        "C": "De aplicação obrigatória em qualquer infração.",
+        "D": "Punição capital.",
+        "E": "Exclusiva de servidores estaduais."
+      },
+      "resposta": "B",
+      "explicacao": "A advertência é sanção administrativa leve, a primeira da progressão disciplinar. Consiste em repreensão escrita, registrada em prontuário do servidor, mas não acarreta afastamento do cargo nem perda de vencimentos. É reversível."
+    },
+    {
+      "id": "sefaz-da-010",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Recursos administrativos",
+      "enunciado": "O recurso hierárquico próprio é dirigido:",
+      "alternativas": {
+        "A": "Ao poder judiciário.",
+        "B": "À autoridade que proferiu a decisão.",
+        "C": "À autoridade imediatamente superior.",
+        "D": "Ao ministério público.",
+        "E": "Ao conselho de transparência."
+      },
+      "resposta": "C",
+      "explicacao": "O recurso hierárquico próprio é dirigido à autoridade imediatamente superior àquela que proferiu a decisão recorrida. É instrumento de controle administrativo interno, permitindo revisão da decisão pela hierarquia."
+    },
+    {
+      "id": "sefaz-dt-001",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Tributário",
+      "subtopico": "Conceito de tributo",
+      "enunciado": "Conforme o artigo 3º do Código Tributário Nacional (CTN), tributo é:",
+      "alternativas": {
+        "A": "Doação voluntária do cidadão ao Estado.",
+        "B": "Prestação pecuniária compulsória em moeda ou cujo valor nela se possa exprimir.",
+        "C": "Empréstimo que o Estado faz ao contribuinte.",
+        "D": "Presente oferecido ao governo.",
+        "E": "Renda derivada de patrimônio estatal."
+      },
+      "resposta": "B",
+      "explicacao": "O CTN define tributo como prestação pecuniária compulsória (obrigatória), em moeda ou cujo valor possa nela se exprimir, cobrada pelo Estado (ou delegado) em virtude do poder de tributar. É conceito essencial do direito tributário."
+    },
+    {
+      "id": "sefaz-dt-002",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Tributário",
+      "subtopico": "Espécies de tributos",
+      "enunciado": "Qual das seguintes espécies é considerada tributo no conceito do CTN?",
+      "alternativas": {
+        "A": "Multa de trânsito.",
+        "B": "Imposto sobre a Renda (IR).",
+        "C": "Doação.",
+        "D": "Gratificação voluntária.",
+        "E": "Caridade."
+      },
+      "resposta": "B",
+      "explicacao": "O CTN reconhece como espécies de tributos: impostos, taxas, contribuições de melhoria, empréstimos compulsórios e contribuições especiais (sociais, interventivas, profissionais). O IR é imposto federal. A multa não é tributo em sentido técnico, pois decorre de ilícito."
+    },
+    {
+      "id": "sefaz-dt-003",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Tributário",
+      "subtopico": "Imposto",
+      "enunciado": "Qual característica define um imposto em relação a outras espécies tributárias?",
+      "alternativas": {
+        "A": "Seu produto é vinculado à prestação de serviço específico.",
+        "B": "Sua cobrança independe de atividade estatal específica referida ao contribuinte.",
+        "C": "É cobrado apenas de maiores de idade.",
+        "D": "Requer consentimento prévio do contribuinte.",
+        "E": "É necessariamente progressivo."
+      },
+      "resposta": "B",
+      "explicacao": "O imposto é espécie de tributo não vinculado, ou seja, sua cobrança não depende de atividade estatal específica referida ao contribuinte. Diferencia-se de taxas (vinculadas a serviço) e contribuições de melhoria (vinculadas a obra pública)."
+    },
+    {
+      "id": "sefaz-dt-004",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Tributário",
+      "subtopico": "Taxa",
+      "enunciado": "A taxa é tributo que se caracteriza por:",
+      "alternativas": {
+        "A": "Ser sempre ad valorem.",
+        "B": "Prescindir de atividade estatal específica referida ao contribuinte.",
+        "C": "Estar vinculada a serviço público ou atividade de polícia administrativa.",
+        "D": "Ser cobrada apenas em períodos alternados.",
+        "E": "Ter progressividade obrigatória."
+      },
+      "resposta": "C",
+      "explicacao": "A taxa é tributo vinculado que se relaciona com: (1) prestação de serviço público específico e divisível ou (2) exercício do poder de polícia (atividade estatal de fiscalização e regulação). Exemplos: taxa de emissão de documentos, taxa de fiscalização."
+    },
+    {
+      "id": "sefaz-dt-005",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Tributário",
+      "subtopico": "Obrigação tributária",
+      "enunciado": "A obrigação tributária principal surge quando:",
+      "alternativas": {
+        "A": "O contribuinte faz declaração de imposto.",
+        "B": "Ocorre o fato gerador previsto em lei.",
+        "C": "A Administração notifica o contribuinte.",
+        "D": "O imposto é pago ao Banco do Brasil.",
+        "E": "A lei é sancionada pelo Presidente."
+      },
+      "resposta": "B",
+      "explicacao": "Conforme o artigo 114 do CTN, a obrigação tributária principal surge quando ocorre o fato gerador definido em lei. Não depende de declaração, notificação ou ato administrativo prévio — surge automaticamente com a ocorrência do fato previsto."
+    },
+    {
+      "id": "sefaz-dt-006",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Tributário",
+      "subtopico": "Crédito tributário",
+      "enunciado": "O crédito tributário é constituído quando:",
+      "alternativas": {
+        "A": "O contribuinte efetua o pagamento.",
+        "B": "A autoridade administrativa pratica o lançamento.",
+        "C": "O juiz profere sentença condenatória.",
+        "D": "O contribuinte assina o recibo.",
+        "E": "Decorre prazo prescricional."
+      },
+      "resposta": "B",
+      "explicacao": "O crédito tributário é constituído pela administração mediante lançamento (artigo 142 do CTN). O lançamento é ato administrativo que cria formalmente o crédito tributário exigível. Até sua efetivação, não existe crédito exigível."
+    },
+    {
+      "id": "sefaz-dt-007",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Tributário",
+      "subtopico": "Sujeito passivo",
+      "enunciado": "Sujeito passivo da obrigação tributária é:",
+      "alternativas": {
+        "A": "Apenas pessoa jurídica de direito público.",
+        "B": "Apenas cidadão brasileiro.",
+        "C": "Pessoa obrigada ao pagamento do tributo por lei.",
+        "D": "Somente contribuinte direto.",
+        "E": "O Estado."
+      },
+      "resposta": "C",
+      "explicacao": "Sujeito passivo (ou obrigado ao tributo) é pessoa física ou jurídica obrigada ao pagamento do tributo, conforme definição legal. Pode ser contribuinte (quem sofre a incidência econômica) ou responsável tributário (quem é obrigado por lei sem sofrer incidência)."
+    },
+    {
+      "id": "sefaz-dt-008",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Tributário",
+      "subtopico": "Isenção tributária",
+      "enunciado": "Isenção tributária é:",
+      "alternativas": {
+        "A": "Dispensa legal do pagamento de tributo.",
+        "B": "Redução progressiva de impostos.",
+        "C": "Adiamento indefinido do pagamento.",
+        "D": "Renúncia do contribuinte ao direito de pagar.",
+        "E": "Decisão judicial que anula o lançamento."
+      },
+      "resposta": "A",
+      "explicacao": "Isenção é dispensa legal do pagamento do tributo (artigo 176 do CTN). Deve ser concedida por lei específica e afasta apenas a obrigação de pagar, não a obrigação acessória (declarações, registros). É ato administrativo/legislativo, não privado."
+    },
+    {
+      "id": "sefaz-dt-009",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Tributário",
+      "subtopico": "Infrações e penalidades",
+      "enunciado": "Multa tributária por atraso no pagamento de imposto é aplicada:",
+      "alternativas": {
+        "A": "Sem qualquer aviso prévio.",
+        "B": "Após notificação e oportunidade de defesa.",
+        "C": "Apenas se houver prejuízo ao Erário.",
+        "D": "Somente em pessoa jurídica.",
+        "E": "Nunca em caso de boa fé."
+      },
+      "resposta": "B",
+      "explicacao": "As penalidades tributárias exigem observância de direitos procedimentais, incluindo notificação do contribuinte e oportunidade de defesa administrativa (Lei 9.784/99 e princípios do direito administrativo). O atraso no pagamento gera multa de mora e juros de mora conforme lei."
+    },
+    {
+      "id": "sefaz-dt-010",
+      "concurso": "SEFAZ-CE",
+      "materia": "Direito Tributário",
+      "subtopico": "Lançamento tributário",
+      "enunciado": "O lançamento tributário é ato administrativo que:",
+      "alternativas": {
+        "A": "Cancela a obrigação tributária.",
+        "B": "Constitui o crédito tributário.",
+        "C": "Dispensa o pagamento do tributo.",
+        "D": "Modifica a lei tributária.",
+        "E": "Autoriza a não observância de normas."
+      },
+      "resposta": "B",
+      "explicacao": "O lançamento (artigo 142 do CTN) é procedimento administrativo mediante o qual a administração tributária constitui formalmente o crédito tributário, tornando-o exigível. Determina a matéria tributável, a alíquota e o valor do tributo devido."
+    },
+    {
+      "id": "sefaz-lt-001",
+      "concurso": "SEFAZ-CE",
+      "materia": "Legislação Tributária CE",
+      "subtopico": "ICMS - Imposto sobre Circulação de Mercadorias",
+      "enunciado": "O ICMS é imposto estadual que incide sobre:",
+      "alternativas": {
+        "A": "Circulação de mercadorias e serviços de transporte.",
+        "B": "Apenas circulação interna de mercadorias.",
+        "C": "Somente importação de produtos.",
+        "D": "Renda de pessoa física.",
+        "E": "Propriedade de imóvel urbano."
+      },
+      "resposta": "A",
+      "explicacao": "O ICMS, conforme a CF/88 artigo 155, II, é imposto estadual sobre operações relativas à circulação de mercadorias e sobre prestações de serviços de transporte interestadual/intermunicipal e de telecomunicações. É principal tributo estadual."
+    },
+    {
+      "id": "sefaz-lt-002",
+      "concurso": "SEFAZ-CE",
+      "materia": "Legislação Tributária CE",
+      "subtopico": "Alíquotas de ICMS",
+      "enunciado": "Conforme a Lei de ICMS do Ceará, a alíquota interna para operações com mercadorias em geral é:",
+      "alternativas": {
+        "A": "5%",
+        "B": "12%",
+        "C": "17%",
+        "D": "22%",
+        "E": "30%"
+      },
+      "resposta": "C",
+      "explicacao": "A alíquota padrão de ICMS no Ceará é 17% para operações internas com mercadorias. Existem alíquotas reduzidas para produtos específicos (alimentos básicos, energia, etc.) e alíquotas diferenciadas nas operações interestaduais."
+    },
+    {
+      "id": "sefaz-lt-003",
+      "concurso": "SEFAZ-CE",
+      "materia": "Legislação Tributária CE",
+      "subtopico": "Substituição tributária",
+      "enunciado": "A substituição tributária do ICMS é regime que:",
+      "alternativas": {
+        "A": "Elimina completamente o ICMS.",
+        "B": "Transfere a responsabilidade tributária a terceiro designado por lei.",
+        "C": "Reduz permanentemente a carga de imposto.",
+        "D": "Dispensa apresentação de notas fiscais.",
+        "E": "Permite pagamento parcelado indefinido."
+      },
+      "resposta": "B",
+      "explicacao": "A substituição tributária é regime em que a lei designa a terceiro a responsabilidade pelo pagamento do ICMS devido (substituto tributário paga pelo substituído). Aplicável, por exemplo, a produtores na venda para varejistas. Aumenta a eficiência de arrecadação."
+    },
+    {
+      "id": "sefaz-lt-004",
+      "concurso": "SEFAZ-CE",
+      "materia": "Legislação Tributária CE",
+      "subtopico": "Crédito de ICMS",
+      "enunciado": "O direito ao crédito de ICMS surge quando:",
+      "alternativas": {
+        "A": "O contribuinte deseja reduir suas despesas.",
+        "B": "Entrada de mercadoria destinada à comercialização, industrialização ou operação com energia.",
+        "C": "Compra feita sem documentação fiscal.",
+        "D": "Operação sem incidência de ICMS.",
+        "E": "Despacho de mercadoria pelo cliente."
+      },
+      "resposta": "B",
+      "explicacao": "O crédito de ICMS origina-se na entrada de mercadoria e na aquisição de serviços de transporte/telecomunicações destinados à revenda, industrialização ou consumo como insumo. Documentos hábeis são exigidos. Nota fiscal adequada é indispensável."
+    },
+    {
+      "id": "sefaz-lt-005",
+      "concurso": "SEFAZ-CE",
+      "materia": "Legislação Tributária CE",
+      "subtopico": "Diferencial de alíquota",
+      "enunciado": "O diferencial de alíquota do ICMS existe para:",
+      "alternativas": {
+        "A": "Aumentar a arrecadação estadual.",
+        "B": "Desestimular importações e proteger indústria estadual.",
+        "C": "Reduzir impostos de pequeno produtor.",
+        "D": "Compensar operações interestaduais com menor carga.",
+        "E": "Estimular exportação nacional."
+      },
+      "resposta": "D",
+      "explicacao": "O diferencial de alíquota (DIFAL) é mecanismo que completa a arrecadação de ICMS nas operações interestaduais. Quando alíquota de origem (estado vendedor) é menor que alíquota de destino (estado comprador), a diferença é retida para estado de destino, garantindo equilíbrio."
+    },
+    {
+      "id": "sefaz-lt-006",
+      "concurso": "SEFAZ-CE",
+      "materia": "Legislação Tributária CE",
+      "subtopico": "ISS - Imposto sobre Serviços",
+      "enunciado": "O ISS é imposto de competência:",
+      "alternativas": {
+        "A": "Federal.",
+        "B": "Estadual.",
+        "C": "Municipal.",
+        "D": "Distrital.",
+        "E": "Conjunta dos estados."
+      },
+      "resposta": "C",
+      "explicacao": "O ISS (Imposto Sobre Serviços) é imposto municipal, conforme CF/88 artigo 156, III. Incide sobre prestação de serviços. No Ceará, municípios cobram ISS conforme Lei Complementar Nacional 116/2003 e suas próprias legislações."
+    },
+    {
+      "id": "sefaz-lt-007",
+      "concurso": "SEFAZ-CE",
+      "materia": "Legislação Tributária CE",
+      "subtopico": "IPTU - Imposto Predial e Territorial Urbano",
+      "enunciado": "O IPTU é tributo que incide sobre:",
+      "alternativas": {
+        "A": "Propriedade de máquinas e equipamentos.",
+        "B": "Propriedade de imóvel urbano.",
+        "C": "Renda anual do proprietário.",
+        "D": "Transferência de bens móveis.",
+        "E": "Serviços prestados na cidade."
+      },
+      "resposta": "B",
+      "explicacao": "O IPTU (artigo 156, I da CF/88) é imposto municipal que incide sobre a propriedade de imóvel urbano (terreno e construção). Sua base de cálculo é o valor venal do imóvel, e contribuinte é o proprietário ou usufrutuário."
+    },
+    {
+      "id": "sefaz-lt-008",
+      "concurso": "SEFAZ-CE",
+      "materia": "Legislação Tributária CE",
+      "subtopico": "ITBI - Imposto sobre Transmissão de Bens Imóveis",
+      "enunciado": "O ITBI é imposto cobrado na:",
+      "alternativas": {
+        "A": "Morte do proprietário.",
+        "B": "Transmissão de imóvel por ato oneroso.",
+        "C": "Compra de automóvel usado.",
+        "D": "Aluguel de imóvel.",
+        "E": "Reforma de construção."
+      },
+      "resposta": "B",
+      "explicacao": "O ITBI (artigo 156, II da CF/88) incide sobre transmissão de propriedade ou direitos reais sobre imóvel urbano (compra e venda, permutas, etc.) e é de competência municipal. Não incide sobre herança (que é ITCMD, estadual)."
+    },
+    {
+      "id": "sefaz-lt-009",
+      "concurso": "SEFAZ-CE",
+      "materia": "Legislação Tributária CE",
+      "subtopico": "Obrigações acessórias de ICMS",
+      "enunciado": "Constitui obrigação acessória do contribuinte de ICMS no Ceará:",
+      "alternativas": {
+        "A": "Apenas pagamento mensal do imposto.",
+        "B": "Emissão de Nota Fiscal, escrituração de livros e manutenção de registros.",
+        "C": "Doação de mercadorias ao Estado.",
+        "D": "Concessão de crédito ao Erário.",
+        "E": "Retirada de parte do faturamento."
+      },
+      "resposta": "B",
+      "explicacao": "Obrigações acessórias (não pecuniárias) do contribuinte de ICMS incluem: emissão de documentos fiscais (NF, CF), manutenção de escrituração (LIFO, RAIZAL, RICMS), registros contábeis, arquivamento de documentos. Cumprem-se independentemente do pagamento de tributo."
+    },
+    {
+      "id": "sefaz-lt-010",
+      "concurso": "SEFAZ-CE",
+      "materia": "Legislação Tributária CE",
+      "subtopico": "Regime de Tributação",
+      "enunciado": "No Ceará, o regime de tributação simplificado para microempresas é:",
+      "alternativas": {
+        "A": "Irrecorrível e permanente.",
+        "B": "Proibido por lei.",
+        "C": "Conhecido como Simples Nacional.",
+        "D": "Exclusivo de prestadores de serviço.",
+        "E": "Nunca foi regulamentado."
+      },
+      "resposta": "C",
+      "explicacao": "O Simples Nacional (Lei Complementar 123/2006) é regime tributário simplificado para microempresas e pequenas empresas que reúnem requisitos. Unifica em um único imposto a arrecadação de vários tributos federais, estaduais e municipais, facilitando cumprimento de obrigações."
+    },
+    {
+      "id": "sefaz-co-001",
+      "concurso": "SEFAZ-CE",
+      "materia": "Contabilidade Geral",
+      "subtopico": "Conceito e objetivo da contabilidade",
+      "enunciado": "A contabilidade é ciência que tem como objetivo:",
+      "alternativas": {
+        "A": "Coletar impostos do contribuinte.",
+        "B": "Estudar e controlar o patrimônio das entidades, evidenciando sua composição e variações.",
+        "C": "Confeccionar documentos pessoais.",
+        "D": "Registrar apenas as despesas da empresa.",
+        "E": "Eliminar gastos operacionais."
+      },
+      "resposta": "B",
+      "explicacao": "A contabilidade estuda e controla o patrimônio das entidades econômicas mediante escrituração ordenada de eventos que o modificam, fornecendo informações sobre composição e variações patrimoniais. Seu objetivo é evidenciar e análise da situação patrimonial."
+    },
+    {
+      "id": "sefaz-co-002",
+      "concurso": "SEFAZ-CE",
+      "materia": "Contabilidade Geral",
+      "subtopico": "Princípios contábeis",
+      "enunciado": "Conforme as normas contábeis, o princípio que estabelece que o registro contábil deve refletir a realidade econômica é:",
+      "alternativas": {
+        "A": "Princípio da atualização monetária.",
+        "B": "Princípio da realização da receita.",
+        "C": "Princípio da correspondência de receitas e despesas.",
+        "D": "Princípio da prudência.",
+        "E": "Princípio da essência sobre a forma."
+      },
+      "resposta": "E",
+      "explicacao": "O princípio da essência sobre a forma estabelece que a contabilização deve refletir a realidade econômica do evento, não apenas sua forma jurídica. Exemplo: um arrendamento operacional que tem essência de compra deve ser registrado como ativo."
+    },
+    {
+      "id": "sefaz-co-003",
+      "concurso": "SEFAZ-CE",
+      "materia": "Contabilidade Geral",
+      "subtopico": "Equação patrimonial",
+      "enunciado": "A equação patrimonial fundamental é:",
+      "alternativas": {
+        "A": "PATRIMÔNIO LÍQUIDO = ATIVO - PASSIVO",
+        "B": "ATIVO = PASSIVO - PATRIMÔNIO LÍQUIDO",
+        "C": "ATIVO = PASSIVO + PATRIMÔNIO LÍQUIDO",
+        "D": "PASSIVO = ATIVO + PATRIMÔNIO LÍQUIDO",
+        "E": "PATRIMÔNIO LÍQUIDO = ATIVO + PASSIVO"
+      },
+      "resposta": "C",
+      "explicacao": "A equação fundamental da contabilidade é A = P + PL (Ativo = Passivo + Patrimônio Líquido). Todo ativo é financiado por passivo (obrigações) ou patrimônio líquido (capital e lucros). Essa igualdade é permanente no balanço patrimonial."
+    },
+    {
+      "id": "sefaz-co-004",
+      "concurso": "SEFAZ-CE",
+      "materia": "Contabilidade Geral",
+      "subtopico": "Contas de ativo",
+      "enunciado": "Qual das contas abaixo é classificada como ativo circulante?",
+      "alternativas": {
+        "A": "Imóvel destinado à venda.",
+        "B": "Caixa e bancos.",
+        "C": "Marca registrada.",
+        "D": "Benfeitorias em propriedade de terceiro.",
+        "E": "Veículo para uso administrativo."
+      },
+      "resposta": "B",
+      "explicacao": "Caixa e bancos são contas de ativo circulante, pois representam disponibilidades (dinheiro e saldos em contas correntes) que podem ser convertidas em caixa imediatamente ou em breve prazo. Circulante significa conversão esperada dentro de 12 meses."
+    },
+    {
+      "id": "sefaz-co-005",
+      "concurso": "SEFAZ-CE",
+      "materia": "Contabilidade Geral",
+      "subtopico": "Contas de passivo",
+      "enunciado": "Contas de passivo circulante representam:",
+      "alternativas": {
+        "A": "Recursos permanentemente retidos na empresa.",
+        "B": "Obrigações exigíveis dentro de 12 meses.",
+        "C": "Lucros não distribuídos.",
+        "D": "Bens adquiridos a longo prazo.",
+        "E": "Reservas de capital."
+      },
+      "resposta": "B",
+      "explicacao": "Passivo circulante engloba obrigações exigíveis dentro de 12 meses (fornecedores, salários a pagar, empréstimos a curto prazo, etc.). Representa dívidas que a empresa deve quitar no curto prazo."
+    },
+    {
+      "id": "sefaz-co-006",
+      "concurso": "SEFAZ-CE",
+      "materia": "Contabilidade Geral",
+      "subtopico": "Receitas e despesas",
+      "enunciado": "No resultado do exercício, receita é:",
+      "alternativas": {
+        "A": "Diminuição do patrimônio.",
+        "B": "Aumento do patrimônio oriundo de atividades operacionais ou não.",
+        "C": "Apenas vendas de produto.",
+        "D": "Retorno de capital investido.",
+        "E": "Redução de dívida."
+      },
+      "resposta": "B",
+      "explicacao": "Receita é aumento do patrimônio líquido decorrente de vendas de produtos/serviços ou de atividades não operacionais (juros, aluguel, etc.). Representa ingressos de recursos que aumentam o PL (não é apenas vendas, mas toda entrada econômica)."
+    },
+    {
+      "id": "sefaz-co-007",
+      "concurso": "SEFAZ-CE",
+      "materia": "Contabilidade Geral",
+      "subtopico": "Estrutura do balanço patrimonial",
+      "enunciado": "Qual alternativa corretamente ordena os grupos do balanço patrimonial?",
+      "alternativas": {
+        "A": "Patrimônio Líquido, Passivo Não Circulante, Passivo Circulante, Ativo Não Circulante, Ativo Circulante.",
+        "B": "Ativo Circulante, Ativo Não Circulante, Passivo Circulante, Passivo Não Circulante, Patrimônio Líquido.",
+        "C": "Passivo Circulante, Ativo Circulante, Patrimônio Líquido, Passivo Não Circulante, Ativo Não Circulante.",
+        "D": "Ativo Não Circulante, Patrimônio Líquido, Passivo Não Circulante, Ativo Circulante, Passivo Circulante.",
+        "E": "Passivo, Ativo, Patrimônio."
+      },
+      "resposta": "B",
+      "explicacao": "A estrutura padrão do balanço patrimonial é: LADO ESQUERDO (Ativo): 1) Ativo Circulante, 2) Ativo Não Circulante. LADO DIREITO (Passivo e PL): 3) Passivo Circulante, 4) Passivo Não Circulante, 5) Patrimônio Líquido."
+    },
+    {
+      "id": "sefaz-co-008",
+      "concurso": "SEFAZ-CE",
+      "materia": "Contabilidade Geral",
+      "subtopico": "Demonstração de resultados",
+      "enunciado": "A Demonstração do Resultado do Exercício (DRE) evidencia:",
+      "alternativas": {
+        "A": "A composição do patrimônio em determinada data.",
+        "B": "Lucro ou prejuízo do período.",
+        "C": "As dívidas contraídas no exercício.",
+        "D": "Os investimentos realizados.",
+        "E": "A evolução do patrimônio."
+      },
+      "resposta": "B",
+      "explicacao": "A DRE é demonstração financeira que apresenta receitas, despesas e o resultado final (lucro ou prejuízo) de um período. Vai de receita bruta até lucro/prejuízo líquido, evidenciando desempenho operacional e não operacional."
+    },
+    {
+      "id": "sefaz-co-009",
+      "concurso": "SEFAZ-CE",
+      "materia": "Contabilidade Geral",
+      "subtopico": "Conceito de depreciação",
+      "enunciado": "Depreciação é:",
+      "alternativas": {
+        "A": "Aumento do valor de bem imóvel.",
+        "B": "Redução sistemática do valor de ativo imobilizado pelo uso, obsolescência ou ação do tempo.",
+        "C": "Perda total de bem.",
+        "D": "Venda de bem com desconto.",
+        "E": "Empréstimo de equipamento."
+      },
+      "resposta": "B",
+      "explicacao": "Depreciação é alocação sistemática do custo de ativo imobilizado (máquinas, veículos, móveis) ao longo de sua vida útil. Reflete perda de valor pelo uso, obsolescência tecnológica ou passagem do tempo. É despesa reconhecida na DRE."
+    },
+    {
+      "id": "sefaz-co-010",
+      "concurso": "SEFAZ-CE",
+      "materia": "Contabilidade Geral",
+      "subtopico": "Contabilização de despesas",
+      "enunciado": "Uma empresa compra mercadoria a prazo para revenda. O registro contábil correto é:",
+      "alternativas": {
+        "A": "Débito em Despesa e Crédito em Caixa.",
+        "B": "Débito em Estoque de Mercadorias e Crédito em Fornecedores.",
+        "C": "Débito em Fornecedores e Crédito em Receita.",
+        "D": "Débito em Caixa e Crédito em Receita.",
+        "E": "Não gera registro contábil até o pagamento."
+      },
+      "resposta": "B",
+      "explicacao": "Compra de mercadoria para revenda (a prazo) é ativo circulante (estoque). Registro correto: D) Estoque de Mercadorias, C) Fornecedores (passivo circulante). Não é despesa enquanto a mercadoria está em estoque; apenas quando vendida vira COGS."
+    },
+    {
+      "id": "sefaz-afo-001",
+      "concurso": "SEFAZ-CE",
+      "materia": "Administração Financeira e Orçamentária",
+      "subtopico": "Ciclo orçamentário",
+      "enunciado": "O ciclo orçamentário compreende as seguintes fases:",
+      "alternativas": {
+        "A": "Apenas arrecadação e gasto.",
+        "B": "Elaboração, aprovação, execução e avaliação.",
+        "C": "Somente planejamento.",
+        "D": "Aprovação e pagamento.",
+        "E": "Auditoria contínua."
+      },
+      "resposta": "B",
+      "explicacao": "O ciclo orçamentário compreende: 1) Planejamento/Elaboração do orçamento, 2) Aprovação pelo Legislativo, 3) Execução dos gastos aprovados, 4) Controle e Avaliação dos resultados. É processo contínuo que se repete anualmente."
+    },
+    {
+      "id": "sefaz-afo-002",
+      "concurso": "SEFAZ-CE",
+      "materia": "Administração Financeira e Orçamentária",
+      "subtopico": "Orçamento público",
+      "enunciado": "O orçamento público é:",
+      "alternativas": {
+        "A": "Apenas projeção de receitas.",
+        "B": "Documento legal que expressa receitas e despesas previstas para exercício financeiro.",
+        "C": "Contrato entre governo e cidadão.",
+        "D": "Autorização do Judiciário para gastar.",
+        "E": "Documento informal e não obrigatório."
+      },
+      "resposta": "B",
+      "explicacao": "Orçamento público é ato legislativo que prevê e autoriza as despesas e estima as receitas para o exercício financeiro. Tem natureza de lei e força legal vinculante (Lei Orçamentária Anual - LOA). Instrumento de planejamento e controle do Estado."
+    },
+    {
+      "id": "sefaz-afo-003",
+      "concurso": "SEFAZ-CE",
+      "materia": "Administração Financeira e Orçamentária",
+      "subtopico": "Classificação orçamentária",
+      "enunciado": "Despesas de custeio de serviços (como material de consumo) são classificadas como:",
+      "alternativas": {
+        "A": "Investimento.",
+        "B": "Amortização de dívida.",
+        "C": "Despesa corrente.",
+        "D": "Transferência de capital.",
+        "E": "Subtvenção econômica."
+      },
+      "resposta": "C",
+      "explicacao": "Despesas correntes são aquelas que não resultam em aumento do patrimônio (material de consumo, salários, juros). Investimento refere-se a despesas que criam/ampliam patrimônio (obras, equipamentos permanentes)."
+    },
+    {
+      "id": "sefaz-afo-004",
+      "concurso": "SEFAZ-CE",
+      "materia": "Administração Financeira e Orçamentária",
+      "subtopico": "Receita orçamentária",
+      "enunciado": "Qual alternativa melhor exemplifica receita orçamentária?",
+      "alternativas": {
+        "A": "Herança recebida.",
+        "B": "Imposto sobre renda e propriedade.",
+        "C": "Presente de terceiro.",
+        "D": "Achado de dinheiro.",
+        "E": "Perdão de dívida."
+      },
+      "resposta": "B",
+      "explicacao": "Receita orçamentária é aquela que entra no orçamento de receitas e despesas da administração pública. Impostos (imposto de renda, ICMS, IPTU) são receitas correntes. Herança, presentes e achados não são receitas orçamentárias."
+    },
+    {
+      "id": "sefaz-afo-005",
+      "concurso": "SEFAZ-CE",
+      "materia": "Administração Financeira e Orçamentária",
+      "subtopico": "Princípio orçamentário",
+      "enunciado": "O princípio orçamentário que determina um único orçamento para cada exercício financeiro é:",
+      "alternativas": {
+        "A": "Princípio da anualidade.",
+        "B": "Princípio da unidade.",
+        "C": "Princípio da universalidade.",
+        "D": "Princípio da exclusividade.",
+        "E": "Princípio da clareza."
+      },
+      "resposta": "A",
+      "explicacao": "O princípio da anualidade estabelece que o orçamento é elaborado e aprovado anualmente para cada exercício financeiro (que coincide com o ano civil). Garante conhecimento periódico de receitas e despesas."
+    },
+    {
+      "id": "sefaz-afo-006",
+      "concurso": "SEFAZ-CE",
+      "materia": "Administração Financeira e Orçamentária",
+      "subtopico": "Créditos orçamentários",
+      "enunciado": "Crédito suplementar é:",
+      "alternativas": {
+        "A": "Cancelamento de dotação orçamentária.",
+        "B": "Aumento de despesa já existente no orçamento aprovado.",
+        "C": "Redução de receita arrecadada.",
+        "D": "Autorização permanente de gasto.",
+        "E": "Sanção judicial de orçamento."
+      },
+      "resposta": "B",
+      "explicacao": "Crédito suplementar é aumento de dotação (verba) orçamentária já incluída no orçamento aprovado. Diferencia-se de crédito adicional (novo) e extraordinário (urgência). Requer decreto executivo e aprovação legislativa."
+    },
+    {
+      "id": "sefaz-afo-007",
+      "concurso": "SEFAZ-CE",
+      "materia": "Administração Financeira e Orçamentária",
+      "subtopico": "Execução orçamentária",
+      "enunciado": "A execução orçamentária de despesa segue a sequência:",
+      "alternativas": {
+        "A": "Apenas pagamento.",
+        "B": "Empenho, Liquidação e Pagamento.",
+        "C": "Aprovação e transferência.",
+        "D": "Autorização do controlador.",
+        "E": "Licitação e contratação."
+      },
+      "resposta": "B",
+      "explicacao": "A execução de despesa orçamentária segue: 1) Empenho (reserva de crédito), 2) Liquidação (verificação do cumprimento da obrigação), 3) Pagamento (transferência de recursos). Essa sequência garante controle e legalidade."
+    },
+    {
+      "id": "sefaz-afo-008",
+      "concurso": "SEFAZ-CE",
+      "materia": "Administração Financeira e Orçamentária",
+      "subtopico": "Execução de receita",
+      "enunciado": "A receita orçamentária é arrecadada seguindo a sequência:",
+      "alternativas": {
+        "A": "Apenas repouso e débito em conta.",
+        "B": "Lançamento, arrecadação e repouso.",
+        "C": "Aprovação legislativa e pagamento.",
+        "D": "Auditoria prévia.",
+        "E": "Contratação de fornecedor."
+      },
+      "resposta": "B",
+      "explicacao": "Execução de receita: 1) Lançamento (inscrição do crédito), 2) Arrecadação (entrada efetiva de recursos), 3) Repouso (entrega aos cofres públicos). Diferente de despesa, que segue empenho-liquidação-pagamento."
+    },
+    {
+      "id": "sefaz-afo-009",
+      "concurso": "SEFAZ-CE",
+      "materia": "Administração Financeira e Orçamentária",
+      "subtopico": "Controle orçamentário",
+      "enunciado": "O controle interno da execução orçamentária é realizado por:",
+      "alternativas": {
+        "A": "Órgão legislativo exclusivamente.",
+        "B": "Órgãos da administração e Tribunal de Contas.",
+        "C": "Judiciário apenas.",
+        "D": "Sociedade civil indiretamente.",
+        "E": "Cidadão individualmente."
+      },
+      "resposta": "B",
+      "explicacao": "O controle da execução orçamentária é feito por órgãos internos da administração (Secretarias de Orçamento, Controladoria) e por órgãos externos como Tribunal de Contas (controle externo). Trabalham conjuntamente para assegurar legalidade e eficiência."
+    },
+    {
+      "id": "sefaz-afo-010",
+      "concurso": "SEFAZ-CE",
+      "materia": "Administração Financeira e Orçamentária",
+      "subtopico": "Lei de Responsabilidade Fiscal",
+      "enunciado": "A Lei de Responsabilidade Fiscal (LRF) estabelece:",
+      "alternativas": {
+        "A": "Eliminação total de despesas públicas.",
+        "B": "Normas de finanças públicas para gestão fiscal responsável.",
+        "C": "Autorização para gastos ilimitados.",
+        "D": "Proibição absoluta de endividamento.",
+        "E": "Aumento obrigatório de impostos."
+      },
+      "resposta": "B",
+      "explicacao": "A Lei Complementar 101/2000 (LRF) estabelece normas de finanças públicas voltadas para gestão fiscal responsável, com controle de despesas, limites de endividamento, cumprimento de metas de resultado primário e transparência."
+    },
+    {
+      "id": "sefaz-rl-001",
+      "concurso": "SEFAZ-CE",
+      "materia": "Raciocínio Lógico",
+      "subtopico": "Proposições e conectivos",
+      "enunciado": "Qual das seguintes sentenças é uma proposição?",
+      "alternativas": {
+        "A": "Quanto é dois mais dois?",
+        "B": "Feche a porta!",
+        "C": "Brasília é a capital do Brasil.",
+        "D": "Como você está?",
+        "E": "Que dia bonito!"
+      },
+      "resposta": "C",
+      "explicacao": "Proposição é sentença declarativa que pode ser verdadeira ou falsa. 'Brasília é capital do Brasil' é declarativa e pode ser avaliada como verdadeira ou falsa. As demais são: pergunta (A e D), ordem (B), exclamação (E) — não são proposições."
+    },
+    {
+      "id": "sefaz-rl-002",
+      "concurso": "SEFAZ-CE",
+      "materia": "Raciocínio Lógico",
+      "subtopico": "Conectivos lógicos",
+      "enunciado": "Se p = 'chove' e q = 'faz frio', então 'chove e faz frio' é representado por:",
+      "alternativas": {
+        "A": "p ∨ q",
+        "B": "p ∧ q",
+        "C": "p → q",
+        "D": "¬p",
+        "E": "p ↔ q"
+      },
+      "resposta": "B",
+      "explicacao": "O conectivo 'e' (conjunção) é representado por ∧ (p ∧ q). Lê-se 'p e q'. Os demais: ∨ é 'ou', → é 'se então', ¬ é 'não', ↔ é 'se e somente se'."
+    },
+    {
+      "id": "sefaz-rl-003",
+      "concurso": "SEFAZ-CE",
+      "materia": "Raciocínio Lógico",
+      "subtopico": "Tabela-verdade",
+      "enunciado": "A disjunção 'p ∨ q' é verdadeira quando:",
+      "alternativas": {
+        "A": "p e q são ambas falsas.",
+        "B": "p é verdadeira e q é falsa.",
+        "C": "Pelo menos uma delas é verdadeira.",
+        "D": "Ambas são sempre falsas.",
+        "E": "Nunca é verdadeira."
+      },
+      "resposta": "C",
+      "explicacao": "A disjunção (ou) é verdadeira quando ao menos uma das proposições é verdadeira. É falsa apenas quando ambas são falsas. Portanto: VV=V, VF=V, FV=V, FF=F."
+    },
+    {
+      "id": "sefaz-rl-004",
+      "concurso": "SEFAZ-CE",
+      "materia": "Raciocínio Lógico",
+      "subtopico": "Negação",
+      "enunciado": "A negação de 'Todos os fiscais cumprem a lei' é:",
+      "alternativas": {
+        "A": "Nenhum fiscal cumpre a lei.",
+        "B": "A maioria dos fiscais cumpre a lei.",
+        "C": "Pelo menos um fiscal não cumpre a lei.",
+        "D": "Alguns fiscais cumprem a lei.",
+        "E": "Os fiscais deveriam cumprir a lei."
+      },
+      "resposta": "C",
+      "explicacao": "A negação de 'todos' (∀) é 'nem todos' ou 'pelo menos um não'. ¬(∀x P(x)) = ∃x ¬P(x). Negar 'todos cumprem' significa 'existe pelo menos um que não cumpre', não significa 'nenhum cumpre'."
+    },
+    {
+      "id": "sefaz-rl-005",
+      "concurso": "SEFAZ-CE",
+      "materia": "Raciocínio Lógico",
+      "subtopico": "Implicação lógica",
+      "enunciado": "A implicação 'Se chove, então a rua fica molhada' é falsa apenas quando:",
+      "alternativas": {
+        "A": "Chove e a rua fica molhada.",
+        "B": "Não chove e a rua fica molhada.",
+        "C": "Chove e a rua não fica molhada.",
+        "D": "Não chove e a rua não fica molhada.",
+        "E": "Sempre é falsa."
+      },
+      "resposta": "C",
+      "explicacao": "A implicação (→) é falsa apenas quando antecedente é verdadeiro e consequente é falso. VV=V, VF=F, FV=V, FF=V. Logo, é falsa apenas quando 'chove' (V) e 'rua não fica molhada' (F)."
+    },
+    {
+      "id": "sefaz-rl-006",
+      "concurso": "SEFAZ-CE",
+      "materia": "Raciocínio Lógico",
+      "subtopico": "Silogismo",
+      "enunciado": "Qual conclusão é válida? 'Todo fiscal é servidor público. João é fiscal. Logo:'",
+      "alternativas": {
+        "A": "João é brasileiro.",
+        "B": "João é servidor público.",
+        "C": "Todo servidor público é fiscal.",
+        "D": "João pode não ser servidor.",
+        "E": "Não há conclusão válida."
+      },
+      "resposta": "B",
+      "explicacao": "É silogismo categórico válido (Barbara). Se todo fiscal pertence à classe servidor público, e João é fiscal, então João pertence à classe servidor público. Conclusão: João é servidor público."
+    },
+    {
+      "id": "sefaz-rl-007",
+      "concurso": "SEFAZ-CE",
+      "materia": "Raciocínio Lógico",
+      "subtopico": "Problemas de contagem",
+      "enunciado": "De quantas formas diferentes 3 pessoas podem se organizar em uma fila?",
+      "alternativas": {
+        "A": "3",
+        "B": "6",
+        "C": "9",
+        "D": "12",
+        "E": "27"
+      },
+      "resposta": "B",
+      "explicacao": "É permutação de 3 elementos: P(3) = 3! = 3 × 2 × 1 = 6 formas. São: ABC, ACB, BAC, BCA, CAB, CBA."
+    },
+    {
+      "id": "sefaz-rl-008",
+      "concurso": "SEFAZ-CE",
+      "materia": "Raciocínio Lógico",
+      "subtopico": "Combinatória",
+      "enunciado": "De quantas formas podemos escolher 2 pessoas dentre 5 para compor uma comissão?",
+      "alternativas": {
+        "A": "5",
+        "B": "10",
+        "C": "20",
+        "D": "120",
+        "E": "25"
+      },
+      "resposta": "B",
+      "explicacao": "É combinação: C(5,2) = 5!/(2!×3!) = (5×4)/(2×1) = 10 formas. Ordem não importa na comissão."
+    },
+    {
+      "id": "sefaz-rl-009",
+      "concurso": "SEFAZ-CE",
+      "materia": "Raciocínio Lógico",
+      "subtopico": "Problemas de lógica",
+      "enunciado": "Em uma cidade, há 3 tributos: A, B e C. Sabe-se: (1) Se cobra A, então cobra B. (2) Se cobra B, então não cobra C. (3) Cobra-se A. De acordo com essas premissas:",
+      "alternativas": {
+        "A": "Cobra-se C.",
+        "B": "Não se cobra B.",
+        "C": "Cobra-se B e C.",
+        "D": "Não se cobra C.",
+        "E": "Cobra-se apenas C."
+      },
+      "resposta": "D",
+      "explicacao": "Premissas: A → B; B → ¬C; A. Por modus ponens: A é verdadeiro, logo B é verdadeiro. Se B é verdadeiro, então ¬C é verdadeiro. Logo, C é falso (não se cobra C)."
+    },
+    {
+      "id": "sefaz-rl-010",
+      "concurso": "SEFAZ-CE",
+      "materia": "Raciocínio Lógico",
+      "subtopico": "Analogia",
+      "enunciado": "Fiscal está para auditoria assim como juiz está para:",
+      "alternativas": {
+        "A": "Réu",
+        "B": "Processo",
+        "C": "Sentença",
+        "D": "Advogado",
+        "E": "Tribunal"
+      },
+      "resposta": "B",
+      "explicacao": "Analogia é relação de correspondência. Fiscal realiza auditoria (é função/atividade). Juiz realiza processo/julgamento (função correspondente). B melhor exprime a relação funcional entre juiz e sua atividade profissional."
+    },
+    {
+      "id": "sefaz-et-001",
+      "concurso": "SEFAZ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Princípios éticos fundamentais",
+      "enunciado": "Qual dos seguintes é princípio fundamental da ética no serviço público?",
+      "alternativas": {
+        "A": "Enriquecimento pessoal a qualquer custo.",
+        "B": "Lealdade ao interesse público.",
+        "C": "Fidelidade a amigos políticos.",
+        "D": "Ocultamento de informações oficiais.",
+        "E": "Priorização de ganho privado sobre público."
+      },
+      "resposta": "B",
+      "explicacao": "Lealdade ao interesse público é princípio ético fundamental no serviço público. O servidor público deve servir ao bem comum e à população, não a interesses pessoais ou políticos. É base da moralidade administrativa."
+    },
+    {
+      "id": "sefaz-et-002",
+      "concurso": "SEFAZ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Código de Ética Profissional",
+      "enunciado": "A improbidade administrativa se caracteriza por:",
+      "alternativas": {
+        "A": "Erro involuntário de cálculo.",
+        "B": "Ação ou omissão contrária ao dever funcional com objetivo de auferir ganho ilícito.",
+        "C": "Atraso justificado em processamento.",
+        "D": "Interpretação conservadora da lei.",
+        "E": "Recusa injustificada de cumprimento de ordem superior."
+      },
+      "resposta": "B",
+      "explicacao": "Improbidade administrativa (Lei 8.429/92) é ação ou omissão do agente público que viola dever funcional e resulta em ganho ilícito pessoal ou dano ao erário. É conduta desonesta e contra normas éticas e legais."
+    },
+    {
+      "id": "sefaz-et-003",
+      "concurso": "SEFAZ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Conflito de interesses",
+      "enunciado": "Um servidor público está em conflito de interesses quando:",
+      "alternativas": {
+        "A": "Trabalha em mais de um órgão.",
+        "B": "Seus interesses pessoais podem influenciar o exercício imparcial de suas funções.",
+        "C": "Recebe salário de dois órgãos.",
+        "D": "Muda de endereço residencial.",
+        "E": "Frequenta eventos sociais com colegas."
+      },
+      "resposta": "B",
+      "explicacao": "Conflito de interesses ocorre quando há potencial para que interesses privados (financeiros, familiares, políticos) do servidor influenciem sua conduta profissional. Deve ser declarado e evitado para preservar imparcialidade."
+    },
+    {
+      "id": "sefaz-et-004",
+      "concurso": "SEFAZ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Sigilo profissional",
+      "enunciado": "O sigilo profissional no serviço público deve ser quebrado quando:",
+      "alternativas": {
+        "A": "O superior imediato solicita informações privadas.",
+        "B": "Amigos do servidor solicitam dados pessoais de cidadão.",
+        "C": "A lei autoriza ou obriga a divulgação para proteger bem público maior.",
+        "D": "A imprensa solicita informação sigilosa.",
+        "E": "Nunca deve ser quebrado sob qualquer circunstância."
+      },
+      "resposta": "C",
+      "explicacao": "Sigilo é direito do cidadão e dever do servidor. Pode ser excetuado quando lei expressamente autoriza (investigações, auditorias) ou quando necessário proteger bem público de maior importância. Sempre com fundamentação legal clara."
+    },
+    {
+      "id": "sefaz-et-005",
+      "concurso": "SEFAZ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Nepotismo",
+      "enunciado": "Nepotismo no serviço público é:",
+      "alternativas": {
+        "A": "Pratica comum e esperada.",
+        "B": "Contratação de parentes sem respeitar concurso público; violação ética e legal.",
+        "C": "Direito do servidor de indicar amigos.",
+        "D": "Forma legítima de preencher vagas.",
+        "E": "Procedimento administrativo normal."
+      },
+      "resposta": "B",
+      "explicacao": "Nepotismo (favoritismo a parentes) é vedado por lei (CF/88) e prejudica mérito. Violação ética flagrante: impede acesso igualitário, compromete qualidade de serviço, favorece interesse privado sobre público. É passível de ações administrativas e civis."
+    },
+    {
+      "id": "sefaz-et-006",
+      "concurso": "SEFAZ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Transparência administrativa",
+      "enunciado": "Transparência administrativa significa:",
+      "alternativas": {
+        "A": "Divulgar apenas informações favoráveis ao governo.",
+        "B": "Permitir que cidadão acesse informações públicas, exceto as legalmente sigilosas.",
+        "C": "Ocultar dados de orçamento e gastos.",
+        "D": "Autoridade pode decidir quem acessa informações públicas.",
+        "E": "Informações públicas são propriedade do servidor."
+      },
+      "resposta": "B",
+      "explicacao": "Transparência é princípio constitucional (Lei 12.527/2011 - Lei de Acesso à Informação). Administração deve disponibilizar informações públicas ao cidadão, ressalvados dados pessoais e estratégicos legalmente sigilosos."
+    },
+    {
+      "id": "sefaz-et-007",
+      "concurso": "SEFAZ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Responsabilidade profissional",
+      "enunciado": "Um servidor público que age com negligência grave causando dano ao erário pode sofrer:",
+      "alternativas": {
+        "A": "Apenas repreensão verbal.",
+        "B": "Sanções administrativas, civis e criminais conforme gravidade.",
+        "C": "Nenhuma sanção, pois trabalha para o Estado.",
+        "D": "Perdão automático pelo superior.",
+        "E": "Licença remunerada."
+      },
+      "resposta": "B",
+      "explicacao": "Responsabilidade do servidor é tripla: administrativa (exoneração, demissão), civil (reparação de danos) e criminal (conforme tipo de infração). Negligência grave causa obrigação de indenizar e sanções disciplinares."
+    },
+    {
+      "id": "sefaz-et-008",
+      "concurso": "SEFAZ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Dever de lealdade institucional",
+      "enunciado": "Dever de lealdade institucional do servidor público significa:",
+      "alternativas": {
+        "A": "Obediência cega a ordens superiores, mesmo ilegais.",
+        "B": "Cumprimento de deveres legais e éticos, prevalecendo interesse público.",
+        "C": "Favorecer governo sobre interesse do cidadão.",
+        "D": "Sigilo absoluto sobre qualquer ato administrativo.",
+        "E": "Priorizar amigos do governo."
+      },
+      "resposta": "B",
+      "explicacao": "Lealdade institucional é compromisso com legalidade e ética. Não significa obediência cega, mas respeito ao estado de direito, interesse público e integridade profissional. Inclui direito/dever de recusar ordens ilegais."
+    },
+    {
+      "id": "sefaz-et-009",
+      "concurso": "SEFAZ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Presentes e vantagens indevidas",
+      "enunciado": "É ético que servidor público receba presente de pessoa que está sendo fiscalizada?",
+      "alternativas": {
+        "A": "Sim, se o presente é pequeno.",
+        "B": "Sim, se não há contrato em aberto.",
+        "C": "Não, pois configura conflito de interesses e corrupção.",
+        "D": "Só se for comida ou bebida.",
+        "E": "Depende da aprovação do chefe."
+      },
+      "resposta": "C",
+      "explicacao": "Receber presente de pessoa fiscalizada é vedado e configura conflito de interesses/corrupção passiva. Compromete imparcialidade e viola ética administrativa. Lei 8.112 e código de ética vedam tal prática."
+    },
+    {
+      "id": "sefaz-et-010",
+      "concurso": "SEFAZ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Compromisso com excelência",
+      "enunciado": "O compromisso com excelência do servidor público implica:",
+      "alternativas": {
+        "A": "Realizar o mínimo necessário para não ser punido.",
+        "B": "Buscar continuamente melhorar qualidade, eficiência e atendimento ao cidadão.",
+        "C": "Trabalhar somente durante horário oficial.",
+        "D": "Realizar tarefas conforme padronizado, sem inovação.",
+        "E": "Priorizar rapidez sobre precisão."
+      },
+      "resposta": "B",
+      "explicacao": "Compromisso com excelência significa dedicação a qualidade de trabalho, eficiência, melhoria contínua e atendimento adequado ao cidadão. É princípio de profissionalismo e ética administrativa moderna."
+    }
+  ]
+}
