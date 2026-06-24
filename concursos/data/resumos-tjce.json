@@ -1,0 +1,123 @@
+{
+  "resumos": [
+    {
+      "materia": "Língua Portuguesa",
+      "subtopicos": [
+        {
+          "titulo": "Concordância Verbal e Nominal",
+          "conteudo": "<p><strong>Concordância</strong> é a adequação entre palavras em número, pessoa e gênero.</p><ul><li><strong>Concordância verbal:</strong> Verbo concorda com sujeito em número e pessoa</li><li><strong>Concordância nominal:</strong> Adjetivo, artigo e numeral concordam com o nome em gênero e número</li><li>Sujeito composto + verbo: Geralmente plural (\"O pai e a mãe chegaram\")</li><li>Coletivo no singular: Verbo singular (\"A banca aprovou a moção\")</li><li>Pronome relativo \"que\": Verbo concorda com o antecedente</li></ul><div class=\"macete-box\">💡 Macete: Procure sempre pelo núcleo do sujeito e faça o verbo concordar com ele. Ignore as palavras que vêm entre o sujeito e o verbo.</div>"
+        },
+        {
+          "titulo": "Regência e Crase",
+          "conteudo": "<p><strong>Crase</strong> é a fusão de preposição \"a\" com artigo ou pronome demonstrativo que também começa com \"a\".</p><ul><li>Ocorre quando verbo ou nome pede preposição \"a\" + palavra feminina com artigo \"a\"</li><li>Exemplos: \"Refiro-me à decisão\", \"Assisti à sessão\", \"Dedico-me à leitura\"</li><li><strong>Não há crase:</strong> Antes de masculino (ao, aos), antes de verbos no infinitivo, em \"moda de\", antes de nomes próprios (sem artigo)</li><li>Crase em locuções: \"à noite\", \"à medida que\", \"à proporção que\"</li></ul><div class=\"macete-box\">💡 Macete: Substitua a palavra feminina por um masculino equivalente. Se sair \"ao\", há crase (à). Se sair \"a o\", não há crase.</div>"
+        },
+        {
+          "titulo": "Vícios de Linguagem e Estilo",
+          "conteudo": "<p><strong>Vícios de linguagem</strong> prejudicam a clareza e elegância do texto.</p><ul><li><strong>Solecismo:</strong> Violação de regras sintáticas (\"Assistimos um jogo\")</li><li><strong>Barbarismo:</strong> Uso de palavra não dicionarizada ou deformada (\"impecilho\" por \"empecilho\")</li><li><strong>Ambiguidade:</strong> Frase com mais de um sentido (\"Visitei a colega com a amiga dela\")</li><li><strong>Redundância:</strong> Repetição desnecessária (\"elo de ligação\", \"subir para cima\")</li><li><strong>Pleonasmo:</strong> Repetição de uma ideia (\"monólogo do único\")</li></ul>"
+        }
+      ]
+    },
+    {
+      "materia": "Direito Constitucional",
+      "subtopicos": [
+        {
+          "titulo": "Direitos Fundamentais e Garantias",
+          "conteudo": "<p><strong>Direitos fundamentais</strong> (CF, arts. 5º-17) são liberdades protegidas constitucionalmente.</p><ul><li><strong>Direitos individuais:</strong> Vida, liberdade, igualdade, segurança, propriedade, acesso à Justiça</li><li><strong>Direitos políticos:</strong> Voto, elegibilidade, criação de partidos</li><li><strong>Direitos sociais:</strong> Educação, saúde, trabalho, moradia, segurança social (art. 6º)</li><li><strong>Garantias fundamentais:</strong> Habeas corpus, mandado de segurança, mandado de injunção, ação popular</li><li>Aplicabilidade imediata (§ 1º); não abolível por EC (art. 60, § 4º)</li></ul><div class=\"macete-box\">💡 Macete: Direitos = o que você tem; Garantias = como proteger esses direitos judicialmente.</div>"
+        },
+        {
+          "titulo": "Poder Judiciário: Estrutura e Competência",
+          "conteudo": "<p>O <strong>Poder Judiciário</strong> é responsável por administrar justiça e resolver conflitos.</p><ul><li><strong>Estrutura federal:</strong> STF (Supremo Tribunal Federal), STJ (Superior Tribunal de Justiça), TRF (Tribunais Regionais Federais), Juizados Especiais</li><li><strong>Estrutura estadual:</strong> TJCE (Tribunal de Justiça do Estado do Ceará), Comarcas, Varas Cíveis/Criminais</li><li><strong>Competência:</strong> Definida por lei (pessoa, matéria, território, função)</li><li>Princípios: Independência, imparcialidade, acesso à Justiça</li></ul><div class=\"macete-box\">💡 Macete: STF = Constituição; STJ = Lei Federal; TJ = Lei Estadual. Cada tribunal tem sua especialidade.</div>"
+        },
+        {
+          "titulo": "Separação de Poderes e Freios e Contrapesos",
+          "conteudo": "<p>Os três Poderes são <strong>independentes</strong> mas <strong>harmônicos</strong>, com sistema de controles mútuos.</p><ul><li><strong>Executivo controla Legislativo:</strong> Veto de projetos, decreto de urgência</li><li><strong>Legislativo controla Executivo:</strong> Aprovação de orçamento, impeachment de presidente</li><li><strong>Judiciário controla ambos:</strong> Declaração de inconstitucionalidade, mandado de segurança</li><li>Nenhum Poder pode absorver funções do outro (art. 2º)</li></ul>"
+        }
+      ]
+    },
+    {
+      "materia": "Direito Administrativo",
+      "subtopicos": [
+        {
+          "titulo": "Ato Administrativo: Elementos e Atributos",
+          "conteudo": "<p><strong>Ato administrativo</strong> é manifestação de vontade da Administração que cria efeitos jurídicos.</p><ul><li><strong>Elementos obrigatórios:</strong> Sujeito competente, objeto lícito, forma legal, motivo válido, finalidade pública</li><li><strong>Atributos:</strong> Presunção de legitimidade, imperatividade, exigibilidade, autoexecutoriedade</li><li><strong>Classificação:</strong> Vinculado vs. Discricionário, Negativo vs. Positivo, Simples vs. Composto</li><li>Vício em qualquer elemento = Nulidade ou Anulabilidade</li></ul><div class=\"macete-box\">💡 Macete: \"SSFOM\" = Sujeito competente, Sine (forma), Finalidade, Objeto lícito, Motivo válido.</div>"
+        },
+        {
+          "titulo": "Princípios da Administração Pública (Art. 37, CF)",
+          "conteudo": "<p><strong>Princípios fundamentais</strong> regem toda atividade administrativa.</p><ul><li><strong>Legalidade:</strong> Só pode fazer o que a lei autoriza (vinculação positiva)</li><li><strong>Impessoalidade:</strong> Igualdade perante a lei, sem discriminação arbitrária</li><li><strong>Moralidade:</strong> Atuar com honestidade, decência e boa-fé</li><li><strong>Publicidade:</strong> Transparência e divulgação dos atos (exceção: sigilo legal)</li><li><strong>Eficiência:</strong> Melhor resultado com menor custo (EC 19/1998)</li></ul><div class=\"macete-box\">💡 Macete: \"LIMPE\" = Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência.</div>"
+        },
+        {
+          "titulo": "Recursos Administrativos e Revisão",
+          "conteudo": "<p><strong>Recursos administrativos</strong> permitem contestar decisões dentro da própria Administração.</p><ul><li><strong>Recurso administrativo:</strong> Pedido de reconsideração de ato administrativo pela mesma autoridade</li><li><strong>Hierárquico:</strong> Contestação perante superior da autoridade que proferiu o ato</li><li><strong>Revisão:</strong> Reabertura de processo administrativo com base em fatos novos</li><li><strong>Prazo:</strong> Geralmente 30 dias a partir da notificação</li><li>Não suspende execução do ato (princípio de autoexecutoriedade) a menos que autorizado</li></ul>"
+        }
+      ]
+    },
+    {
+      "materia": "Direito Processual Civil",
+      "subtopicos": [
+        {
+          "titulo": "Conceitos Fundamentais: Ação, Jurisdição, Competência",
+          "conteudo": "<p><strong>Direito Processual Civil</strong> regula procedimentos para resolução de conflitos civis.</p><ul><li><strong>Ação:</strong> Direito de provocar o Poder Judiciário; direito público subjetivo</li><li><strong>Jurisdição:</strong> Poder estatal de dizer o direito em caso concreto</li><li><strong>Competência:</strong> Distribuição de jurisdição entre juízes/tribunais (fixada por lei)</li><li><strong>Elementos da ação:</strong> Partes, causa de pedir, pedido</li></ul><div class=\"macete-box\">💡 Macete: Você tem o direito (ex: contrato), mas precisa de uma AÇÃO (processo) para cobrar. A ação é o direito de ir ao juiz.</div>"
+        },
+        {
+          "titulo": "Fases do Processo Civil: Conhecimento, Execução, Cautelar",
+          "conteudo": "<p>O <strong>processo civil</strong> divide-se em três fases principais:</p><ul><li><strong>Fase de Conhecimento:</strong> Partes apresentam pretensão e defesa, produz-se prova, sentença declara o direito</li><li><strong>Fase de Execução:</strong> Cumprimento coercitivo da sentença (penhora, até venda de bem do devedor)</li><li><strong>Processo Cautelar:</strong> Medidas para garantir efetividade da tutela (arresto, sequestro, busca e apreensão)</li><li><strong>Procedimento ordinário:</strong> Maior complexidade; três fases (petição, resposta, instrução)</li><li><strong>Procedimento sumário:</strong> Mais rápido; menos complexidade</li></ul>"
+        },
+        {
+          "titulo": "Sentença e Coisa Julgada",
+          "conteudo": "<p><strong>Sentença</strong> é a decisão do juiz que encerra o processo e resolve o conflito.</p><ul><li><strong>Coisa julgada material:</strong> A sentença não pode ser modificada (imutabilidade)</li><li><strong>Coisa julgada formal:</strong> A sentença não cabe mais recurso (preclusa)</li><li><strong>Eficácia:</strong> Obriga todos os órgãos do Judiciário e Administração</li><li><strong>Exceção:</strong> Rescisória (ação para desfazer sentença por vício grave, dentro de 2 anos)</li></ul><div class=\"macete-box\">💡 Macete: Coisa julgada = Decisão final que não volta mais atrás. É como um \"ponto final\" na história do processo.</div>"
+        }
+      ]
+    },
+    {
+      "materia": "Direito Processual Penal",
+      "subtopicos": [
+        {
+          "titulo": "Princípios Fundamentais do Processo Penal",
+          "conteudo": "<p><strong>Princípios</strong> são fundamentos que guiam todo o processo penal.</p><ul><li><strong>Legalidade:</strong> Não há crime sem lei anterior (art. 1º, CP e art. 5º, XXXIX, CF)</li><li><strong>Presunção de inocência:</strong> Acusado é inocente até prova em contrário (art. 5º, LVII, CF)</li><li><strong>Contraditório e ampla defesa:</strong> Acusado tem direito de se defender (art. 5º, LV, CF)</li><li><strong>In dubio pro reo:</strong> Na dúvida, favorece-se o réu (inócuo)</li><li><strong>Direito de silêncio:</strong> Acusado não é obrigado a confessear</li></ul><div class=\"macete-box\">💡 Macete: O Ministério Público prova culpa; a Defesa tem direito a contestar. Sem prova clara, o réu sai livre.</div>"
+        },
+        {
+          "titulo": "Fases do Processo Penal: Investigação, Instrução, Julgamento",
+          "conteudo": "<p>O <strong>processo penal</strong> passa por três fases:</p><ul><li><strong>Investigação:</strong> Polícia apura fatos (inquérito policial); sem garantias processuais completas</li><li><strong>Denúncia/Queixa:</strong> MP oferece denúncia; Juiz recebe (válida) ou rejeita</li><li><strong>Instrução:</strong> Oitiva de testemunhas, produção de provas, argumentação das partes</li><li><strong>Julgamento:</strong> Sentença condenando ou absolvendo; possibilidade de apelação</li></ul>"
+        },
+        {
+          "titulo": "Prisão Preventiva e Cautelares",
+          "conteudo": "<p><strong>Prisão preventiva</strong> é medida cautelar para garantir a ordem pública durante o processo.</p><ul><li><strong>Requisitos:</strong> Prova da materialidade do crime, indício de autoria, necessidade (fumaça do bom direito)</li><li><strong>Fundamentos:</strong> Garantia da ordem pública, econômica, conveniência da instrução ou aplicação da lei penal</li><li><strong>Duração:</strong> Máximo 30 dias (prorrogável por mais 30) antes de pronuncia no tribunal do júri</li><li><strong>Direito ao contraditório:</strong> Acusado deve ser ouvido antes da decisão (art. 5º, LV, CF)</li><li>Alternativas: Monitoramento eletrônico, restrições (não sair do país, comparecer em juízo)</li></ul>"
+        }
+      ]
+    },
+    {
+      "materia": "Regimento Interno TJ-CE",
+      "subtopicos": [
+        {
+          "titulo": "Estrutura e Organização do TJ-CE",
+          "conteudo": "<p>O <strong>Tribunal de Justiça do Ceará (TJ-CE)</strong> é o órgão máximo da Justiça Estadual.</p><ul><li><strong>Composição:</strong> Desembargadores (magistrados do segundo grau)</li><li><strong>Órgãos:</strong> Plenário, Câmaras Cíveis, Câmaras Criminais, Câmaras Especializadas</li><li><strong>Funções:</strong> Julgar apelações, recursos especiais, mandados de segurança originários</li><li><strong>Presidência:</strong> Eleita entre desembargadores por dois anos</li></ul><div class=\"macete-box\">💡 Macete: TJ-CE é o \"topo\" da Justiça do Ceará. Acima dele só o STJ e STF (instâncias federais).</div>"
+        },
+        {
+          "titulo": "Atribuições das Câmaras e Competência",
+          "conteudo": "<p><strong>Câmaras</strong> são divisões do TJ-CE especializadas por matéria.</p><ul><li><strong>Câmaras Cíveis:</strong> Julgam apelações de processos civis (contratos, família, propriedade)</li><li><strong>Câmaras Criminais:</strong> Julgam apelações de processos criminais (crimes, penas)</li><li><strong>Câmaras Especializadas:</strong> Direito do Consumidor, Administrativo, Ambiental</li><li>Cada câmara possui 3 desembargadores por painel</li><li>Competência originária: Mandado de segurança contra atos de juiz de primeiro grau</li></ul>"
+        },
+        {
+          "titulo": "Procedimentos e Prazos no TJ-CE",
+          "conteudo": "<p>Procedimentos no TJ-CE seguem prazos específicos e formalismos.</p><ul><li><strong>Petição inicial:</strong> Apresentação da apelação (prazo: 15 dias após sentença); deve conter razões de direito</li><li><strong>Contrarrazões:</strong> Resposta da outra parte (prazo: 15 dias após ciência)</li><li><strong>Julgamento:</strong> Voto do relator, votos dos desembargadores, decisão por maioria</li><li>Acórdão: Decisão colegial que substitui a sentença de primeiro grau</li></ul>"
+        }
+      ]
+    },
+    {
+      "materia": "Ética no Serviço Público",
+      "subtopicos": [
+        {
+          "titulo": "Deveres Fundamentais do Servidor Público",
+          "conteudo": "<p>O <strong>servidor público</strong> tem deveres éticos e legais específicos.</p><ul><li><strong>Deveres principais:</strong> Honestidade, integridade, imparcialidade, eficiência, respeito à hierarquia</li><li><strong>Sigilo profissional:</strong> Não divulgar informações obtidas no cargo (lei ou crime)</li><li><strong>Neutralidade política:</strong> Não usar cargo para beneficiar partido ou candidato</li><li><strong>Impessoalidade:</strong> Tratar todos os cidadãos com igualdade, sem favoritismo</li><li><strong>Respeito ao patrimônio público:</strong> Não desperdiçar recursos ou utilizar para proveito pessoal</li></ul><div class=\"macete-box\">💡 Macete: Publico vs. Privado = o servidor protege bens públicos (dinheiro de todos); não é dono, é depositário.</div>"
+        },
+        {
+          "titulo": "Proibições e Incompatibilidades",
+          "conteudo": "<p><strong>Proibições e incompatibilidades</strong> protegem a integridade da administração.</p><ul><li><strong>Conflito de interesses:</strong> Não pode participar de decisão em que tenha interesse pessoal (deve recusar)</li><li><strong>Nepotismo:</strong> Proibição de contratar parentes até 2º grau (súmula vinculante STF)</li><li><strong>Acumulação de cargos:</strong> Não pode exercer mais de um cargo público (exceção: professor + magistério)</li><li><strong>Atividades privadas incompatíveis:</strong> Não pode exercer profissão privada que conflite com o cargo</li></ul><div class=\"macete-box\">💡 Macete: Quando há dúvida, a ética pede que você se AFASTE. Melhor errar para o lado seguro.</div>"
+        },
+        {
+          "titulo": "Responsabilidades: Civil, Penal e Administrativa",
+          "conteudo": "<p>Servidor público responde em três esferas pela violação de deveres.</p><ul><li><strong>Responsabilidade administrativa:</strong> Infração funcional → Advertência, suspensão, demissão (LGPE ou LGES)</li><li><strong>Responsabilidade civil:</strong> Danos ao Estado ou terceiros → Indenização; direito de regresso contra servidor se culpa provada</li><li><strong>Responsabilidade penal:</strong> Crimes (corrupção, abuso de poder, prevaricação) → Condenação em processo criminal</li><li>As três responsabilidades são independentes: condenar em uma não exclui as outras</li></ul>"
+        }
+      ]
+    }
+  ]
+}

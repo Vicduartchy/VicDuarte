@@ -1,0 +1,157 @@
+{
+  "resumos": [
+    {
+      "materia": "Língua Portuguesa",
+      "subtopicos": [
+        {
+          "titulo": "Concordância Verbal e Nominal",
+          "conteudo": "<p><strong>Concordância</strong> é a adequação entre palavras em número, pessoa e gênero.</p><ul><li><strong>Concordância verbal:</strong> Verbo concorda com sujeito em número e pessoa (\"Os projetos foram aprovados\")</li><li><strong>Concordância nominal:</strong> Adjetivo, artigo, numeral concordam com nome em gênero/número</li><li>Sujeito composto: Verbo geralmente plural (\"Maria e João chegaram\")</li><li>Coletivo singular: Verbo singular (\"A maioria aprovou\")</li><li>Pronome relativo \"que\": Verbo concorda com antecedente</li></ul><div class=\"macete-box\">💡 Macete: \"STNQ\" = Sujeito, Tipo de sujeito, Número, \"Q\"ue. Procure pelo núcleo do sujeito e cole o verbo nele.</div>"
+        },
+        {
+          "titulo": "Crase e Regência",
+          "conteudo": "<p><strong>Crase</strong> é fusão de preposição \"a\" + artigo/pronome com \"a\".</p><ul><li>Ocorre: Verbo/nome pede \"a\" + palavra feminina com artigo \"a\" (\"Vou à praia\", \"Dedico-me à leitura\")</li><li>NÃO há crase: Antes de masculino (\"ao\"), verbos infinitivos, nomes sem artigo</li><li><strong>Truque:</strong> Substitua por masculino equivalente. Se sair \"ao\", há crase (à)</li><li>Locuções com crase: \"à noite\", \"à medida que\", \"à proporção que\", \"à exceção de\"</li></ul><div class=\"macete-box\">💡 Macete: Crase = a + a = à. Se o resultado for \"a o\", não há crase.</div>"
+        },
+        {
+          "titulo": "Sintaxe e Pontuação",
+          "conteudo": "<p><strong>Pontuação</strong> organiza o texto e marca pausas.</p><ul><li><strong>Vírgula:</strong> Separa termos de mesma função, aposto, adjuntos adverbiais deslocados</li><li><strong>Ponto-e-vírgula:</strong> Pausa mais forte; separa orações com relação de sentido</li><li><strong>Dois-pontos:</strong> Precede citação, enumeração, esclarecimento</li><li>NÃO coloque vírgula entre sujeito e verbo (❌ \"O decreto, será publicado\")</li><li>NÃO coloque vírgula entre verbo e objeto (❌ \"Aprovou, o projeto\")</li></ul>"
+        }
+      ]
+    },
+    {
+      "materia": "Direito Constitucional",
+      "subtopicos": [
+        {
+          "titulo": "Direitos Fundamentais (Arts. 5º-17, CF/88)",
+          "conteudo": "<p><strong>Direitos fundamentais</strong> são garantias constitucionais básicas do cidadão.</p><ul><li><strong>Direitos individuais (art. 5º):</strong> Vida, liberdade, igualdade, propriedade, acesso à Justiça</li><li><strong>Direitos políticos:</strong> Voto, elegibilidade, soberania popular</li><li><strong>Direitos sociais (art. 6º):</strong> Educação, saúde, alimentação, trabalho, moradia, lazer, segurança, proteção à maternidade/infância, assistência aos desamparados</li><li>Aplicabilidade imediata (§ 1º)</li><li><strong>Cláusula pétrea:</strong> Não podem ser abolidos por Emenda Constitucional (art. 60, § 4º)</li></ul><div class=\"macete-box\">💡 Macete: Os 9 direitos sociais do art. 6º: EDU, SAÚ, ALI, TRA, MOR, LAZ, SEG, MAT, ASS.</div>"
+        },
+        {
+          "titulo": "Separação de Poderes (Arts. 2º e 60, § 4º, III)",
+          "conteudo": "<p>A <strong>separação de poderes</strong> distribui funções do Estado entre 3 órgãos independentes.</p><ul><li><strong>Poder Legislativo:</strong> Congresso Nacional; legisla (cria leis)</li><li><strong>Poder Executivo:</strong> Presidente; executa (aplica as leis)</li><li><strong>Poder Judiciário:</strong> Tribunais; julga (resolve conflitos conforme as leis)</li><li><strong>Harmonia:</strong> Pesos e contrapesos entre Poderes</li><li>Nenhum Poder absorve funções de outro (cláusula pétrea)</li></ul><div class=\"macete-box\">💡 Macete: L = LEgisla; E = EXecuta; J = JUlga. Cada um tem sua função.</div>"
+        },
+        {
+          "titulo": "Processo Legislativo (Arts. 59-69, CF)",
+          "conteudo": "<p><strong>Processo legislativo</strong> é o procedimento para criar e alterar leis.</p><ul><li><strong>Leis Ordinárias:</strong> Maioria simples (maioria dos presentes na votação)</li><li><strong>Leis Complementares:</strong> Maioria absoluta (50% + 1 do total de membros)</li><li><strong>Emendas Constitucionais:</strong> 3/5 de ambas as Casas, em 2 votações</li><li><strong>Fases:</strong> Iniciativa → Discussão → Votação → Sanção/Veto → Promulgação → Publicação</li><li>Veto presidencial: Câmara/Senado pode derrotar com 2/3</li></ul>"
+        }
+      ]
+    },
+    {
+      "materia": "Direito Administrativo",
+      "subtopicos": [
+        {
+          "titulo": "Princípios da Administração Pública (Art. 37, CF)",
+          "conteudo": "<p><strong>Cinco princípios</strong> fundamentais regem toda atividade administrativa.</p><ul><li><strong>Legalidade:</strong> Só pode fazer o que a lei autoriza (vinculação positiva)</li><li><strong>Impessoalidade:</strong> Igualdade perante a lei; sem privilégios arbitrários</li><li><strong>Moralidade:</strong> Honestidade, decência e boa-fé</li><li><strong>Publicidade:</strong> Transparência; publicação de atos (exceção legal)</li><li><strong>Eficiência:</strong> Melhor resultado com menor custo (EC 19/1998)</li></ul><div class=\"macete-box\">💡 Macete: \"LIMPE\" = Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência.</div>"
+        },
+        {
+          "titulo": "Ato Administrativo: Elementos e Validade",
+          "conteudo": "<p><strong>Ato administrativo</strong> é manifestação de vontade da Administração que produz efeitos jurídicos.</p><ul><li><strong>Elementos:</strong> Sujeito competente, forma legal, motivo válido, objeto lícito, finalidade pública</li><li><strong>Atributos:</strong> Presunção de legitimidade (até prova em contrário), imperatividade (força de lei), exigibilidade</li><li><strong>Vício e nulidade:</strong> Falta de qualquer elemento = ato nulo (ex: autoridade incompetente)</li><li><strong>Desvio de finalidade:</strong> Agente usa poder para fim diverso do legal = ato ilegítimo</li></ul><div class=\"macete-box\">💡 Macete: \"SFMOF\" = Sujeito, Forma, Motivo, Objeto, Finalidade. Lembre dos 5 elementos.</div>"
+        },
+        {
+          "titulo": "Responsabilidade Civil da Administração",
+          "conteudo": "<p><strong>Responsabilidade objetiva</strong> (art. 37, § 6º, CF) = Administração responde sem culpa comprovada.</p><ul><li>Requisitos: Ação/omissão da Administração, dano, nexo causal entre ação e dano</li><li>Não é necessário provar culpa ou dolo</li><li><strong>Ação regressiva:</strong> Se culpa comprovada do agente, Administração recupera valor cobrado pela vítima</li><li>Excludentes: Força maior, culpa exclusiva da vítima, culpa de terceiro</li></ul>"
+        }
+      ]
+    },
+    {
+      "materia": "Direito Tributário",
+      "subtopicos": [
+        {
+          "titulo": "Conceito de Tributo e Classificação",
+          "conteudo": "<p><strong>Tributo</strong> é prestação pecuniária compulsória instituída por lei para fins de interesse público.</p><ul><li><strong>Elementos:</strong> Obrigatoriedade, pecuniário (dinheiro), instituído por lei, interesse público</li><li><strong>Classificação (Código Tributário Nacional, art. 5º):</strong> Impostos, taxas, contribuições</li><li><strong>Impostos:</strong> Não há contraprestação específica; exemplos: IR, ICMS, IPI</li><li><strong>Taxas:</strong> Contraprestação por serviço ou poder de polícia; exemplos: taxa de matrícula, taxi judicial</li><li><strong>Contribuições:</strong> Finalidade especial; exemplos: FGTS, INSS, sindicais</li></ul><div class=\"macete-box\">💡 Macete: Imposto = pago por todos (rua, educação); Taxa = pago só por quem usa (água, matrícula).</div>"
+        },
+        {
+          "titulo": "Impostos Federais, Estaduais e Municipais",
+          "conteudo": "<p><strong>Competência tributária</strong> (CF, arts. 153-156) distribui impostos entre esferas.</p><ul><li><strong>Impostos federais:</strong> IR (renda), IPI (industrial), II (importação), IE (exportação), IOF (operações financeiras)</li><li><strong>Impostos estaduais:</strong> ICMS (circulação de mercadorias), IPVA (propriedade de veículo), ITCMD (transmissão de bens)</li><li><strong>Impostos municipais:</strong> IPTU (propriedade imóvel urbana), ISS (serviços), ITBI (transmissão de imóvel)</li><li>Cada esfera cobra seus tributos; vedada cobrança duplicada (CF, art. 150, I)</li></ul>"
+        },
+        {
+          "titulo": "Obrigação Tributária: Constituição e Extinção",
+          "conteudo": "<p><strong>Obrigação tributária</strong> é dever de pagar tributo ao Estado.</p><ul><li><strong>Obrigação principal:</strong> Pagar o tributo (quantidade, valor, prazos)</li><li><strong>Obrigação acessória:</strong> Cumprir obrigações formais (declaração, escrituração, registro)</li><li><strong>Fato gerador:</strong> Situação definida em lei que desencadeia a obrigação</li><li><strong>Extinguem a obrigação:</strong> Pagamento, compensação, prescrição (5 anos geralmente), remissão</li><li><strong>Prazo de prescrição:</strong> 5 anos para Fazenda Pública cobrar</li></ul><div class=\"macete-box\">💡 Macete: Obrigação principal = pagar tributo; acessória = cumprir prazos e entregar documentos.</div>"
+        }
+      ]
+    },
+    {
+      "materia": "Legislação Tributária Cearense",
+      "subtopicos": [
+        {
+          "titulo": "ICMS-CE: Legislação e Incidência",
+          "conteudo": "<p><strong>ICMS-CE</strong> (Imposto sobre Circulação de Mercadorias e Prestação de Serviços) é o principal imposto estadual do Ceará.</p><ul><li><strong>Fato gerador:</strong> Circulação de mercadorias e prestação de serviço de transporte/comunicação</li><li><strong>Sujeitos:</strong> Comerciante, industrial, prestador de serviço (pessoa jurídica/física)</li><li><strong>Base de cálculo:</strong> Valor total da operação (preço da venda/serviço)</li><li><strong>Alíquota estadual:</strong> Varia conforme mercadoria e origem (interna, interestadual, importação)</li><li><strong>Crédito fiscal:</strong> Direito de abater ICMS pago em compras de matéria-prima</li></ul><div class=\"macete-box\">💡 Macete: ICMS = imposto sobre venda de coisas e serviços. Não incide sobre exportação (0%).</div>"
+        },
+        {
+          "titulo": "IPVA-CE e ITCMD-CE",
+          "conteudo": "<p><strong>IPVA-CE</strong> (Imposto Propriedade Veículo Automotor) e <strong>ITCMD-CE</strong> (Transmissão de Bens/Direitos).</p><ul><li><strong>IPVA:</strong> Incide sobre propriedade de veículo automotor (carro, moto, caminhão)</li><li>Base: Valor venal (valor de mercado); alíquota conforme tipo (0% a 4%)</li><li>Pagamento: Anual; obrigatório para circulação legal</li><li><strong>ITCMD:</strong> Incide sobre herança, doação de bens/direitos (não onerado)</li><li>Base: Valor venal da propriedade; alíquota até 8% (conforme cada estado)</li></ul>"
+        },
+        {
+          "titulo": "Legislação Procedural e Administração Tributária CE",
+          "conteudo": "<p><strong>Administração Tributária do Ceará</strong> (SEFAZ-CE) é responsável por arrecadação e fiscalização.</p><ul><li><strong>Decretos e Instruções Normativas:</strong> Regulamentam aplicação de tributos estaduais</li><li><strong>Lançamento tributário:</strong> Ato administrativo que oficializa a dívida</li><li><strong>Processo administrativo tributário:</strong> Discussão de débito antes de judicial</li><li><strong>CAJA:</strong> Câmara de Apelação e Julgamento de Assuntos Tributários (órgão recursal)</li><li>Prazo para impugnação administrativa: Geralmente 30 dias</li></ul>"
+        }
+      ]
+    },
+    {
+      "materia": "Contabilidade Geral",
+      "subtopicos": [
+        {
+          "titulo": "Conceitos Fundamentais: Ativo, Passivo, Patrimônio Líquido",
+          "conteudo": "<p><strong>Contabilidade</strong> registra e analisa a situação financeira das organizações.</p><ul><li><strong>Ativo:</strong> Bens e direitos da empresa (dinheiro, estoques, contas a receber, imóveis)</li><li><strong>Passivo:</strong> Obrigações/dívidas (empréstimos, contas a pagar, impostos a recolher)</li><li><li><strong>Patrimônio Líquido:</strong> Diferença: Ativo - Passivo = Capital + Lucros Acumulados</li><li><strong>Equação patrimonial:</strong> Ativo = Passivo + Patrimônio Líquido</li></ul><div class=\"macete-box\">💡 Macete: Ativo = tudo que empresa TEM; Passivo = tudo que empresa DEVE; PL = o que sobra (de quem é).</div>"
+        },
+        {
+          "titulo": "Escrituração e Livros Contábeis",
+          "conteudo": "<p><strong>Escrituração</strong> é o registro de operações comerciais em livros.</p><ul><li><strong>Livro Diário:</strong> Registro diário de TODAS as operações (obrigatório por lei)</li><li><strong>Livro Razão:</strong> Detalhamento por conta (facilita análise)</li><li><strong>Livro Caixa:</strong> Registro de entradas e saídas de dinheiro</li><li><strong>Livro de Inventário:</strong> Relação de bens (estoque, máquinas)</li><li><strong>Formalidades:</strong> Escrita em ordem cronológica, assinado por contador e empresa, sem rasuras</li></ul>"
+        },
+        {
+          "titulo": "Demonstrações Contábeis: BP, DRE, DLPA",
+          "conteudo": "<p><strong>Demonstrações Contábeis</strong> resume situação financeira e de resultados da empresa.</p><ul><li><strong>Balanço Patrimonial (BP):</strong> Mostra Ativo, Passivo e PL em data específica</li><li><strong>Demonstração de Resultado do Exercício (DRE):</strong> Receitas - Despesas = Lucro/Prejuízo</li><li><strong>Demonstração de Lucros/Prejuízos Acumulados (DLPA):</strong> Variação do PL</li><li><strong>Fluxo de Caixa:</strong> Entradas e saídas de dinheiro (caixa, não contabilidade)</li><li>Publicação: Obrigatória para sociedades anônimas (S.A.) e limitadas acima de certo faturamento</li></ul><div class=\"macete-box\">💡 Macete: BP = foto da empresa em data X; DRE = filme das operações do período; Caixa = dinheiro que entrou/saiu.</div>"
+        }
+      ]
+    },
+    {
+      "materia": "Administração Financeira e Orçamentária",
+      "subtopicos": [
+        {
+          "titulo": "Orçamento Público: Conceito e Princípios",
+          "conteudo": "<p><strong>Orçamento público</strong> é peça que estima receitas e fixa despesas do Estado.</p><ul><li><strong>Definição legal (CF, art. 165):</strong> Lei que autoriza arrecadação e despesa</li><li><strong>Princípios orçamentários:</strong> Universalidade, unidade, anualidade, exclusividade</li><li><strong>Universalidade:</strong> Inclui todas receitas e despesas</li><li><strong>Unidade:</strong> Um só orçamento por nível (federal, estadual, municipal)</li><li><strong>Anualidade:</strong> Vigência de um ano (1º jan a 31 dez)</li><li><strong>Exclusividade:</strong> Só matéria orçamentária (proibido \"cavalos de troia\")</li></ul><div class=\"macete-box\">💡 Macete: Orçamento = autorização legal para gastar dinheiro público. Sem aprovação, governo não executa.</div>"
+        },
+        {
+          "titulo": "Ciclo Orçamentário: Elaboração, Aprovação, Execução, Controle",
+          "conteudo": "<p><strong>Ciclo orçamentário</strong> passa por 4 fases principales.</p><ul><li><strong>1. Elaboração:</strong> Executivo prepara projeto (destina-se a Legislativo)</li><li><strong>2. Aprovação:</strong> Legislativo discute, emenda, aprova; Executivo sanciona</li><li><strong>3. Execução:</strong> Executivo coleta receitas e realiza despesas conforme autorizado</li><li><strong>4. Controle:</strong> Tribunal de Contas (TC) fiscaliza; Executivo presta contas</li><li>Duração total: ~18 meses (discussão + execução)</li></ul>"
+        },
+        {
+          "titulo": "Receitas e Despesas Públicas",
+          "conteudo": "<p><strong>Receitas públicas</strong> são ingressos de recursos; <strong>despesas</strong> saídas.</p><ul><li><strong>Receitas:</strong> Tributos (impostos, taxas), empréstimos, venda de ativos, multas</li><li><strong>Receitas orçamentárias:</strong> Entram no orçamento; receitas extraorçamentárias não</li><li><strong>Despesas:</strong> Custeio (material, serviços), investimento (obras, equipamentos), transferências</li><li><strong>Despesa orçamentária:</strong> Autorizada por lei orçamentária; deve passar por empenho, liquidação, pagamento</li><li><strong>Equilíbrio:</strong> Receita = Despesa (meta do governo)</li></ul><div class=\"macete-box\">💡 Macete: Receita = dinheiro entra; Despesa = dinheiro sai. Governo deve arrecadar tanto quanto gasta.</div>"
+        }
+      ]
+    },
+    {
+      "materia": "Raciocínio Lógico",
+      "subtopicos": [
+        {
+          "titulo": "Proposições, Conectivos e Tabela Verdade",
+          "conteudo": "<p><strong>Proposição</strong> é sentença que é verdadeira (V) ou falsa (F), nunca ambas.</p><ul><li><strong>Conectivos lógicos:</strong> E (conjunção), OU (disjunção), NÃO (negação), SE...ENTÃO (condicional), SE E SOMENTE SE (bicondicional)</li><li><strong>Conjunção (P ∧ Q):</strong> Verdadeira só se ambas são V</li><li><strong>Disjunção (P ∨ Q):</strong> Falsa só se ambas são F</li><li><strong>Negação (¬P):</strong> Inverte valor (V→F, F→V)</li><li><strong>Condicional (P → Q):</strong> Falsa só se P é V e Q é F</li><li><strong>Bicondicional (P ↔ Q):</strong> Verdadeira se P e Q têm mesmo valor</li></ul><div class=\"macete-box\">💡 Macete: E = todos V; OU = pelo menos um V; CONDICIONAL = falso só com V→F; BICONDICIONAL = iguais.</div>"
+        },
+        {
+          "titulo": "Equivalência Lógica e Negação de Proposições",
+          "conteudo": "<p><strong>Equivalência lógica</strong> = proposições com mesmo valor em todas situações.</p><ul><li><strong>P → Q ≡ ¬P ∨ Q:</strong> \"Se chove, jogo fica suspenso\" = \"Não chove OU jogo fica suspenso\"</li><li><strong>Negação de conjunção:</strong> ¬(P ∧ Q) ≡ ¬P ∨ ¬Q (Lei de Morgan)</li><li><strong>Negação de disjunção:</strong> ¬(P ∨ Q) ≡ ¬P ∧ ¬Q</li><li><strong>Negação de condicional:</strong> ¬(P → Q) ≡ P ∧ ¬Q</li><li><strong>Contrapositividade:</strong> P → Q ≡ ¬Q → ¬P (útil para prova por redução ao absurdo)</li></ul>"
+        },
+        {
+          "titulo": "Argumentos Lógicos e Dedução",
+          "conteudo": "<p><strong>Argumento lógico</strong> é sequência de proposições (premissas) que levam a conclusão.</p><ul><li><strong>Argumento válido:</strong> Se premissas são V, conclusão é necessariamente V</li><li><strong>Silogismo:</strong> Dois premissas + conclusão (ex: \"Todo homem morre; Sócrates é homem; logo Sócrates morre\")</li><li><strong>Falácia lógica:</strong> Argumento inválido (parece válido mas não é)</li><li><strong>Contradição:</strong> Proposição sempre F</li><li><strong>Tautologia:</strong> Proposição sempre V (ex: P ∨ ¬P = \"chove ou não chove\")</li></ul><div class=\"macete-box\">💡 Macete: Argumento VÁLIDO = verdadeiras premissas → verdadeira conclusão. Teste com contraexemplo.</div>"
+        }
+      ]
+    },
+    {
+      "materia": "Ética no Serviço Público",
+      "subtopicos": [
+        {
+          "titulo": "Código de Ética Profissional e Deveres do Servidor",
+          "conteudo": "<p><strong>Ética</strong> é conjunto de valores morais que guiam comportamento profissional.</p><ul><li><strong>Deveres fundamentais:</strong> Honestidade, integridade, imparcialidade, sigilo, respeito à lei</li><li><strong>Serviço público:</strong> Agir sempre em favor do interesse público, não pessoal</li><li><strong>Sigilo profissional:</strong> Não divulgar informações confidenciais (salvo exceção legal ou crime)</li><li><strong>Neutralidade política:</strong> Não usar cargo para promover partido/candidato</li><li><strong>Sanções por violação:</strong> Censura, suspensão, demissão (conforme gravidade)</li></ul><div class=\"macete-box\">💡 Macete: Ética pública = \"Se fosse publicado no jornal, eu ficaria bem?\" Se resposta é NÃO, não faça.</div>"
+        },
+        {
+          "titulo": "Conflito de Interesses, Nepotismo e Incompatibilidades",
+          "conteudo": "<p><strong>Conflito de interesses</strong> = servidor tem interesse pessoal em decisão que faz.</p><ul><li><strong>Obrigação:</strong> Afastar-se imediatamente (recusal, impedimento)</li><li><strong>Nepotismo:</strong> Proibição de contratar parentes até 2º grau (Súmula Vinculante 13, STF)</li><li><strong>Acumulação de cargos:</strong> Vedada (exceção: professor + magistério)</li><li><strong>Incompatibilidades:</strong> Servidor eletivo + exercer executivo; exercer profissão privada que conflite com cargo</li><li>Não afastar-se = gravíssima violação ética e legal</li></ul><div class=\"macete-box\">💡 Macete: Em dúvida = AFASTE. Melhor errar para o lado seguro da ética.</div>"
+        },
+        {
+          "titulo": "Responsabilidades: Civil, Penal e Administrativa",
+          "conteudo": "<p>Servidor público responde por atos em <strong>três esferas independentes</strong>.</p><ul><li><strong>Responsabilidade administrativa:</strong> Violação de dever funcional → Advertência, suspensão, demissão (conforme lei)</li><li><strong>Responsabilidade civil:</strong> Dano ao Estado ou terceiros → Indenização; Administração tem direito regressivo contra servidor se culpa comprovada</li><li><strong>Responsabilidade penal:</strong> Crime (ex: corrupção, prevaricação, abuso de poder) → Condenação em processo criminal</li><li>Condenar em uma NÃO exclui outras; são independentes</li></ul>"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "resumos": [
+    {
+      "materia": "Língua Portuguesa",
+      "subtopicos": [
+        {
+          "titulo": "Concordância Verbal",
+          "conteudo": "<p><strong>Concordância verbal</strong> é a adequação entre o verbo e seu sujeito em número e pessoa.</p><ul><li>Sujeito simples: verbo concorda com o núcleo do sujeito</li><li>Sujeito composto: verbo geralmente no plural (ex: \"João e Maria viajaram\")</li><li>Sujeito coletivo no singular: verbo no singular (ex: \"A turma chegou cansada\")</li><li>Verbos impessoais (haver, fazer, ir): sempre na 3ª pessoa do singular</li><li>Pronome relativo \"que\": verbo concorda com o antecedente</li></ul><div class=\"macete-box\">💡 Macete: Se o verbo tiver um sujeito claro e definido, olhe para o sujeito e coloque o verbo no mesmo número. Não é tão difícil!</div>"
+        },
+        {
+          "titulo": "Regência Nominal e Verbal",
+          "conteudo": "<p><strong>Regência</strong> é a relação de dependência entre palavras, determinando qual preposição usar.</p><ul><li><strong>Regência verbal:</strong> Alguns verbos exigem preposições específicas (ex: \"ir a\", \"assistir a\", \"intervir em\")</li><li><strong>Regência nominal:</strong> Nomes e adjetivos também exigem preposições (ex: \"próximo de\", \"hábil em\", \"obediente a\")</li><li>Não use preposição desnecessária (ex: ❌ \"entrar em\", ✓ \"entrar\")</li><li>Alguns verbos mudam de significado com a preposição (ex: \"assistir a\" = ver; \"assistir em\" = ajudar)</li></ul><div class=\"macete-box\">💡 Macete: Quando em dúvida, teste a palavra com preposições comuns (a, em, de, para) e leia naturalmente. A que soar melhor é a correta.</div>"
+        },
+        {
+          "titulo": "Pontuação e Uso da Vírgula",
+          "conteudo": "<p>A <strong>vírgula</strong> marca pausas na leitura e separa termos sintaticamente equivalentes.</p><ul><li>Separa aposto: \"O deputado, experiente em políticas públicas, apresentou a proposta\"</li><li>Separa adjuntos adverbiais deslocados: \"No início da sessão, o presidente convocou os membros\"</li><li>Antes de conectivos: \"Chegou cansado, mas disposto a trabalhar\"</li><li>NÃO coloque vírgula entre sujeito e verbo (❌ \"O projeto, será aprovado\")</li></ul>"
+        }
+      ]
+    },
+    {
+      "materia": "Direito Constitucional",
+      "subtopicos": [
+        {
+          "titulo": "Direitos Fundamentais (CF/88, arts. 5º-17)",
+          "conteudo": "<p>Os <strong>direitos fundamentais</strong> são garantias básicas do cidadão contra o Estado.</p><ul><li><strong>Direitos individuais:</strong> vida, liberdade, igualdade, segurança, propriedade</li><li><strong>Direitos políticos:</strong> votar, ser votado, participar de referendo</li><li><strong>Direitos sociais:</strong> educação, saúde, trabalho, moradia, assistência social</li><li>Aplicabilidade imediata (art. 5º, § 1º)</li><li>Cláusula de permanência: não podem ser abolidos por EC</li></ul><div class=\"macete-box\">💡 Macete: Memorize os 9 direitos sociais do art. 6º: educação, saúde, alimentação, trabalho, moradia, lazer, segurança, proteção à maternidade/infância, assistência aos desamparados.</div>"
+        },
+        {
+          "titulo": "Separação de Poderes (arts. 2º e 60, § 4º, III)",
+          "conteudo": "<p>O Estado se divide em <strong>três Poderes</strong> independentes e harmônicos:</p><ul><li><strong>Poder Legislativo:</strong> Congresso Nacional (Câmara + Senado). Função principal: legislar</li><li><strong>Poder Executivo:</strong> Presidente da República. Função principal: executar as leis</li><li><strong>Poder Judiciário:</strong> Tribunais e Juízes. Função principal: aplicar as leis e julgar conflitos</li><li>Nenhum Poder pode absorver atribuições do outro</li><li>Sistema de pesos e contrapesos (checks and balances)</li></ul><div class=\"macete-box\">💡 Macete: Cada Poder tem uma função clara: Legislativo LEgisla, Executivo EXecuta, Judiciário JUlga.</div>"
+        },
+        {
+          "titulo": "Processo Legislativo (art. 59-69)",
+          "conteudo": "<p>O <strong>processo legislativo</strong> é o procedimento para criar e alterar normas jurídicas.</p><ul><li><strong>Leis Ordinárias:</strong> Maioria simples; maioria dos presentes na votação</li><li><strong>Leis Complementares:</strong> Maioria absoluta (50% + 1 do total de membros)</li><li><strong>Emendas Constitucionais:</strong> 3/5 em duas votações em cada Casa</li><li>Fases: Iniciativa → Discussão → Votação → Sanção/Veto → Promulgação</li></ul>"
+        }
+      ]
+    },
+    {
+      "materia": "Direito Administrativo",
+      "subtopicos": [
+        {
+          "titulo": "Ato Administrativo: Conceito e Elementos",
+          "conteudo": "<p>O <strong>ato administrativo</strong> é a manifestação da vontade da Administração que produz efeitos jurídicos imediatos na esfera de direitos públicos.</p><ul><li><strong>Elementos:</strong> Sujeito competente, forma prescrita, motivo, objeto lícito, finalidade pública</li><li><strong>Atributos:</strong> Presunção de legitimidade, imperatividade, autoexecutoriedade (nem todos)</li><li><strong>Classificação:</strong> Vinculados (discricionários), negativas (positivos), simples (compostos)</li><li>Contém vício: anulação. Desvio de finalidade: ilegitimidade</li></ul><div class=\"macete-box\">💡 Macete: \"SFMOF\" = Sujeito, Forma, Motivo, Objeto, Finalidade. Memorize os 5 elementos do ato administrativo.</div>"
+        },
+        {
+          "titulo": "Princípios da Administração Pública (art. 37, CF)",
+          "conteudo": "<p>Os <strong>princípios constitucionais</strong> regem toda atividade administrativa.</p><ul><li><strong>Legalidade:</strong> Só pode fazer o que a lei permite</li><li><strong>Moralidade:</strong> Atuar com honestidade, boa-fé e decência</li><li><strong>Impessoalidade:</strong> Igualdade perante a Administração</li><li><strong>Publicidade:</strong> Transparência e acesso a informações</li><li><strong>Eficiência:</strong> Melhor resultado com menores recursos (incluído em 1998)</li></ul><div class=\"macete-box\">💡 Macete: \"LIMPE\" = Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência.</div>"
+        },
+        {
+          "titulo": "Responsabilidade Civil da Administração Pública",
+          "conteudo": "<p>A Administração responde pelos danos causados por seus agentes.</p><ul><li><strong>Teoria da responsabilidade objetiva:</strong> Não é preciso provar culpa; basta o dano</li><li><strong>Requisitos:</strong> Ação/omissão da Administração, dano, nexo causal</li><li>Cidadão tem ação regressiva contra o agente se for comprovada culpa grosseira</li><li>Excludentes: Força maior, culpa da vítima, culpa de terceiro</li></ul>"
+        }
+      ]
+    },
+    {
+      "materia": "Regimento Interno ALECE",
+      "subtopicos": [
+        {
+          "titulo": "Estrutura Organizacional e Poderes da ALECE",
+          "conteudo": "<p>A <strong>Assembleia Legislativa do Estado do Ceará (ALECE)</strong> é o Poder Legislativo estadual.</p><ul><li><strong>Composição:</strong> Deputados estaduais (número definido pelo art. 27, CF)</li><li><strong>Estrutura:</strong> Plenário, Comissões, Lideranças partidárias</li><li><strong>Poderes:</strong> Legislar, fiscalizar o Executivo, aprovar orçamentos, julgar prefeitos (impeachment)</li><li>Mandato: 4 anos (coincide com municipais)</li></ul><div class=\"macete-box\">💡 Macete: ALECE = Assembleia LEgislativa do Estado do Ceará. Competência: legislar, fiscalizar, orçar.</div>"
+        },
+        {
+          "titulo": "Processo Legislativo na ALECE",
+          "conteudo": "<p>Segue as mesmas regras federais, adaptadas ao contexto estadual.</p><ul><li>Leis ordinárias: Maioria simples dos presentes</li><li>Leis complementares: Maioria absoluta</li><li>Emendas ao Ato das Disposições Constitucionais Transitórias estadual: 3/5</li><li>Iniciativa: Deputado, Comissão, Poder Executivo, povo (Lei de Iniciativa Popular)</li></ul>"
+        },
+        {
+          "titulo": "Comissões Parlamentares",
+          "conteudo": "<p>As <strong>comissões</strong> são órgãos especializados para análise temática de projetos.</p><ul><li><strong>Comissões permanentes:</strong> Funcionam durante toda legislatura (Educação, Saúde, Fazenda, etc.)</li><li><strong>Comissões temporárias:</strong> Criadas para fins específicos (investigação, elaboração de projeto)</li><li>Representação proporcional entre partidos</li><li>Parecer em comissão: Obrigatório antes de ir ao Plenário</li></ul>"
+        }
+      ]
+    },
+    {
+      "materia": "Ética no Serviço Público",
+      "subtopicos": [
+        {
+          "titulo": "Código de Ética Profissional (Decreto 6.029/2007)",
+          "conteudo": "<p>O <strong>Código de Ética</strong> estabelece deveres morais do servidor público.</p><ul><li><strong>Deveres:</strong> Honestidade, integridade, lealdade, eficiência, discrição</li><li><strong>Restrições:</strong> Não aceitar presentes, não solicitar favores, não usar cargo para vantagem pessoal</li><li><strong>Sigilo:</strong> Informações obtidas no exercício do cargo são confidenciais</li><li><strong>Sanções:</strong> Censura, suspensão, demissão (gravidade depende da infração)</li></ul><div class=\"macete-box\">💡 Macete: Ética = Fazer o que é certo, não apenas o que é legal. Quando em dúvida, pergunte: \"Como isso ficaria se publicado no jornal?\"</div>"
+        },
+        {
+          "titulo": "Conflito de Interesses e Incompatibilidades",
+          "conteudo": "<p><strong>Conflito de interesses</strong> ocorre quando o servidor tem interesse pessoal em decisão que deve tomar.</p><ul><li><strong>Obrigação:</strong> Afastar-se (recusal ou impedimento)</li><li><strong>Incompatibilidades:</strong> Exercer cargo eletivo + função executiva simultaneamente (em geral)</li><li>Cônjuge ou parente até 3º grau: Não pode trabalhar sob sua supervisão direta</li><li>Recusa em se afastar = Violação ética grave</li></ul>"
+        },
+        {
+          "titulo": "Responsabilidades do Servidor Público",
+          "conteudo": "<p>O servidor responde por seus atos em três esferas:</p><ul><li><strong>Responsabilidade Civil:</strong> Indenizar danos causados ao Estado ou terceiros</li><li><strong>Responsabilidade Penal:</strong> Crimes como corrupção, prevaricação, abuso de poder</li><li><strong>Responsabilidade Administrativa:</strong> Infrações funciona que resultam em demissão, suspensão ou censura</li></ul>"
+        }
+      ]
+    },
+    {
+      "materia": "Informática",
+      "subtopicos": [
+        {
+          "titulo": "Conceitos Básicos de Hardware e Software",
+          "conteudo": "<p><strong>Hardware</strong> é o componente físico do computador; <strong>software</strong> é o programa (intangível).</p><ul><li><strong>Hardware:</strong> Processador (CPU), memória RAM, disco rígido (HD/SSD), periféricos</li><li><strong>Software:</strong> Sistemas operacionais (Windows, Linux), aplicativos, drivers</li><li><strong>Memória:</strong> RAM (rápida, volátil), Armazenamento (permanente)</li><li>ROM: Read-Only Memory (firmware)</li></ul><div class=\"macete-box\">💡 Macete: Hardware = o que você consegue tocar; Software = o que você consegue ver na tela.</div>"
+        },
+        {
+          "titulo": "Segurança da Informação e Proteção de Dados",
+          "conteudo": "<p><strong>Segurança da informação</strong> protege dados contra acesso, modificação ou destruição não autorizada.</p><ul><li><strong>Princípios:</strong> Confidencialidade (acesso restrito), Integridade (dados íntegros), Disponibilidade (acesso quando necessário)</li><li><strong>Ameaças:</strong> Vírus, malware, phishing, senhas fracas</li><li><strong>Proteção:</strong> Antivírus, firewall, criptografia, backup, autenticação de dois fatores</li><li><strong>LGPD (Lei 13.709/2018):</strong> Protege dados pessoais no Brasil</li></ul><div class=\"macete-box\">💡 Macete: CIA = Confidencialidade, Integridade, Disponibilidade. Os três pilares da segurança.</div>"
+        },
+        {
+          "titulo": "Internet, Email e Navegadores Web",
+          "conteudo": "<p><strong>Internet</strong> é uma rede global conectando computadores; protocolos principais: TCP/IP.</p><ul><li><strong>WWW (World Wide Web):</strong> Sistema de documentos hipermídia acessados via HTTP/HTTPS</li><li><strong>Email:</strong> Protocolos SMTP (envio), POP3/IMAP (recebimento)</li><li><strong>URL:</strong> Uniform Resource Locator (endereço de página web)</li><li><strong>DNS:</strong> Traduz nomes de domínios em endereços IP</li><li><strong>Navegadores:</strong> Chrome, Firefox, Safari, Edge; executam código JavaScript e renderizam HTML/CSS</li></ul>"
+        }
+      ]
+    }
+  ]
+}
