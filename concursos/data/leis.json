@@ -1,0 +1,256 @@
+{
+  "leis": [
+    {
+      "id": "cf88",
+      "nome": "Constituição Federal de 1988",
+      "sigla": "CF/88",
+      "concursos": ["alece", "tjce", "sefaz"],
+      "materia_grupo": "direito-constitucional",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "pontos_leitura": 50,
+      "artigos_chave": [
+        { "ref": "Art. 5º", "desc": "Direitos e garantias fundamentais individuais e coletivos" },
+        { "ref": "Art. 37", "desc": "Princípios da Administração Pública (LIMPE)" },
+        { "ref": "Art. 60, § 4º", "desc": "Cláusulas pétreas — vedações ao poder constituinte derivado" }
+      ]
+    },
+    {
+      "id": "lei8112",
+      "nome": "Regime Jurídico dos Servidores Públicos Federais",
+      "sigla": "Lei 8.112/90",
+      "concursos": ["alece", "tjce", "sefaz"],
+      "materia_grupo": "direito-administrativo",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "pontos_leitura": 30,
+      "artigos_chave": [
+        { "ref": "Art. 2º", "desc": "Conceito de servidor público" },
+        { "ref": "Art. 116-117", "desc": "Deveres e proibições dos servidores" },
+        { "ref": "Art. 127-145", "desc": "Regime disciplinar e penalidades" }
+      ]
+    },
+    {
+      "id": "lei9826",
+      "nome": "Estatuto dos Servidores Públicos do Estado do Ceará",
+      "sigla": "Lei 9.826/74",
+      "concursos": ["alece"],
+      "materia_grupo": "direito-administrativo",
+      "url": "https://belt.al.ce.gov.br/index.php/legislacao/proposicoes/leis-ordinarias/1974/62-lei-n-9-826-de-14-de-maio-de-1974",
+      "pontos_leitura": 20,
+      "artigos_chave": [
+        { "ref": "Art. 1º-10", "desc": "Provimento e vacância de cargos" },
+        { "ref": "Art. 87-100", "desc": "Direitos e vantagens dos servidores estaduais" },
+        { "ref": "Art. 157-175", "desc": "Regime disciplinar estadual" }
+      ]
+    },
+    {
+      "id": "lei9784",
+      "nome": "Lei do Processo Administrativo Federal",
+      "sigla": "Lei 9.784/99",
+      "concursos": ["alece", "tjce", "sefaz"],
+      "materia_grupo": "direito-administrativo",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "pontos_leitura": 25,
+      "artigos_chave": [
+        { "ref": "Art. 2º", "desc": "Princípios do processo administrativo" },
+        { "ref": "Art. 26-28", "desc": "Intimação e prazos nos processos" },
+        { "ref": "Art. 65-66", "desc": "Revisão e anulação de atos administrativos" }
+      ]
+    },
+    {
+      "id": "lei8666",
+      "nome": "Lei de Licitações e Contratos Administrativos",
+      "sigla": "Lei 8.666/93",
+      "concursos": ["alece"],
+      "materia_grupo": "direito-administrativo",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8666cons.htm",
+      "pontos_leitura": 25,
+      "artigos_chave": [
+        { "ref": "Art. 1º-3", "desc": "Princípios da licitação e âmbito de aplicação" },
+        { "ref": "Art. 22-25", "desc": "Modalidades e casos de dispensa/inexigibilidade" },
+        { "ref": "Art. 54-80", "desc": "Contratos administrativos — cláusulas e execução" }
+      ]
+    },
+    {
+      "id": "ri-alece",
+      "nome": "Regimento Interno da ALECE",
+      "sigla": "RI ALECE",
+      "concursos": ["alece"],
+      "materia_grupo": "regimentos",
+      "url": "https://www.al.ce.gov.br/index.php/o-legislativo/regimento-interno",
+      "pontos_leitura": 20,
+      "artigos_chave": [
+        { "ref": "Título I", "desc": "Organização e competências da ALECE" },
+        { "ref": "Sessões", "desc": "Tipos de sessão, quórum e votações" },
+        { "ref": "Comissões", "desc": "Criação, composição e atribuições das comissões" }
+      ]
+    },
+    {
+      "id": "cpc",
+      "nome": "Código de Processo Civil",
+      "sigla": "CPC — Lei 13.105/15",
+      "concursos": ["tjce"],
+      "materia_grupo": "processo-civil",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+      "pontos_leitura": 50,
+      "artigos_chave": [
+        { "ref": "Art. 1º-12", "desc": "Normas fundamentais e aplicação das normas processuais" },
+        { "ref": "Art. 318-373", "desc": "Procedimento comum — petição inicial a sentença" },
+        { "ref": "Art. 485-501", "desc": "Sentença e coisa julgada" }
+      ]
+    },
+    {
+      "id": "cpp",
+      "nome": "Código de Processo Penal",
+      "sigla": "CPP — D.L. 3.689/41",
+      "concursos": ["tjce"],
+      "materia_grupo": "processo-penal",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "pontos_leitura": 40,
+      "artigos_chave": [
+        { "ref": "Art. 1º-7", "desc": "Aplicação da lei processual penal" },
+        { "ref": "Art. 282-314", "desc": "Medidas cautelares e prisão em flagrante" },
+        { "ref": "Art. 381-405", "desc": "Sentença e coisa julgada penal" }
+      ]
+    },
+    {
+      "id": "lei9099",
+      "nome": "Lei dos Juizados Especiais Cíveis e Criminais",
+      "sigla": "Lei 9.099/95",
+      "concursos": ["tjce"],
+      "materia_grupo": "processo-civil",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm",
+      "pontos_leitura": 25,
+      "artigos_chave": [
+        { "ref": "Art. 2º", "desc": "Critérios: oralidade, simplicidade, informalidade, economia processual" },
+        { "ref": "Art. 3º-4", "desc": "Competência dos juizados especiais cíveis" },
+        { "ref": "Art. 60-92", "desc": "Juizado especial criminal — JECRIM" }
+      ]
+    },
+    {
+      "id": "loman",
+      "nome": "Lei Orgânica da Magistratura Nacional",
+      "sigla": "LOMAN — LC 35/79",
+      "concursos": ["tjce"],
+      "materia_grupo": "regimentos",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp35.htm",
+      "pontos_leitura": 20,
+      "artigos_chave": [
+        { "ref": "Art. 35-36", "desc": "Deveres e vedações dos magistrados" },
+        { "ref": "Art. 40-48", "desc": "Garantias e prerrogativas da magistratura" },
+        { "ref": "Art. 49-50", "desc": "Processo administrativo disciplinar dos magistrados" }
+      ]
+    },
+    {
+      "id": "ri-tjce",
+      "nome": "Regimento Interno do Tribunal de Justiça do Ceará",
+      "sigla": "RI TJ-CE",
+      "concursos": ["tjce"],
+      "materia_grupo": "regimentos",
+      "url": "https://www.tjce.jus.br/institucional/regimento-interno/",
+      "pontos_leitura": 20,
+      "artigos_chave": [
+        { "ref": "Competências do TJ", "desc": "Jurisdição e competência originária e recursal" },
+        { "ref": "Câmaras e Seções", "desc": "Organização interna e distribuição de processos" },
+        { "ref": "Pleno", "desc": "Competências do Pleno do TJ-CE" }
+      ]
+    },
+    {
+      "id": "ctn",
+      "nome": "Código Tributário Nacional",
+      "sigla": "CTN — Lei 5.172/66",
+      "concursos": ["sefaz"],
+      "materia_grupo": "direito-tributario",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+      "pontos_leitura": 50,
+      "artigos_chave": [
+        { "ref": "Art. 3º", "desc": "Conceito legal de tributo" },
+        { "ref": "Art. 96-112", "desc": "Legislação tributária — vigência e aplicação" },
+        { "ref": "Art. 113-138", "desc": "Obrigação tributária, fato gerador e crédito tributário" }
+      ]
+    },
+    {
+      "id": "lc87",
+      "nome": "Lei Kandir — ICMS em Operações Interestaduais",
+      "sigla": "LC 87/96",
+      "concursos": ["sefaz"],
+      "materia_grupo": "direito-tributario",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp87.htm",
+      "pontos_leitura": 30,
+      "artigos_chave": [
+        { "ref": "Art. 2º", "desc": "Fatos geradores do ICMS" },
+        { "ref": "Art. 12-13", "desc": "Momento do fato gerador e base de cálculo" },
+        { "ref": "Art. 19-23", "desc": "Não-cumulatividade e aproveitamento de crédito" }
+      ]
+    },
+    {
+      "id": "lei12670",
+      "nome": "Lei do ICMS do Estado do Ceará",
+      "sigla": "Lei 12.670/96",
+      "concursos": ["sefaz"],
+      "materia_grupo": "direito-tributario",
+      "url": "https://www.sefaz.ce.gov.br/legislacao-tributaria/icms/lei-12-670-1996/",
+      "pontos_leitura": 30,
+      "artigos_chave": [
+        { "ref": "Art. 1º-3", "desc": "Incidência e não-incidência do ICMS cearense" },
+        { "ref": "Art. 25-30", "desc": "Base de cálculo e alíquotas no Ceará" },
+        { "ref": "Art. 60-75", "desc": "Obrigações acessórias e documentos fiscais" }
+      ]
+    },
+    {
+      "id": "lei4320",
+      "nome": "Lei das Finanças Públicas",
+      "sigla": "Lei 4.320/64",
+      "concursos": ["sefaz"],
+      "materia_grupo": "financas-publicas",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l4320.htm",
+      "pontos_leitura": 30,
+      "artigos_chave": [
+        { "ref": "Art. 1º-22", "desc": "Elaboração e controle dos orçamentos públicos" },
+        { "ref": "Art. 35-48", "desc": "Receitas e despesas públicas — classificação" },
+        { "ref": "Art. 75-82", "desc": "Controle da execução orçamentária" }
+      ]
+    },
+    {
+      "id": "lc101",
+      "nome": "Lei de Responsabilidade Fiscal",
+      "sigla": "LRF — LC 101/00",
+      "concursos": ["sefaz"],
+      "materia_grupo": "financas-publicas",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm",
+      "pontos_leitura": 30,
+      "artigos_chave": [
+        { "ref": "Art. 1º", "desc": "Responsabilidade na gestão fiscal — conceito e abrangência" },
+        { "ref": "Art. 16-17", "desc": "Geração de despesa — estudo de impacto orçamentário" },
+        { "ref": "Art. 44-54", "desc": "Transparência fiscal e relatórios obrigatórios" }
+      ]
+    },
+    {
+      "id": "lei8429",
+      "nome": "Lei de Improbidade Administrativa",
+      "sigla": "Lei 8.429/92",
+      "concursos": ["sefaz"],
+      "materia_grupo": "direito-administrativo",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+      "pontos_leitura": 25,
+      "artigos_chave": [
+        { "ref": "Art. 9º", "desc": "Atos que importam enriquecimento ilícito" },
+        { "ref": "Art. 10", "desc": "Atos que causam lesão ao erário" },
+        { "ref": "Art. 11", "desc": "Atos que violam os princípios da Administração" }
+      ]
+    },
+    {
+      "id": "lc10ce",
+      "nome": "Estatuto dos Servidores Públicos do Estado do Ceará",
+      "sigla": "LC 10/91",
+      "concursos": ["sefaz"],
+      "materia_grupo": "direito-administrativo",
+      "url": "https://belt.al.ce.gov.br/index.php/legislacao/proposicoes/leis-complementares/1991/462-lei-complementar-n-10-de-04-de-novembro-de-1991",
+      "pontos_leitura": 20,
+      "artigos_chave": [
+        { "ref": "Art. 1º-15", "desc": "Provimento, vacância e posse de cargos" },
+        { "ref": "Art. 87-110", "desc": "Vencimentos, vantagens e licenças" },
+        { "ref": "Art. 156-180", "desc": "Regime disciplinar e processo administrativo" }
+      ]
+    }
+  ]
+}
