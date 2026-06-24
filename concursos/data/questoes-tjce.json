@@ -1,0 +1,1124 @@
+{
+  "questoes": [
+    {
+      "id": "tjce-lp-001",
+      "concurso": "TJ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Concordância nominal",
+      "enunciado": "Assinale a alternativa em que a concordância nominal está CORRETA:",
+      "alternativas": {
+        "A": "É necessário bastante cuidado e atenção.",
+        "B": "Bastante cuidado e atenção são necessárias.",
+        "C": "Anexo seguem as certidões requeridas.",
+        "D": "Os documentos foram entregues em mãos propria.",
+        "E": "A juíza e o promotor ficaram satisfeitos com a decisão."
+      },
+      "resposta": "E",
+      "explicacao": "Em E, o adjetivo 'satisfeitos' concorda com o sujeito composto 'juíza e promotor', prevalecendo o masculino, por regra de concordância quando há elementos de gêneros diferentes — alternativa correta. Em C, 'Anexo' deve concordar com 'certidões': 'Anexas seguem as certidões'. Em A, deveria ser 'Bastantes cuidado e atenção' ou reformular."
+    },
+    {
+      "id": "tjce-lp-002",
+      "concurso": "TJ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Colocação pronominal",
+      "enunciado": "Assinale a alternativa em que a colocação pronominal está de acordo com a norma culta escrita:",
+      "alternativas": {
+        "A": "Me disseram que a audiência foi adiada.",
+        "B": "Não se pode negar a importância do contraditório.",
+        "C": "O magistrado entregou-lhe a sentença imediatamente.",
+        "D": "Se o réu comparecer, comunicar-se-á ao advogado.",
+        "E": "Pediram-me que aguardasse o despacho."
+      },
+      "resposta": "B",
+      "explicacao": "Em B, a presença da palavra negativa 'não' atrai o pronome para a posição de próclise: 'não se pode' — correto. Em A, pronome no início absoluto é evitado na norma escrita culta. Em C e E, a ênclise é tecnicamente correta mas em D a mesóclise 'comunicar-se-á' é adequada com futuro do indicativo, estando também correta. A alternativa B é a mais inequivocamente correta em contexto de prova."
+    },
+    {
+      "id": "tjce-lp-003",
+      "concurso": "TJ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Regência nominal",
+      "enunciado": "A regência nominal está INCORRETA em:",
+      "alternativas": {
+        "A": "O juiz era acessível aos advogados da parte.",
+        "B": "A decisão foi favorável ao réu.",
+        "C": "O promotor era contrário a proposta de acordo.",
+        "D": "O magistrado era alheio às pressões externas.",
+        "E": "A sentença foi benéfica para as partes."
+      },
+      "resposta": "C",
+      "explicacao": "Em C, o adjetivo 'contrário' rege a preposição 'a', que, ao se combinar com o artigo 'a' de 'a proposta', forma a crase: 'contrário à proposta'. A frase deveria ser 'contrário à proposta de acordo'. A ausência da crase torna a frase incorreta do ponto de vista da norma culta."
+    },
+    {
+      "id": "tjce-lp-004",
+      "concurso": "TJ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Tipos textuais",
+      "enunciado": "Uma sentença judicial, ao fundamentar a decisão com base em fatos e provas dos autos, predomina o tipo textual:",
+      "alternativas": {
+        "A": "narrativo.",
+        "B": "descritivo.",
+        "C": "injuntivo.",
+        "D": "argumentativo/dissertativo.",
+        "E": "preditivo."
+      },
+      "resposta": "D",
+      "explicacao": "A fundamentação de uma sentença judicial apresenta teses, contrateses, provas e raciocínios que levam a uma conclusão — características típicas do texto argumentativo/dissertativo. A parte dispositiva (comando) é injuntiva, mas a fundamentação, que é a essência racional da sentença, é argumentativo-dissertativa."
+    },
+    {
+      "id": "tjce-lp-005",
+      "concurso": "TJ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Emprego do sinal indicativo de crase",
+      "enunciado": "Há obrigatoriedade de crase em:",
+      "alternativas": {
+        "A": "Ele se referiu a você na audiência.",
+        "B": "O processo foi encaminhado a Brasília.",
+        "C": "A decisão foi favorável à parte autora.",
+        "D": "O prazo é de oito dias a contar de amanhã.",
+        "E": "Ele chegou a pé ao fórum."
+      },
+      "resposta": "C",
+      "explicacao": "Em C, 'favorável à parte': o adjetivo 'favorável' rege preposição 'a' + artigo 'a' antes de substantivo feminino 'parte' = crase obrigatória. Em B, nomes de cidades geralmente não aceitam crase. Em A, pronomes pessoais não aceitam crase. Em D e E, locuções adverbiais sem artigo."
+    },
+    {
+      "id": "tjce-lp-006",
+      "concurso": "TJ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Período composto — subordinação",
+      "enunciado": "Identifique a alternativa que contém oração subordinada adverbial causal:",
+      "alternativas": {
+        "A": "O juiz determinou que o réu fosse ouvido.",
+        "B": "Embora tenha sido absolvido, o réu recorreu.",
+        "C": "Como não havia provas suficientes, o réu foi absolvido.",
+        "D": "O processo será arquivado se não houver recurso.",
+        "E": "O advogado pediu que a audiência fosse remarcada."
+      },
+      "resposta": "C",
+      "explicacao": "Em C, 'Como não havia provas suficientes' é oração subordinada adverbial causal introduzida pela conjunção 'como' com valor de causa. Em A e E, há orações substantivas objetivas diretas. Em B, há oração concessiva ('embora'). Em D, há oração condicional ('se')."
+    },
+    {
+      "id": "tjce-lp-007",
+      "concurso": "TJ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Denotação e conotação",
+      "enunciado": "No texto 'A justiça é cega para as diferenças sociais, mas vê claramente os erros dos pobres', o vocábulo 'cega' está empregado em sentido:",
+      "alternativas": {
+        "A": "denotativo, pois a justiça possui olhos.",
+        "B": "conotativo, exprimindo a ideia de imparcialidade — ou falta dela — de forma figurada.",
+        "C": "denotativo, pois descreve uma característica física real.",
+        "D": "técnico-jurídico, sendo uma terminologia do Direito.",
+        "E": "arcaico, não mais utilizado na língua contemporânea."
+      },
+      "resposta": "B",
+      "explicacao": "O emprego de 'cega' para referir-se à justiça é conotativo (figurado): a 'justiça cega' é uma personificação que alude à imparcialidade. No texto, o autor usa a ironia para criticar que essa 'cegueira' não é universal — o que é um uso crítico e metafórico do vocábulo."
+    },
+    {
+      "id": "tjce-lp-008",
+      "concurso": "TJ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Ortografia — novo acordo",
+      "enunciado": "De acordo com o Acordo Ortográfico vigente, assinale a alternativa com grafia CORRETA:",
+      "alternativas": {
+        "A": "idéia, geléia, heróico",
+        "B": "ideia, geleia, heroico",
+        "C": "idéia, geleia, heroico",
+        "D": "ideia, geléia, heróico",
+        "E": "idea, gelêia, heroíco"
+      },
+      "resposta": "B",
+      "explicacao": "Com o Acordo Ortográfico de 1990 (em vigor no Brasil desde 2009), foram suprimidos acentos considerados desnecessários em ditongos abertos: 'ideia' (não mais idéia), 'geleia' (não geléia), 'heroico' (não heróico — pois o ditongo 'oi' em posição não monossílaba tônica não leva acento)."
+    },
+    {
+      "id": "tjce-lp-009",
+      "concurso": "TJ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Paralelismo sintático",
+      "enunciado": "Assinale a alternativa que apresenta paralelismo sintático CORRETO:",
+      "alternativas": {
+        "A": "O advogado disse que recorreria e a necessidade de novo prazo.",
+        "B": "O réu foi preso, processado e a condenação ocorreu.",
+        "C": "A parte autora pediu a procedência da ação, a condenação do réu e o pagamento de custas.",
+        "D": "O juiz determinou o início do prazo e que os documentos fossem juntados.",
+        "E": "A sentença foi clara, objetiva e teve motivação suficiente."
+      },
+      "resposta": "C",
+      "explicacao": "Em C, há paralelismo sintático perfeito: três substantivos no mesmo nível sintático como objetos diretos ('a procedência', 'a condenação', 'o pagamento'). Em A, B, D e E há quebra de paralelismo ao misturar elementos de categorias gramaticais ou estruturas sintáticas diferentes."
+    },
+    {
+      "id": "tjce-lp-010",
+      "concurso": "TJ-CE",
+      "materia": "Língua Portuguesa",
+      "subtopico": "Variantes linguísticas",
+      "enunciado": "A norma culta ou padrão é a variedade linguística:",
+      "alternativas": {
+        "A": "falada pela maioria da população brasileira no cotidiano.",
+        "B": "mais antiga e, portanto, mais correta.",
+        "C": "associada ao prestígio social e adotada em contextos formais, como textos jurídicos e acadêmicos.",
+        "D": "exclusiva das regiões Sul e Sudeste do Brasil.",
+        "E": "a única capaz de expressar ideias complexas."
+      },
+      "resposta": "C",
+      "explicacao": "A norma culta (ou padrão) é a variedade linguística de prestígio social, adotada em contextos formais como a produção de textos jurídicos, acadêmicos, jornalísticos de referência e na imprensa escrita. Não é a mais falada (que é a norma popular/regional), nem é inerentemente superior às demais, apenas mais valorizada socialmente."
+    },
+    {
+      "id": "tjce-dc-001",
+      "concurso": "TJ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Poder Judiciário — estrutura",
+      "enunciado": "Nos termos da Constituição Federal de 1988, são órgãos do Poder Judiciário:",
+      "alternativas": {
+        "A": "STF, STJ, TST, TSE, STM, TRFs, TRTs, TREs, TJMs e Juízes.",
+        "B": "STF, STJ, CNJ, AGU, MPF e Tribunal de Contas da União.",
+        "C": "STF, STJ, Câmara dos Deputados, Senado Federal e TRFs.",
+        "D": "Apenas o STF, como órgão de cúpula único do Poder Judiciário.",
+        "E": "STF, STJ, TJMs, Ministério Público e Defensoria Pública."
+      },
+      "resposta": "A",
+      "explicacao": "O art. 92 da CF elenca os órgãos do Poder Judiciário: STF, CNJ, STJ, TRFs e Juízes Federais, TRTs e Juízes do Trabalho, TREs e Juízes Eleitorais, STM e Juízes Militares, Tribunais e Juízes dos Estados e do DF. O CNJ (Conselho Nacional de Justiça) também é órgão do Judiciário, mas na alternativa A a listagem inclui os mais importantes sem mencionar o CNJ — é a mais completa e correta entre as opções."
+    },
+    {
+      "id": "tjce-dc-002",
+      "concurso": "TJ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Garantias da magistratura",
+      "enunciado": "São garantias constitucionais da magistratura, nos termos do art. 95 da CF:",
+      "alternativas": {
+        "A": "vitaliciedade, inamovibilidade e irredutibilidade de subsídio.",
+        "B": "vitaliciedade, reeleição ilimitada e voto secreto.",
+        "C": "inamovibilidade, imunidade parlamentar e foro privilegiado no STF.",
+        "D": "irredutibilidade salarial, férias de 60 dias e aposentadoria compulsória aos 70 anos.",
+        "E": "vitaliciedade, inamovibilidade e acumulação de cargos públicos."
+      },
+      "resposta": "A",
+      "explicacao": "O art. 95, incisos I, II e III da CF estabelece as três garantias da magistratura: vitaliciedade (após 2 anos de exercício, perda do cargo só por sentença judicial transitada em julgado); inamovibilidade (não pode ser removido salvo por interesse público, com maioria absoluta do tribunal); e irredutibilidade de subsídio."
+    },
+    {
+      "id": "tjce-dc-003",
+      "concurso": "TJ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Devido processo legal",
+      "enunciado": "O princípio do devido processo legal, previsto no art. 5º, LIV, da CF/88, assegura que:",
+      "alternativas": {
+        "A": "ninguém será preso sem flagrante delito ou sem ordem escrita de autoridade judicial competente.",
+        "B": "ninguém será privado da liberdade ou de seus bens sem o devido processo legal.",
+        "C": "é assegurada ampla defesa com os meios e recursos a ela inerentes.",
+        "D": "ninguém será considerado culpado até o trânsito em julgado da sentença penal condenatória.",
+        "E": "a lei não excluirá da apreciação do Poder Judiciário lesão ou ameaça a direito."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 5º, LIV, CF prevê expressamente: 'ninguém será privado da liberdade ou de seus bens sem o devido processo legal'. A alternativa C refere-se à ampla defesa (LV), D à presunção de inocência (LVII), E ao princípio da inafastabilidade da jurisdição (XXXV), e A à liberdade de locomoção (LXVIII/LXI)."
+    },
+    {
+      "id": "tjce-dc-004",
+      "concurso": "TJ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Ação popular",
+      "enunciado": "A ação popular, prevista no art. 5º, LXXIII, da CF/88, pode ser proposta por:",
+      "alternativas": {
+        "A": "qualquer pessoa, brasileira ou estrangeira, desde que maior de 18 anos.",
+        "B": "qualquer cidadão, para anular ato lesivo ao patrimônio público ou de entidade de que o Estado participe.",
+        "C": "apenas o Ministério Público, em nome da coletividade.",
+        "D": "qualquer partido político com representação no Congresso.",
+        "E": "apenas entidades associativas em defesa de seus filiados."
+      },
+      "resposta": "B",
+      "explicacao": "Nos termos do art. 5º, LXXIII, da CF, qualquer cidadão (não qualquer pessoa — é necessário ser cidadão, ou seja, estar no pleno gozo dos direitos políticos) é parte legítima para propor ação popular que vise anular ato lesivo ao patrimônio público ou de entidade de que o Estado participe, à moralidade administrativa, ao meio ambiente e ao patrimônio histórico e cultural, ficando o autor isento de custas judiciais e do ônus da sucumbência, salvo comprovada má-fé."
+    },
+    {
+      "id": "tjce-dc-005",
+      "concurso": "TJ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Tribunal de Justiça estadual",
+      "enunciado": "Sobre os Tribunais de Justiça dos Estados, é correto afirmar que:",
+      "alternativas": {
+        "A": "seus membros são nomeados diretamente pelo Presidente da República.",
+        "B": "a CF reserva um quinto dos lugares para membros do MP e da OAB, pelo chamado quinto constitucional.",
+        "C": "o TJ pode ser criado por decreto do governador sem previsão na Constituição Estadual.",
+        "D": "as decisões do TJ sobre matéria constitucional são definitivas e não podem ser reformadas pelo STF.",
+        "E": "o TJ é o único órgão com competência para julgar crimes praticados por prefeitos municipais."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 94 da CF estabelece que um quinto dos lugares dos TJs, TRFs e TRTs será composto de membros, do Ministério Público, com mais de dez anos de carreira, e de advogados de notório saber jurídico e de reputação ilibada, com mais de dez anos de efetiva atividade profissional — o chamado 'quinto constitucional'."
+    },
+    {
+      "id": "tjce-dc-006",
+      "concurso": "TJ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Estado de defesa e estado de sítio",
+      "enunciado": "Qual é a principal diferença entre estado de defesa e estado de sítio?",
+      "alternativas": {
+        "A": "O estado de defesa suspende direitos por tempo ilimitado; o estado de sítio tem prazo fixo de 30 dias.",
+        "B": "O estado de defesa, decretado pelo Presidente, abrange locais restritos, com prazo de até 30 dias prorrogável uma vez; o estado de sítio é mais grave, com prazo de 30 dias prorrogável indefinidamente.",
+        "C": "O estado de defesa dispensa autorização do Congresso; o estado de sítio exige autorização prévia.",
+        "D": "Ambos exigem autorização prévia do Congresso Nacional.",
+        "E": "O estado de sítio pode ser decretado pelo governador; o estado de defesa é privativo do Presidente."
+      },
+      "resposta": "B",
+      "explicacao": "O estado de defesa (art. 136 CF) é decretado pelo Presidente para preservar a ordem pública em locais restritos e determinados, com prazo de até 30 dias prorrogável uma vez por igual período — não requer autorização prévia do Congresso, mas deve ser apreciado em 10 dias. O estado de sítio (art. 137 CF) é medida mais grave, para situações de maior perturbação ou guerra, exigindo autorização do Congresso Nacional, com prazo de 30 dias prorrogável."
+    },
+    {
+      "id": "tjce-dc-007",
+      "concurso": "TJ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Direitos e deveres individuais e coletivos",
+      "enunciado": "De acordo com a CF/88, a casa é asilo inviolável do indivíduo. Pode, entretanto, nela penetrar sem consentimento do morador:",
+      "alternativas": {
+        "A": "qualquer agente de segurança pública, em qualquer horário, mediante ordem verbal da autoridade.",
+        "B": "em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial.",
+        "C": "apenas o Ministério Público, durante investigações criminais.",
+        "D": "qualquer autoridade pública, desde que em horário noturno.",
+        "E": "a autoridade fiscal para realizar auditorias tributárias, a qualquer hora."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 5º, XI, da CF prevê que a casa é inviolável, mas a lei estabelece que nela se pode penetrar em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial. A entrada em caso de flagrante pode ocorrer a qualquer hora; a entrada por mandado judicial é restrita ao período diurno."
+    },
+    {
+      "id": "tjce-dc-008",
+      "concurso": "TJ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Tribunal do Júri",
+      "enunciado": "A Constituição Federal garante a instituição do Júri com a seguinte organização:",
+      "alternativas": {
+        "A": "plenitude de defesa, sigilo das votações, soberania dos veredictos e competência para o julgamento de crimes comuns.",
+        "B": "plenitude de defesa, sigilo das votações, soberania dos veredictos e competência para o julgamento dos crimes dolosos contra a vida.",
+        "C": "ampla defesa, publicidade das votações, soberania e competência para crimes hediondos.",
+        "D": "plenitude de defesa, voto aberto dos jurados, soberania e competência para crimes dolosos contra a vida.",
+        "E": "plenitude de defesa, sigilo das votações e competência para todos os crimes praticados por civis."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 5º, XXXVIII, da CF prevê que é reconhecida a instituição do júri, com a organização que lhe der a lei, assegurados: a plenitude de defesa; o sigilo das votações; a soberania dos veredictos; a competência para o julgamento dos crimes dolosos contra a vida."
+    },
+    {
+      "id": "tjce-dc-009",
+      "concurso": "TJ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "CNJ — Conselho Nacional de Justiça",
+      "enunciado": "O Conselho Nacional de Justiça (CNJ), criado pela EC nº 45/2004, tem como principal atribuição:",
+      "alternativas": {
+        "A": "julgar em última instância os recursos cíveis e criminais do Poder Judiciário.",
+        "B": "o controle da atuação administrativa e financeira do Poder Judiciário e do cumprimento dos deveres funcionais dos juízes.",
+        "C": "substituir o STF no julgamento das ações diretas de inconstitucionalidade.",
+        "D": "nomear e exonerar magistrados de todos os graus de jurisdição.",
+        "E": "editar súmulas vinculantes com efeito erga omnes sobre matéria constitucional."
+      },
+      "resposta": "B",
+      "explicacao": "Nos termos do art. 103-B, §4º, da CF, compete ao CNJ o controle da atuação administrativa e financeira do Poder Judiciário e do cumprimento dos deveres funcionais dos juízes. O CNJ não tem competência jurisdicional — não julga processos. Súmulas vinculantes são competência do STF."
+    },
+    {
+      "id": "tjce-dc-010",
+      "concurso": "TJ-CE",
+      "materia": "Direito Constitucional",
+      "subtopico": "Repartição de competências tributárias",
+      "enunciado": "É da competência tributária dos Estados e do Distrito Federal:",
+      "alternativas": {
+        "A": "Imposto sobre Produtos Industrializados (IPI).",
+        "B": "Imposto sobre Operações Relativas à Circulação de Mercadorias e Serviços (ICMS).",
+        "C": "Imposto sobre Serviços de Qualquer Natureza (ISS).",
+        "D": "Imposto de Renda (IR).",
+        "E": "Imposto sobre a Propriedade Predial e Territorial Urbana (IPTU)."
+      },
+      "resposta": "B",
+      "explicacao": "O ICMS é tributo estadual, previsto no art. 155, II, da CF. IPI (A) e IR (D) são federais. ISS (C) e IPTU (E) são municipais. O art. 155 elenca os impostos estaduais: ITCMD, ICMS e IPVA."
+    },
+    {
+      "id": "tjce-da-001",
+      "concurso": "TJ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Princípios da Administração Pública",
+      "enunciado": "O princípio da eficiência, inserido no art. 37, caput da CF pela EC nº 19/1998, exige que a Administração Pública:",
+      "alternativas": {
+        "A": "priorize o cumprimento de metas quantitativas em detrimento da qualidade dos serviços.",
+        "B": "atue de modo a alcançar os melhores resultados com o menor dispêndio de recursos, otimizando a prestação dos serviços públicos.",
+        "C": "terceirize todos os serviços públicos para o setor privado.",
+        "D": "elimine os controles burocráticos para agilizar os processos administrativos.",
+        "E": "garanta que todos os atos administrativos sejam concluídos em até 30 dias."
+      },
+      "resposta": "B",
+      "explicacao": "O princípio da eficiência impõe à Administração a obrigação de atuar de forma a produzir os melhores resultados com o menor custo possível, otimizando o uso dos recursos públicos. Não se confunde com a eliminação de controles legais (que violaria a legalidade) ou com a privatização indiscriminada."
+    },
+    {
+      "id": "tjce-da-002",
+      "concurso": "TJ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Contratos administrativos",
+      "enunciado": "As cláusulas exorbitantes dos contratos administrativos são aquelas que:",
+      "alternativas": {
+        "A": "fixam valores acima do mercado para a Administração.",
+        "B": "conferem à Administração prerrogativas que não existem nos contratos privados, como a alteração e rescisão unilateral.",
+        "C": "são nulas por extrapolarem os limites legais dos contratos.",
+        "D": "garantem ao contratado indenização automática em caso de rescisão.",
+        "E": "são exclusivas dos contratos de concessão de serviço público."
+      },
+      "resposta": "B",
+      "explicacao": "Cláusulas exorbitantes são prerrogativas da Administração que colocariam o contratante em posição de vantagem inaceitável nos contratos privados, mas que são legítimas nos contratos administrativos por força do interesse público. Exemplos: poder de alteração unilateral, rescisão unilateral, fiscalização, aplicação de penalidades."
+    },
+    {
+      "id": "tjce-da-003",
+      "concurso": "TJ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Ato administrativo — vícios",
+      "enunciado": "O vício de competência no ato administrativo ocorre quando:",
+      "alternativas": {
+        "A": "o agente pratica o ato com finalidade diversa do interesse público.",
+        "B": "o ato é praticado por agente sem atribuição legal para tanto.",
+        "C": "o conteúdo do ato contraria a lei.",
+        "D": "não são observados os requisitos formais previstos em lei.",
+        "E": "o motivo declarado não corresponde à realidade."
+      },
+      "resposta": "B",
+      "explicacao": "O elemento 'competência' diz respeito ao sujeito que pratica o ato. O vício de competência ocorre quando o ato é praticado por agente sem atribuição legal. Vício de finalidade (A) ocorre quando há desvio de finalidade. Vício de objeto (C) quando o conteúdo é ilegal. Vício de forma (D) quando descumpridos requisitos formais. Vício de motivo (E) quando há ausência ou falsidade do motivo."
+    },
+    {
+      "id": "tjce-da-004",
+      "concurso": "TJ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Serviços públicos — concessão",
+      "enunciado": "Na concessão de serviço público, a responsabilidade pelos danos causados a usuários do serviço é:",
+      "alternativas": {
+        "A": "do Estado, que responde solidariamente com a concessionária.",
+        "B": "exclusiva do Estado, independentemente de culpa.",
+        "C": "da concessionária, que responde objetivamente perante usuários e terceiros.",
+        "D": "exclusiva do usuário que sofreu o dano, por aceitar os riscos do serviço.",
+        "E": "repartida igualmente entre Estado e concessionária sempre."
+      },
+      "resposta": "C",
+      "explicacao": "Nos termos do art. 37, §6º da CF e da jurisprudência do STF, as pessoas jurídicas de direito privado prestadoras de serviços públicos (como concessionárias) respondem objetivamente pelos danos causados a usuários e terceiros. O Estado responde subsidiariamente, caso a concessionária não tenha condições de arcar com a indenização."
+    },
+    {
+      "id": "tjce-da-005",
+      "concurso": "TJ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Prescrição administrativa",
+      "enunciado": "A ação de reparação de danos causados por agentes de pessoas jurídicas de direito público ou privado prestadoras de serviços públicos prescreve em:",
+      "alternativas": {
+        "A": "2 anos.",
+        "B": "5 anos.",
+        "C": "10 anos.",
+        "D": "20 anos.",
+        "E": "3 anos."
+      },
+      "resposta": "B",
+      "explicacao": "O Decreto nº 20.910/1932 estabelece que as dívidas passivas da União, dos Estados e dos Municípios, bem assim todo e qualquer direito ou ação contra a Fazenda federal, estadual ou municipal, seja qual for a sua natureza, prescrevem em 5 anos, contados da data do ato ou fato do qual se originarem. O STJ consolidou o prazo de 5 anos para ações de responsabilidade civil contra o Estado."
+    },
+    {
+      "id": "tjce-da-006",
+      "concurso": "TJ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Poder hierárquico",
+      "enunciado": "O poder hierárquico na Administração Pública compreende as seguintes faculdades:",
+      "alternativas": {
+        "A": "apenas a de punir os subordinados por infrações disciplinares.",
+        "B": "editar, rever, delegar e avocar atos, bem como dar ordens e fiscalizar o cumprimento.",
+        "C": "o controle dos atos do Poder Legislativo e do Judiciário.",
+        "D": "a criação de novos cargos públicos sem lei.",
+        "E": "a demissão de servidores sem processo administrativo."
+      },
+      "resposta": "B",
+      "explicacao": "O poder hierárquico é o poder-dever de organização interna da Administração, que inclui: dar ordens aos subordinados, fiscalizar, rever atos, delegar competências e avocar processos. É exercido dentro da mesma pessoa jurídica e não abrange controle externo (sobre outros Poderes)."
+    },
+    {
+      "id": "tjce-da-007",
+      "concurso": "TJ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Licitação — modalidades",
+      "enunciado": "De acordo com a Lei 14.133/2021, são modalidades de licitação:",
+      "alternativas": {
+        "A": "concorrência, tomada de preços, convite, concurso e leilão.",
+        "B": "pregão, concorrência, concurso, leilão e diálogo competitivo.",
+        "C": "pregão eletrônico, RDC, concorrência internacional e convite.",
+        "D": "tomada de preços, pregão e diálogo competitivo.",
+        "E": "concorrência, concurso, pregão e carta-convite."
+      },
+      "resposta": "B",
+      "explicacao": "A Lei 14.133/2021 (Nova Lei de Licitações) estabelece as seguintes modalidades: concorrência, pregão, concurso, leilão e diálogo competitivo (nova modalidade). A tomada de preços e o convite, previstos na revogada Lei 8.666/1993, foram extintos. O pregão passou a ser uma das modalidades previstas na nova lei."
+    },
+    {
+      "id": "tjce-da-008",
+      "concurso": "TJ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Desapropriação",
+      "enunciado": "A desapropriação por necessidade ou utilidade pública é disciplinada pelo Decreto-Lei nº 3.365/1941 e exige, como regra, o pagamento de:",
+      "alternativas": {
+        "A": "indenização em títulos da dívida pública.",
+        "B": "indenização justa e prévia em dinheiro.",
+        "C": "compensação financeira após 10 anos.",
+        "D": "qualquer forma de contrapartida acordada com o expropriado.",
+        "E": "indenização fixada unilateralmente pelo ente expropriante."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 5º, XXIV, da CF estabelece que a lei estabelecerá o procedimento para desapropriação por necessidade ou utilidade pública, ou por interesse social, mediante justa e prévia indenização em dinheiro. A exceção é a desapropriação para fins de reforma agrária (art. 184 CF), que admite indenização em títulos da dívida agrária."
+    },
+    {
+      "id": "tjce-da-009",
+      "concurso": "TJ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Tombamento",
+      "enunciado": "O tombamento é um instrumento de:",
+      "alternativas": {
+        "A": "desapropriação indireta do bem cultural pelo Estado.",
+        "B": "intervenção do Estado na propriedade privada para preservação do patrimônio cultural, histórico e artístico, sem transferir a propriedade.",
+        "C": "venda compulsória de bens para o Poder Público.",
+        "D": "autorização para demolição de imóveis em estado precário.",
+        "E": "registro de imóveis urbanos para fins de IPTU."
+      },
+      "resposta": "B",
+      "explicacao": "O tombamento é forma de intervenção estatal na propriedade que restringe o direito de uso, modificação ou demolição de bem de valor cultural, histórico, artístico ou ambiental, sem transferir a propriedade para o Estado. Difere da desapropriação, que transfere a propriedade. O tombado pode ser público ou privado."
+    },
+    {
+      "id": "tjce-da-010",
+      "concurso": "TJ-CE",
+      "materia": "Direito Administrativo",
+      "subtopico": "Agências reguladoras",
+      "enunciado": "As agências reguladoras são:",
+      "alternativas": {
+        "A": "órgãos da administração direta, sem personalidade jurídica própria.",
+        "B": "autarquias especiais com independência técnica e funcional, criadas por lei para regular setores específicos da economia.",
+        "C": "empresas estatais com fins lucrativos criadas para regular a concorrência.",
+        "D": "fundações públicas de direito privado criadas por decreto.",
+        "E": "órgãos vinculados diretamente ao Presidente da República."
+      },
+      "resposta": "B",
+      "explicacao": "As agências reguladoras são autarquias em regime especial, criadas por lei, com maior autonomia administrativa, financeira e técnica em relação às autarquias comuns. Têm mandato fixo para seus diretores, o que lhes confere independência em relação às pressões políticas. Exemplos: ANATEL, ANS, ANEEL, ANP."
+    },
+    {
+      "id": "tjce-pc-001",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Civil",
+      "subtopico": "Princípios processuais",
+      "enunciado": "O princípio da cooperação, previsto no art. 6º do CPC/2015, impõe às partes e ao juiz o dever de:",
+      "alternativas": {
+        "A": "concordar com os pedidos formulados pela parte adversa para encerrar o processo.",
+        "B": "colaborar entre si para a obtenção, em tempo razoável, de decisão de mérito justa e efetiva.",
+        "C": "renunciar a recursos para agilizar o procedimento.",
+        "D": "abrir mão do contraditório em benefício da celeridade.",
+        "E": "aceitar mediação obrigatoriamente antes do ajuizamento da ação."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 6º do CPC/2015 prevê que 'Todos os sujeitos do processo devem cooperar entre si para que se obtenha, em tempo razoável, decisão de mérito justa e efetiva.' Trata-se de princípio estruturante do Novo CPC, que impõe deveres de consulta, prevenção, esclarecimento e auxílio tanto ao juiz quanto às partes e seus procuradores."
+    },
+    {
+      "id": "tjce-pc-002",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Civil",
+      "subtopico": "Competência",
+      "enunciado": "De acordo com o CPC/2015, a competência para processar e julgar ação de indenização por ato ilícito é, em regra, do foro:",
+      "alternativas": {
+        "A": "do domicílio do autor.",
+        "B": "onde ocorreu o ato ou o fato que gerou o ilícito.",
+        "C": "da sede do réu.",
+        "D": "da capital do Estado onde ocorreu o fato.",
+        "E": "da Comarca mais próxima ao local do dano."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 53, IV, 'a', do CPC/2015 estabelece que para a ação de reparação de dano é competente, entre outros, o foro do lugar do ato ou fato (locus commissi delicti). Essa regra é de competência relativa (territorial), portanto pode ser alterada por convenção das partes ou prorrogação."
+    },
+    {
+      "id": "tjce-pc-003",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Civil",
+      "subtopico": "Tutelas provisórias",
+      "enunciado": "A tutela antecipada antecedente, prevista no CPC/2015, pode se estabilizar quando:",
+      "alternativas": {
+        "A": "o réu não apresentar contestação no prazo legal.",
+        "B": "o réu não interpuser recurso contra a decisão que a concedeu.",
+        "C": "o autor não promover a ação principal em 30 dias.",
+        "D": "o juiz converter a tutela antecipada em definitiva após 6 meses.",
+        "E": "as partes celebrarem acordo sobre o objeto da tutela."
+      },
+      "resposta": "B",
+      "explicacao": "Nos termos dos arts. 303 e 304 do CPC/2015, a tutela antecipada antecedente pode se estabilizar se o réu não recorrer da decisão que a concedeu. Estabilizada, o processo será extinto. Qualquer das partes pode demandar a outra para revisar, reformar ou invalidar a tutela estabilizada no prazo de 2 anos."
+    },
+    {
+      "id": "tjce-pc-004",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Civil",
+      "subtopico": "Recursos — apelação",
+      "enunciado": "O prazo para interposição de apelação, nos termos do CPC/2015, é de:",
+      "alternativas": {
+        "A": "5 dias úteis.",
+        "B": "10 dias corridos.",
+        "C": "15 dias úteis.",
+        "D": "30 dias úteis.",
+        "E": "20 dias corridos."
+      },
+      "resposta": "C",
+      "explicacao": "O art. 1.003, §5º, do CPC/2015 estabelece que o prazo para interpor e para responder os recursos é de 15 (quinze) dias úteis, exceto no caso dos embargos de declaração, cujo prazo é de 5 dias úteis. O CPC/2015 passou a contar prazos em dias úteis."
+    },
+    {
+      "id": "tjce-pc-005",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Civil",
+      "subtopico": "Coisa julgada",
+      "enunciado": "A coisa julgada material impede:",
+      "alternativas": {
+        "A": "a repropositura de qualquer demanda relacionada ao mesmo assunto.",
+        "B": "nova propositura da mesma ação com as mesmas partes, o mesmo pedido e a mesma causa de pedir.",
+        "C": "apenas a interposição de novos recursos no mesmo processo.",
+        "D": "que o juiz profira nova decisão no mesmo processo.",
+        "E": "a execução imediata da sentença condenatória."
+      },
+      "resposta": "B",
+      "explicacao": "A coisa julgada material torna imutável e indiscutível a decisão de mérito não mais sujeita a recurso, impedindo nova propositura da mesma ação (mesmas partes, pedido e causa de pedir — tríplice identidade). A coisa julgada formal impede apenas a reabertura do mesmo processo."
+    },
+    {
+      "id": "tjce-pc-006",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Civil",
+      "subtopico": "Litisconsórcio",
+      "enunciado": "O litisconsórcio é necessário quando:",
+      "alternativas": {
+        "A": "as partes querem reunir suas demandas para maior comodidade.",
+        "B": "a lei expressamente o determina ou quando a natureza da relação jurídica exige a presença de mais de um sujeito no polo ativo ou passivo.",
+        "C": "o juiz entender conveniente reunir várias ações.",
+        "D": "a sentença puder beneficiar terceiros de qualquer modo.",
+        "E": "o autor tiver mais de um pedido cumulado."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 114 do CPC/2015 prevê que o litisconsórcio será necessário por disposição de lei ou quando, pela natureza da relação jurídica controvertida, a eficácia da sentença depender da citação de todos que devam ser litisconsortes. Ao contrário do litisconsórcio facultativo, o necessário é obrigatório e sua ausência gera extinção do processo sem resolução do mérito."
+    },
+    {
+      "id": "tjce-pc-007",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Civil",
+      "subtopico": "Execução civil",
+      "enunciado": "Na execução de título extrajudicial, o executado será citado para pagar em:",
+      "alternativas": {
+        "A": "24 horas.",
+        "B": "5 dias úteis.",
+        "C": "3 dias úteis.",
+        "D": "15 dias úteis.",
+        "E": "30 dias úteis."
+      },
+      "resposta": "C",
+      "explicacao": "O art. 829 do CPC/2015 determina que o executado seja citado para pagar a dívida no prazo de 3 (três) dias, contado da citação. Caso não pague, o oficial de justiça já fica autorizado a penhorar tantos bens quanto bastem para a execução."
+    },
+    {
+      "id": "tjce-pc-008",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Civil",
+      "subtopico": "Nulidades processuais",
+      "enunciado": "A teoria das nulidades processuais adota o princípio de que não há nulidade sem prejuízo (pas de nullité sans grief). Isso significa que:",
+      "alternativas": {
+        "A": "toda irregularidade processual gera nulidade automática.",
+        "B": "a nulidade só deve ser declarada quando o vício causar prejuízo à parte que a alega ou ao processo.",
+        "C": "o juiz pode decretar nulidade de qualquer ato sem ouvir as partes.",
+        "D": "qualquer erro formal invalida automaticamente o ato processual.",
+        "E": "a nulidade pode ser decretada de ofício apenas pelo tribunal."
+      },
+      "resposta": "B",
+      "explicacao": "O princípio da instrumentalidade das formas (pas de nullité sans grief) prevê que as nulidades processuais só devem ser declaradas quando o vício causou efetivo prejuízo à parte que alega ou ao processo como um todo. O art. 277 do CPC/2015 consagra esse princípio: 'quando a lei prescrever determinada forma sob pena de nulidade, a decretação desta não pode ser requerida pela parte que lhe deu causa'."
+    },
+    {
+      "id": "tjce-pc-009",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Civil",
+      "subtopico": "Audiência de conciliação",
+      "enunciado": "Nos termos do CPC/2015, a audiência de conciliação ou mediação será designada:",
+      "alternativas": {
+        "A": "apenas se o réu requerer.",
+        "B": "obrigatoriamente em todos os processos de conhecimento.",
+        "C": "como regra, em todas as causas, salvo se ambas as partes manifestarem desinteresse ou se a causa não admitir autocomposição.",
+        "D": "apenas em causas de valor superior a 60 salários mínimos.",
+        "E": "exclusivamente nos Juizados Especiais Cíveis."
+      },
+      "resposta": "C",
+      "explicacao": "O art. 334 do CPC/2015 determina que o juiz designará audiência de conciliação ou mediação como regra. A audiência não será realizada apenas se ambas as partes manifestarem desinteresse na composição ou se o direito em litígio não admitir autocomposição. A presença é obrigatória para ambas as partes, sob pena de ato atentatório à dignidade da justiça."
+    },
+    {
+      "id": "tjce-pc-010",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Civil",
+      "subtopico": "Incidente de resolução de demandas repetitivas — IRDR",
+      "enunciado": "O Incidente de Resolução de Demandas Repetitivas (IRDR), previsto no CPC/2015, tem como objetivo:",
+      "alternativas": {
+        "A": "reunir todos os processos idênticos em um único juízo.",
+        "B": "fixar tese jurídica a ser aplicada a todos os processos que versem sobre idêntica questão de direito, garantindo isonomia e segurança jurídica.",
+        "C": "extinguir os processos repetitivos por falta de interesse processual.",
+        "D": "designar um juiz especial para todos os processos repetitivos.",
+        "E": "permitir ao réu contestar coletivamente todas as ações idênticas."
+      },
+      "resposta": "B",
+      "explicacao": "O IRDR (arts. 976 a 987 do CPC/2015) é instaurado quando há efetiva repetição de processos que contenham controvérsia sobre a mesma questão unicamente de direito e risco de ofensa à isonomia e à segurança jurídica. O tribunal fixa tese jurídica que vincula os processos em curso e futuros na área de sua competência."
+    },
+    {
+      "id": "tjce-pp-001",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Penal",
+      "subtopico": "Princípios processuais penais",
+      "enunciado": "O princípio da presunção de inocência (ou não culpabilidade) no processo penal implica que:",
+      "alternativas": {
+        "A": "o réu deve provar sua inocência durante o processo.",
+        "B": "o ônus da prova cabe exclusivamente ao réu.",
+        "C": "ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória, sendo o ônus da prova do Estado.",
+        "D": "a prisão preventiva é vedada durante o processo.",
+        "E": "o réu não pode ser interrogado durante o processo."
+      },
+      "resposta": "C",
+      "explicacao": "O art. 5º, LVII, da CF consagra que 'ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória'. Disso decorre que o ônus da prova no processo penal é do Estado (acusação), e o réu não tem obrigação de provar sua inocência. Em caso de dúvida, aplica-se o in dubio pro reo."
+    },
+    {
+      "id": "tjce-pp-002",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Penal",
+      "subtopico": "Inquérito policial",
+      "enunciado": "O inquérito policial é um procedimento:",
+      "alternativas": {
+        "A": "judicial, presidido pelo juiz de direito.",
+        "B": "administrativo, presidido pela autoridade policial, de natureza inquisitiva.",
+        "C": "acusatório, presidido pelo Ministério Público.",
+        "D": "contraditório, em que o investigado tem amplo direito de defesa.",
+        "E": "obrigatório para o ajuizamento de qualquer ação penal."
+      },
+      "resposta": "B",
+      "explicacao": "O inquérito policial é procedimento administrativo, presidido pela autoridade policial (delegado), de natureza inquisitiva — ou seja, não há contraditório nem ampla defesa plenos nessa fase. O IP serve para colher elementos de informação que subsidiem o oferecimento da denúncia pelo MP, não sendo obrigatório para o ajuizamento da ação penal pública."
+    },
+    {
+      "id": "tjce-pp-003",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Penal",
+      "subtopico": "Prisão em flagrante",
+      "enunciado": "Nos termos do CPP, é flagrante delito quando o agente:",
+      "alternativas": {
+        "A": "é identificado por testemunhas após 48 horas do crime.",
+        "B": "está cometendo a infração penal ou acaba de cometê-la, ou é perseguido logo após o crime ou encontrado logo depois com instrumentos ou objetos que indiquem autoria.",
+        "C": "é preso por mandado judicial após investigação.",
+        "D": "confessa o crime voluntariamente à autoridade policial.",
+        "E": "é encontrado próximo ao local do crime em qualquer momento."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 302 do CPP define as hipóteses de flagrante delito: I – está cometendo a infração penal; II – acaba de cometê-la; III – é perseguido, logo após, pela autoridade, pelo ofendido ou por qualquer pessoa em situação que faça presumir ser o autor da infração; IV – é encontrado, logo depois, com instrumentos, armas, objetos ou papéis que façam presumir ser ele o autor da infração."
+    },
+    {
+      "id": "tjce-pp-004",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Penal",
+      "subtopico": "Ação penal pública",
+      "enunciado": "A ação penal pública incondicionada é aquela que:",
+      "alternativas": {
+        "A": "depende de representação da vítima para ser iniciada.",
+        "B": "é promovida exclusivamente pelo ofendido.",
+        "C": "é iniciada pelo Ministério Público independentemente de manifestação da vítima.",
+        "D": "depende de requisição do Ministro da Justiça.",
+        "E": "pode ser iniciada por qualquer cidadão."
+      },
+      "resposta": "C",
+      "explicacao": "A ação penal pública incondicionada é a regra no direito penal brasileiro: o Ministério Público é o titular exclusivo, e a promoção da ação independe de qualquer condição (representação da vítima ou requisição do Ministro da Justiça). A ação penal pública condicionada depende de representação (ex: ameaça) ou de requisição ministerial."
+    },
+    {
+      "id": "tjce-pp-005",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Penal",
+      "subtopico": "Provas — princípios",
+      "enunciado": "A prova obtida por meio ilícito é:",
+      "alternativas": {
+        "A": "admitida no processo penal se corroborada por outras provas lícitas.",
+        "B": "inadmissível no processo penal, assim como as provas dela derivadas (teoria da árvore envenenada).",
+        "C": "admissível se a ilicitude for da menor gravidade.",
+        "D": "admitida exclusivamente para absolver o réu.",
+        "E": "nula apenas quando o juiz expressamente assim reconhecer."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 5º, LVI, da CF prevê que 'são inadmissíveis, no processo, as provas obtidas por meios ilícitos'. O art. 157 do CPP reitera que são inadmissíveis as provas ilícitas, assim entendidas as obtidas em violação a normas constitucionais ou legais, bem como as derivadas das ilícitas (fruits of the poisonous tree / teoria dos frutos da árvore envenenada), salvo exceções (fonte independente, descoberta inevitável, prova pro reo)."
+    },
+    {
+      "id": "tjce-pp-006",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Penal",
+      "subtopico": "Habeas corpus",
+      "enunciado": "O habeas corpus é cabível quando:",
+      "alternativas": {
+        "A": "alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção.",
+        "B": "alguém sofrer violação de seus dados pessoais por autoridade pública.",
+        "C": "alguém tiver negado seu direito líquido e certo por ato de autoridade.",
+        "D": "alguém quiser obter certidões de repartições públicas.",
+        "E": "alguém sofrer discriminação racial por agente público."
+      },
+      "resposta": "A",
+      "explicacao": "O habeas corpus (art. 5º, LXVIII, CF) é remédio constitucional destinado a proteger a liberdade de locomoção: 'conceder-se-á habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder'. Pode ser repressivo (liberar o preso) ou preventivo (evitar a prisão iminente)."
+    },
+    {
+      "id": "tjce-pp-007",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Penal",
+      "subtopico": "Prisão preventiva",
+      "enunciado": "A prisão preventiva pode ser decretada para garantir:",
+      "alternativas": {
+        "A": "a recuperação social do acusado.",
+        "B": "a ordem pública, a ordem econômica, a conveniência da instrução criminal ou para assegurar a aplicação da lei penal.",
+        "C": "o pagamento das custas processuais pelo réu.",
+        "D": "a presença do réu em todos os atos do processo.",
+        "E": "o ressarcimento do dano à vítima."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 312 do CPP estabelece que a prisão preventiva poderá ser decretada como garantia da ordem pública, da ordem econômica, por conveniência da instrução criminal ou para assegurar a aplicação da lei penal, quando houver prova da existência do crime e indício suficiente de autoria e de perigo gerado pelo estado de liberdade do imputado."
+    },
+    {
+      "id": "tjce-pp-008",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Penal",
+      "subtopico": "Juiz das garantias",
+      "enunciado": "O Juiz das Garantias, previsto no Pacote Anticrime (Lei 13.964/2019), tem competência para:",
+      "alternativas": {
+        "A": "proferir sentença condenatória ou absolutória após o julgamento.",
+        "B": "controlar a legalidade da investigação criminal e salvaguardar os direitos fundamentais do investigado na fase pré-processual.",
+        "C": "presidir a audiência de instrução e julgamento.",
+        "D": "receber a denúncia e presidir o processo até o trânsito em julgado.",
+        "E": "julgar os recursos interpostos contra a sentença."
+      },
+      "resposta": "B",
+      "explicacao": "O juiz das garantias, previsto nos arts. 3º-A a 3º-F do CPP (inseridos pela Lei 13.964/2019), tem competência para controlar a legalidade da investigação criminal na fase pré-processual. Após o recebimento da denúncia, cessa sua competência, iniciando-se a do juiz da instrução e julgamento. O STF suspendeu inicialmente sua implementação, mas a medida foi retomada."
+    },
+    {
+      "id": "tjce-pp-009",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Penal",
+      "subtopico": "Nulidades no processo penal",
+      "enunciado": "São nulidades absolutas no processo penal, que podem ser reconhecidas a qualquer tempo:",
+      "alternativas": {
+        "A": "ausência de testemunha de acusação na audiência.",
+        "B": "falta de defensor ao acusado durante qualquer ato do processo, e ausência de representante do Ministério Público onde sua presença é obrigatória.",
+        "C": "qualquer irregularidade na intimação de testemunhas.",
+        "D": "atraso na realização da audiência de instrução.",
+        "E": "ausência de intérprete quando o réu é brasileiro."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 564 do CPP elenca as nulidades processuais penais. São nulidades absolutas (podem ser reconhecidas a qualquer tempo, mesmo de ofício pelo juiz): a falta de defensor ao acusado e a ausência do Ministério Público quando sua presença é obrigatória. Essas nulidades não se sujeitam à preclusão e violam garantias fundamentais."
+    },
+    {
+      "id": "tjce-pp-010",
+      "concurso": "TJ-CE",
+      "materia": "Direito Processual Penal",
+      "subtopico": "Acordo de não persecução penal — ANPP",
+      "enunciado": "O acordo de não persecução penal (ANPP), previsto no art. 28-A do CPP, é cabível quando:",
+      "alternativas": {
+        "A": "o crime for apenado com prisão perpetua.",
+        "B": "não sendo caso de arquivamento, o crime for praticado sem violência ou grave ameaça e a pena mínima for inferior a 4 anos.",
+        "C": "o réu já tiver sido condenado definitivamente por outro crime.",
+        "D": "o crime for hediondo, independentemente da pena.",
+        "E": "a vítima concordar com a não persecução penal."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 28-A do CPP prevê que o Ministério Público poderá propor acordo de não persecução penal, desde que necessário e suficiente para reprovação e prevenção do crime, se o investigado tiver confessado formal e circunstancialmente a prática de infração penal sem violência ou grave ameaça e com pena mínima inferior a 4 anos. São vedados: reincidência, crime praticado com violência/grave ameaça, crimes hediondos."
+    },
+    {
+      "id": "tjce-ri-001",
+      "concurso": "TJ-CE",
+      "materia": "Regimento Interno do TJ-CE",
+      "subtopico": "Competências do Pleno",
+      "enunciado": "Ao Pleno do Tribunal de Justiça do Ceará compete, entre outras atribuições:",
+      "alternativas": {
+        "A": "julgar recursos de apelação em matéria cível.",
+        "B": "eleger o Presidente e os demais membros da Diretoria do Tribunal e julgar ação direta de inconstitucionalidade de lei estadual.",
+        "C": "presidir as sessões do Júri.",
+        "D": "nomear e exonerar os servidores de primeiro grau.",
+        "E": "decidir sobre habeas corpus em matéria criminal originária."
+      },
+      "resposta": "B",
+      "explicacao": "O Pleno do TJ-CE é o órgão máximo do tribunal, competente para eleger seus dirigentes (Presidente, Vice-Presidente e Corregedor), processar e julgar ações diretas de inconstitucionalidade de leis estaduais em face da Constituição do Estado do Ceará, e outras matérias de interesse institucional do tribunal."
+    },
+    {
+      "id": "tjce-ri-002",
+      "concurso": "TJ-CE",
+      "materia": "Regimento Interno do TJ-CE",
+      "subtopico": "Câmaras e turmas",
+      "enunciado": "As Câmaras Cíveis do TJ-CE são competentes para julgar:",
+      "alternativas": {
+        "A": "recursos criminais e habeas corpus.",
+        "B": "ações penais originárias contra deputados estaduais.",
+        "C": "apelações cíveis, agravos de instrumento e demais recursos em matéria cível.",
+        "D": "mandados de segurança coletivos.",
+        "E": "ações de controle abstrato de constitucionalidade."
+      },
+      "resposta": "C",
+      "explicacao": "As Câmaras Cíveis do TJ-CE têm competência recursal em matéria cível, julgando apelações, agravos de instrumento, e demais recursos interpostos contra decisões de juízes de primeiro grau em causas não criminais. As matérias criminais são julgadas pelas Câmaras Criminais."
+    },
+    {
+      "id": "tjce-ri-003",
+      "concurso": "TJ-CE",
+      "materia": "Regimento Interno do TJ-CE",
+      "subtopico": "Corregedoria de Justiça",
+      "enunciado": "A Corregedoria de Justiça do TJ-CE tem como função principal:",
+      "alternativas": {
+        "A": "julgar ações penais originárias contra magistrados.",
+        "B": "fiscalizar e orientar a atividade dos juízes de primeiro grau e serventias judiciais, exercendo controle disciplinar.",
+        "C": "propor ao CNJ a aposentadoria compulsória de magistrados.",
+        "D": "presidir as sessões do Pleno do Tribunal.",
+        "E": "elaborar o orçamento anual do Poder Judiciário estadual."
+      },
+      "resposta": "B",
+      "explicacao": "A Corregedoria de Justiça (ou Corregedoria-Geral da Justiça) é o órgão do TJ responsável pela fiscalização e orientação dos serviços de primeiro grau, incluindo o controle disciplinar dos magistrados e servidores do Poder Judiciário estadual. Age de ofício ou mediante denúncia."
+    },
+    {
+      "id": "tjce-ri-004",
+      "concurso": "TJ-CE",
+      "materia": "Regimento Interno do TJ-CE",
+      "subtopico": "Sessões do Tribunal",
+      "enunciado": "As sessões do Tribunal de Justiça do Ceará são, em regra:",
+      "alternativas": {
+        "A": "secretas, com acesso restrito aos advogados das partes.",
+        "B": "públicas, podendo ser secretas nos casos previstos em lei.",
+        "C": "públicas apenas para os membros do Ministério Público.",
+        "D": "sempre virtuais, por disposição regimental.",
+        "E": "realizadas apenas no segundo semestre do ano."
+      },
+      "resposta": "B",
+      "explicacao": "As sessões dos tribunais são públicas por força do princípio constitucional da publicidade dos atos processuais (art. 5º, LX e art. 93, IX, CF). A sessão só poderá ser secreta quando a defesa da intimidade ou o interesse social o exigirem, nos termos da lei."
+    },
+    {
+      "id": "tjce-ri-005",
+      "concurso": "TJ-CE",
+      "materia": "Regimento Interno do TJ-CE",
+      "subtopico": "Presidente do TJ-CE",
+      "enunciado": "O Presidente do Tribunal de Justiça do Ceará é eleito pelo Pleno e exerce mandato de:",
+      "alternativas": {
+        "A": "um ano, renovável indefinidamente.",
+        "B": "dois anos, vedada a reeleição para o período subsequente.",
+        "C": "quatro anos, com uma recondução.",
+        "D": "dois anos, com possibilidade de uma recondução.",
+        "E": "três anos, sem possibilidade de recondução."
+      },
+      "resposta": "B",
+      "explicacao": "Nos tribunais brasileiros, a regra constitucional e regimental é que o Presidente e demais membros da diretoria do tribunal exercem mandato de dois anos, sendo vedada a reeleição para o período imediatamente subsequente. Isso garante a alternância na administração do tribunal."
+    },
+    {
+      "id": "tjce-ri-006",
+      "concurso": "TJ-CE",
+      "materia": "Regimento Interno do TJ-CE",
+      "subtopico": "Competências das Câmaras Criminais",
+      "enunciado": "Compete às Câmaras Criminais do Tribunal de Justiça do Ceará:",
+      "alternativas": {
+        "A": "julgar apelações em causas cíveis de valor superior a 60 salários mínimos.",
+        "B": "processar e julgar recursos de apelação criminal, habeas corpus e mandados de segurança em matéria criminal.",
+        "C": "eleger o Presidente do Tribunal.",
+        "D": "julgar ações de improbidade administrativa em grau de recurso.",
+        "E": "processar conflitos de competência entre juizados especiais cíveis."
+      },
+      "resposta": "B",
+      "explicacao": "As Câmaras Criminais do TJ-CE são competentes para julgar recursos em matéria penal oriundos dos juízes de primeiro grau, incluindo apelações criminais, recursos em sentido estrito, habeas corpus e mandados de segurança em matéria criminal."
+    },
+    {
+      "id": "tjce-ri-007",
+      "concurso": "TJ-CE",
+      "materia": "Regimento Interno do TJ-CE",
+      "subtopico": "Câmara de Direito Público",
+      "enunciado": "A Câmara de Direito Público do TJ-CE tem competência para julgar, entre outros, recursos relativos a:",
+      "alternativas": {
+        "A": "contratos privados de consumo.",
+        "B": "responsabilidade civil por acidentes de trânsito.",
+        "C": "ações contra entes públicos estaduais e municipais, mandados de segurança e ações populares.",
+        "D": "crimes praticados por servidores públicos estaduais.",
+        "E": "ações de família e sucessões."
+      },
+      "resposta": "C",
+      "explicacao": "A Câmara de Direito Público tem competência sobre matérias envolvendo o Poder Público: ações contra o Estado do Ceará e municípios, mandados de segurança contra atos de autoridades públicas estaduais, ações populares e outras causas de direito público."
+    },
+    {
+      "id": "tjce-ri-008",
+      "concurso": "TJ-CE",
+      "materia": "Regimento Interno do TJ-CE",
+      "subtopico": "Quórum para deliberações",
+      "enunciado": "Para as deliberações do Pleno do TJ-CE serem válidas, exige-se, como regra geral, a presença de:",
+      "alternativas": {
+        "A": "totalidade dos desembargadores.",
+        "B": "maioria absoluta dos membros do Pleno.",
+        "C": "apenas 3 desembargadores.",
+        "D": "dois terços dos membros.",
+        "E": "unanimidade dos desembargadores presentes."
+      },
+      "resposta": "B",
+      "explicacao": "As deliberações do Pleno do Tribunal de Justiça exigem, como regra, quórum de maioria absoluta dos membros do Pleno — ou seja, mais da metade do total de desembargadores. Para determinadas matérias (como declaração de inconstitucionalidade), exige-se maioria absoluta do Pleno para o voto de inconstitucionalidade (cláusula de reserva de plenário, art. 97 CF)."
+    },
+    {
+      "id": "tjce-ri-009",
+      "concurso": "TJ-CE",
+      "materia": "Regimento Interno do TJ-CE",
+      "subtopico": "Voto do relator",
+      "enunciado": "No julgamento colegiado do TJ-CE, o papel do relator inclui:",
+      "alternativas": {
+        "A": "decidir monocraticamente os recursos sem necessidade de pauta.",
+        "B": "elaborar o voto, relatar o processo na sessão de julgamento e lavrar o acórdão.",
+        "C": "convocar as partes para audiência de conciliação no tribunal.",
+        "D": "presidir obrigatoriamente todas as sessões do órgão colegiado.",
+        "E": "nomear o advogado dativo nas hipóteses de ausência de defensor."
+      },
+      "resposta": "B",
+      "explicacao": "O relator é o desembargador responsável pelo processo: estuda os autos, elabora seu voto, apresenta o relatório na sessão de julgamento, colhe os votos dos demais membros do colegiado e, após o julgamento, lavra o acórdão refletindo o entendimento majoritário do órgão."
+    },
+    {
+      "id": "tjce-ri-010",
+      "concurso": "TJ-CE",
+      "materia": "Regimento Interno do TJ-CE",
+      "subtopico": "Súmulas do TJ-CE",
+      "enunciado": "As súmulas do Tribunal de Justiça do Ceará:",
+      "alternativas": {
+        "A": "têm efeito vinculante sobre todos os juízes e tribunais do país.",
+        "B": "consolidam o entendimento reiterado do tribunal e orientam a jurisprudência, mas só vinculam os órgãos do próprio TJ-CE.",
+        "C": "são editadas pelo Presidente do Tribunal sem deliberação do Pleno.",
+        "D": "equivalem a lei estadual e devem ser observadas pelo Executivo.",
+        "E": "podem revogar decisões do STJ e STF sobre matérias estaduais."
+      },
+      "resposta": "B",
+      "explicacao": "As súmulas do TJ-CE consolidam o entendimento jurisprudencial dominante do tribunal e orientam a aplicação do direito pelos órgãos judiciais do estado, mas não possuem efeito vinculante geral — diferentemente das súmulas vinculantes do STF (art. 103-A CF), que vinculam todos os órgãos do Poder Judiciário e da Administração Pública."
+    },
+    {
+      "id": "tjce-et-001",
+      "concurso": "TJ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Código de Ética — Decreto 1.171/94",
+      "enunciado": "De acordo com o Código de Ética do Servidor Público (Decreto 1.171/94), não é dever fundamental do servidor:",
+      "alternativas": {
+        "A": "exercer com zelo e dedicação as atribuições do cargo.",
+        "B": "ser probo, reto, leal e justo, demonstrando integridade de caráter.",
+        "C": "guardar sigilo sobre assunto da repartição quando necessário.",
+        "D": "tratar com urbanidade as pessoas com que mantenha contato.",
+        "E": "utilizar equipamentos e instalações públicas para fins particulares com autorização tácita do superior."
+      },
+      "resposta": "E",
+      "explicacao": "O Código de Ética veda expressamente ao servidor utilizar pessoal ou recursos materiais da repartição para fins não autorizados. A utilização de bens públicos para fins particulares é vedação ética, não dever. As alternativas A, B, C e D descrevem deveres fundamentais do servidor previstos no Código."
+    },
+    {
+      "id": "tjce-et-002",
+      "concurso": "TJ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Independência funcional do servidor",
+      "enunciado": "O servidor público, ao perceber que seu superior hierárquico determina a prática de ato ilegal, deve:",
+      "alternativas": {
+        "A": "cumprir a ordem imediatamente para evitar punição disciplinar.",
+        "B": "representar ao órgão competente, recusando-se a cumprir a ordem ilegal.",
+        "C": "executar a ordem e depois comunicar ao Ministério Público.",
+        "D": "transferir-se para outro setor para evitar o conflito.",
+        "E": "aceitar a ordem se ela vier assinada pelo superior hierárquico máximo."
+      },
+      "resposta": "B",
+      "explicacao": "O servidor não está obrigado a cumprir ordens ilegais. Pelo contrário, o Código de Ética e a doutrina administrativa estabelecem que o servidor deve recusar-se a cumprir a ordem ilegal e representar ao órgão competente (corregedoria, Ministério Público, TCU, etc.). A obediência a ordens ilegais não exclui a responsabilidade do servidor que as executa."
+    },
+    {
+      "id": "tjce-et-003",
+      "concurso": "TJ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Responsabilidade do servidor",
+      "enunciado": "O servidor público pode ser responsabilizado nas esferas:",
+      "alternativas": {
+        "A": "apenas administrativa.",
+        "B": "apenas penal e civil.",
+        "C": "administrativa, civil e penal, de forma independente.",
+        "D": "apenas civil e administrativa, nunca penal.",
+        "E": "apenas em uma esfera, não sendo possível acumulação."
+      },
+      "resposta": "C",
+      "explicacao": "O servidor público pode ser responsabilizado simultaneamente nas esferas administrativa (processo disciplinar), civil (ressarcimento ao erário) e penal (crimes contra a Administração Pública), de forma independente. As sanções de cada esfera não se excluem. O art. 121 da Lei 8.112/90 prevê que o servidor responde civil, penal e administrativamente pelo exercício irregular de suas atribuições."
+    },
+    {
+      "id": "tjce-et-004",
+      "concurso": "TJ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Nepotismo",
+      "enunciado": "A Súmula Vinculante nº 13 do STF veda o nepotismo na Administração Pública. Ela proíbe:",
+      "alternativas": {
+        "A": "apenas a nomeação de cônjuge para cargo comissionado pelo próprio agente público.",
+        "B": "a nomeação de parentes até o terceiro grau para cargos em comissão ou de confiança por qualquer autoridade do ente público, salvo cargos políticos com natureza técnica.",
+        "C": "somente o nepotismo cruzado entre órgãos do mesmo Poder.",
+        "D": "exclusivamente o nepotismo no Poder Executivo federal.",
+        "E": "a contratação de parentes por concurso público."
+      },
+      "resposta": "B",
+      "explicacao": "A SV nº 13 veda a nomeação de cônjuge, companheiro ou parente em linha reta, colateral ou por afinidade até o 3º grau, inclusive, da autoridade nomeante ou de servidor da mesma pessoa jurídica investido em cargo de direção, chefia ou assessoramento, para o exercício de cargo em comissão ou de confiança ou, ainda, de função gratificada."
+    },
+    {
+      "id": "tjce-et-005",
+      "concurso": "TJ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Acumulação de cargos",
+      "enunciado": "A Constituição Federal permite ao servidor público acumular cargos nas seguintes hipóteses:",
+      "alternativas": {
+        "A": "qualquer acumulação, desde que a soma das remunerações não exceda o teto constitucional.",
+        "B": "dois cargos de professor, ou um de professor com outro técnico ou científico, ou dois de profissionais de saúde com profissões regulamentadas, desde que haja compatibilidade de horários.",
+        "C": "qualquer cargo técnico com qualquer cargo comissionado.",
+        "D": "acumulação ilimitada de cargos em órgãos diferentes do mesmo Poder.",
+        "E": "apenas dois cargos públicos, sem qualquer outra restrição."
+      },
+      "resposta": "B",
+      "explicacao": "O art. 37, XVI, da CF veda a acumulação remunerada de cargos públicos, exceto quando houver compatibilidade de horários em: (a) dois cargos de professor; (b) um cargo de professor com outro técnico ou científico; (c) dois cargos ou empregos privativos de profissionais de saúde com profissões regulamentadas. Em qualquer caso, a remuneração total não pode exceder o teto constitucional."
+    },
+    {
+      "id": "tjce-et-006",
+      "concurso": "TJ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Improbidade administrativa",
+      "enunciado": "A Lei de Improbidade Administrativa (Lei 8.429/92, com alterações da Lei 14.230/2021) tipifica como atos de improbidade:",
+      "alternativas": {
+        "A": "apenas os atos que causem prejuízo ao erário, exigindo dolo específico.",
+        "B": "atos que importem enriquecimento ilícito, que causem prejuízo ao erário e que atentem contra os princípios da Administração Pública — todos exigindo dolo.",
+        "C": "qualquer irregularidade administrativa, mesmo sem dolo.",
+        "D": "somente atos praticados por agentes políticos.",
+        "E": "apenas atos com enriquecimento ilícito do agente público."
+      },
+      "resposta": "B",
+      "explicacao": "Após as alterações da Lei 14.230/2021, a Lei de Improbidade exige dolo para todas as modalidades de atos ímprobos. As três categorias continuam: enriquecimento ilícito (art. 9º), prejuízo ao erário (art. 10) e violação a princípios (art. 11). A culpa não é mais suficiente para configurar improbidade administrativa."
+    },
+    {
+      "id": "tjce-et-007",
+      "concurso": "TJ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Sigilo funcional",
+      "enunciado": "O dever de sigilo do servidor público:",
+      "alternativas": {
+        "A": "impede que o servidor divulgue qualquer informação, mesmo depois de exonerado.",
+        "B": "obriga o servidor a guardar sigilo sobre assunto da repartição que, por sua natureza ou determinação superior, deva permanecer em segredo.",
+        "C": "é absoluto e prevalece sobre o direito de acesso à informação em todos os casos.",
+        "D": "impede que o servidor preste depoimento como testemunha em processos judiciais.",
+        "E": "aplica-se apenas a servidores de órgãos de segurança pública."
+      },
+      "resposta": "B",
+      "explicacao": "O dever de sigilo é um dos deveres funcionais do servidor (art. 116, VIII, Lei 8.112/90): deve guardar sigilo sobre assunto da repartição que, por sua natureza ou determinação superior, deva permanecer em segredo. Entretanto, não é absoluto: a Lei de Acesso à Informação (Lei 12.527/2011) estabelece casos em que a transparência prevalece."
+    },
+    {
+      "id": "tjce-et-008",
+      "concurso": "TJ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Processo administrativo disciplinar — PAD",
+      "enunciado": "O Processo Administrativo Disciplinar (PAD) tem como objetivo:",
+      "alternativas": {
+        "A": "punir o servidor sem necessidade de ampla defesa.",
+        "B": "apurar irregularidades funcionais e aplicar sanções, assegurados o contraditório e a ampla defesa ao servidor.",
+        "C": "investigar apenas crimes praticados por servidores.",
+        "D": "substituir o processo judicial na apuração de crimes funcionais.",
+        "E": "ser conduzido pelo Ministério Público sem participação da Administração."
+      },
+      "resposta": "B",
+      "explicacao": "O PAD (arts. 148 a 182 da Lei 8.112/90) é o instrumento pelo qual a Administração Pública apura infrações disciplinares e aplica as sanções cabíveis, garantindo ao acusado o contraditório e a ampla defesa (art. 5º, LV, CF). A comissão processante instrui o processo e ao final emite relatório — a autoridade competente decide com base nele."
+    },
+    {
+      "id": "tjce-et-009",
+      "concurso": "TJ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Transparência e publicidade",
+      "enunciado": "De acordo com a Lei de Acesso à Informação (Lei 12.527/2011), a publicidade é a regra e o sigilo é a exceção. Isso significa que:",
+      "alternativas": {
+        "A": "todas as informações do governo devem ser publicadas na internet.",
+        "B": "as informações produzidas ou mantidas pelo Poder Público são, em regra, acessíveis a qualquer pessoa, podendo ser classificadas como sigilosas apenas nas hipóteses legais.",
+        "C": "o sigilo é a regra para informações de caráter pessoal.",
+        "D": "apenas servidores públicos têm direito de acesso às informações governamentais.",
+        "E": "a publicidade se aplica apenas ao Poder Executivo federal."
+      },
+      "resposta": "B",
+      "explicacao": "A LAI consagra o princípio da transparência ativa: as informações públicas são acessíveis a qualquer pessoa, independentemente de justificativa. O sigilo é exceção, admitido apenas nas hipóteses taxativas da lei (segurança nacional, dados pessoais, investigações em andamento, etc.) e com prazo de vigência definido."
+    },
+    {
+      "id": "tjce-et-010",
+      "concurso": "TJ-CE",
+      "materia": "Ética no Serviço Público",
+      "subtopico": "Ética na magistratura",
+      "enunciado": "O Código de Ética da Magistratura Nacional (Resolução CNJ 60/2008) impõe ao magistrado, entre outros deveres:",
+      "alternativas": {
+        "A": "participar ativamente de campanhas políticas de partidos.",
+        "B": "transparência, imparcialidade, integridade e cortesia no exercício da função jurisdicional.",
+        "C": "divulgar suas decisões apenas para as partes do processo.",
+        "D": "exercer mandato parlamentar cumulativamente com a magistratura.",
+        "E": "aceitar presentes de advogados como forma de reconhecimento."
+      },
+      "resposta": "B",
+      "explicacao": "O Código de Ética da Magistratura (Resolução CNJ 60/2008) estabelece como princípios e deveres do magistrado: independência, imparcialidade, transparência, integridade, equanimidade, diligência, dedicação e cortesia. O magistrado deve ser imparcial, tratar as partes com urbanidade e manter conduta irrepreensível dentro e fora da função."
+    }
+  ]
+}
