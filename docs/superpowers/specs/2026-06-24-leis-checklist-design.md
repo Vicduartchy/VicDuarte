@@ -141,12 +141,10 @@ Adicionada como 3ª aba em cada `concursos/<concurso>/index.html`:
 └──────────────────────────────────────────────────────┘
 ```
 
-Ao clicar "Marcar como lida":
-1. `localStorage.setItem('lei_lida_cf88', 'true')`
-2. Adiciona 50 pts em `quiz_alece_pontos`
-3. Animação CSS breve no card (`.lei-check-anim`, mesma duração do `badge-pop`)
-4. Verifica badges de leitura (ver abaixo)
-5. Atualiza mini-placar da aba e progresso na hub (se aberta)
+Ao clicar o botão (toggle):
+- **Marcar como lida:** `localStorage.setItem('lei_lida_cf88', 'true')`, adiciona pts, verifica badges, animação no card
+- **Desmarcar:** remove `lei_lida_cf88` do localStorage, subtrai pts de `quiz_<concurso>_pontos` (mínimo 0), badges conquistados permanecem
+- Atualiza mini-placar da aba e progresso na hub em ambos os casos
 
 ---
 
@@ -173,7 +171,7 @@ IIFE `window.LeisApp` com API:
 ```js
 LeisApp.initHub()        // chamado na hub page — renderiza accordion por concurso
 LeisApp.init(concurso)   // chamado nas páginas de concurso — renderiza aba Leis
-LeisApp.marcarLida(id)   // marca como lida (ação irreversível via UI); salva, adiciona pontos, verifica badges
+LeisApp.marcarLida(id)   // toggle lida/não-lida; ao marcar: adiciona pontos e verifica badges; ao desmarcar: subtrai pontos (badges já conquistados permanecem)
 LeisApp.getProgresso(concurso) // retorna { lidas, total, pontos }
 ```
 
