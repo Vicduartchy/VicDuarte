@@ -237,3 +237,103 @@
 
 /* Progress mini no hub */
 .progress-mini .progress { border-radius: 4px; }
+
+/* ===== Leis do Edital ===== */
+
+.lei-card {
+  border: 1.5px solid rgba(9,33,64,0.12);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: #fff;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.lei-card.lei-lida {
+  border-left: 4px solid #198754;
+  background: rgba(25,135,84,0.04);
+}
+.lei-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.lei-sigla {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--primary);
+  margin-bottom: 2px;
+}
+.lei-nome {
+  display: block;
+  font-size: 0.9rem;
+  color: #343a40;
+}
+.lei-concursos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.lei-badge-concurso {
+  background: rgba(9,33,64,0.07);
+  color: var(--primary);
+  border-radius: 20px;
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.lei-link-externo {
+  flex-shrink: 0;
+  color: var(--primary);
+  border-color: rgba(9,33,64,0.2);
+}
+.lei-link-externo:hover {
+  background: rgba(9,33,64,0.07);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.artigos-chave-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  border-left: 3px solid rgba(9,33,64,0.1);
+  padding-left: 12px;
+}
+.artigos-chave-list li {
+  font-size: 0.84rem;
+  color: #495057;
+  padding: 3px 0;
+}
+.artigos-chave-list li strong {
+  color: var(--primary);
+}
+@keyframes lei-check-pulse {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+.lei-check-anim {
+  animation: lei-check-pulse 0.35s ease;
+}
+.leis-progresso-hub {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: rgba(9,33,64,0.07);
+  border-radius: 20px;
+  padding: 2px 10px;
+  margin-left: 10px;
+}
+.leis-mini-placar {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  background: rgba(9,33,64,0.04);
+  border-radius: 8px;
+  border-left: 3px solid var(--primary);
+}
