@@ -35,7 +35,13 @@ window.QuizApp = (function () {
     { id: 'questoes_50',     label: '📚 50 Questões',
       check: function(s) { return s.seenIds.length >= 50; } },
     { id: 'questoes_100',    label: '🎯 100 Questões',
-      check: function(s) { return s.seenIds.length >= 100; } }
+      check: function(s) { return s.seenIds.length >= 100; } },
+    { id: 'lei_primeira', label: '<i class="fas fa-book-open me-1"></i>Primeira Lei Lida',
+      check: function() { return false; } },
+    { id: 'lei_materia',  label: '<i class="fas fa-scale-balanced me-1"></i>Mestre de uma Matéria',
+      check: function() { return false; } },
+    { id: 'lei_edital',   label: '<i class="fas fa-landmark me-1"></i>Edital Completo',
+      check: function() { return false; } }
   ];
 
   /* ── Utilidades ─────────────────────────────────────────── */
@@ -295,7 +301,7 @@ window.QuizApp = (function () {
 
   function checkBadges() {
     BADGES.forEach(function(b) {
-      if (st.badges.indexOf(b.id) === -1 && b.check(st)) {
+      if (st.badges.indexOf(b.id) === -1 && b.check && b.check(st)) {
         st.badges.push(b.id);
         showBadgeNotification(b.label);
         renderBadges();
