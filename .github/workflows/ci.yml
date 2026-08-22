@@ -31,6 +31,31 @@ jobs:
       - name: Rodar suíte de testes
         run: npm test
 
+      - name: Listar testes que falharam
+        if: failure()
+        run: |
+          python3 - <<'EOF'
+          import json
+          with open('test-results.json') as f:
+              data = json.load(f)
+
+          def walk(suites, prefix=''):
+              for s in suites:
+                  title = f"{prefix}{s.get('title','')}"
+                  for spec in s.get('specs', []):
+                      for t in spec.get('tests', []):
+                          for r in t.get('results', []):
+                              if r.get('status') != 'passed':
+                                  err = ''
+                                  for e in r.get('errors', []):
+                                      err = e.get('message', '')[:500]
+                                      break
+                                  print(f"::error title={title} - {spec.get('title')}::{err}")
+                  walk(s.get('suites', []), f"{title} > ")
+
+          walk(data.get('suites', []))
+          EOF
+
       - name: Publicar relatório HTML em caso de falha
         if: failure()
         uses: actions/upload-artifact@v4
