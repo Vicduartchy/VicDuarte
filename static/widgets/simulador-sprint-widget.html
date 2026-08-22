@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulador de sprint — Vic Duarte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#092140;
+    --terracotta:#BF452A;
+    --rose:#D99789;
+    --peach:#F2C5BB;
+    --offwhite:#F2F2F2;
+    --white:#FFFFFF;
+    --ink-muted:#6B7280;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--offwhite);
+    color:var(--navy);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1120px; margin:0 auto; padding:48px 24px 80px;}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--terracotta); margin:0 0 10px; font-weight:600;
+  }
+  h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600; font-size:34px; line-height:1.15; margin:0 0 12px;
+  }
+  .lede{font-size:16px; color:var(--ink-muted); max-width:58ch; line-height:1.6; margin:0 0 40px;}
+
+  .layout{display:grid; grid-template-columns:460px 1fr; gap:32px; align-items:start;}
+  @media (max-width:860px){ .layout{grid-template-columns:1fr;} }
+
+  .ring-box{position:relative;}
+  svg#ring{width:100%; height:auto; display:block; overflow:visible;}
+
+  .seg{cursor:pointer; transition:opacity .2s ease, transform .25s ease; transform-box:fill-box; transform-origin:center;}
+  .seg:hover{opacity:.85;}
+  .seg.active{opacity:1;}
+
+  .center-label{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:26px; font-weight:700; fill:var(--navy);
+    text-anchor:middle;
+  }
+  .center-sub{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px; fill:var(--ink-muted); text-anchor:middle;
+  }
+
+  .node-btn{
+    width:100%; height:100%;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px;
+    text-align:center; cursor:pointer; border:none; background:none; padding:0;
+    font-family:'Inter',sans-serif;
+  }
+  .node-icon{
+    width:44px; height:44px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--white); border:1.5px solid var(--offwhite);
+    box-shadow:0 2px 6px rgba(9,33,64,.08);
+    transition:transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+    color:var(--navy);
+  }
+  .node-icon svg{width:20px; height:20px; color:inherit; display:block;}
+  .node-text{font-size:11.5px; font-weight:600; color:var(--navy); line-height:1.25; max-width:100px; transition:color .2s ease;}
+  .node-btn.active .node-icon{
+    background:var(--seg-color, var(--navy));
+    border-color:var(--seg-color, var(--navy));
+    color:var(--seg-icon-color, var(--white));
+    transform:scale(1.14);
+    box-shadow:0 4px 14px rgba(9,33,64,.22);
+  }
+  .node-btn.active .node-text{color:var(--seg-color, var(--terracotta));}
+  .node-btn:hover .node-icon{border-color:#C9C4B8;}
+
+  .leader{stroke:#D9D5CC; stroke-width:2; fill:none; transition:stroke .2s ease;}
+  .leader.active{stroke:var(--seg-color, var(--navy)); stroke-width:2.5;}
+
+  /* Panel */
+  .panel{
+    background:var(--white); border-radius:18px; padding:34px 38px;
+    min-height:400px; display:flex; flex-direction:column;
+    box-shadow:0 4px 24px rgba(9,33,64,.06);
+  }
+  .pill{
+    font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.04em;
+    padding:5px 12px; border-radius:100px; font-weight:600; display:inline-block; margin-bottom:12px;
+  }
+  .pill.artefato{background:var(--peach); color:#8A4324;}
+  .pill.cerimonia{background:var(--navy); color:var(--white);}
+  .pill.execucao{background:var(--terracotta); color:var(--white);}
+
+  .panel h2{font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:600; margin:0 0 16px;}
+  .panel-body{font-size:15px; line-height:1.7; flex:1;}
+  .panel-body p{margin:0 0 14px;}
+  .panel-body strong{font-weight:600;}
+  .muted{color:var(--ink-muted);}
+
+  .task{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 0; border-bottom:1px solid var(--offwhite); cursor:pointer;}
+  .task:last-child{border-bottom:none;}
+  .task .name{display:flex; align-items:center; gap:10px; font-size:15px;}
+  .task .check{width:18px; height:18px; border-radius:5px; border:1.5px solid #D9D5CC; flex:none; display:flex; align-items:center; justify-content:center; font-size:12px; color:var(--white); transition:all .15s ease;}
+  .task.done .check{background:var(--terracotta); border-color:var(--terracotta);}
+  .task.done .name{color:var(--ink-muted); text-decoration:line-through;}
+  .task .hrs{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-muted);}
+
+  .day-tabs{display:flex; gap:8px; margin-bottom:16px;}
+  .day-tab{font-family:'JetBrains Mono',monospace; font-size:12px; padding:6px 12px; border-radius:100px; border:1px solid var(--offwhite); background:var(--white); color:var(--ink-muted); cursor:pointer;}
+  .day-tab.active{background:var(--terracotta); border-color:var(--terracotta); color:var(--white); font-weight:600;}
+  .day-card{background:var(--offwhite); border-radius:12px; padding:16px 18px;}
+
+  .callout{background:var(--offwhite); border-left:3px solid var(--navy); border-radius:0 10px 10px 0; padding:14px 18px; font-size:14px; color:var(--ink-muted); margin-top:16px;}
+
+  .backlog-list{display:flex; flex-direction:column; gap:2px; margin-top:10px;}
+  .backlog-row{display:flex; align-items:center; gap:10px; padding:9px 4px;}
+  .backlog-row.selected{background:var(--offwhite); border-radius:8px; padding:9px 10px 9px 9px; border-left:3px solid var(--terracotta);}
+  .backlog-name{font-size:14px; flex:1;}
+  .selected-flag{font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--terracotta); font-weight:600; flex:none;}
+  .priority-tag{font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; padding:2px 8px; border-radius:100px; flex:none; letter-spacing:.02em;}
+  .priority-tag.alta{background:var(--terracotta); color:#fff;}
+  .priority-tag.media{background:var(--peach); color:#8A4324;}
+  .priority-tag.baixa{background:#E9E5DA; color:var(--ink-muted);}
+
+  .planning-flow{display:flex; align-items:center; gap:14px; margin:16px 0; flex-wrap:wrap;}
+  .mini-backlog{flex:1; min-width:200px; background:var(--offwhite); border-radius:12px; padding:14px 16px;}
+  .mini-label{display:block; font-family:'JetBrains Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-muted); margin-bottom:10px;}
+  .mini-row{display:flex; align-items:center; gap:8px; font-size:12.5px; padding:5px 0;}
+  .mini-row.dim{opacity:.45;}
+  .mini-row.picked{font-weight:600; color:var(--navy);}
+  .flow-arrow{font-size:22px; color:var(--terracotta); flex:none;}
+  .mini-sprint{background:var(--terracotta); border-radius:12px; padding:14px 16px; color:#fff; flex:1; min-width:170px;}
+  .mini-sprint .mini-label{color:rgba(255,255,255,.75);}
+  .mini-picked-item{font-size:14px; font-weight:600;}
+
+  .roles-block{margin-top:22px; padding-top:18px; border-top:1px solid var(--offwhite);}
+  .roles-title{font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-muted); margin-bottom:12px;}
+  .role-row{display:flex; align-items:flex-start; gap:11px; padding:9px 8px; border-radius:10px; transition:background .2s ease;}
+  .role-row.none{opacity:.5;}
+  .role-row.highlight{background:var(--offwhite);}
+  .role-avatar{width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--role-bg); color:var(--role-color); flex:none;}
+  .role-avatar svg{width:16px; height:16px;}
+  .role-info{flex:1;}
+  .role-name-row{display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  .role-name{font-size:13.5px; font-weight:600;}
+  .role-level{font-family:'JetBrains Mono',monospace; font-size:9.5px; padding:2px 8px; border-radius:100px; font-weight:600; letter-spacing:.03em;}
+  .role-level.lead{background:var(--role-color); color:#fff;}
+  .role-level.support{background:var(--offwhite); color:var(--ink-muted);}
+  .role-level.none{background:transparent; color:#ADA89B; border:1px dashed #D9D5CC;}
+  .role-note{font-size:13px; color:var(--ink-muted); margin-top:3px; line-height:1.5;}
+
+  .role-filter{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:28px;}
+  .role-btn{display:flex; align-items:center; gap:7px; font-family:'Inter',sans-serif; font-size:13px; font-weight:600; padding:8px 15px 8px 12px; border-radius:100px; border:1.5px solid var(--role-color); color:var(--role-color); background:var(--white); cursor:pointer; transition:all .2s ease;}
+  .role-btn svg{width:15px; height:15px;}
+  .role-btn:hover{background:var(--offwhite);}
+  .role-btn.active{background:var(--role-color); color:#fff;}
+  .role-btn.reset{border-color:#D9D5CC; color:var(--ink-muted);}
+  .role-btn.reset.active{background:var(--ink-muted); border-color:var(--ink-muted); color:#fff;}
+  .role-summary{font-size:13px; color:var(--ink-muted); margin:0;}
+
+  .nav{display:flex; justify-content:space-between; align-items:center; margin-top:26px; padding-top:20px; border-top:1px solid var(--offwhite);}
+  button.nav-btn{font-family:'Inter',sans-serif; font-size:14px; font-weight:600; padding:10px 20px; border-radius:100px; border:1.5px solid var(--navy); background:var(--navy); color:var(--white); cursor:pointer; transition:opacity .15s ease;}
+  button.nav-btn.ghost{background:transparent; color:var(--navy);}
+  button.nav-btn:disabled{opacity:.3; cursor:default;}
+  button.nav-btn:hover:not(:disabled){opacity:.85;}
+  button.nav-btn:focus-visible{outline:2px solid var(--terracotta); outline-offset:2px;}
+
+  footer.credit{text-align:center; margin-top:48px; font-size:12px; color:var(--ink-muted);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Gestão de projetos &middot; disciplina de TCC</p>
+  <h1>Ande por um ciclo de sprint</h1>
+  <p class="lede">Um item do backlog, do jeito que ele nasce até virar aprendizado pro próximo ciclo. Clique nos ícones ao redor do círculo pra andar pelas etapas.</p>
+
+  <div class="role-filter" id="roleFilter"></div>
+  <p class="role-summary" id="roleSummary">Filtre por papel pra ver onde cada um entra no ciclo — ou clique numa etapa pra ver os três juntos.</p>
+
+  <div class="layout">
+    <div class="ring-box">
+      <svg id="ring" viewBox="0 0 720 720"></svg>
+    </div>
+
+    <main class="panel">
+      <div>
+        <span class="pill" id="pill"></span>
+        <h2 id="title"></h2>
+        <div class="panel-body" id="body"></div>
+      </div>
+      <div class="nav">
+        <button class="nav-btn ghost" id="prevBtn">&larr; Voltar</button>
+        <button class="nav-btn" id="nextBtn">Avançar &rarr;</button>
+      </div>
+    </main>
+  </div>
+
+  <footer class="credit">Exemplo: redução de turnover na equipe de vendas &middot; material de apoio da disciplina</footer>
+</div>
+
+<script>
+const NAVY = '#092140', TERRACOTTA = '#BF452A', ROSE = '#D99789', PEACH='#F2C5BB';
+
+const icons = {
+  backlog: `<path d="M4 6h16M4 12h16M4 18h11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>`,
+  planning: `<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/>`,
+  sprintBacklog: `<rect x="4.5" y="4.5" width="15" height="15" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8.5 12l2.3 2.3L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+  daily: `<path d="M4 5.5h16v10H8.5L4.5 19V5.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="none"/>`,
+  review: `<path d="M2.5 12s3.8-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.8 6.5-9.5 6.5-9.5-6.5-9.5-6.5z" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="12" r="2.7" stroke="currentColor" stroke-width="1.8" fill="none"/>`,
+  retro: `<path d="M4.5 12a7.5 7.5 0 0 1 13-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M19.5 12a7.5 7.5 0 0 1-13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M17 4v4h-4M7 20v-4h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`
+};
+
+const roleIcons = {
+  po: `<circle cx="12" cy="8" r="3.3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M5 19c1.4-3.6 4-5.2 7-5.2s5.6 1.6 7 5.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>`,
+  am: `<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M15.2 8.8l-2 4.4-4.4 2 2-4.4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" fill="none"/>`,
+  dev: `<circle cx="8" cy="9" r="2.6" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="16" cy="9" r="2.6" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M3 19c1-2.7 2.8-4.1 5-4.1s4 1.4 5 4.1M11 19c1-2.7 2.8-4.1 5-4.1s4 1.4 5 4.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>`
+};
+
+const ROLES = {
+  po:  { name:'Product Owner', short:'PO',  color:ROSE,       bg:'#FBEDE9', icon:roleIcons.po,  summary:'Dono do backlog: decide o quê e o porquê, não o como.' },
+  am:  { name:'Agile Master',  short:'AM',  color:TERRACOTTA, bg:'#FBEAE4', icon:roleIcons.am,  summary:'Facilita o processo e remove bloqueios — não manda no conteúdo.' },
+  dev: { name:'Dev Team',      short:'Time',color:NAVY,       bg:'#E7EAEE', icon:roleIcons.dev, summary:'Time multidisciplinar que estima, executa e entrega o incremento.' },
+};
+
+// icon color chosen per background for reliable contrast (navy on light rose, white on dark navy/terracotta)
+const ICON_ON_ROSE = NAVY, ICON_ON_DARK = '#FFFFFF';
+
+const stages = [
+  { tag:'artefato', color:ROSE, iconColor:ICON_ON_ROSE, short:'Product backlog', icon:icons.backlog,
+    title:'Product backlog',
+    body:`<p>Toda demanda de gestão de pessoas entra aqui primeiro — nada é urgente ao mesmo tempo, é o time que prioriza.</p>
+          <div class="backlog-list">
+            <div class="backlog-row selected">
+              <span class="priority-tag alta">Alta</span>
+              <span class="backlog-name">Reduzir turnover na equipe de vendas</span>
+              <span class="selected-flag">Este ciclo</span>
+            </div>
+            <div class="backlog-row">
+              <span class="priority-tag alta">Alta</span>
+              <span class="backlog-name">Estruturar plano de carreira comercial</span>
+            </div>
+            <div class="backlog-row">
+              <span class="priority-tag media">Média</span>
+              <span class="backlog-name">Aplicar pesquisa de clima organizacional</span>
+            </div>
+            <div class="backlog-row">
+              <span class="priority-tag media">Média</span>
+              <span class="backlog-name">Criar trilha de onboarding pra vendas</span>
+            </div>
+            <div class="backlog-row">
+              <span class="priority-tag media">Média</span>
+              <span class="backlog-name">Revisar processo de avaliação de desempenho</span>
+            </div>
+            <div class="backlog-row">
+              <span class="priority-tag baixa">Baixa</span>
+              <span class="backlog-name">Programa de reconhecimento entre pares</span>
+            </div>
+            <div class="backlog-row">
+              <span class="priority-tag baixa">Baixa</span>
+              <span class="backlog-name">Mapear representatividade por cargo</span>
+            </div>
+          </div>
+          <p class="muted" style="margin-top:14px">O item do topo é o que liderança e time concordam ser mais urgente agora — é ele que segue pra próxima etapa.</p>`,
+    roles:[
+      {id:'po', level:'lead', note:'Escreve, prioriza e reordena os itens. É quem decide o que vale mais a pena agora.'},
+      {id:'am', level:'support', note:'Facilita a conversa de priorização, sem interferir no conteúdo.'},
+      {id:'dev', level:'support', note:'Sugere itens técnicos e ajuda a estimar o impacto de cada um.'},
+    ]},
+  { tag:'cerimonia', color:NAVY, iconColor:ICON_ON_DARK, short:'Sprint planning', icon:icons.planning,
+    title:'Sprint planning',
+    body:`<p>O time olha o backlog priorizado e decide o que cabe nas próximas 2 semanas.</p>
+          <div class="planning-flow">
+            <div class="mini-backlog">
+              <span class="mini-label">Backlog priorizado</span>
+              <div class="mini-row picked"><span class="priority-tag alta">Alta</span>Reduzir turnover na equipe de vendas</div>
+              <div class="mini-row dim"><span class="priority-tag alta">Alta</span>Plano de carreira comercial</div>
+              <div class="mini-row dim"><span class="priority-tag media">Média</span>Pesquisa de clima</div>
+            </div>
+            <div class="flow-arrow">&#8594;</div>
+            <div class="mini-sprint">
+              <span class="mini-label">Entra nesta sprint</span>
+              <div class="mini-picked-item">Reduzir turnover na equipe de vendas</div>
+            </div>
+          </div>
+          <p><strong>Meta da sprint:</strong> mapear as causas do turnover entrevistando os últimos 10 colaboradores desligados.</p>
+          <p class="muted">O resto do backlog continua esperando — só entra o que cabe, com foco.</p>`,
+    roles:[
+      {id:'po', level:'lead', note:'Explica a meta e por que aquele item é o mais prioritário agora.'},
+      {id:'dev', level:'lead', note:'Decide o que cabe na sprint, baseado na capacidade real do time.'},
+      {id:'am', level:'support', note:'Facilita a reunião e mantém o timebox — a conversa não pode virar o dia todo.'},
+    ]},
+  { tag:'artefato', color:ROSE, iconColor:ICON_ON_ROSE, short:'Sprint backlog', icon:icons.sprintBacklog,
+    title:'Sprint backlog',
+    body:`<p>A meta vira tarefas do tamanho de um dia de trabalho. Clique pra marcar o que já foi feito.</p>`,
+    tasks:[
+      {name:'Criar roteiro de entrevista', hrs:'2h'},
+      {name:'Agendar 10 entrevistas', hrs:'3h'},
+      {name:'Realizar entrevistas', hrs:'8h'},
+      {name:'Consolidar respostas em planilha', hrs:'4h'},
+    ],
+    roles:[
+      {id:'dev', level:'lead', note:'Quebra a meta em tarefas do tamanho de um dia e estima o esforço de cada uma.'},
+      {id:'am', level:'support', note:'Ajuda a destravar dependências que aparecem no detalhamento.'},
+      {id:'po', level:'support', note:'Fica disponível pra esclarecer dúvidas de prioridade, sem definir o como.'},
+    ]},
+  { tag:'execucao', color:TERRACOTTA, iconColor:ICON_ON_DARK, short:'Daily', icon:icons.daily,
+    title:'Daily ao longo da sprint',
+    body:`<p>15 minutos por dia. Não é status report — é destravar o que está impedindo o time de entregar.</p>`,
+    days:[
+      {d:'Dia 2', text:'Roteiro pronto, hoje começo a agendar as entrevistas.'},
+      {d:'Dia 5', text:'3 entrevistas remarcaram. Vou realocar o horário amanhã.'},
+      {d:'Dia 8', text:'Travado: preciso da agenda do RH pra fechar as 2 últimas entrevistas.'},
+    ],
+    roles:[
+      {id:'dev', level:'lead', note:'Sincroniza o progresso do dia e expõe qualquer bloqueio pro grupo.'},
+      {id:'am', level:'support', note:'Facilita e sai atrás de remover o impedimento levantado.'},
+      {id:'po', level:'none', note:'Normalmente não participa — a daily é do time de desenvolvimento.'},
+    ]},
+  { tag:'cerimonia', color:NAVY, iconColor:ICON_ON_DARK, short:'Sprint review', icon:icons.review,
+    title:'Sprint review',
+    body:`<p>O time mostra o que foi entregue — não uma lista de tarefas, um resultado real — para quem vai usar.</p>
+          <p><strong>Apresentado à liderança:</strong> 8 de 10 entrevistas concluídas. Top 3 causas identificadas: falta de plano de carreira, remuneração abaixo do mercado, gestor pouco presente.</p>
+          <div class="callout">Feedback do stakeholder: aprofundar a causa "gestor pouco presente" na próxima sprint.</div>`,
+    roles:[
+      {id:'po', level:'lead', note:'Valida a entrega com os stakeholders e recolhe o feedback que vira novo item.'},
+      {id:'dev', level:'lead', note:'Demonstra o que foi construído — dados, protótipo, o que for o incremento.'},
+      {id:'am', level:'support', note:'Facilita a apresentação e o tempo de discussão.'},
+    ]},
+  { tag:'cerimonia', color:NAVY, iconColor:ICON_ON_DARK, short:'Retrospectiva', icon:icons.retro,
+    title:'Retrospectiva',
+    body:`<p><span class="muted">Funcionou bem:</span> entrevistas presenciais geraram respostas mais ricas do que um formulário teria.</p>
+          <p><span class="muted">Atrapalhou:</span> a agenda do RH atrasou 2 entrevistas e quase estourou o prazo.</p>
+          <p><span class="muted">Ação para o próximo ciclo:</span> alinhar a agenda com o RH antes de a sprint começar.</p>
+          <div class="callout">O ciclo fecha aqui — e o que sobrou (ou surgiu) volta pro product backlog, repriorizado pra próxima sprint.</div>`,
+    roles:[
+      {id:'am', level:'lead', note:'Conduz a dinâmica e garante que todo mundo fale com segurança.'},
+      {id:'dev', level:'lead', note:'Traz o que funcionou e o que travou no dia a dia da sprint.'},
+      {id:'po', level:'support', note:'Participa como parte do time — ouve tanto quanto fala.'},
+    ]},
+];
+
+const pillLabel = {artefato:'Artefato', cerimonia:'Cerimônia', execucao:'Execução'};
+let current = 0, dayIndex = 0;
+
+const cx=360, cy=360, rOuter=205, rInner=138, rIcon=292;
+const n = stages.length;
+const gap = 8;
+const seg = 360/n;
+
+function polar(r, angle){
+  const a = (angle-90) * Math.PI/180;
+  return { x: cx + r*Math.cos(a), y: cy + r*Math.sin(a) };
+}
+function donutPath(rO, rI, a0, a1){
+  const p0=polar(rO,a0), p1=polar(rO,a1), p2=polar(rI,a1), p3=polar(rI,a0);
+  const large = (a1-a0) > 180 ? 1 : 0;
+  return `M ${p0.x} ${p0.y} A ${rO} ${rO} 0 ${large} 1 ${p1.x} ${p1.y} L ${p2.x} ${p2.y} A ${rI} ${rI} 0 ${large} 0 ${p3.x} ${p3.y} Z`;
+}
+
+const svg = document.getElementById('ring');
+let svgHTML = '';
+
+stages.forEach((s,i)=>{
+  const a0 = i*seg + gap/2;
+  const a1 = (i+1)*seg - gap/2;
+  const mid = (a0+a1)/2;
+  const d = donutPath(rOuter, rInner, a0, a1);
+  // precompute the outward "explode" offset for the active state (pops the slice along its own angle)
+  const rad = (mid-90) * Math.PI/180;
+  const dx = (Math.cos(rad)*10).toFixed(2), dy = (Math.sin(rad)*10).toFixed(2);
+  svgHTML += `<path class="seg" data-i="${i}" data-dx="${dx}" data-dy="${dy}" d="${d}" fill="${s.color}"/>`;
+
+  const iconPt = polar(rIcon, mid);
+  const leaderStart = polar(rOuter+8, mid);
+  const leaderEnd = polar(rIcon-30, mid);
+  svgHTML += `<line class="leader" data-i="${i}" x1="${leaderStart.x}" y1="${leaderStart.y}" x2="${leaderEnd.x}" y2="${leaderEnd.y}"/>`;
+  svgHTML += `<foreignObject class="node-fo" data-i="${i}" x="${iconPt.x-55}" y="${iconPt.y-34}" width="110" height="68">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%;">
+      <button class="node-btn" data-i="${i}" style="--seg-color:${s.color}; --seg-icon-color:${s.iconColor};">
+        <span class="node-icon"><svg viewBox="0 0 24 24" fill="none">${s.icon}</svg></span>
+        <span class="node-text">${s.short}</span>
+      </button>
+    </div>
+  </foreignObject>`;
+});
+
+svgHTML += `<text class="center-label" x="${cx}" y="${cy-4}">Sprint</text>`;
+svgHTML += `<text class="center-sub" id="centerSub" x="${cx}" y="${cy+18}"></text>`;
+
+svg.innerHTML = svgHTML;
+
+const titleEl = document.getElementById('title');
+const bodyEl = document.getElementById('body');
+const pillEl = document.getElementById('pill');
+const centerSub = document.getElementById('centerSub');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const roleFilterEl = document.getElementById('roleFilter');
+const roleSummaryEl = document.getElementById('roleSummary');
+
+const levelLabel = {lead:'Conduz', support:'Apoia', none:'Não participa'};
+let activeRoleFilter = null;
+
+function rolesBlockHTML(stageRoles){
+  if(!stageRoles) return '';
+  const rows = stageRoles.map(r=>{
+    const role = ROLES[r.id];
+    const isHighlight = activeRoleFilter===r.id;
+    return `<div class="role-row ${r.level==='none'?'none':''} ${isHighlight?'highlight':''}" style="--role-color:${role.color}; --role-bg:${role.bg};">
+      <span class="role-avatar"><svg viewBox="0 0 24 24" fill="none">${role.icon}</svg></span>
+      <div class="role-info">
+        <div class="role-name-row">
+          <span class="role-name">${role.name}</span>
+          <span class="role-level ${r.level}">${levelLabel[r.level]}</span>
+        </div>
+        <p class="role-note">${r.note}</p>
+      </div>
+    </div>`;
+  }).join('');
+  return `<div class="roles-block"><div class="roles-title">Quem conduz essa etapa</div>${rows}</div>`;
+}
+
+function buildRoleFilter(){
+  const resetBtn = `<button class="role-btn reset active" data-role="" style="--role-color:#6B7280;"><span>Todos</span></button>`;
+  const roleBtns = Object.keys(ROLES).map(id=>{
+    const r = ROLES[id];
+    return `<button class="role-btn" data-role="${id}" style="--role-color:${r.color};">
+      <svg viewBox="0 0 24 24" fill="none">${r.icon}</svg><span>${r.name}</span>
+    </button>`;
+  }).join('');
+  roleFilterEl.innerHTML = resetBtn + roleBtns;
+
+  roleFilterEl.querySelectorAll('.role-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      activeRoleFilter = btn.dataset.role || null;
+      roleFilterEl.querySelectorAll('.role-btn').forEach(b=> b.classList.toggle('active', b===btn));
+      roleSummaryEl.textContent = activeRoleFilter
+        ? ROLES[activeRoleFilter].summary
+        : 'Filtre por papel pra ver onde cada um entra no ciclo — ou clique numa etapa pra ver os três juntos.';
+      applyRoleFilter();
+      render();
+    });
+  });
+}
+
+function applyRoleFilter(){
+  document.querySelectorAll('.seg').forEach(el=>{
+    const i = parseInt(el.dataset.i);
+    const involved = stageInvolvesRole(stages[i]);
+    el.style.opacity = involved ? '1' : '0.2';
+  });
+  document.querySelectorAll('.node-fo').forEach(el=>{
+    const i = parseInt(el.dataset.i);
+    const involved = stageInvolvesRole(stages[i]);
+    el.style.opacity = involved ? '1' : '0.35';
+  });
+}
+function stageInvolvesRole(stage){
+  if(!activeRoleFilter) return true;
+  const r = stage.roles && stage.roles.find(r=>r.id===activeRoleFilter);
+  return r && r.level !== 'none';
+}
+
+function render(){
+  const s = stages[current];
+  pillEl.className = 'pill ' + s.tag;
+  pillEl.textContent = pillLabel[s.tag];
+  titleEl.textContent = s.title;
+
+  let extra = '';
+  if(s.tasks){
+    extra = s.tasks.map((t,i)=>`
+      <div class="task" data-i="${i}">
+        <span class="name"><span class="check">&#10003;</span>${t.name}</span>
+        <span class="hrs">${t.hrs}</span>
+      </div>`).join('');
+  }
+  if(s.days){
+    extra = `<div class="day-tabs">${s.days.map((d,i)=>`<span class="day-tab ${i===dayIndex?'active':''}" data-i="${i}">${d.d}</span>`).join('')}</div>
+             <div class="day-card">${s.days[dayIndex].text}</div>`;
+  }
+  bodyEl.innerHTML = s.body + extra + rolesBlockHTML(s.roles);
+
+  if(s.tasks){
+    bodyEl.querySelectorAll('.task').forEach(el=> el.addEventListener('click', ()=> el.classList.toggle('done')));
+  }
+  if(s.days){
+    bodyEl.querySelectorAll('.day-tab').forEach(el=> el.addEventListener('click', ()=>{ dayIndex = parseInt(el.dataset.i); render(); }));
+  }
+
+  document.querySelectorAll('.seg').forEach(el=>{
+    const isActive = parseInt(el.dataset.i)===current;
+    el.classList.toggle('active', isActive);
+    el.style.transform = isActive ? `translate(${el.dataset.dx}px, ${el.dataset.dy}px)` : '';
+  });
+  document.querySelectorAll('.node-btn').forEach(el=> el.classList.toggle('active', parseInt(el.dataset.i)===current));
+  document.querySelectorAll('.leader').forEach(el=>{
+    const isActive = parseInt(el.dataset.i)===current;
+    el.classList.toggle('active', isActive);
+    el.style.setProperty('--seg-color', isActive ? s.color : '');
+  });
+
+  centerSub.textContent = `passo ${current+1} de ${n} · ${s.short}`;
+  centerSub.style.fill = s.color;
+
+  prevBtn.disabled = current===0;
+  nextBtn.textContent = current===n-1 ? 'Reiniciar ciclo ↻' : 'Avançar →';
+}
+
+svg.querySelectorAll('.seg, .node-btn').forEach(el=>{
+  el.addEventListener('click', ()=>{ current = parseInt(el.dataset.i); dayIndex=0; render(); });
+});
+
+prevBtn.addEventListener('click', ()=>{ if(current>0){ current--; dayIndex=0; render(); } });
+nextBtn.addEventListener('click', ()=>{ current = current<n-1 ? current+1 : 0; dayIndex=0; render(); });
+document.addEventListener('keydown', (e)=>{
+  if(e.key==='ArrowRight') nextBtn.click();
+  if(e.key==='ArrowLeft') prevBtn.click();
+});
+
+buildRoleFilter();
+render();
+applyRoleFilter();
+
+// Auto-resize quando embutido em iframe (postMessage pro pai)
+function reportHeight(){
+  if(window.parent !== window){
+    window.parent.postMessage({ type:'simulador-sprint-height', height: document.documentElement.scrollHeight }, '*');
+  }
+}
+window.addEventListener('load', reportHeight);
+window.addEventListener('resize', reportHeight);
+new MutationObserver(reportHeight).observe(document.body, { childList:true, subtree:true, attributes:true });
+</script>
+</body>
+</html>
