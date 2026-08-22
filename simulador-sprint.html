@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Sprint - Vic Duarte</title>
+    <meta name="description" content="Simulador interativo de ciclo de sprint: percorra product backlog, planning, execução, review e retrospectiva, e veja o papel de PO, Agile Master e time de desenvolvimento em cada etapa.">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
+    <link rel="apple-touch-icon" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
+    <link rel="shortcut icon" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
+    <!-- Optimized font loading -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    </noscript>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Schema JSON-LD for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Victoria Duarte",
+        "jobTitle": "Agile Coach & Project Manager",
+        "url": "https://vicduarte.site/simulador-sprint.html",
+        "sameAs": ["https://www.linkedin.com/in/vic-duarte/"]
+    }
+    </script>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <style>
+        .sim-frame-wrap { background: #F2F2F2; border-radius: 18px; box-shadow: 0 8px 30px rgba(9,33,64,0.10); overflow: hidden; }
+        #simFrame { width: 100%; border: 0; display: block; min-height: 640px; }
+        .tool-badge { display: inline-block; background: linear-gradient(135deg, #092140 0%, #BF452A 100%); color: white; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 50px; margin: 3px 2px; }
+        .feature-icon { width: 48px; height: 48px; background: linear-gradient(135deg, #092140 0%, #BF452A 100%); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .privacy-box { background: #f0f9f0; border: 1px solid #c3e6c3; border-radius: 10px; padding: 16px 20px; }
+    </style>
+</head>
+<body>
+    <!-- Skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link visually-hidden-focusable">
+        Pular para o conteúdo principal
+    </a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="Vic Duarte - Início">
+                <img src="./static/images/vic-duarte-logo-white.png"
+                     alt="Vic Duarte" height="40" class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="disciplinas.html">Disciplinas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consultorias.html">Consultorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="palestras.html">Palestras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="livro.html">Livro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="publicacoes.html">Publicações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ferramentas.html">Ferramentas</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="btn btn-linkedin btn-sm" href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin me-1" aria-hidden="true"></i>LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="row align-items-center min-vh-60">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <div class="logo-container mb-4">
+                            <img src="./static/images/vic-duarte-logo-white.png"
+                                 alt="Vic Duarte" class="hero-logo img-fluid lazy-img" data-src="./static/images/vic-duarte-logo-white.png">
+                        </div>
+                        <h2 class="h3 text-white-50 mb-4" id="hero-title">Simulador de Sprint</h2>
+                        <p class="lead text-white-75 mb-5">
+                            Percorra um ciclo completo de sprint — do product backlog à retrospectiva — e veja onde Product Owner, Agile Master e time de desenvolvimento entram em cada etapa.
+                        </p>
+                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                            <a href="#simulador" class="btn btn-linkedin btn-lg">
+                                <i class="fas fa-play me-2" aria-hidden="true"></i>Começar Simulação
+                            </a>
+                            <a href="ferramentas.html" class="btn btn-linkedin btn-lg">
+                                <i class="fas fa-tools me-2" aria-hidden="true"></i>Ver Outras Ferramentas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulador Section -->
+        <section id="simulador" class="py-5">
+            <div class="container">
+                <header class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary mb-3">Como funciona um ciclo de sprint</h2>
+                    <p class="lead text-muted">Clique nos ícones ao redor do anel pra avançar pelas etapas.</p>
+                </header>
+
+                <div class="sim-frame-wrap mb-5">
+                    <iframe id="simFrame" src="./static/widgets/simulador-sprint-widget.html" title="Simulador interativo de ciclo de sprint" loading="lazy"></iframe>
+                </div>
+
+                <!-- Sobre a ferramenta -->
+                <div class="row g-4 mb-5">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm tool-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon me-3">
+                                        <i class="fas fa-circle-notch"></i>
+                                    </div>
+                                    <h5 class="card-title mb-0">Ciclo completo</h5>
+                                </div>
+                                <p class="text-muted mb-0">
+                                    Backlog, planning, sprint backlog, daily, review e retrospectiva — as seis etapas de um ciclo ágil, com um exemplo real do início ao fim.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm tool-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon me-3">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h5 class="card-title mb-0">Papéis claros</h5>
+                                </div>
+                                <p class="text-muted mb-0">
+                                    Filtre por Product Owner, Agile Master ou time de desenvolvimento e veja exatamente quem conduz e quem apoia em cada etapa.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm tool-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon me-3">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <h5 class="card-title mb-0">Material didático</h5>
+                                </div>
+                                <p class="text-muted mb-0">
+                                    Pensado para ensino de gestão ágil: cada etapa traz um exemplo prático de um item de backlog real sendo conduzido.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <div class="privacy-box">
+                            <h6 class="fw-bold mb-2"><i class="fas fa-shield-alt me-2 text-success"></i>100% no navegador</h6>
+                            <p class="text-muted mb-0 small">
+                                O simulador roda inteiramente no seu navegador. Sem login, sem coleta de dados, sem custo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-center">
+                        <span class="tool-badge"><i class="fas fa-check me-1"></i>Gratuito</span>
+                        <span class="tool-badge"><i class="fas fa-check me-1"></i>Uso didático</span>
+                        <span class="tool-badge"><i class="fas fa-check me-1"></i>Open source</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section text-white" role="contentinfo">
+        <div class="container">
+            <div class="row align-items-center py-5">
+                <div class="col-lg-8 text-center">
+                    <h3 class="fw-bold mb-3">Vamos Conectar?</h3>
+                    <p class="lead mb-4">
+                        Estou sempre aberta para conversas sobre agilidade, liderança e transformação organizacional.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                        <a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg">
+                            <i class="fab fa-linkedin me-2" aria-hidden="true"></i>Conectar no LinkedIn
+                        </a>
+                        <a href="mailto:victoriaduarte.s@gmail.com" class="btn btn-linkedin btn-lg">
+                            <i class="fas fa-envelope me-2" aria-hidden="true"></i>Enviar E-mail
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                    <img src="./static/images/vic-duarte-logo-white.png"
+                         alt="Vic Duarte" class="footer-logo img-fluid">
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0 text-white-50">
+                        &copy; 2026 Vic Duarte. Todos os direitos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante Voltar ao Topo -->
+    <button id="backToTop" class="back-to-top-btn" aria-label="Voltar ao topo da página">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modal de Contato -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Agendar Consultoria</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Para agendar uma consultoria, por favor, entre em contato diretamente:</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i><a href="mailto:victoriaduarte.s@gmail.com">victoriaduarte.s@gmail.com</a></li>
+                        <li><i class="fab fa-linkedin me-2"></i><a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer">Conectar no LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./static/js/main.js"></script>
+    <!-- Auto-resize do iframe do simulador -->
+    <script>
+        window.addEventListener('message', function (event) {
+            if (event.data && event.data.type === 'simulador-sprint-height') {
+                var frame = document.getElementById('simFrame');
+                if (frame) {
+                    frame.style.height = Math.max(640, event.data.height) + 'px';
+                }
+            }
+        });
+    </script>
+    <!-- Vercel Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
