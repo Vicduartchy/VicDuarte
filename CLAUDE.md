@@ -36,26 +36,46 @@ npm run test:behavior # só comportamento JS
 npm run test:report   # abre relatório HTML do último run
 ```
 
-O pre-push hook bloqueia `git push` se testes falharem. O hook executa `npm run test:nav` apenas — a suite de navegação, a mais crítica para regressões — evitando bloqueios por bugs conhecidos nas outras suites.
+O pre-push hook bloqueia `git push` se testes falharem. O hook executa `npm run test:nav` apenas — a suite de navegação, a mais crítica para regressões.
 
-Use `git push --no-verify` para forçar push em emergência.
+Use `git push --no-verify` para forçar push em emergência **(só funciona em branches, `main` é protegida — ver seção CI/CD abaixo).**
 
-**Testes que falham intencionalmente** (bugs conhecidos a corrigir):
-- back-to-top visível após scroll (handler ausente em main.js)
-- meta description ausente em todas as páginas
-- copyright 2025 → 2026
-- tags HTML malformadas em index.html e publicacoes.html
+## CI/CD — main protegida, deploy só via PR verde
 
-## CI/CD — Deploy automático
+**`main` tem branch protection ativa desde 22/08/2026.** Push direto (mesmo por admin/token) é recusado com HTTP 409. Toda mudança precisa passar por:
 
-**Todo push para `main` dispara deploy automático na Vercel.**
+```
+branch nova → commit(s) → push da branch → abrir PR → CI (GitHub Actions) roda
+   → se "Testes (Playwright)" passar → merge do PR → main atualizado
+   → Vercel detecta o push em main → build → deploy em produção (~30s)
+```
+
+Regras configuradas em `Settings → Branches → main`:
+- Require status check `Testes (Playwright)` passando (workflow `.github/workflows/ci.yml`)
+- `strict: true` — a branch precisa estar atualizada com `main` antes do merge
+- `enforce_admins: true` — ninguém pula a fila, nem token de admin
+- Sem force-push, sem deleção da branch `main`
 
 ```bash
-# Fluxo padrão para publicar mudanças:
-git add <arquivos>
-git commit -m "tipo: descrição da mudança"
-git push origin main
-# → Vercel detecta o push e faz deploy em ~30s para vicduarte.site
+# Fluxo manual (terminal):
+git checkout -b feat/minha-mudanca
+git add <arquivos> && git commit -m "tipo: descrição"
+git push origin feat/minha-mudanca
+gh pr create --base main --fill
+gh pr checks --watch
+gh pr merge --squash --delete-branch
+```
+
+```bash
+# Fluxo automatizado (API do GitHub, sem gh CLI — usado pelo Claude neste repo):
+# 1. GET  /repos/.../git/ref/heads/main               → sha atual
+# 2. POST /repos/.../git/refs                          → cria branch nova a partir do sha
+# 3. PUT  /repos/.../contents/{path}?ref=<branch>       → commit(s) na branch nova
+# 4. POST /repos/.../pulls                              → abre PR branch → main
+# 5. GET  /repos/.../commits/{sha}/check-runs (polling) → aguarda "Testes (Playwright)" = success
+# 6. PUT  /repos/.../pulls/{n}/merge  (merge_method=squash) → merge
+# 7. DELETE /repos/.../git/refs/heads/<branch>          → limpa a branch
+# → Vercel detecta o push em main e publica sozinho
 ```
 
 Vercel project ID: `prj_5MGmD0siE0ztl2WT2qUjxz6gxRAU`  
@@ -79,11 +99,13 @@ style: mudança visual/CSS sem alterar comportamento
 
 ## Issues conhecidos (a corrigir)
 
-Ver relatório completo do agente UX/UI. Prioridade:
-1. Tag `</h5>` malformada em `index.html:261`
-2. Texto `/h5>` visível em `publicacoes.html:220`
-3. Back-to-top button sem handler JS em `main.js`
-4. `.icon-box-modern` duplicado em `style.css` (~linha 2030)
-5. Hero logo com lazy-load desnecessário (bloqueia above-fold)
-6. Nenhuma página tem `<meta name="description">`
-7. Copyright 2025 em todos os footers (deveria ser 2026)
+Lista revisada em 22/08/2026 — vários itens antigos já estavam corrigidos e foram removidos daqui.
+1. `.icon-box-modern` duplicado em `style.css` (~linha 2030) — não verificado nesta revisão
+2. Hero logo com lazy-load desnecessário (bloqueia above-fold) — não verificado nesta revisão
+
+Resolvidos nesta revisão (não reabrir sem checar antes):
+- ~~Tags HTML malformadas em index.html/publicacoes.html~~ — sem vazamento de tag hoje
+- ~~Meta description ausente~~ — presente em todas as páginas testadas
+- ~~Copyright 2025~~ — todos os footers em 2026
+- ~~Back-to-top sem handler~~ — handler presente e funcional em `main.js`
+- ~~3 links `href="#"` mortos em `consultorias.html` e `palestras.html`~~ — corrigido (agora abrem `#contactModal`)
