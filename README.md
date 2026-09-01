@@ -19,6 +19,7 @@ Site profissional multi-páginas desenvolvido para apresentar o portfólio, disc
 - **📖 Livro:** "IA na Gestão de Projetos" - Download gratuito e compra
 - **📝 Publicações:** Artigos no LinkedIn sobre metodologias ágeis
 - **📸 Momentos Profissionais:** Carrossel com fotos de eventos e workshops
+- **🎓 Gerador ENADE:** Questões por competências para Engenharia Civil, com IA e auditoria editorial
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -39,6 +40,9 @@ VicDuarte/
 ├── palestras.html          # Palestras e talks
 ├── livro.html             # Página dedicada ao livro
 ├── publicacoes.html       # Publicações LinkedIn
+├── gerador-enade.html     # Gerador de questões ENADE para Engenharia Civil
+├── api/
+│   └── generate-enade.js  # Função serverless de geração e validação com IA
 └── static/
     ├── css/
     │   └── style.css      # Estilos customizados
@@ -76,6 +80,8 @@ Acesse: `http://localhost:8000`
 
 O site é automaticamente deployado no Vercel a cada push na branch `main`.
 
+O Gerador ENADE requer a variável de ambiente `GEMINI_API_KEY` configurada no projeto Vercel. A chave é utilizada exclusivamente pela função serverless e nunca é enviada ao navegador.
+
 **URL de produção:** [vicduarte.site](https://vicduarte.site)
 
 ## 📄 Licença
@@ -95,4 +101,3 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ---
 
 **Desenvolvido com 💙 por Vic Duarte**
-
