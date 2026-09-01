@@ -80,7 +80,7 @@ Acesse: `http://localhost:8000`
 
 O site é automaticamente deployado no Vercel a cada push na branch `main`.
 
-O Gerador ENADE requer a variável de ambiente `GEMINI_API_KEY` configurada no projeto Vercel. A chave é utilizada exclusivamente pela função serverless e nunca é enviada ao navegador.
+O Gerador ENADE usa o **Vercel AI Gateway** com o token OIDC gerado automaticamente para o projeto. A autenticação acontece exclusivamente na função serverless, sem chave de IA no navegador ou variável manual obrigatória.
 
 **URL de produção:** [vicduarte.site](https://vicduarte.site)
 
