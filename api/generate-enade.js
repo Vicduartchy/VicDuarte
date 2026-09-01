@@ -1,4 +1,4 @@
-const MODEL = 'gemini-2.5-flash';
+const MODEL = 'google/gemini-3.7-flash';
 const WINDOW_MS = 10 * 60 * 1000;
 const MAX_REQUESTS_PER_WINDOW = 6;
 const requestLog = new Map();
@@ -221,10 +221,28 @@ function isRateLimited(ip) {
   return false;
 }
 
-function extractGeminiText(data) {
-  const text = data?.candidates?.[0]?.content?.parts?.map(part => part.text || '').join('').trim();
+function toJsonSchema(schema) {
+  if (Array.isArray(schema)) return schema.map(toJsonSchema);
+  if (!schema || typeof schema !== 'object') return schema;
+
+  const converted = Object.fromEntries(Object.entries(schema).map(([key, value]) => [
+    key,
+    key === 'type' && typeof value === 'string' ? value.toLowerCase() : toJsonSchema(value),
+  ]));
+
+  if (String(schema.type).toUpperCase() === 'OBJECT') converted.additionalProperties = false;
+  return converted;
+}
+
+function extractGatewayText(data) {
+  const content = data?.choices?.[0]?.message?.content;
+  const text = typeof content === 'string'
+    ? content.trim()
+    : Array.isArray(content)
+      ? content.map(part => part?.text || part?.content || '').join('').trim()
+      : '';
   if (!text) {
-    const reason = data?.promptFeedback?.blockReason || data?.candidates?.[0]?.finishReason || data?.error?.message || 'resposta vazia';
+    const reason = data?.error?.message || data?.choices?.[0]?.finish_reason || 'resposta vazia';
     throw new Error(`A IA não concluiu a resposta (${reason}).`);
   }
   return text;
@@ -232,6 +250,7 @@ function extractGeminiText(data) {
 
 async function callGemini(input, revision) {
   const schema = input.itemType === 'multiple-choice' ? multipleChoiceSchema : discursiveSchema;
+  const token = process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN;
   const typeInstruction = input.itemType === 'multiple-choice'
     ? 'Crie uma questão de múltipla escolha de resposta única, com cinco opções e justificativas individualizadas.'
     : 'Crie uma questão discursiva complexa com resolução, rubrica de 10,0 pontos e critérios detalhados.';
@@ -244,20 +263,28 @@ async function callGemini(input, revision) {
     dificuldade: input.difficulty,
   })}${revisionInstruction}\nRetorne somente o objeto JSON solicitado.`;
 
-  const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`, {
+  const response = await fetch('https://ai-gateway.vercel.sh/v1/chat/completions', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'x-goog-api-key': process.env.GEMINI_API_KEY,
+      'Authorization': `Bearer ${token}`,
     },
     body: JSON.stringify({
-      systemInstruction: { parts: [{ text: `Você é elaborador e revisor sênior de itens ENADE para Engenharia Civil.\n${MATRIX}\n${RULES}` }] },
-      contents: [{ role: 'user', parts: [{ text: prompt }] }],
-      generationConfig: {
-        temperature: 0.25,
-        maxOutputTokens: 12000,
-        responseMimeType: 'application/json',
-        responseSchema: schema,
+      model: MODEL,
+      messages: [
+        { role: 'system', content: `Você é elaborador e revisor sênior de itens ENADE para Engenharia Civil.\n${MATRIX}\n${RULES}` },
+        { role: 'user', content: prompt },
+      ],
+      stream: false,
+      temperature: 0.25,
+      max_tokens: 12000,
+      response_format: {
+        type: 'json_schema',
+        json_schema: {
+          name: input.itemType === 'multiple-choice' ? 'enade_multiple_choice' : 'enade_discursive',
+          description: 'Questão ENADE de Engenharia Civil auditada e pronta para revisão docente.',
+          schema: toJsonSchema(schema),
+        },
       },
     }),
     signal: AbortSignal.timeout(55000),
@@ -265,7 +292,7 @@ async function callGemini(input, revision) {
 
   const data = await response.json();
   if (!response.ok) throw new Error(data?.error?.message || `Falha no provedor de IA (${response.status}).`);
-  return JSON.parse(extractGeminiText(data));
+  return JSON.parse(extractGatewayText(data));
 }
 
 export default async function handler(req, res) {
@@ -277,8 +304,8 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Método não permitido.' });
   }
 
-  if (!process.env.GEMINI_API_KEY) {
-    console.error('[ENADE] GEMINI_API_KEY ausente.');
+  if (!(process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN)) {
+    console.error('[ENADE] autenticação do Vercel AI Gateway ausente.');
     return res.status(503).json({ error: 'O gerador está temporariamente indisponível.' });
   }
 
