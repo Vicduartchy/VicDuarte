@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferramentas - Vic Duarte</title>
-    <meta name="description" content="QuickFlow: ferramenta gratuita e open source de métricas ágeis criada por Vic Duarte. Analise Cycle Time, Throughput e Aging WIP com dados do Jira, Azure DevOps ou Trello.">
+    <meta name="description" content="Ferramentas gratuitas de Vic Duarte: QuickFlow, Simulador de Sprint e Gerador de Questões ENADE para Engenharia Civil.">
     <!-- Preload critical resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
@@ -82,6 +82,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="ferramentas.html">Ferramentas</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gerador-enade.html">ENADE</a>
+                    </li>
                     <li class="nav-item ms-3">
                         <a class="btn btn-linkedin btn-sm" href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-linkedin me-1" aria-hidden="true"></i>LinkedIn
@@ -115,6 +118,9 @@
                             </a>
                             <a href="simulador-sprint.html" class="btn btn-linkedin btn-lg">
                                 <i class="fas fa-circle-notch me-2" aria-hidden="true"></i>Simulador de Sprint
+                            </a>
+                            <a href="gerador-enade.html" class="btn btn-linkedin btn-lg">
+                                <i class="fas fa-graduation-cap me-2" aria-hidden="true"></i>Gerador ENADE
                             </a>
                         </div>
                     </div>
@@ -325,6 +331,46 @@
                 </div>
             </div>
         </section>
+
+        <!-- Gerador ENADE Section -->
+        <section id="gerador-enade" class="py-5">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 order-2 order-lg-1">
+                        <span class="tool-badge"><i class="fas fa-wand-magic-sparkles me-1"></i>Inteligência Artificial</span>
+                        <span class="tool-badge-outline"><i class="fas fa-graduation-cap me-1"></i>Engenharia Civil</span>
+                        <h2 class="display-5 fw-bold text-primary mt-3 mb-3">Gerador de Questões ENADE</h2>
+                        <p class="lead text-muted">Elaboração por competências, com revisão estrutural automática.</p>
+                        <p class="text-muted mb-4">
+                            Crie questões de múltipla escolha ou discursivas alinhadas à <strong>Portaria INEP nº 159/2026</strong>. O fluxo exige tipo e objeto de conhecimento antes de gerar e entrega texto-base, comando, gabarito ou rubrica e auditoria editorial.
+                        </p>
+                        <div class="origin-box mb-4">
+                            <p class="mb-0 text-muted">
+                                <i class="fas fa-shield-alt me-2" style="color: #BF452A;"></i>
+                                <strong>Controle de qualidade:</strong> bloqueia formatos proibidos, verifica a soma da rubrica e confere a aderência ao nível de Bloom e à encomenda selecionada.
+                            </p>
+                        </div>
+                        <a href="gerador-enade.html" class="btn btn-linkedin btn-lg">
+                            <i class="fas fa-arrow-right me-2" aria-hidden="true"></i>Acessar o Gerador ENADE
+                        </a>
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        <div class="card h-100 border-0 shadow-sm tool-card" style="border-top: 4px solid #BF452A !important;">
+                            <div class="card-body p-4 p-lg-5">
+                                <div class="feature-icon mb-4"><i class="fas fa-clipboard-check"></i></div>
+                                <h3 class="fw-bold text-primary mb-3">Da encomenda à rubrica</h3>
+                                <div class="d-grid gap-3">
+                                    <div class="d-flex align-items-start gap-3"><i class="fas fa-circle-check mt-1" style="color:#BF452A;"></i><p class="text-muted mb-0"><strong>16 objetos</strong> de conhecimento oficiais.</p></div>
+                                    <div class="d-flex align-items-start gap-3"><i class="fas fa-circle-check mt-1" style="color:#BF452A;"></i><p class="text-muted mb-0"><strong>Aplicar, Analisar e Avaliar</strong> como foco cognitivo.</p></div>
+                                    <div class="d-flex align-items-start gap-3"><i class="fas fa-circle-check mt-1" style="color:#BF452A;"></i><p class="text-muted mb-0"><strong>Exportação em Markdown</strong> para edição e reutilização.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->

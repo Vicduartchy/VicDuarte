@@ -14,6 +14,7 @@ const PAGES = [
   'palestras.html',
   'publicacoes.html',
   'ferramentas.html',
+  'gerador-enade.html',
 ];
 
 const TAG_LEAK = /\/h[1-6]>|\/p>|\/div>|\/span>|\/li>|\/a>/;

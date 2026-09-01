@@ -12,17 +12,16 @@ test.describe('Back-to-Top', () => {
   test('visível após scroll de 500px', async ({ page }) => {
     await page.goto('/index.html');
     await page.evaluate(() => window.scrollTo(0, 500));
-    await page.waitForTimeout(400);
     const btn = page.locator('#backToTop');
-    const classes = await btn.getAttribute('class') ?? '';
-    expect(classes, '#backToTop deve ter classe "show" após scroll').toContain('show');
+    await expect(btn, '#backToTop deve ter classe "show" após scroll').toHaveClass(/show/, { timeout: 3000 });
   });
 
   test('volta ao topo ao clicar', async ({ page }) => {
     await page.goto('/index.html');
     await page.evaluate(() => window.scrollTo(0, 800));
-    await page.waitForTimeout(400);
-    await page.locator('#backToTop').click({ force: true });
+    const btn = page.locator('#backToTop');
+    await expect(btn).toHaveClass(/show/, { timeout: 3000 });
+    await btn.click({ force: true });
     await page.waitForTimeout(700);
     const scrollY = await page.evaluate(() => window.scrollY);
     expect(scrollY, 'Página deve retornar ao topo após clique').toBe(0);
@@ -41,6 +40,8 @@ test.describe('Modal de Download', () => {
       await page.goto(`/${pageName}`);
       await page.locator('[data-bs-target="#downloadModal"]').first().click();
       await expect(page.locator('#downloadModal')).toBeVisible({ timeout: 3000 });
+      // Bootstrap ignora o fechamento enquanto a transição de abertura está ativa.
+      await page.waitForTimeout(400);
       await page.locator('#downloadModal [data-bs-dismiss="modal"]').click();
       await expect(page.locator('#downloadModal')).not.toBeVisible({ timeout: 3000 });
     });

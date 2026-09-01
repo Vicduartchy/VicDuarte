@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Questões ENADE - Vic Duarte</title>
+    <meta name="description" content="Gerador especializado de questões ENADE para Engenharia Civil, alinhado à Portaria INEP nº 159/2026 e à avaliação por competências.">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="icon" type="image/png" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
+    <link rel="apple-touch-icon" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
+    <link rel="shortcut icon" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Gerador de Questões ENADE — Engenharia Civil",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web",
+        "url": "https://vicduarte.site/gerador-enade.html",
+        "author": { "@type": "Person", "name": "Victoria Duarte", "url": "https://vicduarte.site/" }
+    }
+    </script>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/gerador-enade.css">
+</head>
+<body class="enade-page">
+    <a href="#main-content" class="skip-link visually-hidden-focusable">Pular para o conteúdo principal</a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="Vic Duarte - Início">
+                <img src="./static/images/vic-duarte-logo-white.png" alt="Vic Duarte" height="40" class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="disciplinas.html">Disciplinas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="consultorias.html">Consultorias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="palestras.html">Palestras</a></li>
+                    <li class="nav-item"><a class="nav-link" href="livro.html">Livro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="publicacoes.html">Publicações</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ferramentas.html">Ferramentas</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gerador-enade.html" aria-current="page">ENADE</a></li>
+                    <li class="nav-item ms-3">
+                        <a class="btn btn-linkedin btn-sm" href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin me-1" aria-hidden="true"></i>LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="enade-hero" aria-labelledby="enade-title">
+            <div class="enade-hero-pattern" aria-hidden="true"></div>
+            <div class="container position-relative">
+                <div class="row align-items-center gy-4">
+                    <div class="col-lg-7">
+                        <div class="enade-eyebrow"><span></span>Ferramenta docente · Engenharia Civil</div>
+                        <h1 id="enade-title">Gerador de Questões <strong>ENADE</strong></h1>
+                        <p>Elabore itens por competências, alinhados à Portaria INEP nº 159/2026, com estrutura completa, gabarito ou rubrica e auditoria editorial automática.</p>
+                        <div class="d-flex flex-wrap gap-2 mt-4">
+                            <span class="enade-hero-chip"><i class="fas fa-graduation-cap" aria-hidden="true"></i>Bacharelado em Engenharia Civil</span>
+                            <span class="enade-hero-chip"><i class="fas fa-shield-alt" aria-hidden="true"></i>Fluxo obrigatório em 2 etapas</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="enade-compliance">
+                            <div class="enade-compliance-top">
+                                <span>Conformidade ativa</span>
+                                <span class="enade-online"><i></i>online</span>
+                            </div>
+                            <ul>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Resposta única ou discursiva</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Aplicar · Analisar · Avaliar</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Sem pegadinhas ou comandos negativos</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Rubrica totalizando 10,0 pontos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="enade-workspace" aria-labelledby="workspace-title">
+            <div class="container">
+                <div class="enade-section-intro text-center">
+                    <span>Estúdio de elaboração</span>
+                    <h2 id="workspace-title">Configure a encomenda editorial</h2>
+                    <p>Responda primeiro às duas definições obrigatórias. O botão de geração permanecerá bloqueado até o preenchimento.</p>
+                </div>
+
+                <div id="enade-alert" class="enade-alert" role="status" aria-live="polite" hidden></div>
+
+                <div class="enade-grid">
+                    <form id="enade-form" class="enade-editor" novalidate>
+                        <div class="enade-editor-head">
+                            <div>
+                                <span class="enade-panel-kicker">Parâmetros</span>
+                                <h3>Nova questão</h3>
+                            </div>
+                            <button id="enade-reset" class="enade-text-button" type="reset"><i class="fas fa-rotate-left" aria-hidden="true"></i>Limpar</button>
+                        </div>
+
+                        <fieldset class="enade-step">
+                            <legend class="enade-step-title">
+                                <span id="step-one-number" class="enade-step-number">1</span>
+                                <span>Qual é o tipo do item?<small>Primeira definição obrigatória</small></span>
+                            </legend>
+                            <div class="enade-type-grid">
+                                <button type="button" class="enade-type-card" data-item-type="multiple-choice" aria-pressed="false">
+                                    <span class="enade-type-icon"><i class="fas fa-bullseye" aria-hidden="true"></i></span>
+                                    <span><strong>Múltipla Escolha</strong><small>Resposta única · 5 opções</small></span>
+                                    <span class="enade-choice" aria-hidden="true"><i class="fas fa-check"></i></span>
+                                </button>
+                                <button type="button" class="enade-type-card" data-item-type="discursive" aria-pressed="false">
+                                    <span class="enade-type-icon"><i class="fas fa-pen-ruler" aria-hidden="true"></i></span>
+                                    <span><strong>Discursiva</strong><small>Resposta analítica · 10,0 pontos</small></span>
+                                    <span class="enade-choice" aria-hidden="true"><i class="fas fa-check"></i></span>
+                                </button>
+                            </div>
+                        </fieldset>
+
+                        <fieldset id="step-two" class="enade-step is-disabled" disabled>
+                            <legend class="enade-step-title">
+                                <span id="step-two-number" class="enade-step-number">2</span>
+                                <span>Qual é a disciplina / objeto?<small>Segunda definição obrigatória</small></span>
+                            </legend>
+                            <label class="enade-label" for="knowledge-object">Objeto de conhecimento da Portaria</label>
+                            <div class="enade-select-wrap">
+                                <select id="knowledge-object" class="form-select" required>
+                                    <option value="" selected disabled>Selecione um dos 16 objetos</option>
+                                </select>
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </div>
+                        </fieldset>
+
+                        <div id="enade-refinement" class="enade-refinement" hidden>
+                            <div class="enade-refinement-title"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>Refinamento pedagógico</div>
+                            <label class="enade-label" for="enade-subject">Tema ou recorte técnico <span>opcional</span></label>
+                            <input id="enade-subject" class="form-control" type="text" maxlength="180" placeholder="Ex.: Last Planner System e Percentual de Planos Concluídos">
+                            <div id="subject-suggestions" class="enade-suggestions" aria-label="Sugestões de temas"></div>
+
+                            <div class="row g-3 mt-2">
+                                <fieldset class="col-md-6">
+                                    <legend class="enade-label">Taxonomia de Bloom</legend>
+                                    <div class="enade-segmented" data-group="bloom">
+                                        <button type="button" data-value="Aplicar">Aplicar</button>
+                                        <button type="button" data-value="Analisar" class="is-active">Analisar</button>
+                                        <button type="button" data-value="Avaliar">Avaliar</button>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="col-md-6">
+                                    <legend class="enade-label">Dificuldade</legend>
+                                    <div class="enade-segmented" data-group="difficulty">
+                                        <button type="button" data-value="Fácil">Fácil</button>
+                                        <button type="button" data-value="Média" class="is-active">Média</button>
+                                        <button type="button" data-value="Difícil">Difícil</button>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <button id="enade-generate" class="btn btn-linkedin enade-generate" type="submit" disabled>
+                            <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i><span>Gerar questão ENADE</span>
+                        </button>
+                        <p class="enade-lock-note"><i class="fas fa-lock" aria-hidden="true"></i>A geração só é liberada após as duas definições obrigatórias.</p>
+                    </form>
+
+                    <div id="enade-result" class="enade-result" aria-live="polite">
+                        <div id="enade-empty" class="enade-empty">
+                            <div class="enade-blueprint" aria-hidden="true"></div>
+                            <div class="enade-empty-content">
+                                <span class="enade-empty-icon"><i class="fas fa-book-open" aria-hidden="true"></i></span>
+                                <span class="enade-panel-kicker">Área de revisão</span>
+                                <h3>A questão aparecerá aqui</h3>
+                                <p>Após a geração, revise o item, o gabarito ou a rubrica e a auditoria de qualidade antes de utilizar a questão.</p>
+                                <div class="enade-empty-steps">
+                                    <span><small>01</small>Item</span>
+                                    <span><small>02</small>Gabarito</span>
+                                    <span><small>03</small>Auditoria</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="enade-loading" class="enade-loading" hidden>
+                            <div class="enade-spinner" aria-hidden="true"></div>
+                            <strong>Elaborando e auditando a questão</strong>
+                            <p>A IA está cruzando competência, habilidade, objeto e regras editoriais.</p>
+                        </div>
+
+                        <div id="enade-output" hidden>
+                            <div class="enade-result-head">
+                                <div>
+                                    <span class="enade-panel-kicker">Item gerado</span>
+                                    <h3 id="output-title"></h3>
+                                </div>
+                                <div class="enade-output-actions">
+                                    <button id="enade-copy" type="button" title="Copiar questão" aria-label="Copiar questão"><i class="fas fa-copy"></i></button>
+                                    <button id="enade-download" type="button" title="Baixar Markdown" aria-label="Baixar Markdown"><i class="fas fa-download"></i></button>
+                                    <button id="enade-regenerate" type="button" class="enade-regenerate"><i class="fas fa-rotate" aria-hidden="true"></i>Regenerar</button>
+                                </div>
+                            </div>
+                            <div id="output-metadata" class="enade-metadata"></div>
+                            <div class="enade-tabs" role="tablist" aria-label="Seções da questão">
+                                <button type="button" role="tab" data-tab="item" class="is-active" aria-selected="true"><i class="fas fa-file-lines" aria-hidden="true"></i>Item</button>
+                                <button id="answer-tab-button" type="button" role="tab" data-tab="answer" aria-selected="false"><i class="fas fa-book-open" aria-hidden="true"></i><span>Gabarito</span></button>
+                                <button type="button" role="tab" data-tab="audit" aria-selected="false"><i class="fas fa-shield-halved" aria-hidden="true"></i>Auditoria</button>
+                            </div>
+                            <div id="output-content" class="enade-output-content"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="enade-disclaimer">
+                    <i class="fas fa-circle-info" aria-hidden="true"></i>
+                    <p><strong>Uso responsável:</strong> o conteúdo gerado por inteligência artificial deve passar por revisão técnica e pedagógica docente. O sistema apoia a elaboração, mas não substitui a validação especializada.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-section text-white" role="contentinfo">
+        <div class="container">
+            <div class="row align-items-center py-5">
+                <div class="col-lg-8 text-center">
+                    <h3 class="fw-bold mb-3">Vamos Conectar?</h3>
+                    <p class="lead mb-4">Estou sempre aberta para conversas sobre ensino, agilidade, liderança e transformação organizacional.</p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                        <a href="https://www.linkedin.com/in/vic-duarte/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-lg"><i class="fab fa-linkedin me-2" aria-hidden="true"></i>Conectar no LinkedIn</a>
+                        <a href="mailto:victoriaduarte.s@gmail.com" class="btn btn-linkedin btn-lg"><i class="fas fa-envelope me-2" aria-hidden="true"></i>Enviar E-mail</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                    <img src="./static/images/vic-duarte-logo-white.png" alt="Vic Duarte" class="footer-logo img-fluid">
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row"><div class="col-12 text-center"><p class="mb-0 text-white-50">&copy; 2026 Vic Duarte. Todos os direitos reservados.</p></div></div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top-btn" aria-label="Voltar ao topo da página"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./static/js/main.js"></script>
+    <script src="./static/js/gerador-enade.js"></script>
+    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
