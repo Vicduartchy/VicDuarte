@@ -248,9 +248,14 @@ function extractGatewayText(data) {
   return text;
 }
 
-async function callGemini(input, revision) {
+function getGatewayToken(req) {
+  const oidcHeader = req.headers?.['x-vercel-oidc-token'];
+  const runtimeToken = Array.isArray(oidcHeader) ? oidcHeader[0] : oidcHeader;
+  return process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN || runtimeToken;
+}
+
+async function callGemini(input, revision, token) {
   const schema = input.itemType === 'multiple-choice' ? multipleChoiceSchema : discursiveSchema;
-  const token = process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN;
   const typeInstruction = input.itemType === 'multiple-choice'
     ? 'Crie uma questão de múltipla escolha de resposta única, com cinco opções e justificativas individualizadas.'
     : 'Crie uma questão discursiva complexa com resolução, rubrica de 10,0 pontos e critérios detalhados.';
@@ -304,7 +309,8 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Método não permitido.' });
   }
 
-  if (!(process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN)) {
+  const gatewayToken = getGatewayToken(req);
+  if (!gatewayToken) {
     console.error('[ENADE] autenticação do Vercel AI Gateway ausente.');
     return res.status(503).json({ error: 'O gerador está temporariamente indisponível.' });
   }
@@ -314,11 +320,11 @@ export default async function handler(req, res) {
 
   try {
     const input = parseInput(req.body);
-    let item = await callGemini(input);
+    let item = await callGemini(input, undefined, gatewayToken);
     let issues = validateItem(item, input);
 
     if (issues.length) {
-      item = await callGemini(input, { item, issues });
+      item = await callGemini(input, { item, issues }, gatewayToken);
       issues = validateItem(item, input);
     }
 

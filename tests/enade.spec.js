@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { parseInput, validateItem } from '../api/generate-enade.js';
+import handler, { parseInput, validateItem } from '../api/generate-enade.js';
 
 const requestInput = {
   itemType: 'multiple-choice',
@@ -64,6 +64,45 @@ test.describe('Contrato do Gerador ENADE', () => {
     expect(validateItem(generatedItem, requestInput)).toEqual([]);
     const invalid = { ...generatedItem, command: 'Selecione a alternativa que não representa a melhor ação.' };
     expect(validateItem(invalid, requestInput).some(issue => issue.includes('negativo'))).toBe(true);
+  });
+
+  test('usa o token OIDC do cabeçalho da Vercel no AI Gateway', async () => {
+    const originalFetch = globalThis.fetch;
+    let authorization = '';
+    globalThis.fetch = async (_url, options) => {
+      authorization = options.headers.Authorization;
+      return new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(generatedItem) }, finish_reason: 'stop' }] }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    };
+
+    let statusCode = 200;
+    let responseBody;
+    const req = {
+      method: 'POST',
+      body: requestInput,
+      headers: {
+        'content-length': String(JSON.stringify(requestInput).length),
+        'x-forwarded-for': '127.0.0.77',
+        'x-vercel-oidc-token': 'oidc-test-token',
+      },
+      socket: { remoteAddress: '127.0.0.77' },
+    };
+    const res = {
+      setHeader() {},
+      status(code) { statusCode = code; return this; },
+      json(payload) { responseBody = payload; return payload; },
+    };
+
+    try {
+      await handler(req, res);
+      expect(statusCode).toBe(200);
+      expect(authorization).toBe('Bearer oidc-test-token');
+      expect(responseBody.validation.passed).toBe(true);
+    } finally {
+      globalThis.fetch = originalFetch;
+    }
   });
 });
 
