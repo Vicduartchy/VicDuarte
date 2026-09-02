@@ -1,7 +1,7 @@
 {
   "trailingSlash": true,
   "functions": {
-    "api/generate-enade.js": {
+    "api/generate-professor-enade.js": {
       "maxDuration": 60
     }
   }
