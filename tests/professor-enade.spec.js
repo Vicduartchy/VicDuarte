@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { parseInput, validateItem } from '../api/generate-enade.js';
+import { parseInput, validateItem } from '../api/generate-professor-enade.js';
 
 const requestInput = {
   itemType: 'multiple-choice',
@@ -49,7 +49,7 @@ const apiResponse = {
   validation: { passed: true, checks: 9, message: 'Item aprovado pelo validador estrutural e editorial.' },
 };
 
-test.describe('Contrato do Gerador ENADE', () => {
+test.describe('Contrato do PROFESSOR-ENADE', () => {
   test('aceita uma encomenda completa e sanitiza o tema', () => {
     const parsed = parseInput({ ...requestInput, subject: '  Last Planner System  ' });
     expect(parsed.subject).toBe('Last Planner System');
@@ -67,14 +67,14 @@ test.describe('Contrato do Gerador ENADE', () => {
   });
 });
 
-test.describe('Página do Gerador ENADE', () => {
+test.describe('Página do PROFESSOR-ENADE', () => {
   test.beforeEach(async ({ page }) => {
-    await page.route('**/api/generate-enade', route => route.fulfill({
+    await page.route('**/api/generate-professor-enade', route => route.fulfill({
       status: 200,
       contentType: 'application/json',
       body: JSON.stringify(apiResponse),
     }));
-    await page.goto('/gerador-enade.html');
+    await page.goto('/professor-enade.html');
   });
 
   test('mantém a geração bloqueada até tipo e objeto serem informados', async ({ page }) => {

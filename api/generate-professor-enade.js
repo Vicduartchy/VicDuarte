@@ -305,7 +305,7 @@ export default async function handler(req, res) {
   }
 
   if (!(process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN)) {
-    console.error('[ENADE] autenticação do Vercel AI Gateway ausente.');
+    console.error('[PROFESSOR-ENADE] autenticação do Vercel AI Gateway ausente.');
     return res.status(503).json({ error: 'O gerador está temporariamente indisponível.' });
   }
 
@@ -323,7 +323,7 @@ export default async function handler(req, res) {
     }
 
     if (issues.length) {
-      console.warn('[ENADE] Item reprovado:', issues.join(' | '));
+      console.warn('[PROFESSOR-ENADE] Item reprovado:', issues.join(' | '));
       return res.status(422).json({ error: 'A questão não passou na auditoria editorial. Tente gerar novamente.' });
     }
 
@@ -338,7 +338,7 @@ export default async function handler(req, res) {
       },
     });
   } catch (error) {
-    console.error('[ENADE] Falha na geração:', error);
+    console.error('[PROFESSOR-ENADE] Falha na geração:', error);
     const status = error instanceof Error && error.message.startsWith('Selecione') ? 400 : 500;
     return res.status(status).json({ error: status === 400 ? error.message : 'Não foi possível gerar a questão agora. Tente novamente.' });
   }
