@@ -80,7 +80,7 @@ Acesse: `http://localhost:8000`
 
 O site é automaticamente deployado no Vercel a cada push na branch `main`.
 
-O PROFESSOR-ENADE usa o **Vercel AI Gateway** com o token OIDC gerado automaticamente para o projeto. A autenticação acontece exclusivamente na função serverless, sem chave de IA no navegador ou variável manual obrigatória.
+O PROFESSOR-ENADE chama a **API nativa do Gemini** (`generativelanguage.googleapis.com`) diretamente pela função serverless, autenticando com a variável de ambiente `GEMINI_API_KEY` (gerada gratuitamente no Google AI Studio). A chave nunca é exposta no navegador.
 
 **URL de produção:** [vicduarte.site](https://vicduarte.site)
 
