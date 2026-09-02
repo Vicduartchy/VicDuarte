@@ -10,6 +10,7 @@
     --secondary: #5F6073;
     --accent-1: #BF452A;
     --accent-2: #BF452A;
+    --line: rgba(9, 33, 64, 0.12);
     --white: #ffffff;
     --light-gray: #f8f9fa;
     --dark-gray: #0D0D0D;
@@ -347,12 +348,12 @@ section {
 /* Hero Section */
 .hero-section {
     background: linear-gradient(135deg, rgba(9, 33, 64, 0.85) 0%, rgba(191, 69, 42, 0.75) 100%), url('../images/vic-hero-bg.jpg') center/cover no-repeat;
-    min-height: 100vh;
+    min-height: 460px;
+    padding: clamp(5rem, 12vw, 9rem) 0 clamp(3.5rem, 8vw, 6rem);
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 90px;
     width: 100%;
     will-change: transform;
 }
@@ -660,6 +661,92 @@ section {
     outline: 2px solid white;
     outline-offset: 2px;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Botão Terciário (texto puro) — para ações utilitárias de baixo destaque,
+   ex: "limpar", "ver mais tarde". Inspirado no .enade-text-button. */
+.btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border: 0;
+    background: transparent;
+    padding: 7px 4px;
+    color: var(--secondary);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+.btn-text:hover {
+    color: var(--accent-1);
+    text-decoration: none;
+}
+
+.btn-text:focus {
+    color: var(--accent-1);
+    outline: 2px solid var(--accent-1);
+    outline-offset: 2px;
+}
+
+/* Seção "Abordagem" (index.html) — extraído de estilos inline,
+   inspirado no padrão de callout do professor-enade.css */
+.abordagem-subtitle {
+    font-size: var(--text-base);
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.abordagem-photo {
+    max-width: 280px;
+    width: 100%;
+}
+
+.abordagem-heading {
+    font-size: var(--text-2xl);
+    color: var(--primary);
+}
+
+.abordagem-kicker {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+.abordagem-body {
+    font-size: var(--text-base);
+    line-height: 1.7;
+    color: var(--text-on-light);
+}
+
+.abordagem-divider {
+    border-color: var(--line);
+    margin: 1.2rem 0;
+}
+
+.abordagem-label {
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-1);
+}
+
+.abordagem-item {
+    padding: 0.75rem 1rem;
+    background: rgba(9, 33, 64, 0.04);
+    border-left: 3px solid var(--primary);
+    border-radius: 0 6px 6px 0;
+    height: 100%;
+}
+
+.abordagem-item-title {
+    font-size: var(--text-sm);
+    color: var(--primary);
+}
+
+.abordagem-item-desc {
+    font-size: var(--text-xs);
 }
 
 /* Cabeçalho de Seção */
@@ -1581,8 +1668,6 @@ section {
         height: 30px !important;
     }
     .hero-section {
-        padding-top: 75px;
-        min-height: 90vh;
         backdrop-filter: none;
     }
     .py-5 {
@@ -1857,9 +1942,6 @@ section {
         justify-content: center;
     }
     .hero-section {
-        padding-top: 70px;
-        padding-bottom: 40px;
-        min-height: 85vh;
         backdrop-filter: none;
     }
     .hero-section .container {
