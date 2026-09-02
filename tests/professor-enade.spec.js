@@ -44,7 +44,7 @@ const generatedItem = {
 
 const apiResponse = {
   item: generatedItem,
-  model: 'gemini-3.7-flash',
+  model: 'gemini-2.5-flash',
   generatedAt: Date.now(),
   validation: { passed: true, checks: 9, message: 'Item aprovado pelo validador estrutural e editorial.' },
 };
