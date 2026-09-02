@@ -19,7 +19,7 @@ Site profissional multi-páginas desenvolvido para apresentar o portfólio, disc
 - **📖 Livro:** "IA na Gestão de Projetos" - Download gratuito e compra
 - **📝 Publicações:** Artigos no LinkedIn sobre metodologias ágeis
 - **📸 Momentos Profissionais:** Carrossel com fotos de eventos e workshops
-- **🎓 Gerador ENADE:** Questões por competências para Engenharia Civil, com IA e auditoria editorial
+- **🎓 PROFESSOR-ENADE:** Questões por competências para Engenharia Civil, com IA e auditoria editorial
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -40,9 +40,9 @@ VicDuarte/
 ├── palestras.html          # Palestras e talks
 ├── livro.html             # Página dedicada ao livro
 ├── publicacoes.html       # Publicações LinkedIn
-├── gerador-enade.html     # Gerador de questões ENADE para Engenharia Civil
+├── professor-enade.html   # PROFESSOR-ENADE: gerador de questões ENADE para Engenharia Civil
 ├── api/
-│   └── generate-enade.js  # Função serverless de geração e validação com IA
+│   └── generate-professor-enade.js  # Função serverless de geração e validação com IA
 └── static/
     ├── css/
     │   └── style.css      # Estilos customizados
@@ -80,7 +80,7 @@ Acesse: `http://localhost:8000`
 
 O site é automaticamente deployado no Vercel a cada push na branch `main`.
 
-O Gerador ENADE usa o **Vercel AI Gateway** com o token OIDC gerado automaticamente para o projeto. A autenticação acontece exclusivamente na função serverless, sem chave de IA no navegador ou variável manual obrigatória.
+O PROFESSOR-ENADE usa o **Vercel AI Gateway** com o token OIDC gerado automaticamente para o projeto. A autenticação acontece exclusivamente na função serverless, sem chave de IA no navegador ou variável manual obrigatória.
 
 **URL de produção:** [vicduarte.site](https://vicduarte.site)
 

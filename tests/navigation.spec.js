@@ -15,7 +15,7 @@ const PAGES = [
   'palestras.html',
   'publicacoes.html',
   'ferramentas.html',
-  'gerador-enade.html',
+  'professor-enade.html',
 ];
 
 for (const pageName of PAGES) {

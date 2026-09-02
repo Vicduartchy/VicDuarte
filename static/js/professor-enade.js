@@ -186,7 +186,7 @@
         setLoading(true);
 
         try {
-            const response = await fetch('/api/generate-enade', {
+            const response = await fetch('/api/generate-professor-enade', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

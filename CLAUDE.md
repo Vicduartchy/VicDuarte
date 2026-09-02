@@ -21,12 +21,12 @@ download-livro.html     # Página de download (PT-BR e EN)
 palestras.html          # Palestras
 publicacoes.html        # Publicações do LinkedIn
 ferramentas.html        # Ferramentas (QuickFlow)
-gerador-enade.html      # Gerador de questões ENADE de Engenharia Civil
-api/generate-enade.js   # Função serverless segura de geração por IA
+professor-enade.html    # PROFESSOR-ENADE: gerador de questões ENADE de Engenharia Civil
+api/generate-professor-enade.js # Função serverless segura de geração por IA
 static/css/style.css    # CSS único do site
-static/css/gerador-enade.css # Estilos específicos do gerador
+static/css/professor-enade.css # Estilos específicos do PROFESSOR-ENADE
 static/js/main.js       # JS único do site
-static/js/gerador-enade.js # Fluxo, renderização e exportação do gerador
+static/js/professor-enade.js # Fluxo, renderização e exportação do PROFESSOR-ENADE
 static/images/          # Imagens
 ```
 
