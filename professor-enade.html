@@ -98,7 +98,45 @@
 
                 <div id="enade-alert" class="enade-alert" role="status" aria-live="polite" hidden></div>
 
-                <div class="enade-grid">
+                <div id="enade-auth-gate" class="enade-auth-gate">
+                    <div id="enade-auth-loading" class="enade-auth-loading">
+                        <div class="enade-spinner" aria-hidden="true"></div>
+                    </div>
+
+                    <div id="enade-auth-form-wrap" class="enade-auth-card" hidden>
+                        <span class="enade-panel-kicker">Acesso restrito</span>
+                        <h3 id="enade-auth-title">Entrar</h3>
+                        <p class="enade-auth-sub">Uso exclusivo para e-mails institucionais <strong>@unichristus.edu.br</strong>.</p>
+                        <div id="enade-auth-alert" class="enade-alert" role="status" aria-live="polite" hidden></div>
+                        <form id="enade-auth-form" novalidate>
+                            <label class="enade-label" for="enade-auth-email">E-mail institucional</label>
+                            <input id="enade-auth-email" class="form-control" type="email" required placeholder="nome@unichristus.edu.br">
+                            <label class="enade-label" for="enade-auth-password">Senha</label>
+                            <input id="enade-auth-password" class="form-control" type="password" required minlength="6" placeholder="Mínimo de 6 caracteres">
+                            <button id="enade-auth-submit" class="btn btn-linkedin enade-generate" type="submit"><span>Entrar</span></button>
+                        </form>
+                        <button id="enade-auth-toggle" type="button" class="enade-text-button enade-auth-toggle">Não tem conta? Cadastre-se</button>
+                    </div>
+
+                    <div id="enade-auth-verify" class="enade-auth-card" hidden>
+                        <span class="enade-panel-kicker">Confirmação pendente</span>
+                        <h3>Confirme seu e-mail</h3>
+                        <p class="enade-auth-sub">Enviamos um link de confirmação para <strong id="enade-auth-verify-email"></strong>. Confirme e clique em "Já confirmei".</p>
+                        <div id="enade-auth-verify-alert" class="enade-alert" role="status" aria-live="polite" hidden></div>
+                        <div class="enade-auth-verify-actions">
+                            <button id="enade-auth-verify-check" type="button" class="btn btn-linkedin enade-generate"><span>Já confirmei</span></button>
+                            <button id="enade-auth-verify-resend" type="button" class="enade-text-button">Reenviar e-mail</button>
+                            <button id="enade-auth-verify-signout" type="button" class="enade-text-button">Usar outra conta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="enade-user-bar" class="enade-user-bar" hidden>
+                    <span><i class="fas fa-user-check" aria-hidden="true"></i> <span id="enade-user-email"></span></span>
+                    <button id="enade-user-signout" type="button" class="enade-text-button">Sair</button>
+                </div>
+
+                <div id="enade-workspace-content" class="enade-grid" hidden>
                     <form id="enade-form" class="enade-editor" novalidate>
                         <div class="enade-editor-head">
                             <div>
@@ -274,6 +312,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./static/js/main.js"></script>
+    <script type="module" src="./static/js/professor-enade-auth.js"></script>
     <script src="./static/js/professor-enade.js"></script>
     <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
     <script defer src="/_vercel/insights/script.js"></script>
