@@ -125,7 +125,7 @@ verifyResendButton.addEventListener('click', async () => {
     hideBoxAlert(verifyAlert);
     try {
         if (auth.currentUser) await sendEmailVerification(auth.currentUser);
-        showBoxAlert(verifyAlert, 'E-mail de confirmação reenviado.');
+        showBoxAlert(verifyAlert, 'E-mail de confirmação reenviado. Se não aparecer em alguns minutos, confira a caixa de spam/lixo eletrônico.');
     } catch {
         showBoxAlert(verifyAlert, 'Não foi possível reenviar agora. Tente de novo.');
     }
