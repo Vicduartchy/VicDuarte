@@ -498,3 +498,82 @@
     fillKnowledgeObjects();
     updateReadyState();
 })();
+
+// Painel administrativo: reaproveita o mesmo login/gate da página — não é
+// uma tela ou endereço separado. Roda uma checagem silenciosa em segundo
+// plano assim que o gate revela o Estúdio; só quem for admin (200 em
+// /api/admin-metrics) ganha o botão "Painel administrativo" na barra de
+// usuário. Pra quem não é admin, nada muda — nenhuma requisição extra
+// visível além dessa checagem, sem atraso na tela do gerador.
+(() => {
+    'use strict';
+
+    const workspaceContent = document.getElementById('enade-workspace-content');
+    const adminPanel = document.getElementById('enade-admin-panel');
+    const adminToggle = document.getElementById('enade-admin-toggle');
+    if (!workspaceContent || !adminPanel || !adminToggle) return;
+
+    const totalEl = document.getElementById('admin-total');
+    const sevenEl = document.getElementById('admin-7d');
+    const thirtyEl = document.getElementById('admin-30d');
+    const porProfessorEl = document.getElementById('admin-por-professor');
+    const porCursoEl = document.getElementById('admin-por-curso');
+
+    let hasCheckedAdmin = false;
+
+    function renderList(el, counts) {
+        el.innerHTML = '';
+        const entries = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+        if (entries.length === 0) {
+            const li = document.createElement('li');
+            li.innerHTML = '<span>Nenhum registro ainda</span>';
+            el.appendChild(li);
+            return;
+        }
+        for (const [label, count] of entries) {
+            const li = document.createElement('li');
+            li.innerHTML = `<span>${label}</span><span>${count}</span>`;
+            el.appendChild(li);
+        }
+    }
+
+    async function checkAdminAndPrepare() {
+        try {
+            const token = await window.ProfessorEnadeAuth?.getIdToken?.();
+            const response = await fetch('/api/admin-metrics', {
+                headers: token ? { Authorization: `Bearer ${token}` } : {},
+            });
+            if (!response.ok) return; // não é admin (403) ou outra falha — não mostra o botão
+
+            const data = await response.json().catch(() => ({}));
+            totalEl.textContent = data.total ?? 0;
+            sevenEl.textContent = data.ultimos7Dias ?? 0;
+            thirtyEl.textContent = data.ultimos30Dias ?? 0;
+            renderList(porProfessorEl, data.porProfessor || {});
+            renderList(porCursoEl, data.porCurso || {});
+            adminToggle.hidden = false;
+        } catch {
+            // Falha silenciosa — sem conectividade ou o que for, só não mostra o botão.
+        }
+    }
+
+    adminToggle.addEventListener('click', () => {
+        const switchingToAdmin = adminPanel.hidden; // estava escondido -> vai mostrar agora
+        adminPanel.hidden = !switchingToAdmin;
+        workspaceContent.hidden = switchingToAdmin;
+        adminToggle.querySelector('span').textContent = switchingToAdmin ? 'Voltar ao gerador' : 'Painel administrativo';
+    });
+
+    const observer = new MutationObserver(() => {
+        if (!workspaceContent.hidden && !hasCheckedAdmin) {
+            hasCheckedAdmin = true;
+            checkAdminAndPrepare();
+        }
+    });
+    observer.observe(workspaceContent, { attributes: true, attributeFilter: ['hidden'] });
+
+    if (!workspaceContent.hidden) {
+        hasCheckedAdmin = true;
+        checkAdminAndPrepare();
+    }
+})();
