@@ -1,9 +1,45 @@
+import { cert, getApps, initializeApp } from 'firebase-admin/app';
+import { getAuth } from 'firebase-admin/auth';
+
 const MODEL = 'gemini-3.6-flash';
 const GEMINI_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models';
 const WINDOW_MS = 10 * 60 * 1000;
 const MAX_REQUESTS_PER_WINDOW = 6;
 const RETRY_BUDGET_MS = 55000; // não tenta uma segunda geração se já não sobra tempo hábil dentro do maxDuration da função
 const requestLog = new Map();
+const ALLOWED_EMAIL_DOMAIN = '@unichristus.edu.br';
+
+function getAdminAuth() {
+  if (getApps().length === 0) {
+    const encoded = process.env.FIREBASE_SERVICE_ACCOUNT;
+    if (!encoded) throw new Error('FIREBASE_SERVICE_ACCOUNT ausente.');
+    const serviceAccount = JSON.parse(Buffer.from(encoded, 'base64').toString('utf8'));
+    initializeApp({ credential: cert(serviceAccount) });
+  }
+  return getAuth();
+}
+
+export async function verifyAuth(req, verifyIdToken) {
+  const header = String(req.headers?.authorization || req.headers?.Authorization || '');
+  const match = /^Bearer (.+)$/.exec(header);
+  if (!match) return { ok: false, status: 401, error: 'Login necessário.' };
+
+  let decoded;
+  try {
+    decoded = await verifyIdToken(match[1]);
+  } catch {
+    return { ok: false, status: 401, error: 'Sessão expirada. Faça login novamente.' };
+  }
+
+  if (decoded?.email_verified !== true) {
+    return { ok: false, status: 403, error: 'Confirme seu e-mail antes de gerar questões.' };
+  }
+  if (!String(decoded?.email || '').toLowerCase().endsWith(ALLOWED_EMAIL_DOMAIN)) {
+    return { ok: false, status: 403, error: 'Acesso restrito a e-mails da Unichristus.' };
+  }
+
+  return { ok: true, uid: decoded.uid };
+}
 
 const BLOOM_LEVELS = ['Aplicar', 'Analisar', 'Avaliar'];
 const DIFFICULTY_LEVELS = ['Fácil', 'Média', 'Difícil'];
@@ -295,17 +331,12 @@ export function validateItem(item, input) {
   return issues;
 }
 
-function getClientIp(req) {
-  const forwarded = req.headers?.['x-forwarded-for'];
-  return String(Array.isArray(forwarded) ? forwarded[0] : forwarded || req.socket?.remoteAddress || 'unknown').split(',')[0].trim();
-}
-
-function isRateLimited(ip) {
+function isRateLimited(uid) {
   const now = Date.now();
-  const valid = (requestLog.get(ip) || []).filter(timestamp => now - timestamp < WINDOW_MS);
+  const valid = (requestLog.get(uid) || []).filter(timestamp => now - timestamp < WINDOW_MS);
   if (valid.length >= MAX_REQUESTS_PER_WINDOW) return true;
   valid.push(now);
-  requestLog.set(ip, valid);
+  requestLog.set(uid, valid);
   return false;
 }
 
@@ -369,13 +400,16 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Método não permitido.' });
   }
 
+  const auth = await verifyAuth(req, token => getAdminAuth().verifyIdToken(token));
+  if (!auth.ok) return res.status(auth.status).json({ error: auth.error });
+
   if (!process.env.GEMINI_API_KEY) {
     console.error('[PROFESSOR-ENADE] GEMINI_API_KEY ausente.');
     return res.status(503).json({ error: 'O gerador está temporariamente indisponível.' });
   }
 
   if (Number(req.headers?.['content-length'] || 0) > 12000) return res.status(413).json({ error: 'Solicitação muito grande.' });
-  if (isRateLimited(getClientIp(req))) return res.status(429).json({ error: 'Limite temporário atingido. Aguarde alguns minutos e tente novamente.' });
+  if (isRateLimited(auth.uid)) return res.status(429).json({ error: 'Limite temporário atingido. Aguarde alguns minutos e tente novamente.' });
 
   const startedAt = Date.now();
 

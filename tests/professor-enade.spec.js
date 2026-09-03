@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { parseInput, validateItem } from '../api/generate-professor-enade.js';
+import { parseInput, validateItem, verifyAuth } from '../api/generate-professor-enade.js';
 
 const requestInput = {
   course: 'engenharia-civil',
@@ -70,6 +70,45 @@ test.describe('Contrato do PROFESSOR-ENADE', () => {
     expect(validateItem(generatedItem, requestInput)).toEqual([]);
     const invalid = { ...generatedItem, command: 'Selecione a alternativa que não representa a melhor ação.' };
     expect(validateItem(invalid, requestInput).some(issue => issue.includes('negativo'))).toBe(true);
+  });
+});
+
+test.describe('verifyAuth', () => {
+  test('rejeita requisição sem header Authorization', async () => {
+    const result = await verifyAuth({ headers: {} }, async () => ({}));
+    expect(result).toEqual({ ok: false, status: 401, error: 'Login necessário.' });
+  });
+
+  test('rejeita token inválido ou expirado', async () => {
+    const result = await verifyAuth(
+      { headers: { authorization: 'Bearer abc' } },
+      async () => { throw new Error('token inválido'); },
+    );
+    expect(result).toEqual({ ok: false, status: 401, error: 'Sessão expirada. Faça login novamente.' });
+  });
+
+  test('rejeita e-mail não verificado', async () => {
+    const result = await verifyAuth(
+      { headers: { authorization: 'Bearer abc' } },
+      async () => ({ uid: 'u1', email: 'prof@unichristus.edu.br', email_verified: false }),
+    );
+    expect(result).toEqual({ ok: false, status: 403, error: 'Confirme seu e-mail antes de gerar questões.' });
+  });
+
+  test('rejeita domínio fora da Unichristus', async () => {
+    const result = await verifyAuth(
+      { headers: { authorization: 'Bearer abc' } },
+      async () => ({ uid: 'u1', email: 'prof@gmail.com', email_verified: true }),
+    );
+    expect(result).toEqual({ ok: false, status: 403, error: 'Acesso restrito a e-mails da Unichristus.' });
+  });
+
+  test('aceita e-mail Unichristus verificado, ignorando maiúsculas', async () => {
+    const result = await verifyAuth(
+      { headers: { authorization: 'Bearer abc' } },
+      async () => ({ uid: 'u1', email: 'Prof@Unichristus.edu.br', email_verified: true }),
+    );
+    expect(result).toEqual({ ok: true, uid: 'u1' });
   });
 });
 
