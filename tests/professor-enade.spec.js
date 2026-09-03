@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { parseInput, validateItem, verifyAuth } from '../api/generate-professor-enade.js';
+import { mockFirebaseAuth, loginAsVerifiedProfessor } from './helpers/mock-firebase-auth.js';
 
 const requestInput = {
   course: 'engenharia-civil',
@@ -120,6 +121,7 @@ test.describe('Página do PROFESSOR-ENADE', () => {
       body: JSON.stringify(apiResponse),
     }));
     await page.goto('/professor-enade.html');
+    await loginAsVerifiedProfessor(page);
   });
 
   test('mantém a geração bloqueada até curso, tipo e objeto serem informados', async ({ page }) => {
@@ -168,5 +170,41 @@ test.describe('Página do PROFESSOR-ENADE', () => {
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     expect(overflow).toBeLessThanOrEqual(1);
     await expect(page.locator('h1#enade-title')).toBeVisible();
+  });
+});
+
+test.describe('Gate de autenticação do PROFESSOR-ENADE', () => {
+  test('esconde o Estúdio e mostra o login para visitante deslogado', async ({ page }) => {
+    await page.goto('/professor-enade.html');
+    await expect(page.locator('#enade-auth-form-wrap')).toBeVisible();
+    await expect(page.locator('#enade-workspace-content')).toBeHidden();
+  });
+
+  test('bloqueia cadastro com e-mail fora do domínio Unichristus', async ({ page }) => {
+    await page.goto('/professor-enade.html');
+    await page.locator('#enade-auth-toggle').click();
+    await page.locator('#enade-auth-email').fill('professor@gmail.com');
+    await page.locator('#enade-auth-password').fill('senha123456');
+    await page.locator('#enade-auth-submit').click();
+    await expect(page.locator('#enade-auth-alert')).toContainText('@unichristus.edu.br');
+    await expect(page.locator('#enade-workspace-content')).toBeHidden();
+  });
+
+  test('mostra a tela de confirmação para e-mail não verificado', async ({ page }) => {
+    await page.goto('/professor-enade.html');
+    await mockFirebaseAuth(page, { email: 'professor@unichristus.edu.br', verified: false });
+    await page.locator('#enade-auth-email').fill('professor@unichristus.edu.br');
+    await page.locator('#enade-auth-password').fill('senha123456');
+    await page.locator('#enade-auth-submit').click();
+    await expect(page.locator('#enade-auth-verify')).toBeVisible();
+    await expect(page.locator('#enade-workspace-content')).toBeHidden();
+  });
+
+  test('permite logout e volta pro login', async ({ page }) => {
+    await page.goto('/professor-enade.html');
+    await loginAsVerifiedProfessor(page);
+    await page.locator('#enade-user-signout').click();
+    await expect(page.locator('#enade-auth-form-wrap')).toBeVisible();
+    await expect(page.locator('#enade-workspace-content')).toBeHidden();
   });
 });
