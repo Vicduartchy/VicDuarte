@@ -350,7 +350,7 @@ async function callGemini(input, revision) {
         responseSchema: schema,
       },
     }),
-    signal: AbortSignal.timeout(55000),
+    signal: AbortSignal.timeout(85000),
   });
 
   const data = await response.json();
@@ -402,7 +402,13 @@ export default async function handler(req, res) {
     });
   } catch (error) {
     console.error('[PROFESSOR-ENADE] Falha na geração:', error);
+    const isTimeout = error?.name === 'TimeoutError' || error?.name === 'AbortError';
     const status = error instanceof Error && error.message.startsWith('Selecione') ? 400 : 500;
-    return res.status(status).json({ error: status === 400 ? error.message : 'Não foi possível gerar a questão agora. Tente novamente.' });
+    const message = status === 400
+      ? error.message
+      : isTimeout
+        ? 'A geração demorou mais do que o esperado. Tente novamente.'
+        : 'Não foi possível gerar a questão agora. Tente novamente.';
+    return res.status(status).json({ error: message });
   }
 }
