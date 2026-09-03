@@ -276,6 +276,8 @@
         setLoading(true);
 
         try {
+            // Parâmetro de teste temporário, lido só da URL (?thinkingLevel=low), sem UI visível. Remover após decidirmos o valor definitivo.
+            const testThinkingLevel = new URLSearchParams(window.location.search).get('thinkingLevel');
             const response = await fetch('/api/generate-professor-enade', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -286,10 +288,12 @@
                     subject: state.subject,
                     bloomLevel: state.bloomLevel,
                     difficulty: state.difficulty,
+                    ...(testThinkingLevel ? { thinkingLevel: testThinkingLevel } : {}),
                 }),
             });
             const data = await response.json().catch(() => ({}));
             if (!response.ok) throw new Error(data.error || 'Não foi possível gerar a questão.');
+            if (data.debug) console.info('[PROFESSOR-ENADE debug]', data.debug);
             state.result = data;
             state.activeTab = 'item';
             renderResult();

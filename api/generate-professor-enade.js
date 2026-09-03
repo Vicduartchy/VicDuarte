@@ -8,6 +8,9 @@ const requestLog = new Map();
 const BLOOM_LEVELS = ['Aplicar', 'Analisar', 'Avaliar'];
 const DIFFICULTY_LEVELS = ['Fácil', 'Média', 'Difícil'];
 const ITEM_TYPES = ['multiple-choice', 'discursive'];
+// Parâmetro de teste temporário (não exposto na UI): permite comparar thinkingLevel via chamada direta à API.
+// Sem thinkingLevel informado, o Gemini usa o padrão do modelo (medium). Remover após decidirmos o valor definitivo.
+const THINKING_LEVELS = ['minimal', 'low', 'medium', 'high'];
 
 const MATRIX_ENGENHARIA_CIVIL = `
 PORTARIA INEP Nº 159/2026 — MATRIZ DE ENGENHARIA CIVIL
@@ -244,6 +247,8 @@ export function parseInput(body) {
   const subject = cleanString(input.subject, 180);
   const bloomLevel = cleanString(input.bloomLevel, 20);
   const difficulty = cleanString(input.difficulty, 20);
+  const thinkingLevelRaw = cleanString(input.thinkingLevel, 20);
+  const thinkingLevel = THINKING_LEVELS.includes(thinkingLevelRaw) ? thinkingLevelRaw : undefined;
 
   const course = COURSES[courseKey];
   if (!course || !course.enabled) throw new Error('Selecione um curso válido.');
@@ -252,7 +257,7 @@ export function parseInput(body) {
   if (!BLOOM_LEVELS.includes(bloomLevel)) throw new Error('Selecione um nível de Bloom válido.');
   if (!DIFFICULTY_LEVELS.includes(difficulty)) throw new Error('Selecione uma dificuldade válida.');
 
-  return { course: courseKey, itemType, knowledgeObject, subject, bloomLevel, difficulty };
+  return { course: courseKey, itemType, knowledgeObject, subject, bloomLevel, difficulty, thinkingLevel };
 }
 
 export function validateItem(item, input) {
@@ -349,6 +354,7 @@ async function callGemini(input, revision) {
         maxOutputTokens: 6000,
         responseMimeType: 'application/json',
         responseSchema: schema,
+        ...(input.thinkingLevel ? { thinkingConfig: { thinkingLevel: input.thinkingLevel } } : {}),
       },
     }),
     signal: AbortSignal.timeout(85000),
@@ -402,6 +408,10 @@ export default async function handler(req, res) {
         passed: true,
         checks: input.itemType === 'multiple-choice' ? 10 : 9,
         message: 'Item aprovado pelo validador estrutural e editorial.',
+      },
+      debug: {
+        thinkingLevel: input.thinkingLevel || 'padrão do modelo (medium)',
+        totalMs: Date.now() - startedAt,
       },
     });
   } catch (error) {
