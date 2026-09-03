@@ -5,6 +5,9 @@
   "dependencies": {
     "firebase-admin": "^14.3.0"
   },
+  "overrides": {
+    "jose": "5.10.0"
+  },
   "scripts": {
     "test": "playwright test",
     "test:nav": "playwright test navigation",
