@@ -10,6 +10,28 @@ Site estático (HTML/CSS/JS puro) de Victoria Duarte — Agile Coach e KCP.
 - Hospedagem: Vercel (`vicduarte.site`)
 - Repo: `github.com/Vicduartchy/VicDuarte`
 
+## Restrição básica do projeto: tudo em plano gratuito
+
+**Premissa inegociável.** Este projeto não tem orçamento pra pagar por nenhum serviço — nem Firebase, nem Vercel, nem qualquer API de IA, nem qualquer outra peça de infra. Qualquer sugestão, plano ou implementação (minha, do Claude Code, ou de qualquer sessão futura) precisa verificar isso **antes** de implementar, não depois.
+
+**Regra prática:** se a documentação oficial de um serviço mencionar que uma feature "requer" um plano pago, um cartão vinculado, ou "upgrade" pra funcionar, isso vira uma **pergunta pra Vic antes de implementar**, nunca uma decisão automática. Nunca vincular cartão de crédito a nenhuma conta/projeto novo sem confirmação explícita e por escrito da Vic.
+
+**Checklist ao criar qualquer projeto/conta novo numa plataforma:**
+1. Confirmar que o plano ativado é o gratuito (ex.: Spark no Firebase, Hobby na Vercel), nunca o pago-por-uso
+2. Confirmar que nenhum cartão de crédito foi vinculado
+3. Se algo exigir cartão pra sequer ser criado, parar e perguntar — não presumir que "só vai ficar dentro da cota grátis mesmo"
+
+**O que já sabemos que exige plano pago (não usar sem aprovação explícita):**
+- **Firebase Cloud Storage** — desde fev/2026 exige Blaze (cartão vinculado) mesmo dentro da cota grátis
+- **Firebase Auth por SMS/telefone** — exige Blaze; usamos só e-mail/senha, que é gratuito até 50.000 usuários ativos/mês no plano Spark
+- **Firebase Cloud Functions** (incluindo Blocking Functions) — geralmente exige Blaze acima de cotas mínimas
+- **Vercel**: qualquer feature marcada como "Pro" ou "Enterprise" na doc — o projeto está no Hobby
+
+**O que confirmadamente é gratuito e já está em uso:**
+- Firebase Auth (e-mail/senha), Spark plan, sem cartão
+- Vercel Hobby (hospedagem + função serverless)
+- Gemini API via chave gratuita (`GEMINI_API_KEY`), tier gratuito do Google AI Studio
+
 ## Arquivos principais
 
 ```
