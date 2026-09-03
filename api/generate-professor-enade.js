@@ -2,6 +2,7 @@ const MODEL = 'gemini-3.6-flash';
 const GEMINI_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models';
 const WINDOW_MS = 10 * 60 * 1000;
 const MAX_REQUESTS_PER_WINDOW = 6;
+const RETRY_BUDGET_MS = 55000; // não tenta uma segunda geração se já não sobra tempo hábil dentro do maxDuration da função
 const requestLog = new Map();
 
 const BLOOM_LEVELS = ['Aplicar', 'Analisar', 'Avaliar'];
@@ -129,7 +130,7 @@ Fontes: Guia de Elaboração e Revisão de Itens — Banco Nacional de Itens ENA
 10. Na discursiva, entregue resolução analítica, rubrica somando exatamente 10,0, caminhos alternativos e conservação de pontos nas etapas subsequentes diante de erro algébrico isolado.
 11. As justificativas de cada opção não podem ser tautológicas (isto é, apenas repetir o conteúdo da própria opção). Cada justificativa deve explicar, com fundamentação técnica ou teórica, por que a opção está certa ou errada, referenciando o raciocínio ou o erro conceitual que ela representa.
 12. O item deve ser discriminativo: estudantes com melhor domínio da competência avaliada devem ter mais sucesso nele do que estudantes sem esse domínio. Evite itens triviais (qualquer pessoa acerta) ou absurdamente difíceis (ninguém acerta) para o nível de dificuldade solicitado.
-13. Faça uma autoauditoria rigorosa e marque passed=true somente quando a regra estiver efetivamente atendida.
+13. Na autoauditoria, seja telegráfico: em "rule" cite só o número da regra (ex.: "Regra 6"), nunca reescreva o texto completo da regra; em "evidence" escreva no máximo 15 palavras, direto ao ponto. Marque passed=true somente quando a regra estiver efetivamente atendida.
 `;
 
 function buildMetadataSchema(course) {
@@ -152,7 +153,7 @@ function buildMetadataSchema(course) {
 const auditSchema = {
   type: 'ARRAY',
   minItems: 5,
-  maxItems: 8,
+  maxItems: 6,
   items: {
     type: 'OBJECT',
     properties: {
@@ -345,7 +346,7 @@ async function callGemini(input, revision) {
       },
       generationConfig: {
         temperature: 0.25,
-        maxOutputTokens: 12000,
+        maxOutputTokens: 6000,
         responseMimeType: 'application/json',
         responseSchema: schema,
       },
@@ -376,13 +377,16 @@ export default async function handler(req, res) {
   if (isRateLimited(getClientIp(req))) return res.status(429).json({ error: 'Limite temporário atingido. Aguarde alguns minutos e tente novamente.' });
 
   try {
+    const startedAt = Date.now();
     const input = parseInput(req.body);
     let item = await callGemini(input);
     let issues = validateItem(item, input);
 
-    if (issues.length) {
+    if (issues.length && (Date.now() - startedAt) < RETRY_BUDGET_MS) {
       item = await callGemini(input, { item, issues });
       issues = validateItem(item, input);
+    } else if (issues.length) {
+      console.warn('[PROFESSOR-ENADE] Orçamento de tempo esgotado, pulando nova tentativa.');
     }
 
     if (issues.length) {
