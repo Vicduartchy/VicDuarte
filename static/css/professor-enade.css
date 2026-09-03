@@ -266,8 +266,10 @@
 .enade-auth-verify-actions button.btn { justify-content: center; }
 .enade-user-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; max-width: 820px; margin: 0 auto 1rem; padding: 0.65rem 1.1rem; border: 1px solid var(--enade-line); border-radius: 12px; background: #fff; color: var(--enade-navy); font-size: 0.85rem; font-weight: 600; }
 .enade-user-bar i { color: #2FA36B; margin-right: 6px; }
+.enade-user-bar-actions { display: flex; align-items: center; gap: 1rem; }
 
 /* Painel administrativo */
+.enade-admin-panel { max-width: 820px; margin: 0 auto; }
 .enade-admin-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
 .enade-admin-card { border: 1px solid var(--enade-line); border-radius: 14px; background: #fff; padding: 1.2rem; text-align: center; }
 .enade-admin-card strong { display: block; color: var(--enade-navy); font-size: 2rem; font-weight: 700; }

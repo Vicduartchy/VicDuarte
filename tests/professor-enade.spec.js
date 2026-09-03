@@ -282,3 +282,50 @@ test.describe('Gate de autenticação do PROFESSOR-ENADE', () => {
     await expect(page.locator('#enade-workspace-content')).toBeHidden();
   });
 });
+
+test.describe('Painel administrativo na mesma página', () => {
+  test('professor comum não vê o botão de painel administrativo', async ({ page }) => {
+    await page.route('**/api/admin-metrics', route => route.fulfill({
+      status: 403,
+      contentType: 'application/json',
+      body: JSON.stringify({ error: 'Acesso restrito a administradores.' }),
+    }));
+    await page.goto('/professor-enade.html');
+    await loginAsVerifiedProfessor(page);
+    await expect(page.locator('#enade-admin-toggle')).toBeHidden();
+  });
+
+  test('admin vê o botão e alterna entre gerador e painel sem sair da página', async ({ page }) => {
+    await page.route('**/api/admin-metrics', route => route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({
+        total: 12,
+        porProfessor: { 'prof@unichristus.edu.br': 12 },
+        porCurso: { 'engenharia-civil': 8, 'arquitetura-urbanismo': 4 },
+        ultimos7Dias: 5,
+        ultimos30Dias: 12,
+      }),
+    }));
+    await page.goto('/professor-enade.html');
+    await loginAsVerifiedProfessor(page, 'admin@unichristus.edu.br');
+
+    const toggle = page.locator('#enade-admin-toggle');
+    await expect(toggle).toBeVisible();
+    await expect(page.locator('#enade-workspace-content')).toBeVisible();
+    await expect(page.locator('#enade-admin-panel')).toBeHidden();
+
+    await toggle.click();
+    await expect(page.locator('#enade-admin-panel')).toBeVisible();
+    await expect(page.locator('#enade-workspace-content')).toBeHidden();
+    await expect(page.locator('#admin-total')).toHaveText('12');
+    await expect(page.locator('#admin-por-professor li')).toHaveCount(1);
+    await expect(page.locator('#admin-por-curso li')).toHaveCount(2);
+    await expect(toggle).toHaveText('Voltar ao gerador');
+
+    await toggle.click();
+    await expect(page.locator('#enade-workspace-content')).toBeVisible();
+    await expect(page.locator('#enade-admin-panel')).toBeHidden();
+    await expect(toggle).toHaveText('Painel administrativo');
+  });
+});
