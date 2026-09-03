@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROFESSOR-ENADE - Vic Duarte</title>
-    <meta name="description" content="PROFESSOR-ENADE: gerador especializado de questões no padrão ENADE para Engenharia Civil, alinhado à Portaria INEP nº 159/2026 e à avaliação por competências.">
+    <meta name="description" content="PROFESSOR-ENADE: gerador especializado de questões no padrão ENADE para Engenharia Civil e Arquitetura e Urbanismo, alinhado às Portarias INEP nº 159/2026 e nº 155/2026 e à avaliação por competências.">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
     <link rel="icon" type="image/png" href="./static/images/Vic_Duarte_Logo_Quadrada.png">
@@ -18,7 +18,7 @@
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "PROFESSOR-ENADE — Engenharia Civil",
+        "name": "PROFESSOR-ENADE — Engenharia Civil e Arquitetura e Urbanismo",
         "applicationCategory": "EducationalApplication",
         "operatingSystem": "Web",
         "url": "https://vicduarte.site/professor-enade.html",
@@ -62,12 +62,12 @@
             <div class="container position-relative">
                 <div class="row align-items-center gy-4">
                     <div class="col-lg-7">
-                        <div class="enade-eyebrow"><span></span>Ferramenta docente · Engenharia Civil</div>
+                        <div class="enade-eyebrow"><span></span>Ferramenta docente · Multi-curso</div>
                         <h1 id="enade-title">PROFESSOR-<strong>ENADE</strong></h1>
-                        <p>Elabore itens por competências, alinhados à Portaria INEP nº 159/2026, com estrutura completa, gabarito ou rubrica e auditoria editorial automática.</p>
+                        <p>Elabore itens por competências, alinhados às Portarias INEP nº 159/2026 e nº 155/2026, com estrutura completa, gabarito ou rubrica e auditoria editorial automática.</p>
                         <div class="d-flex flex-wrap gap-2 mt-4">
-                            <span class="enade-hero-chip"><i class="fas fa-graduation-cap" aria-hidden="true"></i>Bacharelado em Engenharia Civil</span>
-                            <span class="enade-hero-chip"><i class="fas fa-shield-alt" aria-hidden="true"></i>Fluxo obrigatório em 2 etapas</span>
+                            <span class="enade-hero-chip"><i class="fas fa-graduation-cap" aria-hidden="true"></i>Engenharia Civil · Arquitetura e Urbanismo</span>
+                            <span class="enade-hero-chip"><i class="fas fa-shield-alt" aria-hidden="true"></i>Fluxo obrigatório em 3 etapas</span>
                         </div>
                     </div>
                     <div class="col-lg-5">
@@ -93,7 +93,7 @@
                 <div class="enade-section-intro text-center">
                     <span>Estúdio de elaboração</span>
                     <h2 id="workspace-title">Configure a encomenda editorial</h2>
-                    <p>Responda primeiro às duas definições obrigatórias. O botão de geração permanecerá bloqueado até o preenchimento.</p>
+                    <p>Responda primeiro às três definições obrigatórias. O botão de geração permanecerá bloqueado até o preenchimento.</p>
                 </div>
 
                 <div id="enade-alert" class="enade-alert" role="status" aria-live="polite" hidden></div>
@@ -110,8 +110,32 @@
 
                         <fieldset class="enade-step">
                             <legend class="enade-step-title">
-                                <span id="step-one-number" class="enade-step-number">1</span>
-                                <span>Qual é o tipo do item?<small>Primeira definição obrigatória</small></span>
+                                <span id="step-course-number" class="enade-step-number">1</span>
+                                <span>Qual é o curso?<small>Primeira definição obrigatória</small></span>
+                            </legend>
+                            <div class="enade-type-grid enade-course-grid">
+                                <button type="button" class="enade-type-card" data-course="engenharia-civil" aria-pressed="false">
+                                    <span class="enade-type-icon"><i class="fas fa-drafting-compass" aria-hidden="true"></i></span>
+                                    <span><strong>Engenharia Civil</strong><small>16 objetos de conhecimento</small></span>
+                                    <span class="enade-choice" aria-hidden="true"><i class="fas fa-check"></i></span>
+                                </button>
+                                <button type="button" class="enade-type-card" data-course="arquitetura-urbanismo" aria-pressed="false">
+                                    <span class="enade-type-icon"><i class="fas fa-building" aria-hidden="true"></i></span>
+                                    <span><strong>Arquitetura e Urbanismo</strong><small>20 objetos de conhecimento</small></span>
+                                    <span class="enade-choice" aria-hidden="true"><i class="fas fa-check"></i></span>
+                                </button>
+                                <button type="button" class="enade-type-card" data-course="engenharia-producao" aria-pressed="false" disabled>
+                                    <span class="enade-type-icon"><i class="fas fa-industry" aria-hidden="true"></i></span>
+                                    <span><strong>Engenharia de Produção</strong><small class="enade-course-badge">Em construção</small></span>
+                                    <span class="enade-choice" aria-hidden="true"><i class="fas fa-check"></i></span>
+                                </button>
+                            </div>
+                        </fieldset>
+
+                        <fieldset id="step-type" class="enade-step is-disabled" disabled>
+                            <legend class="enade-step-title">
+                                <span id="step-one-number" class="enade-step-number">2</span>
+                                <span>Qual é o tipo do item?<small>Segunda definição obrigatória</small></span>
                             </legend>
                             <div class="enade-type-grid">
                                 <button type="button" class="enade-type-card" data-item-type="multiple-choice" aria-pressed="false">
@@ -129,13 +153,13 @@
 
                         <fieldset id="step-two" class="enade-step is-disabled" disabled>
                             <legend class="enade-step-title">
-                                <span id="step-two-number" class="enade-step-number">2</span>
-                                <span>Qual é a disciplina / objeto?<small>Segunda definição obrigatória</small></span>
+                                <span id="step-two-number" class="enade-step-number">3</span>
+                                <span>Qual é a disciplina / objeto?<small>Terceira definição obrigatória</small></span>
                             </legend>
                             <label class="enade-label" for="knowledge-object">Objeto de conhecimento da Portaria</label>
                             <div class="enade-select-wrap">
                                 <select id="knowledge-object" class="form-select" required>
-                                    <option value="" selected disabled>Selecione um dos 16 objetos</option>
+                                    <option value="" selected disabled>Selecione o curso primeiro</option>
                                 </select>
                                 <i class="fas fa-chevron-down" aria-hidden="true"></i>
                             </div>
@@ -170,7 +194,7 @@
                         <button id="enade-generate" class="btn btn-linkedin enade-generate" type="submit" disabled>
                             <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i><span>Gerar questão ENADE</span>
                         </button>
-                        <p class="enade-lock-note"><i class="fas fa-lock" aria-hidden="true"></i>A geração só é liberada após as duas definições obrigatórias.</p>
+                        <p class="enade-lock-note"><i class="fas fa-lock" aria-hidden="true"></i>A geração só é liberada após as três definições obrigatórias.</p>
                     </form>
 
                     <div id="enade-result" class="enade-result" aria-live="polite">

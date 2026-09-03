@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import { parseInput, validateItem } from '../api/generate-professor-enade.js';
 
 const requestInput = {
+  course: 'engenharia-civil',
   itemType: 'multiple-choice',
   knowledgeObject: 'Construção civil',
   subject: 'Last Planner System',
@@ -56,8 +57,13 @@ test.describe('Contrato do PROFESSOR-ENADE', () => {
     expect(parsed.knowledgeObject).toBe('Construção civil');
   });
 
-  test('rejeita encomenda sem as duas definições obrigatórias', () => {
-    expect(() => parseInput({ bloomLevel: 'Analisar', difficulty: 'Média' })).toThrow('tipo de item');
+  test('rejeita encomenda sem curso ou tipo de item', () => {
+    expect(() => parseInput({ bloomLevel: 'Analisar', difficulty: 'Média' })).toThrow('curso');
+    expect(() => parseInput({ course: 'engenharia-civil', bloomLevel: 'Analisar', difficulty: 'Média' })).toThrow('tipo de item');
+  });
+
+  test('rejeita curso desabilitado (Engenharia de Produção)', () => {
+    expect(() => parseInput({ ...requestInput, course: 'engenharia-producao' })).toThrow('curso');
   });
 
   test('aprova questão objetiva válida e bloqueia comando negativo', () => {
@@ -77,11 +83,14 @@ test.describe('Página do PROFESSOR-ENADE', () => {
     await page.goto('/professor-enade.html');
   });
 
-  test('mantém a geração bloqueada até tipo e objeto serem informados', async ({ page }) => {
+  test('mantém a geração bloqueada até curso, tipo e objeto serem informados', async ({ page }) => {
     const select = page.locator('#knowledge-object');
     const generate = page.locator('#enade-generate');
     await expect(select).toBeDisabled();
     await expect(generate).toBeDisabled();
+
+    await page.locator('[data-course="engenharia-civil"]').click();
+    await expect(page.locator('[data-item-type="multiple-choice"]')).toBeEnabled();
 
     await page.locator('[data-item-type="multiple-choice"]').click();
     await expect(select).toBeEnabled();
@@ -93,6 +102,7 @@ test.describe('Página do PROFESSOR-ENADE', () => {
   });
 
   test('gera, revisa e navega entre item, gabarito e auditoria', async ({ page }) => {
+    await page.locator('[data-course="engenharia-civil"]').click();
     await page.locator('[data-item-type="multiple-choice"]').click();
     await page.locator('#knowledge-object').selectOption('Construção civil');
     await page.locator('#enade-generate').click();
@@ -106,6 +116,11 @@ test.describe('Página do PROFESSOR-ENADE', () => {
 
     await page.locator('[data-tab="audit"]').click();
     await expect(page.locator('.enade-audit-row')).toHaveCount(6);
+  });
+
+  test('curso Engenharia de Produção aparece desabilitado (em construção)', async ({ page }) => {
+    const card = page.locator('[data-course="engenharia-producao"]');
+    await expect(card).toBeDisabled();
   });
 
   test('permanece responsiva sem rolagem horizontal em celular', async ({ page }) => {
