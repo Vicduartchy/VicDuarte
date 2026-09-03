@@ -252,3 +252,17 @@
 @media (prefers-reduced-motion: reduce) {
     .enade-page *, .enade-page *::before, .enade-page *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
+
+/* Autenticação — login/cadastro/verificação e barra de usuário */
+.enade-auth-gate { display: flex; align-items: center; justify-content: center; min-height: 320px; }
+.enade-auth-loading { display: flex; align-items: center; justify-content: center; padding: 3rem 0; }
+.enade-auth-card { width: 100%; max-width: 420px; border: 1px solid var(--enade-line); border-radius: 18px; background: #fff; box-shadow: 0 15px 45px rgba(9, 33, 64, 0.08); padding: clamp(1.2rem, 3vw, 1.7rem); }
+.enade-auth-card h3 { margin: 0 0 0.5rem; color: var(--enade-navy); font-size: 1.35rem; font-weight: 700; letter-spacing: -0.025em; }
+.enade-auth-sub { margin: 0 0 1.1rem; color: #4B5A6D; font-size: 0.9rem; line-height: 1.55; }
+.enade-auth-card .enade-label { display: block; margin: 0.9rem 0 0.35rem; }
+.enade-auth-card form > button { margin-top: 1.3rem; width: 100%; justify-content: center; }
+.enade-auth-toggle { display: block; margin: 0.9rem auto 0; }
+.enade-auth-verify-actions { display: flex; flex-direction: column; gap: 0.6rem; align-items: stretch; }
+.enade-auth-verify-actions button.btn { justify-content: center; }
+.enade-user-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; max-width: 820px; margin: 0 auto 1rem; padding: 0.65rem 1.1rem; border: 1px solid var(--enade-line); border-radius: 12px; background: #fff; color: var(--enade-navy); font-size: 0.85rem; font-weight: 600; }
+.enade-user-bar i { color: #2FA36B; margin-right: 6px; }

@@ -4,3 +4,5 @@ playwright-report/
 .playwright/
 test-artifacts/
 test-results.json
+.local-firebase-web-config.json
+.vercel
