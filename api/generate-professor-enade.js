@@ -1,6 +1,17 @@
-import { getAdminAuth, verifyAuth } from './_lib/firebase-admin.js';
+import { getAdminAuth, getAdminFirestore, verifyAuth } from './_lib/firebase-admin.js';
+import { FieldValue } from 'firebase-admin/firestore';
 
 export { verifyAuth };
+
+export async function logGenerationEvent(addDoc, { uid, email, curso, tipoItem }) {
+  try {
+    await addDoc({ uid, email, curso, tipoItem, criadoEm: FieldValue.serverTimestamp() });
+    return true;
+  } catch (error) {
+    console.error('[PROFESSOR-ENADE] Falha ao registrar evento de uso (geração segue normal):', error);
+    return false;
+  }
+}
 
 const MODEL = 'gemini-3.6-flash';
 const GEMINI_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models';
@@ -422,6 +433,11 @@ export default async function handler(req, res) {
 
     const totalMs = Date.now() - startedAt;
     console.info(`[PROFESSOR-ENADE] Sucesso: curso=${input.course} totalMs=${totalMs}`);
+
+    await logGenerationEvent(
+      data => getAdminFirestore().collection('geracoes').add(data),
+      { uid: auth.uid, email: auth.email, curso: input.course, tipoItem: input.itemType },
+    );
 
     return res.status(200).json({
       item,

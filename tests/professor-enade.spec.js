@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { parseInput, validateItem, verifyAuth, classifyGeminiError } from '../api/generate-professor-enade.js';
+import { parseInput, validateItem, verifyAuth, classifyGeminiError, logGenerationEvent } from '../api/generate-professor-enade.js';
 import { mockFirebaseAuth, loginAsVerifiedProfessor } from './helpers/mock-firebase-auth.js';
 
 const requestInput = {
@@ -158,6 +158,32 @@ test.describe('classifyGeminiError', () => {
       status: 503,
       message: 'O gerador está temporariamente sobrecarregado. Aguarde alguns minutos e tente novamente.',
     });
+  });
+});
+
+test.describe('logGenerationEvent', () => {
+  test('grava o evento com os campos esperados', async () => {
+    const calls = [];
+    const ok = await logGenerationEvent(
+      async data => { calls.push(data); },
+      { uid: 'u1', email: 'prof@unichristus.edu.br', curso: 'engenharia-civil', tipoItem: 'multiple-choice' },
+    );
+    expect(ok).toBe(true);
+    expect(calls).toHaveLength(1);
+    expect(calls[0]).toMatchObject({
+      uid: 'u1',
+      email: 'prof@unichristus.edu.br',
+      curso: 'engenharia-civil',
+      tipoItem: 'multiple-choice',
+    });
+  });
+
+  test('nao propaga erro se a escrita falhar — a geracao deve seguir normalmente', async () => {
+    const ok = await logGenerationEvent(
+      async () => { throw new Error('Firestore indisponível'); },
+      { uid: 'u1', email: 'prof@unichristus.edu.br', curso: 'engenharia-civil', tipoItem: 'multiple-choice' },
+    );
+    expect(ok).toBe(false);
   });
 });
 
