@@ -1,5 +1,6 @@
-import { cert, getApps, initializeApp } from 'firebase-admin/app';
-import { getAuth } from 'firebase-admin/auth';
+import { getAdminAuth, verifyAuth } from './_lib/firebase-admin.js';
+
+export { verifyAuth };
 
 const MODEL = 'gemini-3.6-flash';
 const GEMINI_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models';
@@ -7,39 +8,6 @@ const WINDOW_MS = 10 * 60 * 1000;
 const MAX_REQUESTS_PER_WINDOW = 6;
 const RETRY_BUDGET_MS = 55000; // não tenta uma segunda geração se já não sobra tempo hábil dentro do maxDuration da função
 const requestLog = new Map();
-const ALLOWED_EMAIL_DOMAIN = '@unichristus.edu.br';
-
-function getAdminAuth() {
-  if (getApps().length === 0) {
-    const encoded = process.env.FIREBASE_SERVICE_ACCOUNT;
-    if (!encoded) throw new Error('FIREBASE_SERVICE_ACCOUNT ausente.');
-    const serviceAccount = JSON.parse(Buffer.from(encoded, 'base64').toString('utf8'));
-    initializeApp({ credential: cert(serviceAccount) });
-  }
-  return getAuth();
-}
-
-export async function verifyAuth(req, verifyIdToken) {
-  const header = String(req.headers?.authorization || req.headers?.Authorization || '');
-  const match = /^Bearer (.+)$/.exec(header);
-  if (!match) return { ok: false, status: 401, error: 'Login necessário.' };
-
-  let decoded;
-  try {
-    decoded = await verifyIdToken(match[1]);
-  } catch {
-    return { ok: false, status: 401, error: 'Sessão expirada. Faça login novamente.' };
-  }
-
-  if (decoded?.email_verified !== true) {
-    return { ok: false, status: 403, error: 'Confirme seu e-mail antes de gerar questões.' };
-  }
-  if (!String(decoded?.email || '').toLowerCase().endsWith(ALLOWED_EMAIL_DOMAIN)) {
-    return { ok: false, status: 403, error: 'Acesso restrito a e-mails da Unichristus.' };
-  }
-
-  return { ok: true, uid: decoded.uid };
-}
 
 const BLOOM_LEVELS = ['Aplicar', 'Analisar', 'Avaliar'];
 const DIFFICULTY_LEVELS = ['Fácil', 'Média', 'Difícil'];

@@ -109,7 +109,7 @@ test.describe('verifyAuth', () => {
       { headers: { authorization: 'Bearer abc' } },
       async () => ({ uid: 'u1', email: 'Prof@Unichristus.edu.br', email_verified: true }),
     );
-    expect(result).toEqual({ ok: true, uid: 'u1' });
+    expect(result).toEqual({ ok: true, uid: 'u1', email: 'Prof@Unichristus.edu.br' });
   });
 });
 
