@@ -106,6 +106,10 @@
 .enade-type-card small { display: block; margin-top: 4px; color: #7D8997; font-size: 0.57rem; line-height: 1.35; }
 .enade-choice { display: grid; width: 18px; height: 18px; place-items: center; border: 1.5px solid #BAC1C9; border-radius: 50%; color: transparent; font-size: 0.55rem; }
 .enade-type-card.is-selected .enade-choice { border-color: var(--enade-rust); background: var(--enade-rust); color: #fff; }
+.enade-type-card:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+.enade-type-card:disabled:hover { border-color: rgba(9, 33, 64, 0.14); transform: none; }
+.enade-course-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.enade-course-badge { display: inline-block !important; margin-top: 4px; padding: 1px 6px; border-radius: 999px; background: rgba(9, 33, 64, 0.08); color: var(--enade-navy) !important; font-size: 0.5rem !important; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; }
 
 .enade-label { display: block; margin: 0 0 0.5rem; color: #3E4D60; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.01em; }
 .enade-label span { color: #8D97A4; font-weight: 500; }

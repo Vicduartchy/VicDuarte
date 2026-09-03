@@ -1,48 +1,94 @@
 (() => {
     'use strict';
 
-    const KNOWLEDGE_OBJECTS = [
-        'Administração e Economia aplicadas à Engenharia Civil',
-        'Informática, algoritmos e programação',
-        'Ciência dos materiais',
-        'Ciências do ambiente',
-        'Eletricidade aplicada à Engenharia Civil',
-        'Estatística, Física, Matemática e Química aplicadas à Engenharia Civil',
-        'Expressão gráfica e desenho universal',
-        'Fenômenos de transporte',
-        'Mecânica dos sólidos',
-        'Metodologia científica e tecnológica',
-        'Topografia',
-        'Construção civil',
-        'Estruturas',
-        'Geotecnia',
-        'Recursos hídricos e saneamento',
-        'Transportes',
-    ];
-
-    const SUBJECT_SUGGESTIONS = {
-        'Administração e Economia aplicadas à Engenharia Civil': ['Viabilidade técnico-econômica', 'Gestão de custos', 'Lean Construction e Just-in-Time'],
-        'Informática, algoritmos e programação': ['Lógica e pseudocódigo', 'Automação de cálculos', 'IA aplicada à engenharia'],
-        'Ciência dos materiais': ['Dosagem e controle do concreto', 'Aços para construção', 'Ensaios mecânicos'],
-        'Ciências do ambiente': ['Resíduos da construção', 'Licenciamento ambiental', 'Análise de ciclo de vida'],
-        'Eletricidade aplicada à Engenharia Civil': ['Instalações prediais', 'Dispositivos de proteção', 'Eficiência energética'],
-        'Estatística, Física, Matemática e Química aplicadas à Engenharia Civil': ['Controle estatístico', 'Otimização de projetos', 'Química dos materiais'],
-        'Expressão gráfica e desenho universal': ['Modelagem paramétrica', 'Projeções ortogonais', 'Nuvem de pontos e LiDAR'],
-        'Fenômenos de transporte': ['Condutos forçados', 'Escoamento em canais', 'Perda de carga'],
-        'Mecânica dos sólidos': ['Esforço cortante e momento fletor', 'Tensão e deformação', 'Análise de treliças'],
-        'Metodologia científica e tecnológica': ['Metodologias ágeis', 'Pesquisa aplicada', 'Inovação tecnológica'],
-        'Topografia': ['Nivelamento', 'Cálculo de volumes', 'SIG e sensoriamento remoto'],
-        'Construção civil': ['Last Planner System', 'Mapeamento do Fluxo de Valor', 'BIM e transformação digital', 'Linha de Balanço', '5S e redução de perdas'],
-        'Estruturas': ['Concreto armado', 'Estruturas metálicas', 'Combinações de carregamento'],
-        'Geotecnia': ['Fundações', 'Empuxos e contenções', 'Adensamento', 'Estabilidade de taludes'],
-        'Recursos hídricos e saneamento': ['ETA e ETE', 'Drenagem urbana', 'Hidrologia de bacias'],
-        'Transportes': ['Projeto geométrico', 'Pavimentação', 'Mobilidade urbana', 'Terraplenagem'],
+    const COURSES = {
+        'engenharia-civil': {
+            label: 'Engenharia Civil',
+            knowledgeObjects: [
+                'Administração e Economia aplicadas à Engenharia Civil',
+                'Informática, algoritmos e programação',
+                'Ciência dos materiais',
+                'Ciências do ambiente',
+                'Eletricidade aplicada à Engenharia Civil',
+                'Estatística, Física, Matemática e Química aplicadas à Engenharia Civil',
+                'Expressão gráfica e desenho universal',
+                'Fenômenos de transporte',
+                'Mecânica dos sólidos',
+                'Metodologia científica e tecnológica',
+                'Topografia',
+                'Construção civil',
+                'Estruturas',
+                'Geotecnia',
+                'Recursos hídricos e saneamento',
+                'Transportes',
+            ],
+            subjectSuggestions: {
+                'Administração e Economia aplicadas à Engenharia Civil': ['Viabilidade técnico-econômica', 'Gestão de custos', 'Lean Construction e Just-in-Time'],
+                'Informática, algoritmos e programação': ['Lógica e pseudocódigo', 'Automação de cálculos', 'IA aplicada à engenharia'],
+                'Ciência dos materiais': ['Dosagem e controle do concreto', 'Aços para construção', 'Ensaios mecânicos'],
+                'Ciências do ambiente': ['Resíduos da construção', 'Licenciamento ambiental', 'Análise de ciclo de vida'],
+                'Eletricidade aplicada à Engenharia Civil': ['Instalações prediais', 'Dispositivos de proteção', 'Eficiência energética'],
+                'Estatística, Física, Matemática e Química aplicadas à Engenharia Civil': ['Controle estatístico', 'Otimização de projetos', 'Química dos materiais'],
+                'Expressão gráfica e desenho universal': ['Modelagem paramétrica', 'Projeções ortogonais', 'Nuvem de pontos e LiDAR'],
+                'Fenômenos de transporte': ['Condutos forçados', 'Escoamento em canais', 'Perda de carga'],
+                'Mecânica dos sólidos': ['Esforço cortante e momento fletor', 'Tensão e deformação', 'Análise de treliças'],
+                'Metodologia científica e tecnológica': ['Metodologias ágeis', 'Pesquisa aplicada', 'Inovação tecnológica'],
+                'Topografia': ['Nivelamento', 'Cálculo de volumes', 'SIG e sensoriamento remoto'],
+                'Construção civil': ['Last Planner System', 'Mapeamento do Fluxo de Valor', 'BIM e transformação digital', 'Linha de Balanço', '5S e redução de perdas'],
+                'Estruturas': ['Concreto armado', 'Estruturas metálicas', 'Combinações de carregamento'],
+                'Geotecnia': ['Fundações', 'Empuxos e contenções', 'Adensamento', 'Estabilidade de taludes'],
+                'Recursos hídricos e saneamento': ['ETA e ETE', 'Drenagem urbana', 'Hidrologia de bacias'],
+                'Transportes': ['Projeto geométrico', 'Pavimentação', 'Mobilidade urbana', 'Terraplenagem'],
+            },
+        },
+        'arquitetura-urbanismo': {
+            label: 'Arquitetura e Urbanismo',
+            knowledgeObjects: [
+                'Estética e história das artes',
+                'Estudos sociais, econômicos e ambientais',
+                'Sustentabilidade',
+                'Desenho e meios de representação e de expressão',
+                'Teoria e história da arquitetura, do urbanismo e da arquitetura da paisagem',
+                'Projeto de arquitetura',
+                'Projeto de urbanismo',
+                'Projeto de arquitetura da paisagem',
+                'Projeto de arquitetura de interiores',
+                'Planejamento urbano e regional',
+                'Políticas públicas e habitacionais',
+                'Tecnologia da construção',
+                'Infraestrutura urbana',
+                'Gestão e coordenação de projetos e obras',
+                'Sistemas estruturais',
+                'Conforto ambiental e eficiência energética',
+                'Mobilidade urbana',
+                'Desenho universal e acessibilidade',
+                'Patrimônio cultural e técnicas retrospectivas',
+                'Tecnologias digitais aplicadas a arquitetura e urbanismo',
+            ],
+            subjectSuggestions: {
+                'Sustentabilidade': ['Certificações ambientais', 'Eficiência hídrica', 'Materiais de baixo impacto'],
+                'Projeto de arquitetura': ['Programa de necessidades', 'Partido arquitetônico', 'Modulação estrutural'],
+                'Projeto de urbanismo': ['Uso e ocupação do solo', 'Desenho de espaços públicos', 'Adensamento urbano'],
+                'Tecnologia da construção': ['Sistemas construtivos industrializados', 'Alvenaria estrutural', 'BIM na execução'],
+                'Conforto ambiental e eficiência energética': ['Ventilação natural', 'Conforto térmico', 'Iluminação natural'],
+                'Patrimônio cultural e técnicas retrospectivas': ['Restauro arquitetônico', 'Retrofit de edificações', 'Tombamento e preservação'],
+                'Mobilidade urbana': ['Sistema viário', 'Transporte ativo', 'Acessibilidade urbana'],
+                'Desenho universal e acessibilidade': ['NBR 9050', 'Rotas acessíveis', 'Desenho inclusivo'],
+            },
+        },
+        'engenharia-producao': {
+            label: 'Engenharia de Produção',
+            enabled: false,
+            knowledgeObjects: [],
+            subjectSuggestions: {},
+        },
     };
 
     const form = document.getElementById('enade-form');
     if (!form) return;
 
     const state = {
+        course: '',
         itemType: '',
         knowledgeObject: '',
         subject: '',
@@ -53,6 +99,9 @@
         loading: false,
     };
 
+    const courseButtons = [...document.querySelectorAll('[data-course]')];
+    const stepCourseNumber = document.getElementById('step-course-number');
+    const stepType = document.getElementById('step-type');
     const typeButtons = [...document.querySelectorAll('[data-item-type]')];
     const stepTwo = document.getElementById('step-two');
     const stepOneNumber = document.getElementById('step-one-number');
@@ -78,7 +127,15 @@
     }
 
     function fillKnowledgeObjects() {
-        KNOWLEDGE_OBJECTS.forEach((object, index) => {
+        const course = COURSES[state.course];
+        knowledgeSelect.replaceChildren();
+        const placeholder = document.createElement('option');
+        placeholder.value = '';
+        placeholder.selected = true;
+        placeholder.disabled = true;
+        placeholder.textContent = course ? `Selecione um dos ${course.knowledgeObjects.length} objetos` : 'Selecione o curso primeiro';
+        knowledgeSelect.append(placeholder);
+        (course ? course.knowledgeObjects : []).forEach((object, index) => {
             const option = document.createElement('option');
             option.value = object;
             option.textContent = `${String(index + 1).padStart(2, '0')} · ${object}`;
@@ -86,13 +143,13 @@
         });
     }
 
-    function markStep(numberElement, done) {
+    function markStep(numberElement, done, fallback) {
         numberElement.classList.toggle('is-done', done);
-        numberElement.innerHTML = done ? '<i class="fas fa-check" aria-hidden="true"></i>' : numberElement === stepOneNumber ? '1' : '2';
+        numberElement.innerHTML = done ? '<i class="fas fa-check" aria-hidden="true"></i>' : fallback;
     }
 
     function updateReadyState() {
-        generateButton.disabled = !(state.itemType && state.knowledgeObject) || state.loading;
+        generateButton.disabled = !(state.course && state.itemType && state.knowledgeObject) || state.loading;
     }
 
     function showAlert(message, type = 'error') {
@@ -110,7 +167,9 @@
 
     function renderSuggestions() {
         suggestions.replaceChildren();
-        (SUBJECT_SUGGESTIONS[state.knowledgeObject] || []).forEach(label => {
+        const course = COURSES[state.course];
+        const list = (course && course.subjectSuggestions[state.knowledgeObject]) || [];
+        list.forEach(label => {
             const button = document.createElement('button');
             button.type = 'button';
             button.className = 'enade-suggestion';
@@ -125,6 +184,37 @@
         });
     }
 
+    courseButtons.forEach(button => {
+        if (button.disabled) return;
+        button.addEventListener('click', () => {
+            state.course = button.dataset.course;
+            state.itemType = '';
+            state.knowledgeObject = '';
+            state.subject = '';
+            subjectInput.value = '';
+            refinement.hidden = true;
+
+            courseButtons.forEach(item => {
+                const selected = item === button;
+                item.classList.toggle('is-selected', selected);
+                item.setAttribute('aria-pressed', String(selected));
+            });
+            typeButtons.forEach(item => {
+                item.classList.remove('is-selected');
+                item.setAttribute('aria-pressed', 'false');
+            });
+            stepType.disabled = false;
+            stepType.classList.remove('is-disabled');
+            stepTwo.disabled = true;
+            stepTwo.classList.add('is-disabled');
+            markStep(stepCourseNumber, true, '1');
+            markStep(stepOneNumber, false, '2');
+            markStep(stepTwoNumber, false, '3');
+            fillKnowledgeObjects();
+            updateReadyState();
+        });
+    });
+
     typeButtons.forEach(button => {
         button.addEventListener('click', () => {
             state.itemType = button.dataset.itemType;
@@ -135,7 +225,7 @@
             });
             stepTwo.disabled = false;
             stepTwo.classList.remove('is-disabled');
-            markStep(stepOneNumber, true);
+            markStep(stepOneNumber, true, '2');
             updateReadyState();
         });
     });
@@ -145,7 +235,7 @@
         state.subject = '';
         subjectInput.value = '';
         refinement.hidden = !state.knowledgeObject;
-        markStep(stepTwoNumber, Boolean(state.knowledgeObject));
+        markStep(stepTwoNumber, Boolean(state.knowledgeObject), '3');
         renderSuggestions();
         updateReadyState();
     });
@@ -181,7 +271,7 @@
     }
 
     async function generateQuestion() {
-        if (!state.itemType || !state.knowledgeObject || state.loading) return;
+        if (!state.course || !state.itemType || !state.knowledgeObject || state.loading) return;
         hideAlert();
         setLoading(true);
 
@@ -190,6 +280,7 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
+                    course: state.course,
                     itemType: state.itemType,
                     knowledgeObject: state.knowledgeObject,
                     subject: state.subject,
@@ -219,6 +310,7 @@
 
     form.addEventListener('reset', () => {
         window.setTimeout(() => {
+            state.course = '';
             state.itemType = '';
             state.knowledgeObject = '';
             state.subject = '';
@@ -227,20 +319,28 @@
             state.result = null;
             state.activeTab = 'item';
             state.loading = false;
+            courseButtons.forEach(button => {
+                button.classList.remove('is-selected');
+                button.setAttribute('aria-pressed', 'false');
+            });
             typeButtons.forEach(button => {
                 button.classList.remove('is-selected');
                 button.setAttribute('aria-pressed', 'false');
             });
+            stepType.disabled = true;
+            stepType.classList.add('is-disabled');
             stepTwo.disabled = true;
             stepTwo.classList.add('is-disabled');
             refinement.hidden = true;
             suggestions.replaceChildren();
+            fillKnowledgeObjects();
             document.querySelectorAll('.enade-segmented').forEach(group => {
                 const defaultValue = group.dataset.group === 'bloom' ? 'Analisar' : 'Média';
                 group.querySelectorAll('button').forEach(button => button.classList.toggle('is-active', button.dataset.value === defaultValue));
             });
-            markStep(stepOneNumber, false);
-            markStep(stepTwoNumber, false);
+            markStep(stepCourseNumber, false, '1');
+            markStep(stepOneNumber, false, '2');
+            markStep(stepTwoNumber, false, '3');
             emptyState.hidden = false;
             loadingState.hidden = true;
             output.hidden = true;

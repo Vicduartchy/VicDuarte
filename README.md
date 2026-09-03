@@ -19,7 +19,7 @@ Site profissional multi-páginas desenvolvido para apresentar o portfólio, disc
 - **📖 Livro:** "IA na Gestão de Projetos" - Download gratuito e compra
 - **📝 Publicações:** Artigos no LinkedIn sobre metodologias ágeis
 - **📸 Momentos Profissionais:** Carrossel com fotos de eventos e workshops
-- **🎓 PROFESSOR-ENADE:** Questões por competências para Engenharia Civil, com IA e auditoria editorial
+- **🎓 PROFESSOR-ENADE:** Questões por competências para Engenharia Civil e Arquitetura e Urbanismo, com IA e auditoria editorial
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -40,7 +40,7 @@ VicDuarte/
 ├── palestras.html          # Palestras e talks
 ├── livro.html             # Página dedicada ao livro
 ├── publicacoes.html       # Publicações LinkedIn
-├── professor-enade.html   # PROFESSOR-ENADE: gerador de questões ENADE para Engenharia Civil
+├── professor-enade.html   # PROFESSOR-ENADE: gerador de questões ENADE multi-curso (Engenharia Civil, Arquitetura e Urbanismo)
 ├── api/
 │   └── generate-professor-enade.js  # Função serverless de geração e validação com IA
 └── static/
