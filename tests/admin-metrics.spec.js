@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { checkIsAdmin, aggregateMetrics } from '../api/admin-metrics.js';
+import { loginAsVerifiedProfessor } from './helpers/mock-firebase-auth.js';
 
 test.describe('checkIsAdmin', () => {
   test('true quando o doc admins/{uid} existe', async () => {
@@ -50,5 +51,41 @@ test.describe('aggregateMetrics', () => {
     expect(aggregateMetrics([], now)).toEqual({
       total: 0, porProfessor: {}, porCurso: {}, ultimos7Dias: 0, ultimos30Dias: 0,
     });
+  });
+});
+
+test.describe('Página do painel administrativo', () => {
+  test('usuário logado mas sem ser admin vê mensagem de restrição', async ({ page }) => {
+    await page.route('**/api/admin-metrics', route => route.fulfill({
+      status: 403,
+      contentType: 'application/json',
+      body: JSON.stringify({ error: 'Acesso restrito a administradores.' }),
+    }));
+    await page.goto('/professor-enade-admin.html');
+    await loginAsVerifiedProfessor(page);
+    await expect(page.locator('#admin-restricted')).toBeVisible();
+    await expect(page.locator('#admin-metrics-content')).toBeHidden();
+  });
+
+  test('admin vê as métricas renderizadas', async ({ page }) => {
+    await page.route('**/api/admin-metrics', route => route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({
+        total: 12,
+        porProfessor: { 'prof@unichristus.edu.br': 12 },
+        porCurso: { 'engenharia-civil': 8, 'arquitetura-urbanismo': 4 },
+        ultimos7Dias: 5,
+        ultimos30Dias: 12,
+      }),
+    }));
+    await page.goto('/professor-enade-admin.html');
+    await loginAsVerifiedProfessor(page, 'admin@unichristus.edu.br');
+    await expect(page.locator('#admin-metrics-content')).toBeVisible();
+    await expect(page.locator('#admin-total')).toHaveText('12');
+    await expect(page.locator('#admin-7d')).toHaveText('5');
+    await expect(page.locator('#admin-30d')).toHaveText('12');
+    await expect(page.locator('#admin-por-professor li')).toHaveCount(1);
+    await expect(page.locator('#admin-por-curso li')).toHaveCount(2);
   });
 });
