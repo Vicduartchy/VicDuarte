@@ -382,8 +382,9 @@ export default async function handler(req, res) {
   if (Number(req.headers?.['content-length'] || 0) > 12000) return res.status(413).json({ error: 'Solicitação muito grande.' });
   if (isRateLimited(getClientIp(req))) return res.status(429).json({ error: 'Limite temporário atingido. Aguarde alguns minutos e tente novamente.' });
 
+  const startedAt = Date.now();
+
   try {
-    const startedAt = Date.now();
     const input = parseInput(req.body);
     let item = await callGemini(input);
     let issues = validateItem(item, input);
@@ -396,9 +397,12 @@ export default async function handler(req, res) {
     }
 
     if (issues.length) {
-      console.warn('[PROFESSOR-ENADE] Item reprovado:', issues.join(' | '));
+      console.warn(`[PROFESSOR-ENADE] Item reprovado após ${Date.now() - startedAt}ms:`, issues.join(' | '));
       return res.status(422).json({ error: 'A questão não passou na auditoria editorial. Tente gerar novamente.' });
     }
+
+    const totalMs = Date.now() - startedAt;
+    console.info(`[PROFESSOR-ENADE] Sucesso: curso=${input.course} thinkingLevel=${input.thinkingLevel || 'medium(padrão)'} totalMs=${totalMs}`);
 
     return res.status(200).json({
       item,
@@ -411,11 +415,11 @@ export default async function handler(req, res) {
       },
       debug: {
         thinkingLevel: input.thinkingLevel || 'padrão do modelo (medium)',
-        totalMs: Date.now() - startedAt,
+        totalMs,
       },
     });
   } catch (error) {
-    console.error('[PROFESSOR-ENADE] Falha na geração:', error);
+    console.error(`[PROFESSOR-ENADE] Falha na geração após ${Date.now() - startedAt}ms:`, error);
     const isTimeout = error?.name === 'TimeoutError' || error?.name === 'AbortError';
     const status = error instanceof Error && error.message.startsWith('Selecione') ? 400 : 500;
     const message = status === 400
