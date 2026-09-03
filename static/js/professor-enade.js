@@ -114,6 +114,7 @@
     const emptyState = document.getElementById('enade-empty');
     const loadingState = document.getElementById('enade-loading');
     const output = document.getElementById('enade-output');
+    const resultPanel = document.getElementById('enade-result');
     const alertBox = document.getElementById('enade-alert');
     const tabButtons = [...document.querySelectorAll('.enade-tabs [data-tab]')];
 
@@ -264,6 +265,7 @@
             emptyState.hidden = true;
             output.hidden = true;
             loadingState.hidden = false;
+            resultPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } else {
             loadingState.hidden = true;
             if (!state.result) emptyState.hidden = false;
