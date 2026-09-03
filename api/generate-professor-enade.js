@@ -387,8 +387,30 @@ async function callGemini(input, revision) {
   });
 
   const data = await response.json();
-  if (!response.ok) throw new Error(data?.error?.message || `Falha no provedor de IA (${response.status}).`);
+  if (!response.ok) {
+    const error = new Error(data?.error?.message || `Falha no provedor de IA (${response.status}).`);
+    error.geminiStatus = response.status;
+    error.geminiData = data;
+    throw error;
+  }
   return JSON.parse(extractGeminiText(data));
+}
+
+// Distingue estouro de cota diária (RPD) de outros 429 (ex.: limite por
+// minuto sob uso concorrente) inspecionando o quotaId (quando o Gemini o
+// retorna) ou, na falta dele, o texto da mensagem de erro. Retorna null
+// para qualquer status que não seja 429 — nesses casos o chamador usa a
+// mensagem genérica de erro de geração.
+export function classifyGeminiError(status, data) {
+  if (status !== 429) return null;
+
+  const violations = data?.error?.details?.flatMap(detail => detail?.violations || []) || [];
+  const quotaText = [data?.error?.message, ...violations.map(v => v?.quotaId)].filter(Boolean).join(' ');
+  const isDaily = /day/i.test(quotaText);
+
+  return isDaily
+    ? { status: 503, message: 'O gerador atingiu o limite diário gratuito de uso. Tente novamente amanhã.' }
+    : { status: 503, message: 'O gerador está temporariamente sobrecarregado. Aguarde alguns minutos e tente novamente.' };
 }
 
 export default async function handler(req, res) {
@@ -446,13 +468,18 @@ export default async function handler(req, res) {
     });
   } catch (error) {
     console.error(`[PROFESSOR-ENADE] Falha na geração após ${Date.now() - startedAt}ms:`, error);
+    const quotaError = error?.geminiStatus ? classifyGeminiError(error.geminiStatus, error.geminiData) : null;
     const isTimeout = error?.name === 'TimeoutError' || error?.name === 'AbortError';
-    const status = error instanceof Error && error.message.startsWith('Selecione') ? 400 : 500;
-    const message = status === 400
-      ? error.message
-      : isTimeout
-        ? 'A geração demorou mais do que o esperado. Tente novamente.'
-        : 'Não foi possível gerar a questão agora. Tente novamente.';
+    const status = quotaError
+      ? quotaError.status
+      : error instanceof Error && error.message.startsWith('Selecione') ? 400 : 500;
+    const message = quotaError
+      ? quotaError.message
+      : status === 400
+        ? error.message
+        : isTimeout
+          ? 'A geração demorou mais do que o esperado. Tente novamente.'
+          : 'Não foi possível gerar a questão agora. Tente novamente.';
     return res.status(status).json({ error: message });
   }
 }

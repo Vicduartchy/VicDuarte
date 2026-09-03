@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { parseInput, validateItem, verifyAuth } from '../api/generate-professor-enade.js';
+import { parseInput, validateItem, verifyAuth, classifyGeminiError } from '../api/generate-professor-enade.js';
 import { mockFirebaseAuth, loginAsVerifiedProfessor } from './helpers/mock-firebase-auth.js';
 
 const requestInput = {
@@ -110,6 +110,54 @@ test.describe('verifyAuth', () => {
       async () => ({ uid: 'u1', email: 'Prof@Unichristus.edu.br', email_verified: true }),
     );
     expect(result).toEqual({ ok: true, uid: 'u1' });
+  });
+});
+
+test.describe('classifyGeminiError', () => {
+  test('não classifica erros que não são 429', () => {
+    expect(classifyGeminiError(500, { error: { message: 'Erro interno' } })).toBeNull();
+    expect(classifyGeminiError(400, { error: { message: 'Requisição inválida' } })).toBeNull();
+  });
+
+  test('classifica 429 com violação "PerDay" como limite diário', () => {
+    const data = {
+      error: {
+        message: 'You exceeded your current quota',
+        details: [{ violations: [{ quotaId: 'GenerateRequestsPerDayPerProjectPerModel-FreeTier' }] }],
+      },
+    };
+    expect(classifyGeminiError(429, data)).toEqual({
+      status: 503,
+      message: 'O gerador atingiu o limite diário gratuito de uso. Tente novamente amanhã.',
+    });
+  });
+
+  test('classifica 429 cuja mensagem menciona "per day" como limite diário', () => {
+    const data = { error: { message: 'Quota exceeded for quota metric requests per day.' } };
+    expect(classifyGeminiError(429, data)).toEqual({
+      status: 503,
+      message: 'O gerador atingiu o limite diário gratuito de uso. Tente novamente amanhã.',
+    });
+  });
+
+  test('classifica 429 sem indicação de "dia" como sobrecarga temporária', () => {
+    const data = {
+      error: {
+        message: 'You exceeded your current quota',
+        details: [{ violations: [{ quotaId: 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier' }] }],
+      },
+    };
+    expect(classifyGeminiError(429, data)).toEqual({
+      status: 503,
+      message: 'O gerador está temporariamente sobrecarregado. Aguarde alguns minutos e tente novamente.',
+    });
+  });
+
+  test('classifica 429 sem detalhes nenhum como sobrecarga temporária', () => {
+    expect(classifyGeminiError(429, {})).toEqual({
+      status: 503,
+      message: 'O gerador está temporariamente sobrecarregado. Aguarde alguns minutos e tente novamente.',
+    });
   });
 });
 
