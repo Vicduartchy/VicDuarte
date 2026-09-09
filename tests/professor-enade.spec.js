@@ -159,6 +159,48 @@ test.describe('classifyGeminiError', () => {
       message: 'O gerador está temporariamente sobrecarregado. Aguarde alguns minutos e tente novamente.',
     });
   });
+
+  test('prioriza retryDelay curto sobre quotaId "PerDay" (caso real de produção)', () => {
+    const data = {
+      error: {
+        message: 'You exceeded your current quota, please check your plan and billing details. '
+          + 'Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, '
+          + 'limit: 20, model: gemini-3.6-flash. Please retry in 57.342290859s.',
+        details: [
+          { violations: [{ quotaId: 'GenerateRequestsPerDayPerProjectPerModel-FreeTier' }] },
+          { '@type': 'type.googleapis.com/google.rpc.RetryInfo', retryDelay: '57.342290859s' },
+        ],
+      },
+    };
+    expect(classifyGeminiError(429, data)).toEqual({
+      status: 503,
+      message: 'O gerador atingiu um limite temporário de uso. Aguarde 58s e tente novamente.',
+    });
+  });
+
+  test('mantém mensagem de limite diário quando retryDelay é longo mesmo com quotaId "PerDay"', () => {
+    const data = {
+      error: {
+        message: 'You exceeded your current quota',
+        details: [
+          { violations: [{ quotaId: 'GenerateRequestsPerDayPerProjectPerModel-FreeTier' }] },
+          { '@type': 'type.googleapis.com/google.rpc.RetryInfo', retryDelay: '18000s' },
+        ],
+      },
+    };
+    expect(classifyGeminiError(429, data)).toEqual({
+      status: 503,
+      message: 'O gerador atingiu o limite diário gratuito de uso. Tente novamente amanhã.',
+    });
+  });
+
+  test('extrai retryDelay via regex na mensagem quando não há RetryInfo estruturado', () => {
+    const data = { error: { message: 'You exceeded your current quota. Please retry in 12.5s.' } };
+    expect(classifyGeminiError(429, data)).toEqual({
+      status: 503,
+      message: 'O gerador atingiu um limite temporário de uso. Aguarde 13s e tente novamente.',
+    });
+  });
 });
 
 test.describe('logGenerationEvent', () => {
