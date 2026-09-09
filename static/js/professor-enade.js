@@ -364,6 +364,21 @@
         return `<button type="button" class="${cls}" data-copy-text="${escapeHtml(rawText)}" aria-label="Copiar"><i class="fas fa-copy" aria-hidden="true"></i></button>`;
     }
 
+    // Variante com rótulo visível, pra ações que copiam um bloco maior (não
+    // uma peça isolada) e merecem mais destaque que os ícones de 22px acima.
+    function copyButtonWithLabel(rawText, label) {
+        return `<button type="button" class="enade-copy-btn enade-copy-btn--labeled" data-copy-text="${escapeHtml(rawText)}" aria-label="${escapeHtml(label)}"><i class="fas fa-copy" aria-hidden="true"></i><span class="enade-copy-btn-label">${escapeHtml(label)}</span></button>`;
+    }
+
+    // Gabarito comentado: um único bloco de texto (não 5 campos separados),
+    // no formato "LETRA) STATUS. justificativa" por linha — pronto pra colar
+    // no campo único "Resposta correta (Opcional)" do Exitus.
+    function formatCommentedAnswerKey(item) {
+        return item.justifications
+            .map(entry => `${entry.letter}) ${entry.status}. ${entry.rationale}`)
+            .join('\n');
+    }
+
     function section(kicker, content, customClass = '', copyText = null) {
         const copyBtn = copyText !== null ? copyButton(copyText) : '';
         return `<section class="enade-output-section"><h4 class="enade-output-kicker">${escapeHtml(kicker)}${copyBtn}</h4><div class="${customClass || 'enade-output-copy'}">${content}</div></section>`;
@@ -386,7 +401,9 @@
                     <div class="enade-rationale-head"><strong>Alternativa ${escapeHtml(entry.letter)}</strong><span class="enade-rationale-actions"><span class="enade-status">${escapeHtml(entry.status)}</span>${copyButton(entry.rationale)}</span></div>
                     <p>${escapeHtml(entry.rationale)}</p>
                 </div>`).join('');
-            return `<div class="enade-answer-hero"><div class="enade-answer-hero-main"><span>Resposta correta</span><strong>${escapeHtml(item.correctAnswer)}</strong></div>${copyButton(item.correctAnswer, 'enade-copy-btn--on-dark')}</div><div class="enade-rationales">${rationales}</div>`;
+            return `<div class="enade-answer-hero"><div class="enade-answer-hero-main"><span>Resposta correta</span><strong>${escapeHtml(item.correctAnswer)}</strong></div>${copyButton(item.correctAnswer, 'enade-copy-btn--on-dark')}</div>` +
+                `<div class="enade-rationales-toolbar"><span class="enade-rationales-toolbar-label">Gabarito comentado</span>${copyButtonWithLabel(formatCommentedAnswerKey(item), 'Copiar gabarito comentado')}</div>` +
+                `<div class="enade-rationales">${rationales}</div>`;
         }
 
         const rubricRows = item.rubric.map(row => `<tr><td>${escapeHtml(row.criterion)}</td><td>${escapeHtml(row.evidence)}</td><td>${Number(row.points).toFixed(1).replace('.', ',')}</td></tr>`).join('');
@@ -464,12 +481,18 @@
         }
 
         const icon = button.querySelector('i');
+        const label = button.querySelector('.enade-copy-btn-label');
         button.classList.add('is-copied');
         icon?.classList.replace('fa-copy', 'fa-check');
+        if (label) {
+            if (!button.dataset.labelDefault) button.dataset.labelDefault = label.textContent;
+            label.textContent = 'Copiado!';
+        }
         clearTimeout(button._copyResetTimer);
         button._copyResetTimer = setTimeout(() => {
             button.classList.remove('is-copied');
             icon?.classList.replace('fa-check', 'fa-copy');
+            if (label) label.textContent = button.dataset.labelDefault;
         }, 1500);
     });
 
