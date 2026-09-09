@@ -417,13 +417,40 @@ async function callGeminiResilient(input, revision, startedAt) {
   }
 }
 
+const SHORT_RETRY_THRESHOLD_S = 300; // 5min — abaixo disso é espera curta; acima, tratamos como bloqueio longo
+
+// Extrai o tempo real de espera (em segundos) de um 429, priorizando o campo
+// estruturado RetryInfo.retryDelay (padrão google.rpc.Status) sobre caçar
+// palavra-chave no texto: cotas "diárias" do Gemini não resetam num horário
+// fixo (meia-noite), então um retryDelay curto pode aparecer mesmo numa
+// violação cujo quotaId contém "day" — só o retryDelay reflete a espera real.
+// Math.ceil arredonda pra cima: melhor superestimar um pouco do que o
+// professor tentar de novo cedo demais e cair no mesmo erro.
+function extractRetryDelaySeconds(data) {
+  const details = data?.error?.details || [];
+  const retryInfo = details.find(detail => typeof detail?.['@type'] === 'string' && detail['@type'].includes('RetryInfo'));
+  const retryDelayMatch = typeof retryInfo?.retryDelay === 'string' ? retryInfo.retryDelay.match(/([\d.]+)\s*s/i) : null;
+  if (retryDelayMatch) return Math.ceil(Number(retryDelayMatch[1]));
+
+  const messageMatch = data?.error?.message?.match(/retry in ([\d.]+)\s*s/i);
+  if (messageMatch) return Math.ceil(Number(messageMatch[1]));
+
+  return null;
+}
+
 // Distingue estouro de cota diária (RPD) de outros 429 (ex.: limite por
-// minuto sob uso concorrente) inspecionando o quotaId (quando o Gemini o
-// retorna) ou, na falta dele, o texto da mensagem de erro. Retorna null
-// para qualquer status que não seja 429 — nesses casos o chamador usa a
-// mensagem genérica de erro de geração.
+// minuto sob uso concorrente). Primeiro tenta decidir pela duração real de
+// espera (RetryInfo); só cai pra inspecionar o quotaId (quando o Gemini o
+// retorna) ou o texto da mensagem se não houver retryDelay curto disponível.
+// Retorna null para qualquer status que não seja 429 — nesses casos o
+// chamador usa a mensagem genérica de erro de geração.
 export function classifyGeminiError(status, data) {
   if (status !== 429) return null;
+
+  const retryDelaySeconds = extractRetryDelaySeconds(data);
+  if (retryDelaySeconds !== null && retryDelaySeconds < SHORT_RETRY_THRESHOLD_S) {
+    return { status: 503, message: `O gerador atingiu um limite temporário de uso. Aguarde ${retryDelaySeconds}s e tente novamente.` };
+  }
 
   const violations = data?.error?.details?.flatMap(detail => detail?.violations || []) || [];
   const quotaText = [data?.error?.message, ...violations.map(v => v?.quotaId)].filter(Boolean).join(' ');
