@@ -18,6 +18,10 @@ const GEMINI_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models
 const WINDOW_MS = 10 * 60 * 1000;
 const MAX_REQUESTS_PER_WINDOW = 6;
 const RETRY_BUDGET_MS = 55000; // não tenta uma segunda geração se já não sobra tempo hábil dentro do maxDuration da função
+const MAX_DURATION_MS = 90000; // espelha "maxDuration" em vercel.json — mudou lá, muda aqui também
+const RESPONSE_MARGIN_MS = 5000; // reserva pós-Gemini: parse, validação, log no Firestore e resposta
+const MIN_CALL_TIMEOUT_MS = 10000; // abaixo disso não vale tentar uma chamada nova, o orçamento já era
+const OVERLOAD_RETRY_DELAY_MS = 1500; // pequeno atraso antes de reagir a um 503 de sobrecarga do Gemini
 const requestLog = new Map();
 
 const BLOOM_LEVELS = ['Aplicar', 'Analisar', 'Avaliar'];
@@ -334,7 +338,7 @@ function extractGeminiText(data) {
   return text;
 }
 
-async function callGemini(input, revision) {
+async function callGemini(input, revision, timeoutMs) {
   const course = COURSES[input.course];
   const schema = input.itemType === 'multiple-choice' ? buildMultipleChoiceSchema(course) : buildDiscursiveSchema(course);
   const apiKey = process.env.GEMINI_API_KEY;
@@ -367,7 +371,7 @@ async function callGemini(input, revision) {
         thinkingConfig: { thinkingLevel: 'low' },
       },
     }),
-    signal: AbortSignal.timeout(85000),
+    signal: AbortSignal.timeout(timeoutMs),
   });
 
   const data = await response.json();
@@ -378,6 +382,39 @@ async function callGemini(input, revision) {
     throw error;
   }
   return JSON.parse(extractGeminiText(data));
+}
+
+// Timeout dinâmico: quanto sobra até o maxDuration da função, descontada a
+// margem reservada pro pós-processamento (parse, validação, log, resposta).
+// Garante que nenhuma chamada — seja a inicial ou a de revisão — consiga,
+// sozinha, estourar o orçamento total, mesmo que comece tarde.
+function computeCallTimeoutMs(startedAt) {
+  return MAX_DURATION_MS - (Date.now() - startedAt) - RESPONSE_MARGIN_MS;
+}
+
+// Envolve callGemini com timeout dinâmico e uma retentativa automática
+// específica para 503/UNAVAILABLE (sobrecarga temporária do provedor) — não
+// deve ser confundido com o 429 de cota diária, que classifyGeminiError trata
+// à parte e que continua sem retry (tentar de novo não resolve cota estourada).
+async function callGeminiResilient(input, revision, startedAt) {
+  const timeoutMs = computeCallTimeoutMs(startedAt);
+  if (timeoutMs < MIN_CALL_TIMEOUT_MS) {
+    const error = new Error('Tempo insuficiente para nova tentativa dentro do orçamento da função.');
+    error.name = 'TimeoutError';
+    throw error;
+  }
+
+  try {
+    return await callGemini(input, revision, timeoutMs);
+  } catch (error) {
+    const isOverload = error?.geminiStatus === 503;
+    const retryTimeoutMs = computeCallTimeoutMs(startedAt) - OVERLOAD_RETRY_DELAY_MS;
+    if (!isOverload || retryTimeoutMs < MIN_CALL_TIMEOUT_MS) throw error;
+
+    console.warn('[PROFESSOR-ENADE] retry automático por sobrecarga do Gemini (503 UNAVAILABLE)');
+    await new Promise(resolve => setTimeout(resolve, OVERLOAD_RETRY_DELAY_MS));
+    return await callGemini(input, revision, computeCallTimeoutMs(startedAt));
+  }
 }
 
 // Distingue estouro de cota diária (RPD) de outros 429 (ex.: limite por
@@ -421,11 +458,11 @@ export default async function handler(req, res) {
 
   try {
     const input = parseInput(req.body);
-    let item = await callGemini(input);
+    let item = await callGeminiResilient(input, undefined, startedAt);
     let issues = validateItem(item, input);
 
     if (issues.length && (Date.now() - startedAt) < RETRY_BUDGET_MS) {
-      item = await callGemini(input, { item, issues });
+      item = await callGeminiResilient(input, { item, issues }, startedAt);
       issues = validateItem(item, input);
     } else if (issues.length) {
       console.warn('[PROFESSOR-ENADE] Orçamento de tempo esgotado, pulando nova tentativa.');
