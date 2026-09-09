@@ -355,15 +355,25 @@
         }, 0);
     });
 
-    function section(kicker, content, customClass = '') {
-        return `<section class="enade-output-section"><h4 class="enade-output-kicker">${escapeHtml(kicker)}</h4><div class="${customClass || 'enade-output-copy'}">${content}</div></section>`;
+    // Botão de copiar peça individual: o texto vai em data-copy-text já
+    // escapado com escapeHtml() (mesma função usada pro conteúdo visível),
+    // senão aspas/colchetes angulares no rationale/baseText quebram o
+    // atributo HTML em silêncio e o clipboard sai cortado ou malformado.
+    function copyButton(rawText, extraClass = '') {
+        const cls = extraClass ? `enade-copy-btn ${extraClass}` : 'enade-copy-btn';
+        return `<button type="button" class="${cls}" data-copy-text="${escapeHtml(rawText)}" aria-label="Copiar"><i class="fas fa-copy" aria-hidden="true"></i></button>`;
+    }
+
+    function section(kicker, content, customClass = '', copyText = null) {
+        const copyBtn = copyText !== null ? copyButton(copyText) : '';
+        return `<section class="enade-output-section"><h4 class="enade-output-kicker">${escapeHtml(kicker)}${copyBtn}</h4><div class="${customClass || 'enade-output-copy'}">${content}</div></section>`;
     }
 
     function renderItemTab(item) {
-        let html = section('01 · Texto-base / Contexto', escapeHtml(item.baseText));
-        html += section('02 · Comando / Enunciado', escapeHtml(item.command), 'enade-command');
+        let html = section('01 · Texto-base / Contexto', escapeHtml(item.baseText), '', item.baseText);
+        html += section('02 · Comando / Enunciado', escapeHtml(item.command), 'enade-command', item.command);
         if (item.itemType === 'Múltipla Escolha') {
-            const options = item.options.map(option => `<div class="enade-option"><span>${escapeHtml(option.letter)}</span><p>${escapeHtml(option.text)}</p></div>`).join('');
+            const options = item.options.map(option => `<div class="enade-option"><span>${escapeHtml(option.letter)}</span><p>${escapeHtml(option.text)}</p>${copyButton(option.text)}</div>`).join('');
             html += section('03 · Opções de resposta', options, 'enade-options');
         }
         return html;
@@ -373,10 +383,10 @@
         if (item.itemType === 'Múltipla Escolha') {
             const rationales = item.justifications.map(entry => `
                 <div class="enade-rationale ${entry.status === 'CORRETA' ? 'is-correct' : ''}">
-                    <div class="enade-rationale-head"><strong>Alternativa ${escapeHtml(entry.letter)}</strong><span class="enade-status">${escapeHtml(entry.status)}</span></div>
+                    <div class="enade-rationale-head"><strong>Alternativa ${escapeHtml(entry.letter)}</strong><span class="enade-rationale-actions"><span class="enade-status">${escapeHtml(entry.status)}</span>${copyButton(entry.rationale)}</span></div>
                     <p>${escapeHtml(entry.rationale)}</p>
                 </div>`).join('');
-            return `<div class="enade-answer-hero"><span>Resposta correta</span><strong>${escapeHtml(item.correctAnswer)}</strong></div><div class="enade-rationales">${rationales}</div>`;
+            return `<div class="enade-answer-hero"><div class="enade-answer-hero-main"><span>Resposta correta</span><strong>${escapeHtml(item.correctAnswer)}</strong></div>${copyButton(item.correctAnswer, 'enade-copy-btn--on-dark')}</div><div class="enade-rationales">${rationales}</div>`;
         }
 
         const rubricRows = item.rubric.map(row => `<tr><td>${escapeHtml(row.criterion)}</td><td>${escapeHtml(row.evidence)}</td><td>${Number(row.points).toFixed(1).replace('.', ',')}</td></tr>`).join('');
@@ -430,6 +440,38 @@
         state.activeTab = button.dataset.tab;
         renderActiveTab();
     }));
+
+    // Listener único e delegado no container de output: o conteúdo das abas
+    // (Item/Gabarito) é re-renderizado via innerHTML a cada troca de aba ou
+    // nova geração, então um listener por botão vazaria/duplicaria. #output-content
+    // em si nunca é substituído, só seus filhos — por isso o listener aqui sobrevive.
+    document.getElementById('output-content').addEventListener('click', async event => {
+        const button = event.target.closest('.enade-copy-btn');
+        if (!button) return;
+
+        const text = button.dataset.copyText || '';
+        try {
+            await navigator.clipboard.writeText(text);
+        } catch {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.append(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            textarea.remove();
+        }
+
+        const icon = button.querySelector('i');
+        button.classList.add('is-copied');
+        icon?.classList.replace('fa-copy', 'fa-check');
+        clearTimeout(button._copyResetTimer);
+        button._copyResetTimer = setTimeout(() => {
+            button.classList.remove('is-copied');
+            icon?.classList.replace('fa-check', 'fa-copy');
+        }, 1500);
+    });
 
     function formatMarkdown(result) {
         const item = result.item;
