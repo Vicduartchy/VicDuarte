@@ -1,5 +1,6 @@
 import { getAdminAuth, getAdminFirestore, verifyAuth } from './_lib/firebase-admin.js';
 import { FieldValue } from 'firebase-admin/firestore';
+import { inspect } from 'node:util';
 
 export { verifyAuth };
 
@@ -520,7 +521,10 @@ export default async function handler(req, res) {
       debug: { totalMs },
     });
   } catch (error) {
-    console.error(`[PROFESSOR-ENADE] Falha na geração após ${Date.now() - startedAt}ms:`, error);
+    // depth: null evita o truncamento padrão do Node ("details: [Array]") em
+    // objetos aninhados como error.geminiData — sem isso, o corpo do erro do
+    // Gemini (details, violations, RetryInfo) some do log de produção.
+    console.error(`[PROFESSOR-ENADE] Falha na geração após ${Date.now() - startedAt}ms:`, inspect(error, { depth: null }));
     const quotaError = error?.geminiStatus ? classifyGeminiError(error.geminiStatus, error.geminiData) : null;
     const isTimeout = error?.name === 'TimeoutError' || error?.name === 'AbortError';
     const status = quotaError
