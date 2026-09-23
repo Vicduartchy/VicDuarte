@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { parseInput, validateItem, verifyAuth, classifyGeminiError, logGenerationEvent } from '../api/generate-professor-enade.js';
+import { parseInput, validateItem, verifyAuth, classifyGeminiError, logGenerationEvent, reorderOptionsByLength } from '../api/generate-professor-enade.js';
 import { mockFirebaseAuth, loginAsVerifiedProfessor } from './helpers/mock-firebase-auth.js';
 
 const requestInput = {
@@ -71,6 +71,77 @@ test.describe('Contrato do PROFESSOR-ENADE', () => {
     expect(validateItem(generatedItem, requestInput)).toEqual([]);
     const invalid = { ...generatedItem, command: 'Selecione a alternativa que não representa a melhor ação.' };
     expect(validateItem(invalid, requestInput).some(issue => issue.includes('negativo'))).toBe(true);
+  });
+});
+
+test.describe('reorderOptionsByLength', () => {
+  test('reordena opções da maior para a menor e realinha gabarito e justificativas', () => {
+    const item = {
+      options: [
+        { letter: 'A', text: 'curta' },
+        { letter: 'B', text: 'a mais longa de todas as opções aqui' },
+        { letter: 'C', text: 'média mais ou menos' },
+        { letter: 'D', text: 'bem curtinha' },
+        { letter: 'E', text: 'penúltima em tamanho de texto aqui ó' },
+      ],
+      correctAnswer: 'A',
+      justifications: [
+        { letter: 'A', status: 'CORRETA', rationale: 'Era a certa, curta mesmo.' },
+        { letter: 'B', status: 'INCORRETA', rationale: 'Longa mas errada.' },
+        { letter: 'C', status: 'INCORRETA', rationale: 'Média e errada.' },
+        { letter: 'D', status: 'INCORRETA', rationale: 'Curtinha e errada.' },
+        { letter: 'E', status: 'INCORRETA', rationale: 'Penúltima e errada.' },
+      ],
+    };
+
+    const result = reorderOptionsByLength(item);
+
+    expect(result.options.map(option => option.letter)).toEqual(['A', 'B', 'C', 'D', 'E']);
+    expect(result.options.map(option => option.text)).toEqual([
+      'a mais longa de todas as opções aqui',
+      'penúltima em tamanho de texto aqui ó',
+      'média mais ou menos',
+      'bem curtinha',
+      'curta',
+    ]);
+    for (let i = 0; i < result.options.length - 1; i++) {
+      expect(result.options[i].text.length).toBeGreaterThanOrEqual(result.options[i + 1].text.length);
+    }
+
+    expect(result.correctAnswer).toBe('E');
+    expect(result.justifications.map(entry => entry.letter)).toEqual(['A', 'B', 'C', 'D', 'E']);
+    const correctJustification = result.justifications.find(entry => entry.status === 'CORRETA');
+    expect(correctJustification.letter).toBe('E');
+    expect(correctJustification.rationale).toBe('Era a certa, curta mesmo.');
+  });
+
+  test('mantém a ordem original em caso de empate de tamanho (sort estável)', () => {
+    const item = {
+      options: [
+        { letter: 'A', text: 'xxxxx' },
+        { letter: 'B', text: 'yyyyy' },
+        { letter: 'C', text: 'zzzzzzzzzz' },
+        { letter: 'D', text: 'wwwww' },
+        { letter: 'E', text: 'vvvvv' },
+      ],
+      correctAnswer: 'D',
+      justifications: [
+        { letter: 'A', status: 'INCORRETA', rationale: 'a' },
+        { letter: 'B', status: 'INCORRETA', rationale: 'b' },
+        { letter: 'C', status: 'INCORRETA', rationale: 'c' },
+        { letter: 'D', status: 'CORRETA', rationale: 'd' },
+        { letter: 'E', status: 'INCORRETA', rationale: 'e' },
+      ],
+    };
+
+    const result = reorderOptionsByLength(item);
+    expect(result.options.map(option => option.text)).toEqual(['zzzzzzzzzz', 'xxxxx', 'yyyyy', 'wwwww', 'vvvvv']);
+    expect(result.correctAnswer).toBe('D');
+  });
+
+  test('não altera itens sem 5 opções (ex.: item discursivo)', () => {
+    const item = { itemType: 'Discursiva', expectedAnswer: 'texto' };
+    expect(reorderOptionsByLength(item)).toBe(item);
   });
 });
 
