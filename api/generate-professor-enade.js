@@ -68,7 +68,26 @@ II.4 Aplicar estratégias, diretrizes e soluções tecnológicas destinadas à p
 II.5 Reconhecer princípios éticos da profissão e fundamentos técnicos, legais e organizacionais relacionados ao gerenciamento, à direção e à execução de projetos e obras de arquitetura, urbanismo e arquitetura da paisagem.
 `;
 
-// Curso ainda sem matriz oficial cadastrada — mantido desabilitado até a Portaria correspondente ser fornecida.
+const MATRIX_ENGENHARIA_PRODUCAO = `
+PORTARIA INEP Nº 163/2026 — MATRIZ DE ENGENHARIA DE PRODUÇÃO
+Perfil: ético e responsável na concepção, na implementação e na melhoria de sistemas de produção de bens e serviços, envolvendo pessoas, materiais, informação, equipamentos e energia; crítico, criativo e proativo na identificação, na análise e na resolução de problemas, integrando aspectos políticos, econômicos, sociais, ambientais, culturais, de segurança e de saúde no trabalho nos processos decisórios; inovador, empreendedor e colaborativo, com visão multidisciplinar; comprometido com a permanente atualização profissional e com a aplicação de adequadas tecnologias e técnicas de gestão para o aprimoramento dos sistemas de produção; comprometido a atuar de forma isenta, com responsabilidade social e atenção ao desenvolvimento sustentável.
+
+Competência I — Analisar sistemas de produção, utilizando modelos e ferramentas adequadas, avaliar a viabilidade e os impactos das soluções propostas e promover melhorias efetivas e sustentáveis, considerando o contexto organizacional, social, econômico e ambiental.
+I.1 Identificar as necessidades do cliente e as características da organização para propor soluções de engenharia de produção.
+I.2 Aplicar modelos matemáticos, estatísticos e de simulação para representar sistemas e processos de produção.
+I.3 Comparar alternativas de sistemas, produtos e processos e selecionar parâmetros operacionais que assegurem viabilidade técnica e econômica da solução.
+I.4 Empregar normas e procedimentos de monitoramento, de controle e de auditoria.
+I.5 Avaliar a adoção de tecnologias e inovações nos processos produtivos e aperfeiçoamento de sistemas de produção.
+I.6 Interpretar dados e informações para apoiar processos de tomada de decisão.
+
+Competência II — Atuar de forma responsável, colaborativa, comunicativa e estratégica, atento à governança em contextos organizacionais e produtivos, integrando aspectos técnicos, humanos, normativos e organizacionais.
+II.1 Analisar procedimentos de implantação e estratégias de controle e melhoria de desempenho na gestão de recursos.
+II.2 Avaliar os impactos das soluções de engenharia nos contextos social, legal, econômico e ambiental.
+II.3 Analisar práticas de gestão adequadas a equipes multidisciplinares e multiculturais, considerando objetivos e restrições.
+II.4 Interpretar normas e dispositivos legais, com conduta ética, para aplicação no âmbito do exercício da profissão.
+II.5 Criar soluções integradas de gestão de pessoas, projetos e inovação, considerando ética, segurança, comunicação e melhoria contínua, em resposta a situações-problema complexas de sistemas de produção.
+`;
+
 export const COURSES = {
   'engenharia-civil': {
     label: 'Engenharia Civil',
@@ -126,11 +145,32 @@ export const COURSES = {
   },
   'engenharia-producao': {
     label: 'Engenharia de Produção',
-    enabled: false,
-    matrix: '',
-    competences: [],
-    skillCodes: [],
-    knowledgeObjects: [],
+    enabled: true,
+    matrix: MATRIX_ENGENHARIA_PRODUCAO,
+    competences: ['I', 'II'],
+    skillCodes: ['I.1', 'I.2', 'I.3', 'I.4', 'I.5', 'I.6', 'II.1', 'II.2', 'II.3', 'II.4', 'II.5'],
+    knowledgeObjects: [
+      'Ciência e tecnologia dos materiais',
+      'Desenho universal e expressão gráfica',
+      'Eletricidade aplicada',
+      'Engenharia econômica e custos da produção',
+      'Engenharia do produto',
+      'Engenharia do trabalho e ergonomia',
+      'Probabilidade e estatística',
+      'Estratégia e organização',
+      'Fenômenos de transporte',
+      'Gestão ambiental',
+      'Gestão da produção',
+      'Logística e cadeia de suprimentos',
+      'Mecânica dos sólidos',
+      'Pesquisa operacional',
+      'Processos de fabricação',
+      'Gestão da qualidade',
+      'Simulação de sistemas',
+      'Sistemas de informação e gestão do conhecimento',
+      'Projeto de instalações',
+      'Gestão de projetos',
+    ],
   },
 };
 

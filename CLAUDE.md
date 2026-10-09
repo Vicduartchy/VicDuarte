@@ -43,7 +43,7 @@ download-livro.html     # Página de download (PT-BR e EN)
 palestras.html          # Palestras
 publicacoes.html        # Publicações do LinkedIn
 ferramentas.html        # Ferramentas (QuickFlow)
-professor-enade.html    # PROFESSOR-ENADE: gerador de questões ENADE multi-curso (Engenharia Civil, Arquitetura e Urbanismo)
+professor-enade.html    # PROFESSOR-ENADE: gerador de questões ENADE multi-curso (Engenharia Civil, Arquitetura e Urbanismo, Engenharia de Produção)
 api/generate-professor-enade.js # Função serverless segura de geração por IA
 static/css/style.css    # CSS único do site
 static/css/professor-enade.css # Estilos específicos do PROFESSOR-ENADE
