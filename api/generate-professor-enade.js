@@ -22,7 +22,7 @@ const RETRY_BUDGET_MS = 55000; // não tenta uma segunda geração se já não s
 const MAX_DURATION_MS = 90000; // espelha "maxDuration" em vercel.json — mudou lá, muda aqui também
 const RESPONSE_MARGIN_MS = 5000; // reserva pós-Gemini: parse, validação, log no Firestore e resposta
 const MIN_CALL_TIMEOUT_MS = 10000; // abaixo disso não vale tentar uma chamada nova, o orçamento já era
-const OVERLOAD_RETRY_DELAY_MS = 1500; // pequeno atraso antes de reagir a um 503 de sobrecarga do Gemini
+const OVERLOAD_RETRY_DELAYS_MS = [1500, 4000, 8000]; // esperas crescentes entre retentativas após 503 de sobrecarga do Gemini
 const requestLog = new Map();
 
 const BLOOM_LEVELS = ['Aplicar', 'Analisar', 'Avaliar'];
@@ -467,8 +467,8 @@ function computeCallTimeoutMs(startedAt) {
   return MAX_DURATION_MS - (Date.now() - startedAt) - RESPONSE_MARGIN_MS;
 }
 
-// Envolve callGemini com timeout dinâmico e uma retentativa automática
-// específica para 503/UNAVAILABLE (sobrecarga temporária do provedor) — não
+// Envolve callGemini com timeout dinâmico e até 3 retentativas automáticas
+// (com espera crescente) específicas para 503/UNAVAILABLE (sobrecarga temporária do provedor) — não
 // deve ser confundido com o 429 de cota diária, que classifyGeminiError trata
 // à parte e que continua sem retry (tentar de novo não resolve cota estourada).
 async function callGeminiResilient(input, revision, startedAt) {
@@ -479,16 +479,17 @@ async function callGeminiResilient(input, revision, startedAt) {
     throw error;
   }
 
-  try {
-    return await callGemini(input, revision, timeoutMs);
-  } catch (error) {
-    const isOverload = error?.geminiStatus === 503;
-    const retryTimeoutMs = computeCallTimeoutMs(startedAt) - OVERLOAD_RETRY_DELAY_MS;
-    if (!isOverload || retryTimeoutMs < MIN_CALL_TIMEOUT_MS) throw error;
+  for (let attempt = 0; ; attempt += 1) {
+    try {
+      return await callGemini(input, revision, computeCallTimeoutMs(startedAt));
+    } catch (error) {
+      const isOverload = error?.geminiStatus === 503;
+      const delayMs = OVERLOAD_RETRY_DELAYS_MS[attempt];
+      if (!isOverload || delayMs === undefined || computeCallTimeoutMs(startedAt) - delayMs < MIN_CALL_TIMEOUT_MS) throw error;
 
-    console.warn('[PROFESSOR-ENADE] retry automático por sobrecarga do Gemini (503 UNAVAILABLE)');
-    await new Promise(resolve => setTimeout(resolve, OVERLOAD_RETRY_DELAY_MS));
-    return await callGemini(input, revision, computeCallTimeoutMs(startedAt));
+      console.warn(`[PROFESSOR-ENADE] retry automático ${attempt + 1}/${OVERLOAD_RETRY_DELAYS_MS.length} por sobrecarga do Gemini (503 UNAVAILABLE), aguardando ${delayMs}ms`);
+      await new Promise(resolve => setTimeout(resolve, delayMs));
+    }
   }
 }
 
@@ -517,9 +518,13 @@ function extractRetryDelaySeconds(data) {
 // minuto sob uso concorrente). Primeiro tenta decidir pela duração real de
 // espera (RetryInfo); só cai pra inspecionar o quotaId (quando o Gemini o
 // retorna) ou o texto da mensagem se não houver retryDelay curto disponível.
-// Retorna null para qualquer status que não seja 429 — nesses casos o
+// Um 503 (sobrecarga do provedor) que sobreviveu às retentativas ganha
+// mensagem própria. Retorna null para os demais status — nesses casos o
 // chamador usa a mensagem genérica de erro de geração.
 export function classifyGeminiError(status, data) {
+  if (status === 503) {
+    return { status: 503, message: 'A IA do gerador (Gemini) está com alta demanda no momento. Isso costuma passar em poucos minutos. Tente novamente em instantes.' };
+  }
   if (status !== 429) return null;
 
   const retryDelaySeconds = extractRetryDelaySeconds(data);
