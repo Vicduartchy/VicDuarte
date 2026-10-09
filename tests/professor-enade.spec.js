@@ -196,9 +196,16 @@ test.describe('verifyAuth', () => {
 });
 
 test.describe('classifyGeminiError', () => {
-  test('não classifica erros que não são 429', () => {
+  test('não classifica erros que não são 429 nem 503', () => {
     expect(classifyGeminiError(500, { error: { message: 'Erro interno' } })).toBeNull();
     expect(classifyGeminiError(400, { error: { message: 'Requisição inválida' } })).toBeNull();
+  });
+
+  test('classifica 503 UNAVAILABLE como alta demanda do Gemini (caso real de produção)', () => {
+    const data = { error: { code: 503, message: 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', status: 'UNAVAILABLE' } };
+    const result = classifyGeminiError(503, data);
+    expect(result.status).toBe(503);
+    expect(result.message).toContain('alta demanda');
   });
 
   test('classifica 429 com violação "PerDay" como limite diário', () => {
