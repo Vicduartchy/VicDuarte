@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { parseInput, validateItem, verifyAuth, classifyGeminiError, logGenerationEvent, reorderOptionsByLength } from '../api/generate-professor-enade.js';
+import { parseInput, validateItem, verifyAuth, classifyGeminiError, logGenerationEvent, reorderOptionsByLength, COURSES } from '../api/generate-professor-enade.js';
 import { mockFirebaseAuth, loginAsVerifiedProfessor } from './helpers/mock-firebase-auth.js';
 
 const requestInput = {
@@ -63,8 +63,19 @@ test.describe('Contrato do PROFESSOR-ENADE', () => {
     expect(() => parseInput({ course: 'engenharia-civil', bloomLevel: 'Analisar', difficulty: 'Média' })).toThrow('tipo de item');
   });
 
-  test('rejeita curso desabilitado (Engenharia de Produção)', () => {
-    expect(() => parseInput({ ...requestInput, course: 'engenharia-producao' })).toThrow('curso');
+  test('aceita encomenda de Engenharia de Produção (Portaria 163/2026)', () => {
+    const parsed = parseInput({ ...requestInput, course: 'engenharia-producao', knowledgeObject: 'Pesquisa operacional' });
+    expect(parsed.course).toBe('engenharia-producao');
+    expect(parsed.knowledgeObject).toBe('Pesquisa operacional');
+  });
+
+  test('Engenharia de Produção tem 20 objetos e habilidades I.1–I.6 e II.1–II.5', () => {
+    expect(COURSES['engenharia-producao'].knowledgeObjects).toHaveLength(20);
+    expect(COURSES['engenharia-producao'].skillCodes).toEqual(['I.1', 'I.2', 'I.3', 'I.4', 'I.5', 'I.6', 'II.1', 'II.2', 'II.3', 'II.4', 'II.5']);
+  });
+
+  test('rejeita objeto de conhecimento de outro curso', () => {
+    expect(() => parseInput({ ...requestInput, course: 'engenharia-producao', knowledgeObject: 'Construção civil' })).toThrow();
   });
 
   test('aprova questão objetiva válida e bloqueia comando negativo', () => {
@@ -346,9 +357,15 @@ test.describe('Página do PROFESSOR-ENADE', () => {
     await expect(page.locator('.enade-audit-row')).toHaveCount(6);
   });
 
-  test('curso Engenharia de Produção aparece desabilitado (em construção)', async ({ page }) => {
+  test('curso Engenharia de Produção habilita seus objetos de conhecimento', async ({ page }) => {
     const card = page.locator('[data-course="engenharia-producao"]');
-    await expect(card).toBeDisabled();
+    await expect(card).toBeEnabled();
+    await card.click();
+    await page.locator('[data-item-type="multiple-choice"]').click();
+    const select = page.locator('#knowledge-object');
+    await expect(select.locator('option', { hasText: 'Pesquisa operacional' })).toHaveCount(1);
+    await select.selectOption('Pesquisa operacional');
+    await expect(page.locator('#enade-generate')).toBeEnabled();
   });
 
   test('permanece responsiva sem rolagem horizontal em celular', async ({ page }) => {
